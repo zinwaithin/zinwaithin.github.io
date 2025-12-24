@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+ <h1 align="center">Form Lessons</h1>   
+
+ <form action="register.html" method="get">
+    <div>
+    <label for="name">Name</label><br>
+    <input type="text" id="name" placeholder="Enter Name">
+    </div>
+    <br>
+    <div>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" placeholder="Enter email">
+    </div>
+    <br>
+    <div>
+        <label for="age">Age</label><br>
+        <input type="number" id="age" placeholder="Enter Age" name="age"step="2" min="18" max="60">
+    </div>
+    <br>
+    <div>
+        <label for="date">Register Date</label> <br>
+        <input type="date" id="date"name="date">
+    </div>
+    <br>
+    <div>
+        <label for="time">Time</label><br>
+        <input type="time" id="time" name="time">
+    </div>
+    <br>
+    <div>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" placeholder="Enter password" name="password">
+    </div>
+    <br>
+    <label for="">Genter</label>
+    <div>
+        <input type="radio" id="male" name="genter" value="Male"><label for="male">Male</label>
+        <input type="radio" id="female" name="genter" value="Female"><label for="female">Female</label>
+    </div>
+    <br>
+    <button type="submit">Register</button>
+
+ </form>
+</body>
+</html>
