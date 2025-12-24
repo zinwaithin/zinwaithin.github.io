@@ -9,6 +9,19 @@
  <h1 align="center">Form Lessons</h1>   
 
  <form action="register.html" method="get">
+
+    <div>
+        <label for="image">Image</label>
+        <input type="file" id="image" name="image">
+    </div>
+    <br>
+
+    <div>
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color">
+    </div>
+    <br>
+    
     <div>
     <label for="name">Name</label><br>
     <input type="text" id="name" placeholder="Enter Name">
@@ -45,6 +58,27 @@
         <input type="radio" id="female" name="genter" value="Female"><label for="female">Female</label>
     </div>
     <br>
+    <label for="">Hobbies</label>
+    <div>
+        <input type="checkbox" id="reading" name="Hobbies" value="reading"><label for="reading">Reading</label>
+        <input type="checkbox" id="cooking" name="Hobbies" value="cooking"><label for="cooking">Cooking</label>
+        <input type="checkbox" id="drawing" name="Hobbies" value="drawing"><label for="drawing">Drawing</label>
+        <input type="checkbox" id="travling" name="Hobbies" value="travling"><label for="travling">Travling</label>
+    </div>
+    <br>
+    <label for="Education">Education</label>
+    <select name="Education" id="Education">
+       <option value="First Year"> First Year</option>
+       <option value="Second Year">Second Year</option>
+       <option value="Third Year">Third Year</option> 
+     </select>
+     <br>
+
+     <div>
+        <label for="address"><Address></Address></label><br>
+        <textarea name="address" id="address"></textarea>
+     </div>
+     <br>
     <button type="submit">Register</button>
 
  </form>
