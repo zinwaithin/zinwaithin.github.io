@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+h1{
+    color: red;
+    text-align: center;
+    text-transform: capitalize;
+}
+p{
+    color: rgb(16, 228, 72);
+    text-indent: 50px;
+}
+
+.borderone{
+    border:5px solid #ffff00;
+}
+.bordertwo{
+    border-style: solid dotted;
+}
+.borderthree{
+    border-width: 10px 5px 2px;
+    border-style: solid;
+}
+
+.marginone{
+    margin: 50px;
+    border: 2px solid black;
+}
+.paddingone{
+    padding: 50px;
+    border:2px solid black;
+}
+
+.inline{
+    border: 1px solid blue;
+    display: inline-block;
+    width: 400px;
+}
+.block{
+    border: 5px solid black;
+    display: inline-block;
+    width: 400px;
+}
+
+.float_left img{
+    width: 40%;
+    float: left;
+    margin-right: 40px;
+}
+.clear{
+    clear: both;
+}
+
+
+.float_right img{
+    width: 40%;
+    float: right;
+    margin-left: 40px;
+  
+}
+.float_right p{
+  text-align: justify;
+}
+.gridone div ,.gridtwo div ,.gridthree div ,.gridfour div{
+    padding: 20px;
+    text-align: center;
+    color: beige;
+}
+.gridone ,.gridtwo ,.gridthree ,.gridfour{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.gridtwo{
+    /* grid-column-gap: 40px; */
+    /* grid-row-gap: 40px; */
+    grid-gap: 40px;
+}
+.columadd{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rowadd{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+}
+
+/* Position lesson */
+.relative-parent{
+    border: 1px solid red;
+    height: 500px;
+}
+.relative{
+    border: 1px solid green;
+    height: 200px;
+    width: 400px;
+    position: relative;
+    top: 100px;
+    left: 300px;
+}
+.absolute-parent{
+    border: 1px solid black;
+    height: 500px;
+    position: relative;
+}
+.absolute{
+    border: 1px solid yellow;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+.online{
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+    src:url(../static/PlayfairDisplay-Black.ttf)
+    font-family:'a';
+}
+.offline{
+    font-family:'a'
+}

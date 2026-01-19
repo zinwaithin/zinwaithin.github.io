@@ -1,0 +1,63 @@
+/* Universal Selector */
+*{
+    /* color: red; */
+      color: #e93fc4;/* 0 to 9 / a to f hex code   */
+    /* color: #f00; short hex code*/
+   /* color: rgb(255,0 , 0);  */
+   /* rgb(red,green,blue) 0 to 255  */
+} 
+h1{
+    color: #0000ff;
+    text-align: center;
+}
+p{
+    /* color: #ff0000; */
+    text-indent: 100px;
+}
+
+a[title="google"]{
+    color: #0000ff;
+    text-decoration: none;
+}
+
+#selector{
+    color: #0000ff;
+    line-height: 25px;
+    word-spacing: 15px;
+    letter-spacing: 10px;
+    text-indent: 50px;
+}
+
+.one{
+    color: #ffff00;
+}
+
+#pig a{
+    color: #ff00ff;
+}
+
+#cat > a{
+    color:rgb(0, 128, 109);
+}
+
+a:link{
+    text-decoration: double underline;
+    text-transform: uppercase;
+    color: #73d0ac;
+}
+
+a:hover{
+    text-decoration: dotted underline;
+}
+
+a:active{
+    color:green
+}
+a:visited{
+    color: saddlebrown;
+}
+/* target */
+p:target{
+    color: #f612d0;
+    font-style: italic;
+}

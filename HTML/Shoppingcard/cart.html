@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart Icon လေ့လာခြင်း</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #7f9f6d;
+        }
+
+        /* ခြင်းတောင်းနဲ့ ဂဏန်းကို စုစည်းထားတဲ့ ဘောင် */
+        .cart-container {
+            position: relative; /* ဂဏန်းလေး နေရာချဖို့ ဒါက အရေးကြီးဆုံးပါ */
+            display: inline-block;
+        }
+
+        /* ခြင်းတောင်းပုံစံကို ပြင်ဆင်တာ */
+        .cart-icon {
+            font-size: 50px; /* အကြီးကြီးမြင်ရအောင် */
+            color: #2c3e50;
+        }
+
+        /* ဂဏန်းအနီရောင်ဝိုင်းလေး (Badge) */
+        .cart-count {
+            position: absolute;
+            top: -5px;     /* အပေါ်ဘက်ကို တင်တာ */
+            right: -10px;  /* ညာဘက်ကို ထုတ်တာ */
+            background-color: #e74c3c; /* အနီရောင် */
+            color: white;
+            border-radius: 50%; /* ဝိုင်းသွားအောင် */
+            padding: 4px 8px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: sans-serif;
+            border: 2px solid white; /* ပိုလှအောင် အဖြူရောင် ဘောင်လေးခတ်တာ */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cart-container">
+        <i class="fas fa-shopping-cart cart-icon"></i>
+        
+        <span class="cart-count">3</span>
+    </div>
+
+</body>
+</html>
