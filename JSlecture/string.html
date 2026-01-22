@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+
+    <h1>String Lessons</h1>
+
+    <script>
+
+        let firstName = "Developer";
+        let lastName = "Zin Wai Thin";
+
+        console.log (firstName.length);
+
+        console.log(firstName);
+        console.log(lastName);
+
+        let fullName = firstName + "" + lastName;
+
+        console.log(fullName);
+
+        console.log("My name is" + fullName);
+
+        document.write('<h1>' + firstName + '</h1><h2>' + lastName + '</h2>');
+        document.write(`<h1> ${firstName} </h1> <h2> ${lastName} </h2>`);
+        console.log(firstName.toUpperCase());
+        console.log(firstName.toLowerCase());
+        console.log(firstName.substr(2,2));
+
+        let job = '    web      developer.    ';
+        console.log(job.trim());
+
+        let ser = 'Javascript is funny!';
+        console.log(ser.search('is'));
+
+        let rep = "I want to visit Yangon";
+        console.log(rep.replace('Yangon','Mandalay'));
+
+        console.log('I\'m Kyaw Zin Aung');
+        console.log("I'm Kyaw Zin Aung");
+        console.log("I'm Kyaw Zin Aung ,5' 9\"");
+
+        let num = '3,500,000';
+        console.log(num.replace (/\,/g, ''));
+    </script>
+    
+</body>
+</html>

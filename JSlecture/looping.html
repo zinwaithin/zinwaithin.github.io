@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+
+    <h1>looping Lessons</h1>
+
+    <script>
+        let laptops =['Dell','Hp','Acer','Lenovo','Asus','Macbook'];
+
+        for (let i = 0 ; i < laptops.length ; i ++){
+            document.write(`I want to this ${laptops[i]} <br>`);
+
+        }
+
+        for (let h=0 ; h < 5 ; h++){
+            for (let  i =0 ; i <= h ; i++){
+            document.write('*')}
+            document.write('<br>');
+        }
+
+
+        for (let h = 5; h >= 1; h--){
+            for(let i = 1 ; i <= h; i++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+
+        //while looping
+
+        let num = 300;
+        while( num > 100 ){
+            document.write(`Your number is ${num}<br>`);
+
+            //update
+            num -= 5;
+
+        }
+
+        //do while 
+
+        let no=10 ;
+        do {
+            document.write(`Your number is ${no} <br>`);
+            no -= 2;
+      
+          }
+
+        while(no < 5);
+    </script>
+    
+</body>
+</html>

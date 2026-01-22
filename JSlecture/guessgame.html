@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guessgame Lessons</h1>
+
+    <script>
+
+        let secrectNo = 7;
+        let count = 1;
+        let guessNo = Number (prompt ('Enter a Number between 1 to 20'));
+
+        while (secrectNo != guessNo ){
+            count ++;
+
+            if ( guessNo < secrectNo )
+
+              { alert( 'Your Number is lower, Please try again');  } 
+             
+          else  { 
+            alert ('Your number is greader, Please try again'); 
+            }
+            guessNo = prompt('Enter a Number between 1 to 20');
+        }
+
+        document.write (`Wow!, secrect number is correct. You tried ${ count } times!`)
+    </script>
+    
+</body>
+</html>
