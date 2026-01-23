@@ -337,6 +337,10 @@
 /* end shop atmosphere section */
 
 /* start menu section */
+
+
+
+
 #menu{
     padding-top: 150px;
     padding-bottom: 80px;
@@ -352,6 +356,18 @@
     width: 25%;
     position: sticky;
 }
+.menu-title li a {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+} 
+.menu-title li a:hover, .menu-title li a.active {
+    background-color: rgb(122, 73, 9);
+    color: white;
+    padding-left: 30px; /* စာသားလေး နည်းနည်း တိုးသွားတဲ့ Effect ပါ */
+}
+/*  */
 .menu-title li{
     list-style: none;
     padding: 15px 0;
@@ -363,7 +379,7 @@
     color:rgb(134, 82, 14);
     font-weight: bold;
     width: 100%;
-}
+} 
 .menu-title h1{
     color:rgb(122, 73, 9) ;
     font-size: 30px;
@@ -382,13 +398,13 @@
     gap: 20px;
     margin-top: 20px;
     width: 100%;
-}
+} 
 .hot-coffeeimg-wrapper {
     width: 300px;
     height: 300px;
     border-radius: 20px;
     overflow: hidden; /* ပုံကို scale ချဲ့ရင် ဘောင်ထဲမှာပဲ ရှိနေစေဖို့ ဒီမှာထည့်ပါ */
-    margin-bottom: 10px; /* ပုံနဲ့ စာသားကြား အကွာအဝေး */
+    /* margin-bottom: 10px; /* ပုံနဲ့ စာသားကြား အကွာအဝေး */
 }
 
 #hot-coffee h2{
@@ -404,12 +420,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
-}
+    transition: transform 0.3s;
+} 
 
 
 .hot-coffeeimg:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .hot-coffeeimg-container h4{
     text-align: center;
@@ -422,7 +438,7 @@
     color:rgb(122, 73, 9) ;
     font-size: 20px;
     margin-bottom: 70px;
-}
+} 
 /* end menu section */
 
 
@@ -491,11 +507,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
+    transition: transform 0.3s;
 }
 
 .cake-img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .cake-img-container h4{
     text-align: center;
@@ -577,11 +593,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
+    transition: transform 0.3s;
 }
 
 .pizza-img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .pizza-img-container h4{
     text-align: center;
@@ -664,11 +680,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
+    transition: transform 0.3s;
 }
 
 .ice-cream-img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .ice-cream-img-container h4{
     text-align: center;
@@ -753,11 +769,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
+    transition: transform 0.3s;
 }
 
 .softdrink-img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .softdrink-img-container h4{
     text-align: center;
@@ -841,11 +857,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s;
+    transition: transform 0.3s;
 }
 
 .snack-img:hover{
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 .snack-img-container h4{
     text-align: center;
@@ -1064,66 +1080,275 @@
         border-radius: 35px;
         
       }
+
+
+      /*  */
+
+      .reward-tiers {
+    margin-top: 60px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.tier-title {
+    text-align: center;
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.tier-container {
+    display: flex;
+    flex-direction: column; /* အဆင့်ဆင့် စီပြမယ် */
+    gap: 15px;
+}
+
+.tier-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fdfaf7;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+/* Points ပြတဲ့ အဝိုင်းလေး */
+.tier-points {
+    font-size: 24px;
+    font-weight: bold;
+    color: #915405;
+    min-width: 100px;
+    text-align: center;
+    border-right: 2px solid #eee;
+    margin-right: 20px;
+}
+
+.tier-content h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.tier-content p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+/* Mouse တင်ရင် (Hover) အရောင်ပြောင်းမယ် */
+.tier-item:hover {
+    background: #fff;
+    border-color: #915405;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(145, 84, 5, 0.1);
+}
+
+/* Active ဖြစ်နေတဲ့ တစ်ခုကို ပိုပေါ်အောင်လုပ်မယ် */
+.tier-item.active {
+    background: #915405;
+    color: white;
+}
+.tier-item.active .tier-points, .tier-item.active h5, .tier-item.active p {
+    color: white;
+}
+
+/*  */
+
+.earn-stars {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.earn-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.earn-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.earn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* ဖုန်းမှာဆိုရင် အောက်ဆင်းသွားဖို့ပါ */
+}
+
+.earn-card {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* Star ပြတဲ့ Icon ပုံစံ */
+.earn-icon {
+    font-size: 30px;
+    font-weight: bold;
+    color: #915405;
+    background: #fdfaf7;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 2px solid #915405;
+}
+
+.earn-icon small {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* အထူးအစီအစဉ်အတွက် အရောင်ပြောင်းခြင်း */
+.earn-icon.highlight {
+    background: #915405;
+    color: white;
+}
+
+.earn-info h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.earn-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* Mouse တင်ရင် ပိုပေါ်လွင်အောင် */
+.earn-card:hover {
+    transform: translateY(-5px);
+}
 /* end reward section  */
 
 /* start about section */
 
-#company{
-    width: 90%;
-    display: flex;
-    /* padding-top: 150px; */
-    margin: auto;
-}
+
 .company{
-    text-align: center;
-    font-size: 30px;
-    color: rgb(145 84 5) ;
-    margin-top: 150px;
+    color: rgb(145, 84, 5);
+    padding-top: 50px;
+
+}
+
+#company {
+    width: 90%;
+    display: block; 
+    margin:  auto;
+    gap: 40px; /* ပုံနဲ့ စာသားကြား အကွာအဝေး */
     margin-bottom: 40px;
 }
-.company-img{
-    flex: 1;
-}
-.company-img img{
-    width: 100%;
-}
-.company-about{
-    width: 50%;
-    flex: 1;
-}
-.company-about p{
-    color: rgb(145 84 5) ;
-    font-size: 20px;
-    text-indent: 100px;
-    text-align: justify;
-    padding-left: 30px;
-}
 
-#coffee-about{
-    padding-top: 80px;
-    margin: auto;
-    display: flex;
-    width: 90%;
-}
-.coffee-about{
-    flex: 1;
-    width: 100%;
-}
-.coffee-about p{
-    color: rgb(145 84 5) ;
-    font-size: 20px;
-    text-indent: 100px;
+.company {
     text-align: center;
-    padding-right: 30px; 
-    text-align: justify;
-}
-.coffee-img{
-    flex: 1;
-}
-.coffee-img img{
-    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(145, 84, 5);
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
+.company-img {
+    float: left; /* ပုံကို ဘယ်ဘက်ကပ်မယ် */
+    width: 40%; /* ပုံရဲ့ အကျယ်ကို သတ်မှတ်ပါ */
+    margin-right: 30px; /* စာသားနဲ့ မကပ်အောင် ဘေးမှာ နေရာချန်ပါ */
+    margin-bottom: 20px; /* ပုံအောက်ကို စာရောက်လာရင်လည်း မကပ်အောင်ပါ */
+}
+
+.company-img img {
+    width: 100%; /* container ရဲ့ အကျယ်အတိုင်း ယူမှာပါ */
+    border-radius: 15px; /* ထောင့်လေးတွေ ဝိုင်းလိုက်ရင် ပိုလှပါတယ် */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* အရိပ်လေးနဲ့ ပိုပေါ်လွင်စေဖို့ပါ */
+}
+
+.company-about {
+    width: 100%;
+    display: block;
+}
+
+.company-about p {
+    color: rgb(100, 58, 2); /* ဖတ်ရလွယ်အောင် နည်းနည်းပိုရင့်တဲ့ အညိုရောင် သုံးထားပါတယ် */
+    font-size: 18px;
+    line-height: 1.8; /* စာကြောင်းအကွာအဝေးကို ချဲ့လိုက်ရင် ဖတ်ရတာ မပင်ပန်းတော့ပါဘူး */
+    /* text-indent: 50px; */
+    text-align: justify;
+}
+
+
+#coffee-plant {
+    position: relative; /* ဒါက အောက်ခံဖြစ်သွားစေဖို့ပါ */
+    width: 100%;
+    height: 600px; /* Section ရဲ့ အမြင့်ကို သတ်မှတ်ပါ */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background ဗီဒီယိုကို Section တစ်ခုလုံး ပြည့်သွားအောင် လုပ်ခြင်း */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ဗီဒီယို မပြဲသွားအောင် ထိန်းပေးပါတယ် */
+    z-index: -1; /* အောက်ဆုံးလွှာကို ပို့လိုက်တာပါ */
+    filter: brightness(0.5); /* စာသားတွေ ပိုပေါ်အောင် ဗီဒီယိုကို နည်းနည်း မှောင်လိုက်တာပါ */
+}
+
+/* ဗီဒီယိုသေးနဲ့ စာသားပါတဲ့ အကွက် (Overlay) */
+.content-overlay {
+    display: flex;
+    width: 85%;
+    gap: 50px;
+    align-items: center;
+    z-index: 1; /* ဗီဒီယိုအောက်ခံရဲ့ အပေါ်မှာ ရှိနေစေဖို့ပါ */
+}
+
+.video-side {
+    flex: 1;
+}
+
+.video-side video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.text-side {
+    flex: 1;
+    color: white; /* အောက်ခံဗီဒီယိုပေါ်မှာဆိုတော့ အဖြူရောင်က ပိုပေါ်ပါတယ် */
+}
+
+.text-side h4 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* စာသား ပိုပေါ်အောင် အရိပ်ထည့်တာပါ */
+}
+
+.text-side p {
+    font-size: 18px;
+    line-height: 1.8;
+}
 /* end about section */
 
 /* start footer section */
