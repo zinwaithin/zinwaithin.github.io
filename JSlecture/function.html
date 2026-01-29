@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>Function Lessons</h1>
+
+    <script>
+
+        //nameing function
+        function functionName(){
+            //code 
+            document.write(`Hello World <br>`);
+        }
+
+        functionName( );
+
+        //argument function
+        function sum ( num1 , num2 ){
+            let result = num1 * num2 ;
+            document.write (`Multi result is ${result} <br>`);
+        }
+
+        sum( 3 , 5 );
+        sum( 542 ,587 );
+
+        //defult function
+        function hello ( num1=100 , num2=50 ){
+            let result=num1-num2;
+            document.write (`Result is ${result}<br>`)
+        }
+        hello();
+
+        //return function
+
+        function result(num1, num2){
+            let result= num1-num2;
+            return result;
+
+        }
+
+        let subResult =result(50,30);
+        document.write (`Subresult is ${subResult}`);
+
+
+        //object
+
+        let hotel ={
+            name:'Zin Gyi Hotel',
+            rooms:50,
+            booked:25,
+            gym:true,
+            pool:true,
+            roomType:['Twin','Double','Suite','Family','Luxury'],
+            checkAvailability:function( ){
+                let result= this.rooms - this.booked;
+                return result;
+            }
+        }
+
+        console.log(hotel);
+        console.log(hotel.roomType[3]);
+
+        let roomFree = hotel.checkAvailability();
+        console.log(roomFree);
+
+        hotel.name ="Shwe Myotha HOtel";
+        console.log(hotel);
+    </script>
+    
+</body>
+</html>

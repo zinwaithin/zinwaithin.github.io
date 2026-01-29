@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Property And Method</h1>
+    <h2 id="myH2"></h2>
+    <p id="myP">This is set Att</p>
+    <p id="change" style="color: red;">Get & Set & Remove Attribute</p>
+
+    <button onclick="createText()">Create Text Node</button>
+    <button onclick="createElementNode()">Create Element Node</button>
+    <button onclick="createAtt()">Create Attribute</button>
+    <button onclick="changeColor">Change Color</button>
+
+    <script>
+
+        function createText(){
+            let textNode = document.createTextNode("This is a text node")
+            let element = document.getElementById ("myH2")
+
+            console.log(textNode);
+
+               
+              }
+        function createElementNode (){
+            let elementNode = document.createElement('h3')
+            console.log (elementNode);
+
+        }
+
+       function createAtt(){
+        let myP =document.querySelector ('#myP');
+        myP.setAttribute ('style', 'color:red;');
+
+       }
+
+       let currentStyle = document.getElementById ('change');
+       currentStyle.getAttribute('style');
+
+       if(currentStyle == "color:re;"){
+        changeP.setAttribute('style','color:green;');
+       }else{
+        currentStyle.setAttribute('style','color:red;');
+       }
+
+      
+    </script>
+    
+</body>
+</html>

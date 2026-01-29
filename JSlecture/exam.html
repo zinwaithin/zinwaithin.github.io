@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Result</h1>
+
+    <form action=""  name="myForm">
+    
+
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" ><br><br>
+
+         <label for="myanmar">Myanmar</label><br>
+        <input type="number" name="myanmar" id="myanmar" ><br><br>
+
+         <label for="english">English</label><br>
+        <input type="number" name="english" id="english" ><br><br>
+
+         <label for="math">Math</label><br>
+        <input type="number" name="math" id="math" ><br><br>
+
+        <button type="button" onclick="result()">Submit</button>
+
+    </form>
+
+    <script>
+        function result(){
+           // let name = document.getElementById('name').value;
+            //console.log(name);
+          let name = document.myForm.name.value;
+          let myanmar = document.myForm.myanmar.value;
+          let english = document.myForm.english.value;
+          let math = document.myForm.math.value;
+
+          //console.log(name);
+          //console.log(myanmar);
+          //console.log(english);
+          //console.log(math);
+
+          if(myanmar >= 40 && english >= 40 && math >= 40){
+             document.write(`<h2>Congratulations ${name} You are passed!</h2>`)
+            
+            if(myanmar >= 80){
+            document.write (`<h2> ${name} You passed with honor in Myanmar!`)
+          }
+
+          if (english >=80 ){
+            document.write (`<h2> ${name} You passed with honor in English!`)
+          }
+
+          if(math >=80){
+            document.write (`<h2> ${name} You passed with honor in Math!`)
+          }
+
+          }
+
+           
+          else {
+            document.write(`<h2>Sorry ${name} You are failed!`)
+
+          if(myanmar < 40){
+            document.write (`<h2> ${name} You failed in myanmar </h2>`)
+          }
+
+           if (english < 40){
+            document.write (`<h2> ${name} You failed in english </h2>`)
+          }
+
+           if (math < 40){
+            document.write (`<h2> ${name} You failed in math </h2>`)
+          }
+
+          }
+
+        }
+    </script>
+    
+</body>
+</html>
