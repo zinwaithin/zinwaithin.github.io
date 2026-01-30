@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <h1 style="text-align: center; ">Digital Clock</h1><br><br>
+
+
+
+    <div style="background-color: black; padding:25px 20px; border-radius: 30px; max-width: 450px; margin: auto;">
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; max-width: 420px; margin: 0 auto; color: rgb(87, 248, 87); font-family: 'Orbitron', sans-serif; justify-content: flex-end; align-items:baseline">
+        <p id="dayone" style="font-size: 25px;"></p>
+
+    <div style="display: flex; gap: 8px; font-size: 25px; justify-content: flex-end;">
+        <p id="daytwo" style="margin: 0;"></p>
+        <p id="daythree" style="margin: 0;"></p>
+        <p id="dayfour" style="margin: 0;"></p>
+    </div>
+    </div>
+
+
+<div style="display: grid; grid-template-columns: auto 1fr; max-width: 420px; margin: 0 auto; color: rgb(87, 248, 87); font-family: 'Orbitron', sans-serif; align-items: baseline; white-space: nowrap;">
+
+
+    <div style="display: flex; align-items: baseline; justify-content: flex-end; padding-right: 15px;">
+        <p id="one" style="font-size: 80px; margin: 0;"></p>
+        <p id="two" style="font-size: 80px; margin: 0;"></p>
+    </div>
+
+
+    <div style="display: flex; justify-content: flex-start; align-items: baseline; gap: 8px; padding-left: 15px;">
+        <p id="three" style="font-size: 50px; margin: 0;"></p>
+        <p id="four" style="font-size: 20px; margin: 0;"></p>
+    </div>
+
+</div>
+
+    </div>
+
+    <script>
+
+        let todayDate = new Date();
+        console.log(todayDate);
+
+        let days = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+        let day = todayDate.getDay();
+        console.log(days[day]);
+
+        let date = todayDate.getDate();
+        console.log(date);
+
+        let months = ["JANUARY","FEBURARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SETEMBER","OCTOBER","NOVEMBER","DECEMBER"]
+        let month = todayDate.getMonth();
+         console.log(months[month]);
+
+         let fullYear = todayDate.getFullYear();
+         console.log(fullYear);
+
+        //let timeFormat = todayDate.toLocaleTimeString();
+        //console.log(timeFormat);
+
+        let hours = todayDate.getHours();
+        console.log(hours);
+        
+        let minutes = todayDate.getMinutes();
+        console.log(minutes);
+
+        let seconds = todayDate.getSeconds();
+        console.log(seconds);
+
+
+
+        function timeInterval(){
+        let now = new Date();
+
+        
+        let d1 = days[now.getDay()];
+        let d2 = now.getDate();
+        let d3 = months[now.getMonth()];
+        let d4 = now.getFullYear();
+
+        document.getElementById('dayone').innerText = d1;
+        document.getElementById('daytwo').innerText = d2;
+        document.getElementById('daythree').innerText = d3;
+        document.getElementById('dayfour').innerText = d4;
+            
+
+        //Hours
+        let hours =now.getHours();
+        let h;
+        if (hours < 10){
+            h = "0" + hours;
+        }else{
+            h = hours;
+        }
+        document.getElementById('one').innerText = h;
+
+        //Minutes
+        let minutes =now.getMinutes();
+        let m;
+        if(minutes < 10){
+            m = "0" + minutes;
+        }else{
+            m = minutes;
+        }
+        document.getElementById('two').innerText = ": " + m;
+
+        //Seconds
+        let seconds = now.getSeconds();
+        let s;
+         if (seconds < 10){
+            s = "0" + seconds;
+        }else{
+            s = seconds;
+        }
+        document.getElementById('three').innerText = ": " + s;
+
+        //AM PM
+        let ap;
+        if(hours < 12){
+            ap = "AM";
+        }else{
+            ap = "PM";
+        }
+        document.getElementById('four').innerText = ap;
+        
+
+        }
+
+        setInterval(timeInterval, 1000);
+    </script>
+
+</body>
+</html>
