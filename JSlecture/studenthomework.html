@@ -8,18 +8,18 @@
 <body>
     <h1 style="text-align: center;  padding-bottom: 50px;">Restaurant Form</h1>
 
-    <form action="" style="text-align: center; box-shadow: 15px 30px 45px rgba(21, 19, 19, 0.5); padding: 25px 30px; width: 50%; margin: auto;">
+    <form action="" onsubmit="return showData()" style="text-align: center; box-shadow: 15px 30px 45px rgba(21, 19, 19, 0.5); padding: 25px 30px; width: 50%; margin: auto;">
 
         <label for="foodname">Food Name</label><br>
-        <input type="text" id="foodname" name="foodname" required><br><br>
+        <input type="text" id="foodname" name="foodname" oninput="clearError('foodname','requiredone')"> <span id="requiredone"></span><br><br>
 
         <label for="price">Price</label><br>
-        <input type="number" id="price" name="price" required><br><br>
+        <input type="number" id="price" name="price" oninput="clearError('price','requiredtwo')"> <span id="requiredtwo"></span><br><br>
 
         <label for="quantity">Quantity</label><br>
-        <input type="number" id="quantity" name="quantity" required><br><br>
+        <input type="number" id="quantity" name="quantity" oninput="clearError('quantity','requiredthree')"> <span id="requiredthree"></span><br><br>
 
-        <button type="button" onclick="showData()">Register</button><br><br><br>
+        <button type="submit">Register</button><br><br><br>
     </form>
 
 
@@ -45,22 +45,71 @@
 
     <script>
 
+        function clearError(inputId , spanId){
+            let inputValue = document.getElementById(inputId).value;
+
+            if(inputValue !==""){
+                document.getElementById(spanId).innerText ="";
+                document.getElementById(inputId).style.border ="1px solid black";
+            }
+        }
+
        var menu =[];
 
         function showData(){
             //get input value
             let name = document.getElementById('foodname').value ;
-            let price = Number(document.getElementById('price').value);
-            let quantity = Number(document.getElementById('quantity').value);
+            let price = document.getElementById('price').value;
+            let quantity = document.getElementById('quantity').value;
 
+
+            let status = true;
+             if(name == ""){
+                document.getElementById('foodname').style.border ="2px solid red";
+                document.getElementById('requiredone').innerText = "Food's name is required!";
+                status = false;
+            }else{
+                 document.getElementById('foodname').style.border ="1px solid black";
+                document.getElementById('requiredone').innerText = "";
+            }
+
+            
+            if(price == ""){
+                document.getElementById('price').style.border ="2px solid red";
+                document.getElementById('requiredtwo').innerText = "Food's price is required!";
+               status = false;
+            }else{
+                 document.getElementById('price').style.border ="1px solid black";
+                document.getElementById('requiredtwo').innerText = "";
+            }
+
+            
+            if(quantity == ""){
+                document.getElementById('quantity').style.border ="2px solid red";
+                document.getElementById('requiredthree').innerText = "Food's name is required!";
+                status = false;
+            }else{
+                 document.getElementById('quantity').style.border ="1px solid black";
+                document.getElementById('requiredthree').innerText = "";
+            }
+
+            if (status == false){
+                return false;
+            }
+
+            let nextprice = Number(document.getElementById('price').value);
+            let nextquantity = Number(document.getElementById('quantity').value);
+
+
+           
            // console.log(name);
            // console.log(price);
           //  console.log(quantity);
 
           let list ={
             name : name,
-            price : price,
-            quantity : quantity,
+            price : nextprice,
+            quantity : nextquantity,
           }
 
           //console.log(list);
@@ -92,6 +141,8 @@
                             <td>${totalSum} </td>
                          </tr>`
                     document.getElementById('tfoot').innerHTML = htmltwo;
+
+                    return false;
 
         }
     </script>
