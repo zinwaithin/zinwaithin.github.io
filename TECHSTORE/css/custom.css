@@ -1,0 +1,225 @@
+
+/* Navbar Base */
+.main-navbar {
+    padding: 8px 0 !important;
+    min-height: 65px;
+}
+
+/* Laptop Menu Links */
+.custom-nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.custom-nav-link:hover {
+    color: #0dcaf0 !important;
+}
+
+/* Smooth Dropdown (Slide Down Effect) */
+.custom-compact-dropdown {
+    background-color: #1a1d20 !important;
+    min-width: 200px;
+    padding: 10px 0;
+    border-top: 3px solid #0dcaf0 !important;
+    border-radius: 0 0 10px 10px !important;
+    margin-top: 10px !important;
+    
+    /* Animation initial state */
+    display: block !important;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-15px); /* အပေါ်မှာ ဖျောက်ထားမယ် */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover to Show Dropdown */
+.nav-item.dropdown:hover .custom-compact-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* အောက်သို့ အိဆင်းလာမယ် */
+}
+
+/* Dropdown Item Style */
+.dropdown-item {
+    color: #ffffff !important;
+    font-size: 13px;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(13, 202, 240, 0.1) !important;
+    color: #0dcaf0 !important;
+    padding-left: 25px;
+}
+
+/* Search Box Style */
+.search-box {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 12px;
+    margin-left: 10px;
+    width: 100%;
+}
+/* Laptop size (992px) နဲ့ အထက်မှာ အဲဒီ Mobile Menu ကို အတင်းဖျောက်ခိုင်းတာပါ */
+@media (min-width: 992px) {
+    #zgNavMobile {
+        display: none !important;
+    }
+}
+/* ဖုန်းမှာ Menu တွေ တစ်ခုချင်းစီ အောက်ကိုဆင်းဖို့ */
+@media (max-width: 991px) {
+    #zgNavMobile .navbar-nav {
+        display: flex !important;
+        flex-direction: column !important; /* အောက်ကို စီဆင်းစေတာပါ */
+        align-items: flex-start !important; /* ဘယ်ဘက်ကပ်စေတာပါ */
+    }
+
+    #zgNavMobile .nav-link {
+        font-size: 18px; /* ကိုကိုပြတဲ့ပုံထဲကလို စာလုံးကြီးကြီး */
+        font-weight: 500;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.05); /* စာကြောင်းလေးတွေခြားဖို့ */
+    }
+    
+    /* Mobile Dropdown ကျလာရင် ဘေးကစာသားတွေကို မကွယ်စေဖို့ */
+    #zgNavMobile .dropdown-menu {
+        position: relative !important;
+        float: none !important;
+        background: transparent !important;
+        padding-left: 20px !important;
+        border: none !important;
+    }
+}
+
+/* Laptop size မှာ အတင်းဖျောက်ထားတာ (ဒါက ကိုကိုထည့်ထားပြီးသား ကုဒ်ပါ) */
+@media (min-width: 992px) {
+    #zgNavMobile {
+        display: none !important;
+    }
+}
+
+/* end nav */
+/*  */
+/* start bunner */
+
+/* Slider ပုံများအတွက် စတိုင် */
+.bunner-img {
+    width: 100%;
+    /* Laptop မှာ ပုံအမြင့်ကို စိတ်ကြိုက်ညှိပါ (ဥပမာ: 500px သို့မဟုတ် 600px) */
+    height: 500px; 
+    /* ပုံတွေ ဘေးတိုက်ပြဲမသွားဘဲ ကွက်တိဖြစ်နေစေဖို့ အရေးကြီးဆုံးက ဒါပါ */
+    object-fit: cover; 
+    /* ပုံရဲ့ အလယ်ဗဟိုကို ပြစေဖို့ */
+    object-position: center; 
+}
+
+/* ဖုန်း Screen မှာ ပုံအမြင့်ကို နည်းနည်းလျှော့မယ် */
+@media (max-width: 768px) {
+    .bunner-img {
+        height: 300px; /* ဖုန်းမှာ အရမ်းကြီးမနေအောင် 300px ပဲ ထားမယ် */
+    }
+}
+
+/* စာသားတွေ ပိုပေါ်အောင် နောက်ခံကို နည်းနည်းမှောင်ပေးတာ (Optional) */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* ပုံပေါ်မှာ အမည်းရောင်ပါးပါးလေး အုပ်ထားတာပါ */
+}
+/*  */
+/* Slider Container ကို အမြင့်သတ်မှတ်မယ် */
+#carouselExampleCaptions {
+    background-color: #000; /* ပုံမပေါ်ခင် အမည်းရောင်ဖြစ်နေအောင် */
+}
+
+/* ပုံတွေကို ညီအောင်ညှိမယ် */
+.bunner-img {
+    height: 550px; /* Laptop မှာ အချိုးကျတဲ့ အမြင့် */
+    object-fit: cover; /* ပုံပြဲမသွားဘဲ ကွက်တိဖြစ်စေဖို့ */
+    object-position: center;
+    filter: brightness(0.8); /* စာသားပိုပေါ်အောင် ပုံကို နည်းနည်းမှောင်လိုက်တာပါ */
+    transition: transform 2s ease; /* Zoom effect အတွက် */
+}
+
+/* Mouse တင်ရင် ပုံလေးက အိခနဲ Zoom ဖြစ်သွားအောင် */
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+}
+
+/* စာသား (Caption) တွေကို ပိုလှအောင်လုပ်မယ် */
+.carousel-caption {
+    bottom: 30%; /* စာသားကို အလယ်နား ရောက်အောင် တင်လိုက်တာ */
+    text-align: left; /* ဘယ်ဘက်ကပ်ရင် ပို Professional ဆန်ပါတယ် */
+    max-width: 500px;
+    left: 10%;
+}
+
+.carousel-caption h5 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0dcaf0; /* ကျမတို့ သုံးနေကျ အပြာနုရောင် */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+/* Slide Indicators (အောက်က အစက်လေးတွေ) ကို အဝိုင်းလေးလုပ်မယ် */
+.carousel-indicators [button] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* ဖုန်းမှာ အမြင့်ပြန်ညှိမယ် */
+@media (max-width: 768px) {
+    .bunner-img {
+        height: 350px;
+    }
+    .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+}
+/* end bunner */
+/*  */
+/* start promotion */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+    border-color: #0dcaf0 !important; /* text-info color */
+}
+
+/* ဖုန်းမှာ ပုံတွေအရမ်းမကြီးအောင် ညှိတာပါ */
+@media (max-width: 576px) {
+    .product-card img {
+        height: 140px !important;
+    }
+}
+/* end promotion */
