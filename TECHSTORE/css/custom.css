@@ -115,111 +115,179 @@
 /*  */
 /* start bunner */
 
-/* Slider ပုံများအတွက် စတိုင် */
-.bunner-img {
-    width: 100%;
-    /* Laptop မှာ ပုံအမြင့်ကို စိတ်ကြိုက်ညှိပါ (ဥပမာ: 500px သို့မဟုတ် 600px) */
-    height: 500px; 
-    /* ပုံတွေ ဘေးတိုက်ပြဲမသွားဘဲ ကွက်တိဖြစ်နေစေဖို့ အရေးကြီးဆုံးက ဒါပါ */
-    object-fit: cover; 
-    /* ပုံရဲ့ အလယ်ဗဟိုကို ပြစေဖို့ */
-    object-position: center; 
-}
-
-/* ဖုန်း Screen မှာ ပုံအမြင့်ကို နည်းနည်းလျှော့မယ် */
-@media (max-width: 768px) {
-    .bunner-img {
-        height: 300px; /* ဖုန်းမှာ အရမ်းကြီးမနေအောင် 300px ပဲ ထားမယ် */
-    }
-}
-
-/* စာသားတွေ ပိုပေါ်အောင် နောက်ခံကို နည်းနည်းမှောင်ပေးတာ (Optional) */
-.carousel-item::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* ပုံပေါ်မှာ အမည်းရောင်ပါးပါးလေး အုပ်ထားတာပါ */
-}
-/*  */
-/* Slider Container ကို အမြင့်သတ်မှတ်မယ် */
+/* 1. Slider Container - ပုံချဲ့ရင် ဘောင်မကျော်အောင် */
 #carouselExampleCaptions {
-    background-color: #000; /* ပုံမပေါ်ခင် အမည်းရောင်ဖြစ်နေအောင် */
+    background-color: #000;
+    overflow: hidden; 
 }
 
-/* ပုံတွေကို ညီအောင်ညှိမယ် */
+/* 2. Banner Images - ပုံကို အလင်းအပြည့်ပေးပြီး ဖြည်းဖြည်းချင်း Zoom ဆွဲမယ် */
 .bunner-img {
-    height: 550px; /* Laptop မှာ အချိုးကျတဲ့ အမြင့် */
-    object-fit: cover; /* ပုံပြဲမသွားဘဲ ကွက်တိဖြစ်စေဖို့ */
-    object-position: center;
-    filter: brightness(0.8); /* စာသားပိုပေါ်အောင် ပုံကို နည်းနည်းမှောင်လိုက်တာပါ */
-    transition: transform 2s ease; /* Zoom effect အတွက် */
+    width: 100%;
+    height: 550px; 
+    object-fit: cover; 
+    object-position: center; 
+    filter: brightness(1) !important; /* ပုံကို လုံးဝမမှောင်စေရ */
+    transition: transform 6s ease-in-out; 
 }
 
-/* Mouse တင်ရင် ပုံလေးက အိခနဲ Zoom ဖြစ်သွားအောင် */
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-    display: block;
+/* Slide တစ်ခုချင်းစီ စလာရင် ပုံလေးက အိခနဲ ကြွလာမယ် */
+.carousel-item.active .bunner-img {
+    transform: scale(1.1);
 }
 
-/* စာသား (Caption) တွေကို ပိုလှအောင်လုပ်မယ် */
+/* 3. Carousel Caption - စာသားနေရာကို မူလအတိုင်း ထားမယ် (Gradient ပဲ ထည့်မယ်) */
 .carousel-caption {
-    bottom: 30%; /* စာသားကို အလယ်နား ရောက်အောင် တင်လိုက်တာ */
-    text-align: left; /* ဘယ်ဘက်ကပ်ရင် ပို Professional ဆန်ပါတယ် */
-    max-width: 500px;
-    left: 10%;
+    /* စာသားနောက်မှာ အရောင်ပြေးလေးပဲ ခံထားတာမို့ စာဖတ်ရတာ ရှင်းမယ်၊ ပုံလည်း မကွယ်ဘူး */
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 80%);
+    bottom: 20% !important; /* အောက်နားလေးမှာပဲ ရှိနေစေမယ် */
+    left: 0 !important;
+    right: auto !important;
+    text-align: left !important;
+    padding: 30px 5% 30px 10% !important;
+    width: 60%; /* တစ်ပြင်လုံး မဖုံးအောင် ၆၀ ရာခိုင်နှုန်းပဲ ယူမယ် */
 }
 
+/* 4. Text Styles - စာသားတွေကို Glow ဖြစ်အောင်လုပ်ပြီး လင်းစေမယ် */
 .carousel-caption h5 {
     font-size: 3rem;
     font-weight: 800;
-    color: #0dcaf0; /* ကျမတို့ သုံးနေကျ အပြာနုရောင် */
+    color: #0dcaf0 !important; /* အပြာနုရောင် လင်းလင်းလေး */
     text-transform: uppercase;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(13, 202, 240, 0.5); /* စာသား Glow ဖြစ်စေတာ */
 }
 
 .carousel-caption p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #eee;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
-/* Slide Indicators (အောက်က အစက်လေးတွေ) ကို အဝိုင်းလေးလုပ်မယ် */
-.carousel-indicators [button] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
+/* 5. Indicators - အစက်လေးတွေကို အပြာရောင်ပြောင်းပြီး လင်းအောင်လုပ်မယ် */
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    margin: 0 6px !important;
+    background-color: #0dcaf0 !important; 
+    opacity: 0.5;
 }
 
-/* ဖုန်းမှာ အမြင့်ပြန်ညှိမယ် */
+.carousel-indicators .active {
+    opacity: 1 !important;
+    box-shadow: 0 0 10px #0dcaf0;
+}
+
+/* 6. Mobile Responsive - ဖုန်းမှာ အချိုးကျအောင် */
 @media (max-width: 768px) {
     .bunner-img {
         height: 350px;
+    }
+    .carousel-caption {
+        width: 100%;
+        bottom: 10% !important;
+        padding-left: 20px !important;
     }
     .carousel-caption h5 {
         font-size: 1.8rem;
     }
 }
+
+
 /* end bunner */
 /*  */
 /* start promotion */
+
+/* အကွင်းကြီးကို ဖယ်ပြီး အသည်းပုံလေးပဲ ထားမယ် */
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: transparent !important; /* အောက်ခံ အကွင်းကို ဖျောက်လိုက်တာ */
+    border: none !important; /* ဘောင်ကို ဖျောက်လိုက်တာ */
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px; /* အသည်းပုံကို နည်းနည်း ကြီးထားမယ် */
+    color: rgba(255, 255, 255, 0.6); /* အစပိုင်းမှာ ခပ်မှိန်မှိန် အဖြူလေး */
+}
+
+/* Mouse တင်လိုက်ရင် အသည်းပုံလေး "လင်း" လာအောင် */
+.wishlist-btn:hover {
+    color: #ff2d55 !important; /* အသည်းပုံလေးကို အနီရောင်တောက်တောက် ပြောင်းမယ် */
+    transform: scale(1.3); /* အသည်းပုံလေးက ဖောင်းတက်လာမယ် */
+    /* အသည်းပုံလေး ဘေးမှာ အနီရောင် Glow လေး ဖြာထွက်လာအောင် */
+    filter: drop-shadow(0 0 8px rgba(255, 45, 85, 0.8)); 
+}
+
+
+
+/* --- Promotion Section Styling --- */
+/* 1. Card တစ်ခုချင်းစီကို ကြည်လင်ပြီး လင်းသွားစေဖို့ */
 .product-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.03) !important; /* အဖြူရောင် ပါးပါးလေး အုပ်ထားတာပါ */
+    backdrop-filter: blur(5px); /* နောက်ခံကို အနည်းငယ် ဝါးပေးမယ် */
+    border: 1px solid rgba(13, 202, 240, 0.2) !important; /* နံရံလေးတွေကို အပြာနုရောင် ပါးပါးလေး ခံထားမယ် */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 15px !important;
+    overflow: hidden;
 }
 
+/* 2. Mouse တင်လိုက်ရင် လင်းထွက်လာမယ့် Glow Effect */
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
-    border-color: #0dcaf0 !important; /* text-info color */
+    transform: translateY(-10px); /* အပေါ်ကို ကြွတက်လာမယ် */
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #0dcaf0 !important;
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.3); /* အပြာရောင် Glow လေး ဖြာထွက်လာမယ် */
 }
 
-/* ဖုန်းမှာ ပုံတွေအရမ်းမကြီးအောင် ညှိတာပါ */
+/* 3. Product ပုံတွေကို ပိုလင်းစေဖို့ */
+.product-card img {
+    padding: 15px;
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); /* ပုံလေးတွေက ကြွနေသလို ဖြစ်အောင် */
+}
+
+.product-card:hover img {
+    transform: scale(1.05); /* Mouse တင်ရင် ပုံလေးက နည်းနည်း ကြီးလာမယ် */
+}
+
+/* 4. စာသားတွေကို ပိုကြည်အောင် */
+.product-card .card-title {
+    color: #0dcaf0 !important; /* ခေါင်းစဉ်ကို အပြာရောင် တောက်တောက်လေး ထားမယ် */
+    font-weight: 700;
+}
+
+.product-card .card-text {
+    color: #e0e0e0 !important; /* စာသားတွေကို အဖြူရောင် အနုလေး ပြောင်းမယ် */
+}
+
+/* 5. ခလုတ် (Button) ကို Neon Style လုပ်မယ် */
+.product-card .btn-info {
+    background: transparent !important;
+    border: 2px solid #0dcaf0 !important;
+    color: #0dcaf0 !important;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.product-card .btn-info:hover {
+    background: #0dcaf0 !important;
+    color: #000 !important; /* Mouse တင်ရင် စာသားက အမည်း၊ နောက်ခံက အပြာတောက်တောက် ဖြစ်သွားမယ် */
+    box-shadow: 0 0 20px #0dcaf0;
+}
+
+/* 6. Mobile မှာ ပုံတွေ အရွယ်အစား ညှိတာ */
 @media (max-width: 576px) {
     .product-card img {
-        height: 140px !important;
+        height: 160px !important;
+        object-fit: contain;
     }
 }
+
+
 /* end promotion */
