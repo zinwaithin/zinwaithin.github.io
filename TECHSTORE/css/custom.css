@@ -199,95 +199,319 @@
 /*  */
 /* start promotion */
 
-/* အကွင်းကြီးကို ဖယ်ပြီး အသည်းပုံလေးပဲ ထားမယ် */
-.wishlist-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 10;
-    background: transparent !important; /* အောက်ခံ အကွင်းကို ဖျောက်လိုက်တာ */
-    border: none !important; /* ဘောင်ကို ဖျောက်လိုက်တာ */
-    width: auto;
-    height: auto;
-    cursor: pointer;
+/* Card အရောင်ရင့် (Dark Theme) */
+.product-card-dark {
+    background: linear-gradient(145deg, #0f0c29, #302b63) !important;
     transition: all 0.3s ease;
-    font-size: 20px; /* အသည်းပုံကို နည်းနည်း ကြီးထားမယ် */
-    color: rgba(255, 255, 255, 0.6); /* အစပိုင်းမှာ ခပ်မှိန်မှိန် အဖြူလေး */
 }
 
-/* Mouse တင်လိုက်ရင် အသည်းပုံလေး "လင်း" လာအောင် */
-.wishlist-btn:hover {
-    color: #ff2d55 !important; /* အသည်းပုံလေးကို အနီရောင်တောက်တောက် ပြောင်းမယ် */
-    transform: scale(1.3); /* အသည်းပုံလေးက ဖောင်းတက်လာမယ် */
-    /* အသည်းပုံလေး ဘေးမှာ အနီရောင် Glow လေး ဖြာထွက်လာအောင် */
-    filter: drop-shadow(0 0 8px rgba(255, 45, 85, 0.8)); 
+.product-card-dark:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(15, 12, 41, 0.2) !important;
+}
+
+/* Wishlist Button */
+.wishlist-btn-custom {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: rgba(255, 255, 255, 0.949);
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.wishlist-btn-custom:hover {
+    color: #ff4757;
+}
+
+/* View All Hover */
+.view-all-link:hover {
+    text-decoration: underline !important;
+    opacity: 0.8;
+}
+
+/* Eye Button Style */
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 
 
-/* --- Promotion Section Styling --- */
-/* 1. Card တစ်ခုချင်းစီကို ကြည်လင်ပြီး လင်းသွားစေဖို့ */
-.product-card {
-    background: rgba(255, 255, 255, 0.03) !important; /* အဖြူရောင် ပါးပါးလေး အုပ်ထားတာပါ */
-    backdrop-filter: blur(5px); /* နောက်ခံကို အနည်းငယ် ဝါးပေးမယ် */
-    border: 1px solid rgba(13, 202, 240, 0.2) !important; /* နံရံလေးတွေကို အပြာနုရောင် ပါးပါးလေး ခံထားမယ် */
+/* Button စာသားတွေ ကပ်မနေအောင် */
+.btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* စာသားကို တစ်ကြောင်းတည်းဖြစ်စေဖို့ */
+}
+
+/* Hover လုပ်ရင် အရောင်လေး လင်းလာအောင် */
+.btn-outline-light:hover {
+    background-color: white !important;
+    color: #302b63 !important; /* Card background နဲ့ ဆင်တဲ့အရောင် */
+}
+
+.btn-info:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* end promotion */
+/*  */
+/* start service */
+
+/* ၁။ Background တစ်ခုလုံးက အဖြူရောင် */
+.features-white-section {
+    background-color: #ffffff;
+}
+
+/* ၂။ အကွက်လေးတွေကို အရောင်ရင့် (Deep Blue-Purple Gradient) သုံးတာ */
+.feature-bold-card {
+    background: linear-gradient(145deg, #0f0c29, #302b63); /* Promotion style အရောင်ရင့် */
+    padding: 40px 20px;
+    border-radius: 25px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 15px !important;
+    border: none;
+    position: relative;
     overflow: hidden;
 }
 
-/* 2. Mouse တင်လိုက်ရင် လင်းထွက်လာမယ့် Glow Effect */
-.product-card:hover {
-    transform: translateY(-10px); /* အပေါ်ကို ကြွတက်လာမယ် */
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-color: #0dcaf0 !important;
-    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.3); /* အပြာရောင် Glow လေး ဖြာထွက်လာမယ် */
+/* ၃။ Mouse တင်ရင် အပေါ်တက်ပြီး အရောင်က ပိုတောက်လာမယ် */
+.feature-bold-card:hover {
+    transform: translateY(-15px);
+    background: linear-gradient(145deg, #24243e, #302b63, #0f0c29);
+    box-shadow: 0 20px 40px rgba(48, 43, 99, 0.4);
 }
 
-/* 3. Product ပုံတွေကို ပိုလင်းစေဖို့ */
-.product-card img {
+/* ၄။ Icon အဝိုင်းလေး (အထဲမှာ အဖြူရောင်နဲ့ ထင်းနေအောင်) */
+.icon-circle-bold {
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.1); /* အစမှာ ခပ်မှိန်မှိန် */
+    color: #0dcaf0; /* Icon ကို Info Blue ထားပေးတယ် */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    transition: 0.4s;
+}
+
+/* ၅။ Mouse တင်ရင် Icon နဲ့ အဝိုင်းက လင်းခနဲဖြစ်သွားမယ် */
+.feature-bold-card:hover .icon-circle-bold {
+    background-color: #ffffff;
+    color: #302b63; /* Icon က အရောင်ရင့် ပြောင်းသွားမယ် */
+    transform: scale(1.1);
+}
+
+/* ၆။ စာသားအရောင်များ */
+.feature-bold-card h6 {
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.feature-bold-card p {
+    font-weight: 300;
+}
+
+/* end service */
+/*  */
+/* start customer review */
+
+/* ခေါင်းစဉ်အောက်က မျဉ်းလေး */
+.gradient-line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0f0c29, #302b63);
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+/* Review Card ပုံမှန် */
+.review-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid #eee;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* အလယ်က ကတ်ကို အရောင်ရင့်ပေးတာ (Highlight) */
+.review-card.highlight {
+    background: linear-gradient(145deg, #0f0c29, #302b63);
+    border: none;
+    transform: scale(1.05); /* နည်းနည်းလေး ပိုကြီးနေမယ် */
+    box-shadow: 0 15px 35px rgba(48, 43, 99, 0.3);
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #302b63;
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+/* User ပုံစံ */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.stars {
+    font-size: 0.8rem;
+}
+
+
+/* end customer review */
+/*  */
+/* start footer */
+
+
+/* Footer တစ်ခုလုံးကို အရောင်စပ် (Gradient) လုပ်တာ */
+.main-footer {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.fw-black { font-weight: 900; letter-spacing: -1.5px; }
+
+/* ဆိုင်နာမည် အရောင်ပြေး */
+.gradient-text {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Social Icons အရောင်ပြောင်းအလှုပ်အခတ် */
+.s-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.s-link:hover {
+    background: #0dcaf0; /* Mouse တင်ရင် အရောင်ပြောင်းမယ် */
+    color: #000;
+    transform: translateY(-5px) rotate(360deg); /* လည်ပြီး ကြွတက်သွားမယ် */
+}
+
+/* Quick Links အလှုပ်အခတ် */
+.footer-nav li { margin-bottom: 12px; }
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #0dcaf0;
+    padding-left: 8px;
+}
+
+/* Call to Action Card */
+.call-action-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     padding: 15px;
-    transition: transform 0.5s ease;
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); /* ပုံလေးတွေက ကြွနေသလို ဖြစ်အောင် */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.product-card:hover img {
-    transform: scale(1.05); /* Mouse တင်ရင် ပုံလေးက နည်းနည်း ကြီးလာမယ် */
+.call-action-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #0dcaf0;
+    transform: scale(1.05);
 }
 
-/* 4. စာသားတွေကို ပိုကြည်အောင် */
-.product-card .card-title {
-    color: #0dcaf0 !important; /* ခေါင်းစဉ်ကို အပြာရောင် တောက်တောက်လေး ထားမယ် */
-    font-weight: 700;
+/* ဖုန်း Icon တုန်ခါနေတဲ့ပုံစံ */
+.icon-pulse {
+    width: 40px;
+    height: 40px;
+    background: #0dcaf0;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 0 rgba(13, 202, 240, 0.7);
+    animation: pulse 1.5s infinite;
 }
 
-.product-card .card-text {
-    color: #e0e0e0 !important; /* စာသားတွေကို အဖြူရောင် အနုလေး ပြောင်းမယ် */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(13, 202, 240, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(13, 202, 240, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 202, 240, 0); }
 }
 
-/* 5. ခလုတ် (Button) ကို Neon Style လုပ်မယ် */
-.product-card .btn-info {
-    background: transparent !important;
-    border: 2px solid #0dcaf0 !important;
-    color: #0dcaf0 !important;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s;
+/* Subscribe Input Group */
+.sub-input-group {
+    display: flex;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+    transition: 0.3s;
 }
 
-.product-card .btn-info:hover {
-    background: #0dcaf0 !important;
-    color: #000 !important; /* Mouse တင်ရင် စာသားက အမည်း၊ နောက်ခံက အပြာတောက်တောက် ဖြစ်သွားမယ် */
-    box-shadow: 0 0 20px #0dcaf0;
+.sub-input-group:focus-within {
+    border-color: #0dcaf0;
 }
 
-/* 6. Mobile မှာ ပုံတွေ အရွယ်အစား ညှိတာ */
-@media (max-width: 576px) {
-    .product-card img {
-        height: 160px !important;
-        object-fit: contain;
-    }
+.btn-gradient {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+.btn-gradient:hover {
+    filter: brightness(1.2);
+    letter-spacing: 1px;
+}
 
-/* end promotion */
+/* end footer */
+/*  */
