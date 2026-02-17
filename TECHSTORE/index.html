@@ -1,1343 +1,1005 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zin Gyi Tech Store</title>
-        <link rel="icon" href="images/logo.png">
-        <meta name="description"
-            content="Zin Gyi Tech Store is a shop that sell electronic device such as phones, laptops, tablets and other devices.">
-        <meta name="keywords"
-            content="Zin Gyi Tech Store, Tech Store, Electronic shop, Zin Gyi , phones, Laptops, tablets, online shopping.">
-        <meta name="robots" content="index, follow">
-        <meta name="language" content="EN">
 
-        <link rel="stylesheet" href="fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/custom.css">
-        <script src="fontawesome/js/all.min.js"></script>
-        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zin Gyi Tech Store</title>
+    <link rel="icon" href="images/logo.png">
+    <meta name="description"
+        content="Zin Gyi Tech Store is a shop that sell electronic device such as phones, laptops, tablets and other devices.">
+    <meta name="keywords"
+        content="Zin Gyi Tech Store, Tech Store, Electronic shop, Zin Gyi , phones, Laptops, tablets, online shopping.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="EN">
 
-    </head>
-    <body>
-        <!-- start nav -->
-        <nav
-            class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg main-navbar">
-            <div class="container">
-                <div class="row w-100 align-items-center m-0 g-0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    <div class="col-lg-3 col-auto">
-                        <a class="navbar-brand d-flex align-items-center m-0"
-                            href="#">
-                            <img src="images/remove-logo.jpg" alt="ZG Logo"
-                                style="height: 35px; width: auto;">
-                            <span class="brand-text ms-2"
-                                style="color: #ffffff; font-size: 14px; font-weight: 700;">ZG
-                                Electronic</span>
-                        </a>
+</head>
+
+<body>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg main-navbar">
+        <div class="container">
+            <div class="row w-100 align-items-center m-0 g-0">
+
+                <div class="col-lg-3 col-auto">
+                    <a class="navbar-brand d-flex align-items-center m-0" href="#">
+                        <img src="images/remove-logo.jpg" alt="ZG Logo" style="height: 35px; width: auto;">
+                        <span class="brand-text ms-2" style="color: #ffffff; font-size: 14px; font-weight: 700;">ZG
+                            Electronic</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-block">
+                    <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link custom-nav-link dropdown-toggle" href="#" id="productDrop"
+                                data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
+                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="#">Laptops</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
+                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+                        <i class="fa-solid fa-magnifying-glass text-info"></i>
+                        <input type="text" placeholder="Search..."
+                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
                     </div>
 
-                    <div class="col-lg-6 d-none d-lg-block">
-                        <ul
-                            class="navbar-nav d-flex flex-row justify-content-center gap-3">
-                            <li class="nav-item"><a
-                                    class="nav-link custom-nav-link"
-                                    href="#">Home</a></li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link custom-nav-link dropdown-toggle"
-                                    href="#" id="productDrop"
-                                    data-bs-toggle="dropdown">Products</a>
-                                <ul
-                                    class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                    <li><a class="dropdown-item"
-                                            href="#">Smartphones</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Laptops</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Accessories</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a
-                                    class="nav-link custom-nav-link"
-                                    href="#">Promotion</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link custom-nav-link"
-                                    href="#">Services</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link custom-nav-link"
-                                    href="#">About</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link custom-nav-link"
-                                    href="#">Contact</a></li>
-                        </ul>
-                    </div>
+                    <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
 
+                    <a href="#" class="text-info position-relative">
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
+                        <span class="badge rounded-pill bg-info text-dark"
+                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
+                    </a>
+
+                    <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fa-solid fa-user" style="font-size: 18px;"></i>
+
+                    </a>
+
+                    <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#zgNavMobile">
+                        <span class="navbar-toggler-icon" style="width: 22px;"></span>
+                    </button>
+                </div>
+
+                <div class="collapse w-100 d-lg-none" id="zgNavMobile">
+                    <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
+                        style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle py-2" href="#" id="mobileCat"
+                                data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
+                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="#">Laptops</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- end nav -->
+    <!-- start bunner -->
+    <div id="carouselExampleCaptions" class="carousel slide shadow-lg" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/bunner/laptop.png" class="bunner-img d-block w-100" alt="images/bunner/laptop.png">
+                <div class="carousel-caption d-block">
+                    <h5 class="fw-bold display-4">Power & Precision</h5>
+                    <p class="lead">အလုပ်ခွင်မှာပဲဖြစ်ဖြစ်၊ Gaming
+                        မှာပဲဖြစ်ဖြစ် စွမ်းဆောင်ရည်အကောင်းဆုံး Laptop
+                        များ</p>
+                    <a href="#" class="btn btn-info rounded-pill px-4 fw-bold shadow">Shop
+                        Now</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/bunner/applephone.png" class="bunner-img d-block w-100"
+                    alt="images/bunner/applephone.png">
+                <div class="carousel-caption d-block">
+                    <h5 class="fw-bold display-4">The Future is Here</h5>
+                    <p class="lead">iPhone 16 Pro Max - Titanium Design နဲ့
+                        အမိုက်စား Camera နည်းပညာ</p>
+                    <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Explore
+                        More</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/bunner/Screenshot 2026-02-15 013342.png" class="bunner-img d-block w-100"
+                    alt="images/bunner/Screenshot 2026-02-15 013342.png">
+                <div class="carousel-caption d-block">
+                    <h5 class="fw-bold display-4">Best Deals Today</h5>
+                    <p class="lead">လူကြိုက်များတဲ့ Electronic
+                        ပစ္စည်းမျိုးစုံကို ဈေးနှုန်းချိုသာစွာဖြင့်
+                        တစ်နေရာတည်းမှာ ရရှိနိုင်ပါပြီ</p>
+                    <a href="#" class="btn btn-warning rounded-pill px-4 fw-bold">View
+                        Offers</a>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- end bunner -->
+    <!--  -->
+    <!-- start promotion -->
+
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h3 class="fw-bold text-dark mb-0">Today's Promotions</h3>
+                    <p class="text-primary small mb-0">Special discounts for today only!</p>
+                </div>
+                <a href="#" class="text-primary text-decoration-none small view-all-link fw-bold fs-5">
+                    View All <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
                     <div
-                        class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                        <div class="search-box d-flex flex-grow-1 ms-2"
-                            style="max-width: 180px;">
-                            <i
-                                class="fa-solid fa-magnifying-glass text-info"></i>
-                            <input type="text" placeholder="Search..."
-                                style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-laptop1.png" class="card-img-top p-3" alt="ASUS"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">ASUS VivoBook 15</h6>
+                            <p class="small text-white-50 mb-2">Intel Core i5 | 8GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,099$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-laptop-001"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 12px;"><i class="fa-solid fa-circle-info me-1"></i>Details</a>
+                            </div>
                         </div>
-
-                        <a href="#" class="text-white"><i
-                                class="fa-solid fa-heart"
-                                style="font-size: 18px;"></i></a>
-
-                        <a href="#" class="text-info position-relative">
-                            <i class="fa-solid fa-cart-shopping"
-                                style="font-size: 18px;"></i>
-                            <span class="badge rounded-pill bg-info text-dark"
-                                style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
-                        </a>
-
-                        <a href="#" class="text-white ms-1"
-                            data-bs-toggle="modal" data-bs-target="#loginModal">
-                            <i class="fa-solid fa-user"
-                                style="font-size: 18px;"></i>
-
-                        </a>
-
-                        <button class="navbar-toggler border-0 p-0 d-lg-none"
-                            type="button" data-bs-toggle="collapse"
-                            data-bs-target="#zgNavMobile">
-                            <span class="navbar-toggler-icon"
-                                style="width: 22px;"></span>
-                        </button>
-                    </div>
-
-                    <div class="collapse w-100 d-lg-none" id="zgNavMobile">
-                        <ul
-                            class="navbar-nav text-start p-3 mt-2 rounded shadow"
-                            style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
-                            <li class="nav-item"><a
-                                    class="nav-link text-white py-2"
-                                    href="#">Home</a></li>
-                            <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link text-white dropdown-toggle py-2"
-                                    href="#" id="mobileCat"
-                                    data-bs-toggle="dropdown">Products</a>
-                                <ul
-                                    class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                    <li><a class="dropdown-item"
-                                            href="#">Smartphones</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Laptops</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="#">Accessories</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a
-                                    class="nav-link text-white py-2"
-                                    href="#">Promotion</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link text-white py-2"
-                                    href="#">Services</a></li>
-                            <li class="nav-item"><a
-                                    class="nav-link text-white py-2"
-                                    href="#">Contact</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-
-        <!-- end nav -->
-        <!-- start bunner -->
-        <div id="carouselExampleCaptions" class="carousel slide shadow-lg"
-            data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/bunner/laptop.png"
-                        class="bunner-img d-block w-100"
-                        alt="images/bunner/laptop.png">
-                    <div class="carousel-caption d-block">
-                        <h5 class="fw-bold display-4">Power & Precision</h5>
-                        <p class="lead">အလုပ်ခွင်မှာပဲဖြစ်ဖြစ်၊ Gaming
-                            မှာပဲဖြစ်ဖြစ် စွမ်းဆောင်ရည်အကောင်းဆုံး Laptop
-                            များ</p>
-                        <a href="#"
-                            class="btn btn-info rounded-pill px-4 fw-bold shadow">Shop
-                            Now</a>
                     </div>
                 </div>
 
-                <div class="carousel-item">
-                    <img src="images/bunner/applephone.png"
-                        class="bunner-img d-block w-100"
-                        alt="images/bunner/applephone.png">
-                    <div class="carousel-caption d-block">
-                        <h5 class="fw-bold display-4">The Future is Here</h5>
-                        <p class="lead">iPhone 16 Pro Max - Titanium Design နဲ့
-                            အမိုက်စား Camera နည်းပညာ</p>
-                        <a href="#"
-                            class="btn btn-light rounded-pill px-4 fw-bold">Explore
-                            More</a>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-laptop2.png" class="card-img-top p-3" alt="Acer"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">Acer Aspire 5</h6>
+                            <p class="small text-white-50 mb-2">AMD Ryzen 5 | 8GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,099$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-laptop-002"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 12px;"><i class="fa-solid fa-circle-info me-1"></i>Details</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="carousel-item">
-                    <img src="images/bunner/Screenshot 2026-02-15 013342.png"
-                        class="bunner-img d-block w-100"
-                        alt="images/bunner/Screenshot 2026-02-15 013342.png">
-                    <div class="carousel-caption d-block">
-                        <h5 class="fw-bold display-4">Best Deals Today</h5>
-                        <p class="lead">လူကြိုက်များတဲ့ Electronic
-                            ပစ္စည်းမျိုးစုံကို ဈေးနှုန်းချိုသာစွာဖြင့်
-                            တစ်နေရာတည်းမှာ ရရှိနိုင်ပါပြီ</p>
-                        <a href="#"
-                            class="btn btn-warning rounded-pill px-4 fw-bold">View
-                            Offers</a>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-laptop3.png" class="card-img-top p-3" alt="Dell"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">Dell Vostro 3510</h6>
+                            <p class="small text-white-50 mb-2">Intel Core i7 | 16GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,099$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-laptop-003"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 12px;"><i class="fa-solid fa-circle-info me-1"></i>Details</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-            </div>
-            <button class="carousel-control-prev" type="button"
-                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"
-                    aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button"
-                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon"
-                    aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- end bunner -->
-        <!--  -->
-        <!-- start promotion -->
-
-        <section class="py-5 bg-white">
-            <div class="container">
-                <div
-                    class="d-flex justify-content-between align-items-end mb-4">
-                    <div>
-                        <h3 class="fw-bold text-dark mb-0">Today's
-                            Promotions</h3>
-                        <p class="text-primary small mb-0">Special discounts for
-                            today only!</p>
-                    </div>
-                    <a href="#"
-                        class="text-primary text-decoration-none small view-all-link fw-bold fs-5">
-                        View All <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-laptop1.png"
-                                class="card-img-top p-3" alt="MacBook"
-                                style="height: 180px; object-fit: contain;">
-
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-laptop4.png" class="card-img-top p-3" alt="MSI"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">MSI Gaming GF63</h6>
+                            <p class="small text-white-50 mb-2">RTX 3050 | 8GB RAM</p>
                             <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">MacBook
-                                    Air M3</h6>
-                                <p class="small text-white-50 mb-2">Apple M3
-                                    Chip | 8GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,099$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-circle-info me-1"></i>
-                                        Details
-                                    </a>
-                                </div>
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,099$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-laptop2.png"
-                                class="card-img-top p-3" alt="MacBook"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">MacBook
-                                    Air M3</h6>
-                                <p class="small text-white-50 mb-2">Apple M3
-                                    Chip | 8GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,099$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-circle-info me-1"></i>
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-laptop3.png"
-                                class="card-img-top p-3" alt="MacBook"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">MacBook
-                                    Air M3</h6>
-                                <p class="small text-white-50 mb-2">Apple M3
-                                    Chip | 8GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,099$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-circle-info me-1"></i>
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-laptop4.png"
-                                class="card-img-top p-3" alt="MacBook"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">MacBook
-                                    Air M3</h6>
-                                <p class="small text-white-50 mb-2">Apple M3
-                                    Chip | 8GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,099$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-circle-info me-1"></i>
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#"
-                        class="text-primary text-decoration-none small view-all-link fw-bold fs-5 d-block text-end mt-5 mb-3">
-                        View All <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-10% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone1.png"
-                                class="card-img-top p-3" alt="iPhone 15 Pro Max"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">iPhone
-                                    15 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">A17 Pro Chip
-                                    | 256GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,199$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-10% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone2.png"
-                                class="card-img-top p-3" alt="Samsung S24 Ultra"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">
-                                    iPhone 17 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">Snapdragon 8
-                                    Gen 3</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,169$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone3.png"
-                                class="card-img-top p-3" alt="OPPO Find X7"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">OPPO
-                                    Find X7</h6>
-                                <p class="small text-white-50 mb-2">Dimensity
-                                    9300 | 12GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span class="text-info fw-bold">899$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">999$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-5% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone4.png"
-                                class="card-img-top p-3" alt="iPhone 15"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">
-                                    iPhone 17 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">A16 Bionic |
-                                    128GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,169$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
-                                        style="font-size: 12px;">
-                                        <i
-                                            class="fa-solid fa-cart-shopping me-1"></i>
-                                        Add
-                                    </button>
-
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- start porpular brands -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <div class="mb-4">
-                    <h3 class="fw-bold text-dark mb-1">Popular Brands</h3>
-                    <p class="text-secondary small">Top brands we have in our
-                        store</p>
-                </div>
-
-                <div
-                    class="row g-4 justify-content-center align-items-center text-center">
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <i
-                                    class="fa-brands fa-apple fa-3x text-dark"></i>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">Apple</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <i
-                                    class="fa-brands fa-samsung fa-3x text-primary"></i>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">Samsung</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <i
-                                    class="fa-solid fa-laptop-code fa-3x text-info"></i>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">Dell</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <span
-                                    class="h1 fw-bolder text-dark d-block mb-0"
-                                    style="line-height: 1;">SONY</span>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">Sony</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <span
-                                    class="h1 fw-bold text-primary d-block mb-0">hp</span>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">HP</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-4 col-md-2">
-                        <a href="#" class="brand-item text-decoration-none">
-                            <div
-                                class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                                <i
-                                    class="fa-solid fa-mobile-screen-button fa-3x text-warning"></i>
-                                <p
-                                    class="small fw-bold mt-2 mb-0 text-dark">Xiaomi</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<style>
-    .hover-up {
-        transition: transform 0.3s ease, shadow 0.3s ease;
-    }
-    .hover-up:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-    }
-    .brand-item i {
-        display: block;
-        margin-bottom: 5px;
-    }
-</style>
-<!-- end porpular brand -->
-
-        <section class="py-5 bg-white">
-            <div class="container">
-                <div
-                    class="d-flex justify-content-between align-items-end mb-4">
-                    <div>
-                        <h3 class="fw-bold text-dark mb-0">Latest
-                            Smartphones</h3>
-                        <p class="text-primary small mb-0">Upgrade to the newest
-                            technology today!</p>
-                    </div>
-                    <a href="#"
-                        class="text-primary text-decoration-none small view-all-link fw-bold fs-5">
-                        View All <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-10% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone1.png"
-                                class="card-img-top p-3" alt="iPhone 15 Pro Max"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">iPhone
-                                    15 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">A17 Pro Chip
-                                    | 256GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,199$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
-                                        style="font-size: 11px;">Add</button>
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-10% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone2.png"
-                                class="card-img-top p-3" alt="Samsung S24 Ultra"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">
-                                    iPhone 17 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">Snapdragon 8
-                                    Gen 3</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,169$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1,299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
-                                        style="font-size: 11px;">Add</button>
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-15% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone3.png"
-                                class="card-img-top p-3" alt="OPPO Find X7"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">OPPO
-                                    Find X7</h6>
-                                <p class="small text-white-50 mb-2">Dimensity
-                                    9300 | 12GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span class="text-info fw-bold">899$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">999$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
-                                        style="font-size: 11px;">Add</button>
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div
-                            class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
-                            <span
-                                class="badge bg-danger position-absolute mt-2 ms-2"
-                                style="z-index: 1;">-5% Off</span>
-                            <div class="wishlist-btn-custom"><i
-                                    class="fa-solid fa-heart"></i></div>
-
-                            <img src="images/promotion/pro-phone4.png"
-                                class="card-img-top p-3" alt="iPhone 15"
-                                style="height: 180px; object-fit: contain;">
-
-                            <div
-                                class="card-body p-3 pt-0 text-center text-md-start">
-                                <h6
-                                    class="text-white fw-bold mb-1 text-truncate">
-                                    iPhone 17 Pro Max</h6>
-                                <p class="small text-white-50 mb-2">A16 Bionic |
-                                    128GB</p>
-
-                                <div
-                                    class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-                                    <span
-                                        class="text-info fw-bold">1,169$</span>
-                                    <span
-                                        class="text-white-50 text-decoration-line-through small"
-                                        style="font-size: 11px;">1299$</span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <button
-                                        class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
-                                        style="font-size: 11px;">Add</button>
-                                    <a href="#"
-                                        class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
-                                        style="font-size: 11px;">
-                                        Details
-                                    </a>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-laptop-004"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 12px;"><i class="fa-solid fa-circle-info me-1"></i>Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- end promotion -->
+            <a href="#"
+                class="text-primary text-decoration-none small view-all-link fw-bold fs-5 d-block text-end mt-5 mb-3">
+                View All <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
 
-        <!--  -->
-        <!-- start service  -->
-
-        <section class="features-white-section py-5">
-            <div class="container py-4">
-                <div class="row g-4 text-center">
-
-                    <div class="col-md-3">
-                        <div class="feature-bold-card">
-                            <div class="icon-circle-bold">
-                                <i class="fa-solid fa-truck-fast"></i>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-phone1.png" class="card-img-top p-3" alt="iPhone 14 Plus"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">iPhone 14 Plus</h6>
+                            <p class="small text-white-50 mb-2">A15 Bionic | 128GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,199$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
                             </div>
-                            <h6 class="fw-bold text-white">Free Delivery</h6>
-                            <p class="text-white-50 small mb-0">မြို့တွင်း အခမဲ့
-                                ပို့ဆောင်ပေးခြင်း</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="feature-bold-card">
-                            <div class="icon-circle-bold">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <h6 class="fw-bold text-white">Official
-                                Warranty</h6>
-                            <p class="text-white-50 small mb-0">၁ နှစ် အာမခံ
-                                ပါဝင်မှု</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="feature-bold-card">
-                            <div class="icon-circle-bold">
-                                <i class="fa-solid fa-credit-card"></i>
-                            </div>
-                            <h6 class="fw-bold text-white">Secure Payment</h6>
-                            <p class="text-white-50 small mb-0">စိတ်ချရသော
-                                ငွေပေးချေမှု</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="feature-bold-card">
-                            <div class="icon-circle-bold">
-                                <i class="fa-solid fa-headset"></i>
-                            </div>
-                            <h6 class="fw-bold text-white">24/7 Support</h6>
-                            <p class="text-white-50 small mb-0">အချိန်မရွေး
-                                အကူအညီပေးရန်</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- end service  -->
-        <!--  -->
-        <!--start Customer Reviews -->
-
-        <section class="review-section py-5 bg-white">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold text-dark">ဝယ်သူများ၏ စကားသံများ</h2>
-                    <div class="gradient-line mx-auto"></div>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="review-card fw-bold">
-                            <div class="quote-icon"><i
-                                    class="fa-solid fa-quote-left"></i></div>
-                            <p
-                                class="review-text">"Laptop ဝယ်တာ ဝန်ဆောင်မှုရော ပစ္စည်းရော အရမ်းစိတ်တိုင်းကျပါတယ်။ Delivery လည်း တကယ်မြန်တယ်!"</p>
-                            <div class="user-info">
-                                <img src="https://i.pravatar.cc/150?img=1"
-                                    alt="User" class="user-img">
-                                <div>
-                                    <h6 class="mb-0 fw-bold">ကိုအောင်ကျော်</h6>
-                                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="review-card highlight">
-                            <div class="quote-icon text-white"><i
-                                    class="fa-solid fa-quote-left"></i></div>
-                            <p
-                                class="review-text text-white">"Official Warranty ပါတော့ စိတ်အေးရတယ်။ ဖုန်းကလည်း အသစ်စက်စက် လုံးဝ အထစ်အငေါ့မရှိဘူး။"</p>
-                            <div class="user-info border-white-50">
-                                <img src="https://i.pravatar.cc/150?img=2"
-                                    alt="User" class="user-img">
-                                <div>
-                                    <h6
-                                        class="mb-0 fw-bold text-white">မစုစုဝင်း</h6>
-                                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="review-card fw-bold">
-                            <div class="quote-icon"><i
-                                    class="fa-solid fa-quote-left"></i></div>
-                            <p
-                                class="review-text">"ဈေးနှုန်းက တခြားဆိုင်တွေထက် ပိုတန်သလိုပဲ။ အာမခံကိစ္စတွေလည်း သေချာရှင်းပြပေးလို့ ကျေးဇူးပါ။"</p>
-                            <div class="user-info">
-                                <img src="https://i.pravatar.cc/150?img=3"
-                                    alt="User" class="user-img">
-                                <div>
-                                    <h6 class="mb-0 fw-bold">ကိုမင်းမင်း</h6>
-                                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                                </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-phone-001"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">Details</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- end customer Reviews -->
-        <!--  -->
-        <!-- start login -->
-        <div class="modal fade" id="loginModal" tabindex="-1"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-dark text-white border-secondary">
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title fw-bold">Login to ZG</h5>
-                        <button type="button" class="btn-close btn-close-white"
-                            data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-4">
-
-                        <form class="needs-validation" novalidate>
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Email
-                                    Address</label>
-                                <input type="email"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="name@example.com" required>
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">Email
-                                    ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-phone2.png" class="card-img-top p-3" alt="S24 Ultra"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">iPhone 17 Pro Max</h6>
+                            <p class="small text-white-50 mb-2">Snapdragon 8 Gen 3</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,169$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
                             </div>
-
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Password</label>
-                                <input type="password"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="Enter password" required>
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">Password
-                                    ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-phone-002"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">Details</a>
                             </div>
-
-                            <div class="d-flex justify-content-between mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                        type="checkbox" id="remember">
-                                    <label class="form-check-label small"
-                                        for="remember">Remember me</label>
-                                </div>
-                                <a href="#"
-                                    class="text-info small text-decoration-none">Forgot
-                                    Password?</a>
-                            </div>
-
-                            <button type="submit"
-                                class="btn btn-info w-100 fw-bold py-2 rounded-pill">Login</button>
-                        </form>
-
-                        <div class="text-center mt-4">
-                            <p class="small text-secondary">
-                                Don't have an account?
-                                <a href="#"
-                                    class="text-info text-decoration-none"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#signUpModal"
-                                    data-bs-dismiss="modal">Sign Up</a></p>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </div>
 
-        <div class="modal fade" id="signUpModal" tabindex="-1"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content bg-dark text-white border-secondary">
-                    <div class="modal-header border-0">
-                        <h5 class="modal-title fw-bold">Create Account</h5>
-                        <button type="button" class="btn-close btn-close-white"
-                            data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-phone3.png" class="card-img-top p-3" alt="OPPO"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">OPPO Reno11 Pro</h6>
+                            <p class="small text-white-50 mb-2">Dimensity 8200 | 12GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">899$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">999$</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-phone-003"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">Details</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body p-4">
+                </div>
 
-                        <form class="needs-validation" novalidate>
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Full
-                                    Name</label>
-                                <input type="text"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="Enter your name" required>
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">နာမည်ဖြည့်ရန်
-                                    လိုအပ်ပါသည်။</div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-5% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+                        <img src="images/promotion/pro-phone4.png" class="card-img-top p-3" alt="iPhone 15 Pro Max"
+                            style="height: 180px; object-fit: contain;">
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">iPhone 17 Pro Max</h6>
+                            <p class="small text-white-50 mb-2">A17 Pro Chip | 256GB</p>
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,169$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1299$</span>
                             </div>
-
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Email
-                                    Address</label>
-                                <input type="email"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="name@example.com" required>
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">Email မှန်ကန်စွာ
-                                    ဖြည့်ပေးပါ။</div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2 shadow-sm"
+                                    style="font-size: 12px;"><i class="fa-solid fa-cart-shopping me-1"></i>Add</button>
+                                <a href="product-detail.html?id=pro-phone-004"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">Details</a>
                             </div>
-
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Phone
-                                    Number</label>
-                                <input type="tel"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="09xxxxxxxxx" required>
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">ဖုန်းနံပါတ်
-                                    ဖြည့်ပေးပါ။</div>
-                            </div>
-
-                            <div class="mb-3 text-start">
-                                <label
-                                    class="form-label small text-secondary">Password</label>
-                                <input type="password"
-                                    class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
-                                    placeholder="Create password" required
-                                    minlength="6">
-                                <div class="invalid-feedback"
-                                    style="font-size: 11px;">Password အနည်းဆုံး
-                                    ၆ လုံး ဖြည့်ပေးပါ။</div>
-                            </div>
-
-                            <div class="mb-4">
-                                <p class="small text-secondary"
-                                    style="font-size: 11px;">
-                                    By signing up, you agree to our <a href="#"
-                                        class="text-info">Terms &
-                                        Conditions</a>.
-                                </p>
-                            </div>
-
-                            <button type="submit"
-                                class="btn btn-info w-100 fw-bold py-2 rounded-pill">Create
-                                Account</button>
-                        </form>
-
-                        <div class="text-center mt-4">
-                            <p class="small text-secondary">Already have an
-                                account?
-                                <a href="#"
-                                    class="text-info text-decoration-none"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#loginModal"
-                                    data-bs-dismiss="modal">Login Here</a>
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <script>
-// Bootstrap Validation Script
-(function () {
-  'use strict'
-  var forms = document.querySelectorAll('.needs-validation')
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+
+
+    <!-- start porpular brands -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="mb-4">
+                <h3 class="fw-bold text-dark mb-1">Popular Brands</h3>
+                <p class="text-secondary small">Top brands we have in our
+                    store</p>
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-center text-center">
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <i class="fa-brands fa-apple fa-3x text-dark"></i>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">Apple</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <i class="fa-brands fa-samsung fa-3x text-primary"></i>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">Samsung</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <i class="fa-solid fa-laptop-code fa-3x text-info"></i>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">Dell</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <span class="h1 fw-bolder text-dark d-block mb-0" style="line-height: 1;">SONY</span>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">Sony</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <span class="h1 fw-bold text-primary d-block mb-0">hp</span>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">HP</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-2">
+                    <a href="#" class="brand-item text-decoration-none">
+                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
+                            <i class="fa-solid fa-mobile-screen-button fa-3x text-warning"></i>
+                            <p class="small fw-bold mt-2 mb-0 text-dark">Xiaomi</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .hover-up {
+            transition: transform 0.3s ease, shadow 0.3s ease;
         }
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-</script>
 
-        <!-- end login -->
-        <!--  -->
-        <!-- start footer -->
+        .hover-up:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
 
-        <footer class="main-footer">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <h2 class="fw-black text-white mb-3">TECH<span
-                                class="gradient-text">STORE</span></h2>
-                        <p class="text-white-50 mb-4">
-                            မြန်မာနိုင်ငံ၏ အကောင်းဆုံးနှင့် အစုံလင်ဆုံး Tech
-                            Gadgets များကို တစ်နေရာတည်းတွင် စိတ်ချယုံကြည်စွာ
-                            ဝယ်ယူရရှိနိုင်ပါသည်။
-                        </p>
-                        <div class="footer-socials d-flex gap-3">
-                            <a href="#" class="s-link"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="s-link"><i
-                                    class="fa-brands fa-viber"></i></a>
-                            <a href="#" class="s-link"><i
-                                    class="fa-brands fa-telegram"></i></a>
-                            <a href="#" class="s-link"><i
-                                    class="fa-brands fa-tiktok"></i></a>
-                        </div>
-                    </div>
+        .brand-item i {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+    <!-- end porpular brand -->
 
-                    <div class="col-lg-2 col-md-6 ps-lg-5">
-                        <h6 class="fw-bold text-white text-uppercase mb-4">Quick
-                            Links</h6>
-                        <ul class="list-unstyled footer-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">Smartphones</a></li>
-                            <li><a href="#">Promotion</a></li>
-                        </ul>
-                    </div>
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h3 class="fw-bold text-dark mb-0">Latest
+                        Smartphones</h3>
+                    <p class="text-primary small mb-0">Upgrade to the newest
+                        technology today!</p>
+                </div>
+                <a href="#" class="text-primary text-decoration-none small view-all-link fw-bold fs-5">
+                    View All <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <h6 class="fw-bold text-white text-uppercase mb-4">Store
-                            Info</h6>
-                        <div class="contact-box">
-                            <p class="text-white-50 small mb-3">
-                                <i
-                                    class="fa-solid fa-location-dot me-2 text-info"></i>
-                                လမ်း ၃၀၊ ရန်ကုန်မြို့။
-                            </p>
-                            <a href="tel:09123456789" class="call-action-card">
-                                <div class="icon-pulse">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <span
-                                        class="d-block text-white-50 small">ဖုန်းဖြင့်ဆက်သွယ်ရန်</span>
-                                    <span class="fw-bold text-white fs-5">09 123
-                                        456 789</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <h6
-                            class="fw-bold text-white text-uppercase mb-4">Subscribe</h6>
-                        <p class="text-white-50 small mb-3">Email ရိုက်ထည့်ပြီး
-                            Promotion များရယူပါ။</p>
-                        <div class="sub-input-group">
-                            <input type="email" placeholder="Email Address..."
-                                class="form-control bg-transparent text-white border-0 shadow-none">
-                            <button class="btn-gradient">JOIN</button>
-                        </div>
-                        <div class="mt-3">
-                            <i class="fa-solid fa-envelope text-info me-2"></i>
-                            <span
-                                class="text-white-50 small">info@techstore.com</span>
+                        <img src="images/promotion/pro-phone1.png" class="card-img-top p-3" alt="iPhone 15 Pro Max"
+                            style="height: 180px; object-fit: contain;">
+
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">iPhone
+                                15 Pro Max</h6>
+                            <p class="small text-white-50 mb-2">A17 Pro Chip
+                                | 256GB</p>
+
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,199$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
+                                    style="font-size: 11px;">Add</button>
+                                <a href="#"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">
+                                    Details
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <hr class="my-5 border-secondary opacity-25">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
 
-                <div class="text-center">
-                    <p class="small text-white-50 mb-0">© 2026 TECH STORE.
-                        Crafted with Passion by <span
-                            class="text-white fw-bold">ZG</span></p>
+                        <img src="images/promotion/pro-phone2.png" class="card-img-top p-3" alt="Samsung S24 Ultra"
+                            style="height: 180px; object-fit: contain;">
+
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">
+                                iPhone 17 Pro Max</h6>
+                            <p class="small text-white-50 mb-2">Snapdragon 8
+                                Gen 3</p>
+
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,169$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1,299$</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
+                                    style="font-size: 11px;">Add</button>
+                                <a href="#"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+
+                        <img src="images/promotion/pro-phone3.png" class="card-img-top p-3" alt="OPPO Find X7"
+                            style="height: 180px; object-fit: contain;">
+
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">OPPO
+                                Find X7</h6>
+                            <p class="small text-white-50 mb-2">Dimensity
+                                9300 | 12GB</p>
+
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">899$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">999$</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
+                                    style="font-size: 11px;">Add</button>
+                                <a href="#"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div
+                        class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
+                        <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-5% Off</span>
+                        <div class="wishlist-btn-custom"><i class="fa-solid fa-heart"></i></div>
+
+                        <img src="images/promotion/pro-phone4.png" class="card-img-top p-3" alt="iPhone 15"
+                            style="height: 180px; object-fit: contain;">
+
+                        <div class="card-body p-3 pt-0 text-center text-md-start">
+                            <h6 class="text-white fw-bold mb-1 text-truncate">
+                                iPhone 17 Pro Max</h6>
+                            <p class="small text-white-50 mb-2">A16 Bionic |
+                                128GB</p>
+
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+                                <span class="text-info fw-bold">1,169$</span>
+                                <span class="text-white-50 text-decoration-line-through small"
+                                    style="font-size: 11px;">1299$</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info btn-sm flex-grow-1 rounded-pill fw-bold py-2"
+                                    style="font-size: 11px;">Add</button>
+                                <a href="#"
+                                    class="btn btn-outline-light btn-sm flex-grow-1 rounded-pill fw-bold py-2 d-flex align-items-center justify-content-center"
+                                    style="font-size: 11px;">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <!-- end footer -->
+    <!-- end promotion -->
 
-    </body>
+    <!--  -->
+    <!-- start service  -->
+
+    <section class="features-white-section py-5">
+        <div class="container py-4">
+            <div class="row g-4 text-center">
+
+                <div class="col-md-3">
+                    <div class="feature-bold-card">
+                        <div class="icon-circle-bold">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h6 class="fw-bold text-white">Free Delivery</h6>
+                        <p class="text-white-50 small mb-0">မြို့တွင်း အခမဲ့
+                            ပို့ဆောင်ပေးခြင်း</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-bold-card">
+                        <div class="icon-circle-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h6 class="fw-bold text-white">Official
+                            Warranty</h6>
+                        <p class="text-white-50 small mb-0">၁ နှစ် အာမခံ
+                            ပါဝင်မှု</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-bold-card">
+                        <div class="icon-circle-bold">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <h6 class="fw-bold text-white">Secure Payment</h6>
+                        <p class="text-white-50 small mb-0">စိတ်ချရသော
+                            ငွေပေးချေမှု</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="feature-bold-card">
+                        <div class="icon-circle-bold">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h6 class="fw-bold text-white">24/7 Support</h6>
+                        <p class="text-white-50 small mb-0">အချိန်မရွေး
+                            အကူအညီပေးရန်</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- end service  -->
+    <!--  -->
+    <!--start Customer Reviews -->
+
+    <section class="review-section py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark">ဝယ်သူများ၏ စကားသံများ</h2>
+                <div class="gradient-line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="review-card fw-bold">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="review-text">"Laptop ဝယ်တာ ဝန်ဆောင်မှုရော ပစ္စည်းရော အရမ်းစိတ်တိုင်းကျပါတယ်။ Delivery
+                            လည်း တကယ်မြန်တယ်!"</p>
+                        <div class="user-info">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="User" class="user-img">
+                            <div>
+                                <h6 class="mb-0 fw-bold">ကိုအောင်ကျော်</h6>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review-card highlight">
+                        <div class="quote-icon text-white"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="review-text text-white">"Official Warranty ပါတော့ စိတ်အေးရတယ်။ ဖုန်းကလည်း အသစ်စက်စက်
+                            လုံးဝ အထစ်အငေါ့မရှိဘူး။"</p>
+                        <div class="user-info border-white-50">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="User" class="user-img">
+                            <div>
+                                <h6 class="mb-0 fw-bold text-white">မစုစုဝင်း</h6>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="review-card fw-bold">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="review-text">"ဈေးနှုန်းက တခြားဆိုင်တွေထက် ပိုတန်သလိုပဲ။ အာမခံကိစ္စတွေလည်း
+                            သေချာရှင်းပြပေးလို့ ကျေးဇူးပါ။"</p>
+                        <div class="user-info">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="User" class="user-img">
+                            <div>
+                                <h6 class="mb-0 fw-bold">ကိုမင်းမင်း</h6>
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end customer Reviews -->
+    <!--  -->
+    <!-- start login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Login to ZG</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter password" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Password
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label small" for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="text-info small text-decoration-none">Forgot
+                                Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Login</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-secondary">
+                            Don't have an account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Create Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Full
+                                Name</label>
+                            <input type="text"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter your name" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">နာမည်ဖြည့်ရန်
+                                လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email မှန်ကန်စွာ
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Phone
+                                Number</label>
+                            <input type="tel"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="09xxxxxxxxx" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">ဖုန်းနံပါတ်
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-secondary">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Create password" required minlength="6">
+                            <div class="invalid-feedback" style="font-size: 11px;">Password အနည်းဆုံး
+                                ၆ လုံး ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="small text-secondary" style="font-size: 11px;">
+                                By signing up, you agree to our <a href="#" class="text-info">Terms &
+                                    Conditions</a>.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Create
+                            Account</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-secondary">Already have an
+                            account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" data-bs-dismiss="modal">Login Here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Bootstrap Validation Script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+    <!-- end login -->
+    <!--  -->
+    <!-- start footer -->
+
+    <footer class="main-footer">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h2 class="fw-black text-white mb-3">TECH<span class="gradient-text">STORE</span></h2>
+                    <p class="text-white-50 mb-4">
+                        မြန်မာနိုင်ငံ၏ အကောင်းဆုံးနှင့် အစုံလင်ဆုံး Tech
+                        Gadgets များကို တစ်နေရာတည်းတွင် စိတ်ချယုံကြည်စွာ
+                        ဝယ်ယူရရှိနိုင်ပါသည်။
+                    </p>
+                    <div class="footer-socials d-flex gap-3">
+                        <a href="#" class="s-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="s-link"><i class="fa-brands fa-viber"></i></a>
+                        <a href="#" class="s-link"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="s-link"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 ps-lg-5">
+                    <h6 class="fw-bold text-white text-uppercase mb-4">Quick
+                        Links</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Promotion</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white text-uppercase mb-4">Store
+                        Info</h6>
+                    <div class="contact-box">
+                        <p class="text-white-50 small mb-3">
+                            <i class="fa-solid fa-location-dot me-2 text-info"></i>
+                            လမ်း ၃၀၊ ရန်ကုန်မြို့။
+                        </p>
+                        <a href="tel:09123456789" class="call-action-card">
+                            <div class="icon-pulse">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-white-50 small">ဖုန်းဖြင့်ဆက်သွယ်ရန်</span>
+                                <span class="fw-bold text-white fs-5">09 123
+                                    456 789</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white text-uppercase mb-4">Subscribe</h6>
+                    <p class="text-white-50 small mb-3">Email ရိုက်ထည့်ပြီး
+                        Promotion များရယူပါ။</p>
+                    <div class="sub-input-group">
+                        <input type="email" placeholder="Email Address..."
+                            class="form-control bg-transparent text-white border-0 shadow-none">
+                        <button class="btn-gradient">JOIN</button>
+                    </div>
+                    <div class="mt-3">
+                        <i class="fa-solid fa-envelope text-info me-2"></i>
+                        <span class="text-white-50 small">info@techstore.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5 border-secondary opacity-25">
+
+            <div class="text-center">
+                <p class="small text-white-50 mb-0">© 2026 TECH STORE.
+                    Crafted with Passion by <span class="text-white fw-bold">ZG</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end footer -->
+
+</body>
+
 </html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zin Gyi Tech Store</title>
+
+    <link rel="icon" href="images/logo.png">
+    <meta name="description"
+        content="Zin Gyi Tech Store is a shop that sell electronic device such as phones, laptops, tablets and other devices.">
+    <meta name="keywords"
+        content="Zin Gyi Tech Store, Tech Store, Electronic shop, Zin Gyi , phones, Laptops, tablets, online shopping.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="EN">
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .checkout-card {
+            border-radius: 20px;
+            border: none;
+        }
+
+        .product-box {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card checkout-card shadow-lg p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h1 class="text-success fw-bold">Order Checkout</h1>
+                        <p class="text-muted">မိတ်ဆွေ ဝယ်ယူချင်တဲ့ ပစ္စည်းအတွက် အချက်အလက်ဖြည့်စွက်ပေးပါ။</p>
+                    </div>
+
+                    <div id="checkout-item">
+                        <div class="text-center p-3">
+                            <div class="spinner-border text-primary spinner-border-sm"></div>
+                            <p class="small">ခဏစောင့်ပေးပါ မိတ်ဆွေ...</p>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div id="order-form">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Phone Number</label>
+                            <input type="text" id="user-phone" class="form-control form-control-lg"
+                                placeholder="09xxxxxxxxx">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Delivery Address</label>
+                            <textarea id="user-address" class="form-control" rows="3"
+                                placeholder="အိမ်အမှတ်၊ လမ်း၊ မြို့နယ်..."></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success btn-lg py-3 fw-bold shadow-sm" onclick="orderDone()">
+                                <i class="fas fa-check-circle me-2"></i> Confirm Order
+                            </button>
+                            <button class="btn btn-link text-decoration-none text-muted mt-2"
+                                onclick="location.href='index.html'">
+                                <i class="fas fa-arrow-left me-1"></i> Back to Home
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ၁။ Product စာရင်း (Detail page က အတိုင်းပဲ ဖြစ်ရမယ်)
+        const products = {
+            "pro-laptop-001": { name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png" },
+            "pro-laptop-002": { name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png" },
+            "pro-laptop-003": { name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png" },
+            "pro-laptop-004": { name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png" },
+            "pro-phone-001": { name: "iPhone 15 Pro Max", price: "1,199$", img: "images/promotion/pro-phone1.png" },
+            "pro-phone-002": { name: "iPhone 17 Pro Max", price: "1,169$", img: "images/promotion/pro-phone2.png" },
+            "pro-phone-003": { name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png" },
+            "pro-phone-004": { name: "iPhone 17 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png" }
+
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const checkoutDiv = document.getElementById('checkout-item');
+        const item = products[id];
+
+        if (item) {
+            checkoutDiv.innerHTML = `
+                <div class="product-box d-flex align-items-center p-3 shadow-sm">
+                    <img src="${item.img}" width="80" class="rounded me-3 border">
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">${item.name}</h6>
+                        <span class="text-primary fw-bold">${item.price}</span>
+                    </div>
+                </div>
+            `;
+        } else {
+            checkoutDiv.innerHTML = `
+                <div class="alert alert-danger text-center">
+                    <i class="fas fa-exclamation-triangle me-2"></i> ပစ္စည်းအချက်အလက် မတွေ့ပါဘူး မိတ်ဆွေ။
+                </div>`;
+            document.getElementById('order-form').style.display = 'none'; // ပစ္စည်းမရှိရင် Form ဖျောက်ထားမယ်
+        }
+
+        // ၂။ အချက်အလက်စစ်ဆေးပြီး Order တင်ခြင်း
+        function orderDone() {
+            const phone = document.getElementById('user-phone').value.trim();
+            const address = document.getElementById('user-address').value.trim();
+
+            if (phone === "" || address === "") {
+                alert("မိတ်ဆွေ... ဖုန်းနံပါတ်နှင့် လိပ်စာကို ပြည့်စုံစွာ ဖြည့်စွက်ပေးပါ။");
+                return;
+            }
+
+            // အောင်မြင်လျှင်
+            alert("Order တင်တာ အောင်မြင်ပါတယ် မိတ်ဆွေ! မကြာခင် ဆက်သွယ်ပေးပါမယ်။");
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

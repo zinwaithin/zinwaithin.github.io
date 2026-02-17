@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zin Gyi Tech Store</title>
+    <link rel="icon" href="images/logo.png">
+
+    <meta name="description"
+        content="Zin Gyi Tech Store is a shop that sell electronic device such as phones, laptops, tablets and other devices.">
+    <meta name="keywords"
+        content="Zin Gyi Tech Store, Tech Store, Electronic shop, Zin Gyi , phones, Laptops, tablets, online shopping.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="EN">
+
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        /* ပုံကို Zoom ဆွဲသည့် Effect */
+        .main-img-container {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            overflow: hidden;
+            /* ပုံကြီးလာလျှင် ဘောင်ကျော်မထွက်စေရန် */
+            cursor: zoom-in;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+        }
+
+        #main-img {
+            transition: transform 0.5s ease;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .main-img-container:hover #main-img {
+            transform: scale(1.5);
+            /* ၁.၅ ဆ ပိုကြီးလာမည် */
+        }
+
+        .btn-buy {
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div id="detail-content" class="detail-card animate__animated animate__fadeIn">
+            <div class="text-center p-5">
+                <div class="spinner-border text-primary mb-3"></div>
+                <p>ခဏစောင့်ပေးပါ မိတ်ဆွေ...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const products = {
+            // --- Laptops Section (ပုံ ၃ အရ အမှန်ပြင်ထားသည်) ---
+            "pro-laptop-001": {
+                name: "ASUS VivoBook 15",
+                price: "1,099$",
+                img: "images/promotion/pro-laptop1.png",
+                specs: { "Brand": "ASUS", "Display": "15.6 inch FHD", "CPU": "Intel Core i5" }
+            },
+            "pro-laptop-002": {
+                name: "Acer Aspire 5",
+                price: "1,099$",
+                img: "images/promotion/pro-laptop2.png",
+                specs: { "Brand": "Acer", "RAM": "8GB DDR4", "Storage": "512GB SSD" }
+            },
+            "pro-laptop-003": {
+                name: "Dell Vostro 3510",
+                price: "1,099$",
+                img: "images/promotion/pro-laptop3.png",
+                specs: { "Brand": "Dell", "CPU": "Intel Core i7", "RAM": "16GB" }
+            },
+            "pro-laptop-004": {
+                name: "MSI Gaming GF63",
+                price: "1,099$",
+                img: "images/promotion/pro-laptop4.png",
+                specs: { "Type": "Gaming", "GPU": "NVIDIA RTX 3050", "Keyboard": "Red Backlit" }
+            },
+
+            // --- Phones Section (ပုံ ၄ အရ အမှန်ပြင်ထားသည်) ---
+            "pro-phone-001": {
+                name: "iPhone 14 Plus",
+                price: "1,199$",
+                img: "images/promotion/pro-phone1.png",
+                specs: { "Chip": "A15 Bionic", "Display": "6.7 inch", "Camera": "12MP Dual" }
+            },
+            "pro-phone-002": {
+                name: "Samsung Galaxy S24 Ultra",
+                price: "1,169$",
+                img: "images/promotion/pro-phone2.png",
+                specs: { "Chip": "Snapdragon 8 Gen 3", "RAM": "12GB", "Camera": "200MP" }
+            },
+            "pro-phone-003": {
+                name: "OPPO Reno11 Pro",
+                price: "899$",
+                img: "images/promotion/pro-phone3.png",
+                specs: { "Chip": "Dimensity 8200", "RAM": "12GB", "Battery": "4600mAh" }
+            },
+            "pro-phone-004": {
+                name: "iPhone 15 Pro Max",
+                price: "1,169$",
+                img: "images/promotion/pro-phone4.png",
+                specs: { "Chip": "A17 Pro", "RAM": "8GB", "Camera": "48MP Main" }
+            }
+        };
+
+
+        // ... အပေါ်က products object တွေအတိုင်း ထားပါ ...
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const id = urlParams.get('id')?.trim();
+
+        const contentDiv = document.getElementById('detail-content');
+        const item = products[id];
+
+        if (item) {
+            let specHTML = "";
+            for (let key in item.specs) {
+                specHTML += `<div class="d-flex justify-content-between border-bottom py-2">
+                        <span class="text-muted">${key}</span>
+                        <span class="fw-bold">${item.specs[key]}</span>
+                     </div>`;
+            }
+
+            contentDiv.innerHTML = `
+        <div class="row g-0">
+            <div class="col-md-6 p-4">
+                <div class="main-img-container shadow-sm">
+                    <img id="main-img" src="${item.img}" class="img-fluid animate__animated animate__zoomIn">
+                </div>
+            </div>
+
+            <div class="col-md-6 p-5">
+                <div class="ps-md-2">
+                    <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">HOT DEAL</span>
+                    <h1 class="fw-bold text-dark mb-2">${item.name}</h1>
+                    <h2 class="text-primary fw-bold mb-4">${item.price}</h2>
+                    
+                    <div class="p-4 bg-light rounded-4 mb-4">
+                        <h6 class="fw-bold border-bottom pb-2 mb-3"><i class="fas fa-list me-2"></i>Specifications</h6>
+                        <div class="mt-2 small">
+                            ${specHTML}
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <button onclick="addToCart()" class="btn btn-outline-primary w-100 py-3 rounded-3 fw-bold btn-buy">
+                                <i class="fas fa-shopping-cart me-2"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button onclick="buyNow('${id}')" class="btn btn-primary w-100 py-3 rounded-3 fw-bold btn-buy">
+                                <i class="fas fa-bolt me-2"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+
+        } else {
+            contentDiv.innerHTML = `
+                <div class="p-5 text-center">
+                    <h2 class="text-danger">Product Not Found!</h2>
+                    <p>ID: <b>${id}</b> ကို ရှာမတွေ့ပါဘူး မိတ်ဆွေ။</p>
+                    <a href="index.html" class="btn btn-dark mt-3 px-4 rounded-pill">Back to Home</a>
+                </div>`;
+        }
+
+        function addToCart() {
+            alert("ပစ္စည်းကို ခြင်းတောင်းထဲ ထည့်လိုက်ပါပြီ မိတ်ဆွေ!");
+        }
+
+        function buyNow(productId) {
+            window.location.href = `checkout.html?id=${productId}`;
+        }
+    </script>
+</body>
+
+</html>
