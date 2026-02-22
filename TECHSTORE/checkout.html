@@ -85,20 +85,71 @@
         </div>
     </div>
 
+
     <script>
-        // ၁။ Product စာရင်း (Detail page က အတိုင်းပဲ ဖြစ်ရမယ်)
-        const products = {
-            "pro-laptop-001": { name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png" },
-            "pro-laptop-002": { name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png" },
-            "pro-laptop-003": { name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png" },
-            "pro-laptop-004": { name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png" },
-            "pro-phone-001": { name: "iPhone 15 Pro Max", price: "1,199$", img: "images/promotion/pro-phone1.png" },
-            "pro-phone-002": { name: "iPhone 17 Pro Max", price: "1,169$", img: "images/promotion/pro-phone2.png" },
-            "pro-phone-003": { name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png" },
-            "pro-phone-004": { name: "iPhone 17 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png" }
+    // ၁။ Product စာရင်း (Detail page က အတိုင်း ၂၈ လုံး + ၁၆ လုံး အပြည့်ထည့်ထားသည်)
+    const products = {
+        // Promotion Items
+        "pro-laptop-001": { name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png" },
+        "pro-laptop-002": { name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png" },
+        "pro-laptop-003": { name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png" },
+        "pro-laptop-004": { name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png" },
+        "pro-phone-001": { name: "iPhone 14 Plus", price: "1,199$", img: "images/promotion/pro-phone1.png" },
+        "pro-phone-002": { name: "Samsung Galaxy S24 Ultra", price: "1,169$", img: "images/promotion/pro-phone2.png" },
+        "pro-phone-003": { name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png" },
+        "pro-phone-004": { name: "iPhone 15 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png" },
 
-        };
+        // Laptops (lp1 - lp28)
+        "lp1": { name: "MacBook Air M1", price: "950$", img: "images/product/laptop1.png" },
+        "lp2": { name: "Lenovo Yoga 7i", price: "1,150$", img: "images/product/laptop2.png" },
+        "lp3": { name: "Acer Swift X 14", price: "950$", img: "images/product/laptop3.png" },
+        "lp4": { name: "HP Pavilion Gaming", price: "1,080$", img: "images/product/laptop4.png" },
+        "lp5": { name: "ASUS Zenbook 14", price: "1,200$", img: "images/product/laptop5.png" },
+        "lp6": { name: "Dell XPS 13", price: "1,450$", img: "images/product/laptop6.png" },
+        "lp7": { name: "MSI Modern 14", price: "650$", img: "images/product/laptop7.png" },
+        "lp8": { name: "Dell Latitude 5440", price: "890$", img: "images/product/laptop8.png" },
+        "lp9": { name: "Acer Aspire 7", price: "790$", img: "images/product/laptop9.png" },
+        "lp10": { name: "Lenovo IdeaPad 3", price: "550$", img: "images/product/laptop10.png" },
+        "lp11": { name: "HP Victus 15", price: "850$", img: "images/product/laptop11.png" },
+        "lp12": { name: "ASUS ROG Zephyrus", price: "1,600$", img: "images/product/laptop12.png" },
+        "lp13": { name: "Microsoft Surface Pro 9", price: "1,100$", img: "images/product/laptop13.png" },
+        "lp14": { name: "Razer Blade 15", price: "2,400$", img: "images/product/laptop14.png" },
+        "lp15": { name: "Samsung Galaxy Book 3", price: "1,300$", img: "images/product/laptop15.png" },
+        "lp16": { name: "LG Gram 17", price: "1,500$", img: "images/product/laptop16.png" },
+        "lp17": { name: "MacBook Air M2", price: "1,099$", img: "images/product/laptop17.png" },
+        "lp18": { name: "MacBook Pro M3 Max", price: "3,199$", img: "images/product/laptop18.png" },
+        "lp19": { name: "GIGABYTE G5", price: "900$", img: "images/product/laptop19.png" },
+        "lp20": { name: "Lenovo ThinkPad X1", price: "1,700$", img: "images/product/laptop20.png" },
+        "lp21": { name: "Huawei MateBook D15", price: "600$", img: "images/product/laptop21.png" },
+        "lp22": { name: "Dell Vostro 3510", price: "720$", img: "images/product/laptop22.png" },
+        "lp23": { name: "ASUS VivoBook S15", price: "880$", img: "images/product/laptop23.png" },
+        "lp24": { name: "Acer Predator Helios", price: "1,400$", img: "images/product/laptop24.png" },
+        "lp25": { name: "HP Envy x360", price: "980$", img: "images/product/laptop25.png" },
+        "lp26": { name: "MSI Katana GF66", price: "1,050$", img: "images/product/laptop26.png" },
+        "lp27": { name: "Apple MacBook Pro 14", price: "1,999$", img: "images/product/laptop27.png" },
+        "lp28": { name: "Lenovo Legion 5", price: "1,250$", img: "images/product/laptop28.png" },
 
+        // Phones (ph1 - ph16)
+        "ph1": { name: "iPhone 15 Pro Max", price: "1,350$", img: "images/product/phone1.png" },
+        "ph2": { name: "Samsung S24 Ultra", price: "1,200$", img: "images/product/phone2.png" },
+        "ph3": { name: "Google Pixel 8 Pro", price: "950$", img: "images/product/phone3.png" },
+        "ph4": { name: "OnePlus 12", price: "800$", img: "images/product/phone4.png" },
+        "ph5": { name: "Xiaomi 14 Ultra", price: "1,100$", img: "images/product/phone5.png" },
+        "ph6": { name: "Sony Xperia 1 V", price: "1,050$", img: "images/product/phone6.png" },
+        "ph7": { name: "Oppo Reno 11 Pro", price: "600$", img: "images/product/phone7.png" },
+        "ph8": { name: "Vivo X100 Pro", price: "900$", img: "images/product/phone8.png" },
+        "ph9": { name: "Asus ROG Phone 8", price: "1,000$", img: "images/product/phone9.png" },
+        "ph10": { name: "Samsung Z Fold 5", price: "1,799$", img: "images/product/phone10.png" },
+        "ph11": { name: "Samsung Z Flip 5", price: "950$", img: "images/product/phone11.png" },
+        "ph12": { name: "Nothing Phone (2)", price: "650$", img: "images/product/phone12.png" },
+        "ph13": { name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png" },
+        "ph14": { name: "Realme GT 5", price: "550$", img: "images/product/phone14.png" },
+        "ph15": { name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png" },
+        "ph16": { name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png" }
+    };
+
+    // ၂။ URL ကနေ ID ဖတ်ပြီး UI ထုတ်ခြင်း
+    window.onload = function() {
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
         const checkoutDiv = document.getElementById('checkout-item');
@@ -106,7 +157,7 @@
 
         if (item) {
             checkoutDiv.innerHTML = `
-                <div class="product-box d-flex align-items-center p-3 shadow-sm">
+                <div class="product-box d-flex align-items-center p-3 shadow-sm animate__animated animate__fadeIn">
                     <img src="${item.img}" width="80" class="rounded me-3 border">
                     <div>
                         <h6 class="fw-bold mb-1 text-dark">${item.name}</h6>
@@ -117,26 +168,28 @@
         } else {
             checkoutDiv.innerHTML = `
                 <div class="alert alert-danger text-center">
-                    <i class="fas fa-exclamation-triangle me-2"></i> ပစ္စည်းအချက်အလက် မတွေ့ပါဘူး မိတ်ဆွေ။
+                    <i class="fas fa-exclamation-triangle me-2"></i> ပစ္စည်းအချက်အလက် မတွေ့ပါဘူး မိတ်ဆွေ။ (ID: ${id})
                 </div>`;
-            document.getElementById('order-form').style.display = 'none'; // ပစ္စည်းမရှိရင် Form ဖျောက်ထားမယ်
+            document.getElementById('order-form').style.display = 'none';
+        }
+    };
+
+    // ၃။ Order တင်ခြင်း Function
+    function orderDone() {
+        const phone = document.getElementById('user-phone').value.trim();
+        const address = document.getElementById('user-address').value.trim();
+
+        if (phone === "" || address === "") {
+            alert("မိတ်ဆွေ... ဖုန်းနံပါတ်နှင့် လိပ်စာကို ပြည့်စုံစွာ ဖြည့်စွက်ပေးပါ။");
+            return;
         }
 
-        // ၂။ အချက်အလက်စစ်ဆေးပြီး Order တင်ခြင်း
-        function orderDone() {
-            const phone = document.getElementById('user-phone').value.trim();
-            const address = document.getElementById('user-address').value.trim();
+        alert("Order တင်တာ အောင်မြင်ပါတယ် မိတ်ဆွေ! မကြာခင် ဆက်သွယ်ပေးပါမယ်။");
+        window.location.href = 'index.html';
+    }
+</script>
 
-            if (phone === "" || address === "") {
-                alert("မိတ်ဆွေ... ဖုန်းနံပါတ်နှင့် လိပ်စာကို ပြည့်စုံစွာ ဖြည့်စွက်ပေးပါ။");
-                return;
-            }
-
-            // အောင်မြင်လျှင်
-            alert("Order တင်တာ အောင်မြင်ပါတယ် မိတ်ဆွေ! မကြာခင် ဆက်သွယ်ပေးပါမယ်။");
-            window.location.href = 'index.html';
-        }
-    </script>
+    
 </body>
 
 </html>
