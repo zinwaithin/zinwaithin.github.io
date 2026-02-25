@@ -49,37 +49,171 @@
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="service">Services</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#service">Services</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
+
+                    <style>
+
+                    /* --- General Body Style --- */
+                    body {
+                        background-color: #f4f7f6;
+                        color: #333;
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    /* --- Navbar Search (အမြဲတမ်း အဖြူရောင်စစ်စစ် Version) --- */
+                    .nav-search-wrapper {
+                        background-color: #ffffff !important;
+                        /* အစကတည်းက အဖြူရောင်ဖြစ်အောင် ပြင်လိုက်ပါတယ် */
+                        border-radius: 50px;
+                        padding: 0 12px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #ddd;
+                        /* အဖြူပေါ်မှာ သိသာအောင် ဘောင်ပါးပါးလေး ထည့်ထားပါတယ် */
+                        max-width: 140px;
+                        height: 30px;
+                        transition: all 0.3s ease;
+                    }
+
+                    /* နှိပ်လိုက်ရင် အပြာရောင် Glow လေးလင်းလာမယ် */
+                    .nav-search-wrapper:focus-within {
+                        border-color: #007bff;
+                        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+                        max-width: 170px;
+                        /* နှိပ်လိုက်ရင် နည်းနည်းလေး ပိုကျယ်လာမယ် */
+                    }
+
+                    .nav-search-wrapper input {
+                        border: none !important;
+                        outline: none !important;
+                        background: transparent !important;
+                        padding: 4px;
+                        color: #333 !important;
+                        /* အဖြူပေါ်မှာမို့လို့ စာသားကို အမည်းရောင်ထားပါတယ် */
+                        font-size: 11px;
+                        width: 100%;
+                    }
+
+                    .nav-search-wrapper i {
+                        font-size: 11px;
+                        color: #666;
+                        /* မှန်ဘီလူး Icon ကို မီးခိုးရောင်ထားပါတယ် */
+                    }
+
+                    .nav-search-wrapper:focus-within i {
+                        color: #007bff;
+                        /* နှိပ်လိုက်ရင် Icon လေး အပြာရောင်ပြောင်းမယ် */
+                    }
+
+                    /* Search... ဆိုတဲ့စာသားအရောင် */
+                    .nav-search-wrapper input::placeholder {
+                        color: #999 !important;
+                    }
+
+                    /* --- Product Card Style --- */
+                    .product-card {
+                        background-color: #ffffff;
+                        border: none;
+                        border-radius: 16px;
+                        padding: 20px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    .product-card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .product-img {
+                        width: 100%;
+                        height: 160px;
+                        object-fit: contain;
+                        margin-bottom: 15px;
+                        transition: transform 0.4s ease;
+                    }
+
+                    .product-card:hover .product-img {
+                        transform: scale(1.08);
+                        /* Hover လုပ်ရင် ပုံလေး နည်းနည်းကြီးလာမယ် */
+                    }
+
+                    .price-text {
+                        color: #007bff;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    /* --- Category Buttons --- */
+                    .category-btn {
+                        border-radius: 50px;
+                        padding: 7px 22px;
+                        margin: 5px;
+                        border: 1px solid #007bff;
+                        background-color: #fff;
+                        color: #007bff;
+                        transition: all 0.3s ease;
+                        font-weight: 600;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                    .category-btn.active,
+                    .category-btn:hover {
+                        background-color: #007bff;
+                        color: #fff;
+                        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+                    }
+
+                    /* --- Mobile Responsive --- */
+                    @media (max-width: 991px) {
+                        .nav-search-wrapper {
+                            max-width: 100px;
+                        }
+
+                        .nav-search-wrapper:focus-within {
+                            max-width: 130px;
+                        }
+                    }
+                </style>
+                
+
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+                    <div class="nav-search-wrapper d-flex align-items-center ms-2">
                         <i class="fa-solid fa-magnifying-glass text-info"></i>
-                        <input type="text" placeholder="Search..."
-                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
                     <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-
                     <a href="#" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
                             style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
                     </a>
-
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
-
                     </a>
-
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
+
+
+
 
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
@@ -97,7 +231,8 @@
                         <li class="nav-item"><a class="nav-link text-white py-2" href="#promotion">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="#service">Services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -158,8 +293,8 @@
         }
     </style>
 
-    
-<!-- start service  -->
+
+    <!-- start service  -->
 
     <section class="features-white-section py-5">
         <div class="container py-4">
@@ -212,7 +347,7 @@
 
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- end service  -->
 
@@ -231,7 +366,7 @@
                     <p class="text-white-50 fs-5 mb-4">နောက်ဆုံးပေါ် စက်ကိရိယာများဖြင့် မည်သည့် hardware ပြဿနာကိုမဆို
                         တိကျစွာ ပြုပြင်ပေးပါသည်။ ကျွမ်းကျင်ပညာရှင်ကိုယ်တိုင် စစ်ဆေးပေးခြင်းဖြစ်ပါသည်။</p>
                 </div>
-            </div> 
+            </div>
 
             <div class="row align-items-center mb-100 flex-md-row-reverse">
                 <div class="col-md-6 mb-4 mb-md-0">
@@ -248,7 +383,7 @@
             </div>
 
         </div>
-   </section> 
+    </section>
 
     <style>
         .mb-100 {
@@ -296,7 +431,7 @@
         }
     </style>
 
-    
+
     <!-- start footer -->
 
     <footer class="main-footer">

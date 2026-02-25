@@ -42,65 +42,198 @@
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link custom-nav-link dropdown-toggle" href="#" id="productDrop"
+                            <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
+
+                    <style>
+
+                    /* --- General Body Style --- */
+                    body {
+                        background-color: #f4f7f6;
+                        color: #333;
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    /* --- Navbar Search (အမြဲတမ်း အဖြူရောင်စစ်စစ် Version) --- */
+                    .nav-search-wrapper {
+                        background-color: #ffffff !important;
+                        /* အစကတည်းက အဖြူရောင်ဖြစ်အောင် ပြင်လိုက်ပါတယ် */
+                        border-radius: 50px;
+                        padding: 0 12px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #ddd;
+                        /* အဖြူပေါ်မှာ သိသာအောင် ဘောင်ပါးပါးလေး ထည့်ထားပါတယ် */
+                        max-width: 140px;
+                        height: 30px;
+                        transition: all 0.3s ease;
+                    }
+
+                    /* နှိပ်လိုက်ရင် အပြာရောင် Glow လေးလင်းလာမယ် */
+                    .nav-search-wrapper:focus-within {
+                        border-color: #007bff;
+                        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+                        max-width: 170px;
+                        /* နှိပ်လိုက်ရင် နည်းနည်းလေး ပိုကျယ်လာမယ် */
+                    }
+
+                    .nav-search-wrapper input {
+                        border: none !important;
+                        outline: none !important;
+                        background: transparent !important;
+                        padding: 4px;
+                        color: #333 !important;
+                        /* အဖြူပေါ်မှာမို့လို့ စာသားကို အမည်းရောင်ထားပါတယ် */
+                        font-size: 11px;
+                        width: 100%;
+                    }
+
+                    .nav-search-wrapper i {
+                        font-size: 11px;
+                        color: #666;
+                        /* မှန်ဘီလူး Icon ကို မီးခိုးရောင်ထားပါတယ် */
+                    }
+
+                    .nav-search-wrapper:focus-within i {
+                        color: #007bff;
+                        /* နှိပ်လိုက်ရင် Icon လေး အပြာရောင်ပြောင်းမယ် */
+                    }
+
+                    /* Search... ဆိုတဲ့စာသားအရောင် */
+                    .nav-search-wrapper input::placeholder {
+                        color: #999 !important;
+                    }
+
+                    /* --- Product Card Style --- */
+                    .product-card {
+                        background-color: #ffffff;
+                        border: none;
+                        border-radius: 16px;
+                        padding: 20px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    .product-card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .product-img {
+                        width: 100%;
+                        height: 160px;
+                        object-fit: contain;
+                        margin-bottom: 15px;
+                        transition: transform 0.4s ease;
+                    }
+
+                    .product-card:hover .product-img {
+                        transform: scale(1.08);
+                        /* Hover လုပ်ရင် ပုံလေး နည်းနည်းကြီးလာမယ် */
+                    }
+
+                    .price-text {
+                        color: #007bff;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    /* --- Category Buttons --- */
+                    .category-btn {
+                        border-radius: 50px;
+                        padding: 7px 22px;
+                        margin: 5px;
+                        border: 1px solid #007bff;
+                        background-color: #fff;
+                        color: #007bff;
+                        transition: all 0.3s ease;
+                        font-weight: 600;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                    .category-btn.active,
+                    .category-btn:hover {
+                        background-color: #007bff;
+                        color: #fff;
+                        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+                    }
+
+                    /* --- Mobile Responsive --- */
+                    @media (max-width: 991px) {
+                        .nav-search-wrapper {
+                            max-width: 100px;
+                        }
+
+                        .nav-search-wrapper:focus-within {
+                            max-width: 130px;
+                        }
+                    }
+                </style>
+                
+
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+                    <div class="nav-search-wrapper d-flex align-items-center ms-2">
                         <i class="fa-solid fa-magnifying-glass text-info"></i>
-                        <input type="text" placeholder="Search..."
-                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
                     <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-
                     <a href="#" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
                             style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
                     </a>
-
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
-
                     </a>
-
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
 
+
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
                         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="#" id="mobileCat"
+                            <a class="nav-link text-white dropdown-toggle py-2" href="product.html" id="mobileCat"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -111,7 +244,123 @@
     <!-- end nav -->
 
 
+    <section class="py-5 bg-white position-relative overflow-hidden border-bottom border-dark border-2">
+    <h1 class="position-absolute end-0 bottom-0 display-1 fw-black opacity-05 text-uppercase d-none d-lg-block" style="font-size: 10rem; transform: translateY(30%); z-index: 0;">Contact</h1>
+    
+    <div class="container py-5 position-relative" style="z-index: 1;">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <span class="badge bg-info text-black rounded-0 mb-3 fw-bold">CONNECT WITH US</span>
+                <h1 class="display-2 fw-black text-dark mb-0">GET IN <span class="text-info border-bottom border-5">TOUCH.</span></h1>
+                <p class="fs-4 fw-bold text-dark mt-3 mb-0">အကူအညီလိုအပ်ပါသလား? ကျွန်ုပ်တို့ရှိနေပါတယ်။</p>
+                <p class="text-muted">Need professional support or have a project in mind?</p>
+            </div>
+            <div class="col-lg-5 text-lg-end mt-4">
+                <div class="d-inline-block border-start border-info border-5 ps-4 text-start">
+                    <p class="text-dark fw-black mb-0">OFFICIAL SUPPORT</p>
+                    <p class="small text-muted mb-0">Technical | Warranty | Inquiries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="py-5" style="background-color: #fcfcfc;">
+    <div class="container">
+        <div class="row g-0 shadow-lg border border-dark">
+            <div class="col-lg-7 bg-white p-5">
+                <h3 class="fw-black mb-1 text-uppercase">Direct Message</h3>
+                <p class="small text-muted mb-4 text-uppercase fw-bold">ပေးပို့လိုသည့်စာကို အောက်တွင် ရေးသားနိုင်ပါသည်။</p>
+                
+                <form>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control custom-input" placeholder="FULL NAME | အမည်">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control custom-input" placeholder="PHONE | ဖုန်းနံပါတ်">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control custom-input" placeholder="EMAIL | အီးမေးလ်">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control custom-input" rows="4" placeholder="HOW CAN WE HELP YOU? | သိလိုသည့်အကြောင်းအရာ"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-dark w-100 rounded-0 py-3 fw-black text-uppercase ls-2 hover-info">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-5 bg-dark text-white p-5 d-flex flex-column justify-content-between">
+                <div>
+                    <h3 class="fw-black text-info text-uppercase mb-5">Our Hub</h3>
+                    
+                    <div class="contact-item mb-4">
+                        <label class="small text-info fw-bold ls-2">LOCATION</label>
+                        <p class="fs-5 mb-0 fw-bold text-white">No. 123, Tech Street, Yangon.</p>
+                        <p class="small opacity-75">လမ်း ၃၀၊ ရန်ကုန်မြို့။</p>
+                    </div>
+
+                    <div class="contact-item mb-4">
+                        <label class="small text-info fw-bold ls-2">HOTLINE</label>
+                        <p class="fs-5 mb-0 fw-bold text-white">09 123 456 789</p>
+                        <p class="small opacity-75 text-info">Available 9AM - 6PM</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <label class="small text-info fw-bold ls-2">EMAIL</label>
+                        <p class="fs-5 mb-0 fw-bold text-white">support@zgelectronic.com</p>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-5 border-top border-secondary border-opacity-25">
+                    <p class="small mb-0">SUNDAY: <span class="text-danger fw-bold">CLOSED</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 border border-dark border-2 p-1 bg-white">
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    
+    .fw-black { font-weight: 900 !important; }
+    .ls-2 { letter-spacing: 2px; }
+    .opacity-05 { opacity: 0.05; }
+    
+    /* Input Style ပြောင်းလိုက်တာ - ပိုလန်းသွားမယ် */
+    .custom-input {
+        border: none !important;
+        border-bottom: 2px solid #ddd !important;
+        border-radius: 0 !important;
+        padding: 15px 0 !important;
+        background: transparent !important;
+        transition: all 0.3s ease;
+    }
+    .custom-input:focus {
+        border-bottom-color: #00f7ff !important;
+        box-shadow: none !important;
+        padding-left: 10px !important;
+    }
+
+    .text-info { color: #00f7ff !important; }
+    .btn-info { background-color: #00f7ff !important; border: none; }
+    
+    /* Button Hover Effect */
+    .hover-info:hover {
+        background-color: #00f7ff !important;
+        color: #000 !important;
+    }
+
+    .border-5 { border-width: 5px !important; }
+</style>
 
     <!-- start footer -->
 

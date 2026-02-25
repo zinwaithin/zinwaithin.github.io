@@ -20,30 +20,86 @@
     <script src="fontawesome/js/all.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
+
+
     <style>
+        /* --- General Body Style --- */
         body {
             background-color: #f4f7f6;
-            /* ခပ်မှိန်မှိန် မီးခိုးရောင် (Body) */
             color: #333;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
+        /* --- Navbar Search (အမြဲတမ်း အဖြူရောင်စစ်စစ် Version) --- */
+        .nav-search-wrapper {
+            background-color: #ffffff !important;
+            /* အစကတည်းက အဖြူရောင်ဖြစ်အောင် ပြင်လိုက်ပါတယ် */
+            border-radius: 50px;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            /* အဖြူပေါ်မှာ သိသာအောင် ဘောင်ပါးပါးလေး ထည့်ထားပါတယ် */
+            max-width: 140px;
+            height: 30px;
+            transition: all 0.3s ease;
+        }
+
+        /* နှိပ်လိုက်ရင် အပြာရောင် Glow လေးလင်းလာမယ် */
+        .nav-search-wrapper:focus-within {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+            max-width: 170px;
+            /* နှိပ်လိုက်ရင် နည်းနည်းလေး ပိုကျယ်လာမယ် */
+        }
+
+        .nav-search-wrapper input {
+            border: none !important;
+            outline: none !important;
+            background: transparent !important;
+            padding: 4px;
+            color: #333 !important;
+            /* အဖြူပေါ်မှာမို့လို့ စာသားကို အမည်းရောင်ထားပါတယ် */
+            font-size: 11px;
+            width: 100%;
+        }
+
+        .nav-search-wrapper i {
+            font-size: 11px;
+            color: #666;
+            /* မှန်ဘီလူး Icon ကို မီးခိုးရောင်ထားပါတယ် */
+        }
+
+        .nav-search-wrapper:focus-within i {
+            color: #007bff;
+            /* နှိပ်လိုက်ရင် Icon လေး အပြာရောင်ပြောင်းမယ် */
+        }
+
+        /* Search... ဆိုတဲ့စာသားအရောင် */
+        .nav-search-wrapper input::placeholder {
+            color: #999 !important;
+        }
+
+        /* --- Product Card Style --- */
         .product-card {
             background-color: #ffffff;
-            /* Card ကို အဖြူစစ်စစ်ထားခြင်း */
             border: none;
             border-radius: 16px;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            /* အရိပ်ပါးပါးလေး */
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             height: 100%;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .product-img {
@@ -51,55 +107,53 @@
             height: 160px;
             object-fit: contain;
             margin-bottom: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+            /* Hover လုပ်ရင် ပုံလေး နည်းနည်းကြီးလာမယ် */
         }
 
         .price-text {
             color: #007bff;
             font-weight: bold;
             font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
-        .search-box {
-            border-radius: 50px;
-            padding: 12px 25px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-        }
-
+        /* --- Category Buttons --- */
         .category-btn {
             border-radius: 50px;
-            padding: 8px 25px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            color: #555;
-            transition: 0.3s;
-        }
-
-        .category-btn.active {
-            background-color: #007bff;
-            color: #fff;
-            border-color: #007bff;
-        }
-
-
-        .category-btn {
-            border-radius: 50px;
-            padding: 8px 25px;
+            padding: 7px 22px;
             margin: 5px;
             border: 1px solid #007bff;
             background-color: #fff;
             color: #007bff;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
         }
 
-        .category-btn.active {
+        .category-btn.active,
+        .category-btn:hover {
             background-color: #007bff;
             color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 991px) {
+            .nav-search-wrapper {
+                max-width: 100px;
+            }
+
+            .nav-search-wrapper:focus-within {
+                max-width: 130px;
+            }
         }
     </style>
-
 
 </head>
 
@@ -130,39 +184,37 @@
                                 <li><a class="dropdown-item" href="#product">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
-               <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+
+
+                <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
+                    <div class="nav-search-wrapper d-flex align-items-center ms-2">
                         <i class="fa-solid fa-magnifying-glass text-info"></i>
-                        <input type="text" placeholder="Search..."
-                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
-
                     <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-
                     <a href="#" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
                             style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
                     </a>
-
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
-
                     </a>
-
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
+
 
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
@@ -177,9 +229,11 @@
                                 <li><a class="dropdown-item" href="#product">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -206,6 +260,7 @@
             <button class="category-btn active" onclick="filterCategory('all', this)">All Items</button>
             <button class="category-btn" onclick="filterCategory('laptop', this)">Laptops</button>
             <button class="category-btn" onclick="filterCategory('phone', this)">Smartphones</button>
+            <button class="category-btn" onclick="filterCategory('keyboard', this)">Keyboards</button>
         </div>
 
         <div class="row g-4" id="productGrid">
@@ -261,7 +316,25 @@
             { id: 'ph13', name: 'Asus ROG Phone 8', price: '1,099$', category: 'phone', img: 'images/product/phone13.png' },
             { id: 'ph14', name: 'Sony Xperia 1 V', price: '1,199$', category: 'phone', img: 'images/product/phone14.png' },
             { id: 'ph15', name: 'Huawei P60 Pro', price: '899$', category: 'phone', img: 'images/product/phone15.png' },
-            { id: 'ph16', name: 'Motorola Edge 40', price: '499$', category: 'phone', img: 'images/product/phone16.png' }
+            { id: 'ph16', name: 'Motorola Edge 40', price: '499$', category: 'phone', img: 'images/product/phone16.png' },
+
+            // --- Keyboards (၁၆ မျိုး) ---
+            { id: 'kb1', name: 'RGB Pro Gaming KB', price: '85$', category: 'keyboard', img: 'images/product/keyboard1.png' },
+            { id: 'kb2', name: 'Retro Red Mechanical', price: '110$', category: 'keyboard', img: 'images/product/keyboard2.png' },
+            { id: 'kb3', name: 'Mini Custom 40%', price: '95$', category: 'keyboard', img: 'images/product/keyboard3.png' },
+            { id: 'kb4', name: 'Transparent RGB KB', price: '120$', category: 'keyboard', img: 'images/product/keyboard4.png' },
+            { id: 'kb5', name: 'Black Minimalist Knob KB', price: '135$', category: 'keyboard', img: 'images/product/keyboard5.png' },
+            { id: 'kb6', name: 'Vintage Office Mechanical', price: '105$', category: 'keyboard', img: 'images/product/keyboard6.png' },
+            { id: 'kb7', name: 'Panda Theme Mechanical', price: '115$', category: 'keyboard', img: 'images/product/keyboard7.png' },
+            { id: 'kb8', name: 'Yellow Akimbo Style', price: '90$', category: 'keyboard', img: 'images/product/keyboard8.png' },
+            { id: 'kb9', name: 'Rapoo Slim Wireless', price: '45$', category: 'keyboard', img: 'images/product/keyboard9.png' },
+            { id: 'kb10', name: 'Toxic Green Mechanical', price: '125$', category: 'keyboard', img: 'images/product/keyboard10.png' },
+            { id: 'kb11', name: 'Alice Layout Ergo', price: '160$', category: 'keyboard', img: 'images/product/keyboard11.png' },
+            { id: 'kb12', name: 'Minimalist 60% White', price: '80$', category: 'keyboard', img: 'images/product/keyboard12.png' },
+            { id: 'kb13', name: 'Grey-Yellow Mechanical', price: '90$', category: 'keyboard', img: 'images/product/keyboard13.png' },
+            { id: 'kb14', name: 'Acer Wired Office KB', price: '25$', category: 'keyboard', img: 'images/product/keyboard14.png' },
+            { id: 'kb15', name: 'Rapoo Wireless Grey', price: '45$', category: 'keyboard', img: 'images/product/keyboard15.png' },
+            { id: 'kb16', name: 'Custom RGB Wood Case', price: '140$', category: 'keyboard', img: 'images/product/keyboard16.png' }
         ];
 
         function renderItems(data) {
@@ -287,6 +360,8 @@
         // Laptop ၂၈ ခုလုံးမှာ category: 'laptop' လို့ မပါသေးရင် အလိုအလျောက် ထည့်ပေးလိုက်မယ်
         products.forEach(p => {
             if (!p.id.startsWith('ph')) p.category = 'laptop';
+            else if (p.id.startsWith('ph')) p.category = 'phone';
+            else if (p.id.startsWith('kb')) p.category = 'keyboard';
         });
 
         function filterCategory(cat, btn) {

@@ -42,65 +42,199 @@
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link custom-nav-link dropdown-toggle" href="#" id="productDrop"
+                            <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
+
+                    <style>
+
+                    /* --- General Body Style --- */
+                    body {
+                        background-color: #f4f7f6;
+                        color: #333;
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    /* --- Navbar Search (အမြဲတမ်း အဖြူရောင်စစ်စစ် Version) --- */
+                    .nav-search-wrapper {
+                        background-color: #ffffff !important;
+                        /* အစကတည်းက အဖြူရောင်ဖြစ်အောင် ပြင်လိုက်ပါတယ် */
+                        border-radius: 50px;
+                        padding: 0 12px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #ddd;
+                        /* အဖြူပေါ်မှာ သိသာအောင် ဘောင်ပါးပါးလေး ထည့်ထားပါတယ် */
+                        max-width: 140px;
+                        height: 30px;
+                        transition: all 0.3s ease;
+                    }
+
+                    /* နှိပ်လိုက်ရင် အပြာရောင် Glow လေးလင်းလာမယ် */
+                    .nav-search-wrapper:focus-within {
+                        border-color: #007bff;
+                        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+                        max-width: 170px;
+                        /* နှိပ်လိုက်ရင် နည်းနည်းလေး ပိုကျယ်လာမယ် */
+                    }
+
+                    .nav-search-wrapper input {
+                        border: none !important;
+                        outline: none !important;
+                        background: transparent !important;
+                        padding: 4px;
+                        color: #333 !important;
+                        /* အဖြူပေါ်မှာမို့လို့ စာသားကို အမည်းရောင်ထားပါတယ် */
+                        font-size: 11px;
+                        width: 100%;
+                    }
+
+                    .nav-search-wrapper i {
+                        font-size: 11px;
+                        color: #666;
+                        /* မှန်ဘီလူး Icon ကို မီးခိုးရောင်ထားပါတယ် */
+                    }
+
+                    .nav-search-wrapper:focus-within i {
+                        color: #007bff;
+                        /* နှိပ်လိုက်ရင် Icon လေး အပြာရောင်ပြောင်းမယ် */
+                    }
+
+                    /* Search... ဆိုတဲ့စာသားအရောင် */
+                    .nav-search-wrapper input::placeholder {
+                        color: #999 !important;
+                    }
+
+                    /* --- Product Card Style --- */
+                    .product-card {
+                        background-color: #ffffff;
+                        border: none;
+                        border-radius: 16px;
+                        padding: 20px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    .product-card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .product-img {
+                        width: 100%;
+                        height: 160px;
+                        object-fit: contain;
+                        margin-bottom: 15px;
+                        transition: transform 0.4s ease;
+                    }
+
+                    .product-card:hover .product-img {
+                        transform: scale(1.08);
+                        /* Hover လုပ်ရင် ပုံလေး နည်းနည်းကြီးလာမယ် */
+                    }
+
+                    .price-text {
+                        color: #007bff;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    /* --- Category Buttons --- */
+                    .category-btn {
+                        border-radius: 50px;
+                        padding: 7px 22px;
+                        margin: 5px;
+                        border: 1px solid #007bff;
+                        background-color: #fff;
+                        color: #007bff;
+                        transition: all 0.3s ease;
+                        font-weight: 600;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                    .category-btn.active,
+                    .category-btn:hover {
+                        background-color: #007bff;
+                        color: #fff;
+                        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+                    }
+
+                    /* --- Mobile Responsive --- */
+                    @media (max-width: 991px) {
+                        .nav-search-wrapper {
+                            max-width: 100px;
+                        }
+
+                        .nav-search-wrapper:focus-within {
+                            max-width: 130px;
+                        }
+                    }
+                </style>
+                
+
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+                    <div class="nav-search-wrapper d-flex align-items-center ms-2">
                         <i class="fa-solid fa-magnifying-glass text-info"></i>
-                        <input type="text" placeholder="Search..."
-                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
                     <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-
                     <a href="#" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
                             style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
                     </a>
-
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
-
                     </a>
-
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
 
+
+
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
                         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="#" id="mobileCat"
+                            <a class="nav-link text-white dropdown-toggle py-2" href="product.html" id="mobileCat"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -109,74 +243,238 @@
     </nav>
 
     <!-- end nav -->
+               <section class="py-10 position-relative overflow-hidden" style="background-color: #000814;">
+    <div class="position-absolute top-0 end-0 w-50 h-100 bg-primary opacity-10" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
 
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-lg-8">
+                <h6 class="text-cyan fw-bold mb-3 ls-4">EST. 2018 | THE TECH REVOLUTION</h6>
+                <h1 class="display-1 fw-black text-white lh-sm mb-4">
+                    BEYOND <br> <span class="text-cyan">INNOVATION.</span>
+                </h1>
+                <h2 class="h3 fw-bold text-white mb-5 border-start border-cyan border-5 ps-4">
+                    နည်းပညာ၏ အကန့်အသတ်များကို <br> 
+                    ကျော်လွန်၍ အကောင်းဆုံးကိုသာ ပေးစွမ်းမည်။
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="py-5 bg-light border-bottom">
+<section class="py-5 bg-white border-top border-bottom border-cyan border-5">
     <div class="container py-5">
-        <div class="row align-items-center">
+        <div class="row g-5">
             <div class="col-lg-6">
-                <span class="badge bg-info text-dark mb-3 px-3 py-2 rounded-0 fw-bold">SINCE 2018</span>
-                <h1 class="display-4 fw-black text-dark mb-4">ZG Electronic ၏ <br><span class="text-info">ယုံကြည်မှုခရီးစဉ်</span></h1>
-                <p class="text-dark fs-5 mb-0" style="text-align: justify;">
-                    ကျွန်ုပ်တို့သည် နည်းပညာပစ္စည်းများကို ရောင်းချရုံတင်မကဘဲ Customer များအတွက် စိတ်ချရသော ဝန်ဆောင်မှုနှင့် အရည်အသွေးအစစ်အမှန်ကို ထောက်ပံ့ပေးရန် ရည်ရွယ်ပါသည်။
+                <h3 class="fw-black text-dark mb-4 text-uppercase">Who is ZG Electronic?</h3>
+                <p class="text-muted fs-5 mb-4" style="text-align: justify;">
+                    At ZG Electronic, we don't just sell devices; we empower your digital lifestyle. Born in 2018, we have set the benchmark for high-performance gadgets and reliable tech infrastructure in Myanmar.
+                </p>
+                <p class="text-dark fs-5 fw-bold" style="text-align: justify;">
+                    ZG Electronic သည် ပစ္စည်းရောင်းချရုံသက်သက် မဟုတ်ပါ။ ၂၀၁၈ ခုနှစ်တွင် စတင်တည်ထောင်ခဲ့ပြီး မြန်မာနိုင်ငံ၏ ဒီဂျစ်တယ်လူနေမှုဘဝကို မြှင့်တင်ပေးနိုင်မည့် စွမ်းဆောင်ရည်မြင့် နည်းပညာပစ္စည်းများနှင့် စိတ်ချရသော ဝန်ဆောင်မှုများကို စံချိန်စံညွှန်းအသစ်များဖြင့် ဖန်တီးပေးနေသူများ ဖြစ်သည်။
                 </p>
             </div>
-            <div class="col-lg-6 mt-4 mt-lg-0">
-                <div class="border border-5 border-info p-2">
-                    <img src="images/store-hero.jpg" class="img-fluid w-100" alt="Tech Store">
+            
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-6">
+                        <div class="p-4 bg-dark text-white shadow-lg">
+                            <h2 class="fw-black text-cyan">15,000+</h2>
+                            <p class="small mb-0 opacity-75">TECH GEEKS SERVED</p>
+                            <p class="small mb-0">ဝယ်ယူသူပေါင်း ၁ သောင်းခွဲကျော်</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-4 bg-cyan text-black shadow-lg">
+                            <h2 class="fw-black">100%</h2>
+                            <p class="small  text-black mb-0 opacity-75">AUTHENTIC STOCK</p>
+                            <p class="small  text-black mb-0">စစ်မှန်မှု အပြည့်အဝ</p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-4 border border-dark">
+                            <h4 class="fw-black text-dark">5 BRANCHES & GROWING</h4>
+                            <p class="mb-0 text-muted">တစ်နိုင်ငံလုံးအတိုင်းအတာဖြင့် ဆိုင်ခွဲများ တိုးချဲ့လျက်ရှိသည်။</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="row g-0"> <div class="col-md-4 border border-1 p-5 text-center transition-hover">
-                <i class="fa-solid fa-gem text-info fs-1 mb-4"></i>
-                <h4 class="fw-bold text-dark">Original Quality</h4>
-                <p class="text-muted mb-0">Brand အစစ်အမှန်များကိုသာ တရားဝင်အာမခံချက်ဖြင့် ရောင်းချပါသည်။</p>
+<section class="py-5 overflow-hidden" style="background-color:#1c81bf ">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-black text-dark">HOW WE OPERATE</h2>
+            <p class="text-black-50 fs-4 fw-bold">ကျွန်ုပ်တို့၏ လုပ်ငန်းစဉ်များ</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="h-100 p-4 bg-white border-bottom border-cyan border-5 shadow-sm">
+                    <h1 class="fw-black text-dark opacity-10 mb-0">01</h1>
+                    <h5 class="fw-black mb-3">Sourcing</h5>
+                    <p class="small text-muted">Direct from Global Brands. <br> နိုင်ငံတကာ Brand များမှ တိုက်ရိုက်တင်သွင်းခြင်း။</p>
+                </div>
             </div>
-            <div class="col-md-4 border border-1 p-5 text-center transition-hover bg-dark">
-                <i class="fa-solid fa-shield-halved text-info fs-1 mb-4"></i>
-                <h4 class="fw-bold text-white">Trusted Warranty</h4>
-                <p class="text-white-50 mb-0">ရောင်းချပြီး ပစ္စည်းတိုင်းအတွက် After-sales service ကို အပြည့်အဝ တာဝန်ယူပါသည်။</p>
+            <div class="col-md-3">
+                <div class="h-100 p-4 bg-white border-bottom border-cyan border-5 shadow-sm">
+                    <h1 class="fw-black text-dark opacity-10 mb-0">02</h1>
+                    <h5 class="fw-black mb-3">Verification</h5>
+                    <p class="small text-muted">Hardware Level Checks. <br> Hardware အဆင့်ထိ စနစ်တကျ စစ်ဆေးခြင်း။</p>
+                </div>
             </div>
-            <div class="col-md-4 border border-1 p-5 text-center transition-hover">
-                <i class="fa-solid fa-hand-holding-heart text-info fs-1 mb-4"></i>
-                <h4 class="fw-bold text-dark">Customer Care</h4>
-                <p class="text-muted mb-0">ဝယ်ယူသူတိုင်း၏ လိုအပ်ချက်ကို အမြန်ဆုံး ဖြေရှင်းပေးရန် အမြဲအသင့်ရှိနေပါသည်။</p>
+            <div class="col-md-3">
+                <div class="h-100 p-4 bg-white border-bottom border-cyan border-5 shadow-sm">
+                    <h1 class="fw-black text-dark opacity-10 mb-0">03</h1>
+                    <h5 class="fw-bold mb-3">Distribution</h5>
+                    <p class="small text-muted">Safe & Fast Logistics. <br> လုံခြုံမြန်ဆန်သော ပို့ဆောင်မှုစနစ်။</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="h-100 p-4 bg-white border-bottom border-cyan border-5 shadow-sm">
+                    <h1 class="fw-black text-dark opacity-10 mb-0">04</h1>
+                    <h5 class="fw-black mb-3">Support</h5>
+                    <p class="small text-muted">Lifetime Consultation. <br> တစ်သက်တာ နည်းပညာအကြံပေးခြင်း။</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-                <h2 class="fw-black text-dark mb-4">ကျွန်ုပ်တို့ ဘာကြောင့် ကွာခြားသလဲ?</h2>
-                <ul class="list-unstyled">
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="fa-solid fa-square-check text-info me-3 mt-1"></i>
-                        <span class="text-dark fw-bold">ပစ္စည်းစစ်မှန်မှု ၁၀၀% အာမခံခြင်း</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="fa-solid fa-square-check text-info me-3 mt-1"></i>
-                        <span class="text-dark fw-bold">နိုင်ငံတကာအဆင့်မီ ပြုပြင်ရေးဝန်ဆောင်မှု</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="fa-solid fa-square-check text-info me-3 mt-1"></i>
-                        <span class="text-dark fw-bold">သင့်တင့်မျှတသော ဈေးနှုန်းမှန်ကန်မှု</span>
-                    </li>
-                </ul>
-            </div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Inter:wght@400;700;900&display=swap');
+
+    body { font-family: 'Inter', sans-serif; }
+    
+    .fw-black { font-weight: 900 !important; }
+    .text-cyan { color: #00f7ff !important; } /* Neon Blue/Cyan */
+    .bg-cyan { background-color: #00f7ff !important; }
+    .border-cyan { border-color: #00f7ff !important; }
+    .ls-4 { letter-spacing: 4px; }
+    .py-10 { padding: 120px 0; }
+
+    /* Special Font for Tech Titles */
+    .display-1 { font-family: 'Orbitron', sans-serif; }
+
+    /* Solid Blocks - No Blur */
+    .bg-dark { background-color: #000814 !important; }
+    
+    /* Interactive Hover */
+    .shadow-lg:hover {
+        transform: translateY(-5px);
+        transition: 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2) !important;
+    }
+
+    @media (max-width: 768px) {
+        .display-1 { font-size: 2.5rem; }
+    }
+</style>
+
+
+
+<!--  -->
+<section class="py-5 bg-dark text-white border-top border-info border-5">
+    <div class="container py-5">
+        <div class="row align-items-center mb-5">
             <div class="col-lg-6">
-                <div class="bg-white p-4 border-start border-info border-5 shadow-sm">
-                    <p class="fst-italic text-dark mb-0">
-                        "နည်းပညာဆိုတာ လူသားတွေရဲ့ ဘဝကို ပိုမိုလွယ်ကူစေရမယ်။ ဒါကြောင့် ကျွန်တော်တို့ ZG Electronic က အကောင်းဆုံး Gadgets တွေကို သင့်လက်ထဲ အရောက်ပို့ပေးနေတာ ဖြစ်ပါတယ်။"
-                    </p>
-                    <footer class="blockquote-footer mt-2 fw-bold text-info">Founder of ZG Electronic</footer>
+                <h6 class="text-info fw-bold ls-3 text-uppercase">Testimonials</h6>
+                <h2 class="display-4 fw-black mb-0">CLIENT <span class="text-info">VOICES.</span></h2>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <p class="text-white-50">ဝယ်ယူသူပေါင်း ၁၀၀၀ ကျော်၏ စစ်မှန်သော ထင်မြင်ချက်များ</p>
+                <div class="text-warning">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-white ms-2">4.9/5.0 Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary h-100 shadow-hover bg-black-50">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"MacBook Air M2 ဝယ်ခဲ့တာပါ။ ဈေးနှုန်းက တခြားဆိုင်တွေထက် သက်သာပြီး ပစ္စည်းကလည်း လုံးဝ Sealed အစစ်ပါ။ Service အရမ်းကောင်းပါတယ်။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">KM</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">ကိုကျော်မင်း</h6>
+                            <small class="text-info" style="font-size: 10px;">Verified Buyer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border border-info h-100 shadow-hover bg-dark">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"Gaming PC တစ်စုံလုံးကို ဒီမှာပဲ ဆင်ဖြစ်တယ်။ အစိတ်အပိုင်းတစ်ခုချင်းစီကို အသေးစိတ် ရှင်းပြပေးတယ်။ Cable တွေလည်း သေသေသပ်သပ် စီပေးထားလို့ တော်တော်မိုက်ပါတယ်။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">ST</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">Sithu Tun</h6>
+                            <small class="text-info" style="font-size: 10px;">Gamer / Streamer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary h-100 shadow-hover bg-black-50">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"S24 Ultra ဝယ်တာ Gift တွေအများကြီးရခဲ့တယ်။ အာမခံကိစ္စတွေလည်း သေချာရှင်းပြပေးတယ်။ Customer ကို တန်ဖိုးထားတာ သိသာပါတယ်။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">MP</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">Ma Phyu</h6>
+                            <small class="text-info" style="font-size: 10px;">Business User</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary h-100 shadow-hover bg-black-50">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"AirPods Pro ဝယ်ခဲ့တာ တစ်နှစ်ရှိပြီ။ အခုထိ ဘာပြဿနာမှ မရှိသေးဘူး။ ပစ္စည်းက အစစ်အမှန်ဖြစ်တာကြောင့် စိတ်အေးရပါတယ်။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">TT</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">Thura Tun</h6>
+                            <small class="text-info" style="font-size: 10px;">Tech Enthusiast</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary h-100 shadow-hover bg-black-50">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"Laptop Screen လာလဲတာ တခြားဆိုင်တွေထက် ဈေးသက်သာပြီး ၁ နာရီတည်းနဲ့ အပြီးလုပ်ပေးပါတယ်။ ကျွမ်းကျင်မှုရှိတာကို တော်တော်လေး သဘောကျမိတယ်။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">KZ</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">Ko Zaw</h6>
+                            <small class="text-info" style="font-size: 10px;">Freelancer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="p-4 border border-secondary h-100 shadow-hover bg-black-50">
+                    <i class="fa-solid fa-quote-left text-info fs-3 mb-3"></i>
+                    <p class="small opacity-75 mb-4">"နယ်ကနေ မှာတာတောင် ၂ ရက်တည်းနဲ့ ရောက်တယ်။ ပစ္စည်းကို Bubble wrap တွေနဲ့ သေချာထုပ်ပိုးပေးလို့ စိတ်အေးရတယ်။ ယုံကြည်စိတ်ချရတဲ့ဆိုင်ပါ။"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar-circle bg-info me-3">NL</div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">Nan Lwin</h6>
+                            <small class="text-info" style="font-size: 10px;">Online Shopper</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,35 +482,29 @@
 </section>
 
 <style>
-    .fw-black { font-weight: 900; }
-    
-    /* Hover လုပ်ရင် မှုန်သွားတာမျိုးမဟုတ်ဘဲ အရောင်ပြောင်းသွားစေရန် */
-    .transition-hover {
-        transition: background-color 0.3s ease, transform 0.2s ease;
+    .avatar-circle {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        color: #000;
+        font-size: 12px;
+        border-radius: 0; /* Tech ဆန်အောင် အဝိုင်းအစား လေးထောင့်ထားလိုက်တယ် */
     }
-
-    .transition-hover:hover {
-        background-color: #f1f1f1;
-        cursor: pointer;
+    .shadow-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: default;
     }
-
-    /* အနားသတ်များကို ပြတ်ပြတ်သားသား ဖြစ်စေရန် */
-    .border-1 {
-        border: 1px solid #dee2e6 !important;
+    .shadow-hover:hover {
+        background-color: #000 !important;
+        border-color: #00f7ff !important;
+        transform: translateY(-5px);
     }
-
-    /* Badge ထောင့်ချိုးများ */
-    .rounded-0 {
-        border-radius: 0 !important;
-    }
-
-    /* List Icons */
-    .fa-square-check {
-        font-size: 1.2rem;
-    }
+    .bg-black-50 { background-color: rgba(0,0,0,0.5); }
 </style>
-
-
+<!--  -->
 
     <!-- start footer -->
 

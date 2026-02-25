@@ -47,38 +47,172 @@
                                 <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
+                
+                    <style>
+
+                    /* --- General Body Style --- */
+                    body {
+                        background-color: #f4f7f6;
+                        color: #333;
+                        font-family: 'Plus Jakarta Sans', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    /* --- Navbar Search (အမြဲတမ်း အဖြူရောင်စစ်စစ် Version) --- */
+                    .nav-search-wrapper {
+                        background-color: #ffffff !important;
+                        /* အစကတည်းက အဖြူရောင်ဖြစ်အောင် ပြင်လိုက်ပါတယ် */
+                        border-radius: 50px;
+                        padding: 0 12px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #ddd;
+                        /* အဖြူပေါ်မှာ သိသာအောင် ဘောင်ပါးပါးလေး ထည့်ထားပါတယ် */
+                        max-width: 140px;
+                        height: 30px;
+                        transition: all 0.3s ease;
+                    }
+
+                    /* နှိပ်လိုက်ရင် အပြာရောင် Glow လေးလင်းလာမယ် */
+                    .nav-search-wrapper:focus-within {
+                        border-color: #007bff;
+                        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+                        max-width: 170px;
+                        /* နှိပ်လိုက်ရင် နည်းနည်းလေး ပိုကျယ်လာမယ် */
+                    }
+
+                    .nav-search-wrapper input {
+                        border: none !important;
+                        outline: none !important;
+                        background: transparent !important;
+                        padding: 4px;
+                        color: #333 !important;
+                        /* အဖြူပေါ်မှာမို့လို့ စာသားကို အမည်းရောင်ထားပါတယ် */
+                        font-size: 11px;
+                        width: 100%;
+                    }
+
+                    .nav-search-wrapper i {
+                        font-size: 11px;
+                        color: #666;
+                        /* မှန်ဘီလူး Icon ကို မီးခိုးရောင်ထားပါတယ် */
+                    }
+
+                    .nav-search-wrapper:focus-within i {
+                        color: #007bff;
+                        /* နှိပ်လိုက်ရင် Icon လေး အပြာရောင်ပြောင်းမယ် */
+                    }
+
+                    /* Search... ဆိုတဲ့စာသားအရောင် */
+                    .nav-search-wrapper input::placeholder {
+                        color: #999 !important;
+                    }
+
+                    /* --- Product Card Style --- */
+                    .product-card {
+                        background-color: #ffffff;
+                        border: none;
+                        border-radius: 16px;
+                        padding: 20px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+                        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        height: 100%;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    .product-card:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .product-img {
+                        width: 100%;
+                        height: 160px;
+                        object-fit: contain;
+                        margin-bottom: 15px;
+                        transition: transform 0.4s ease;
+                    }
+
+                    .product-card:hover .product-img {
+                        transform: scale(1.08);
+                        /* Hover လုပ်ရင် ပုံလေး နည်းနည်းကြီးလာမယ် */
+                    }
+
+                    .price-text {
+                        color: #007bff;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                    }
+
+                    /* --- Category Buttons --- */
+                    .category-btn {
+                        border-radius: 50px;
+                        padding: 7px 22px;
+                        margin: 5px;
+                        border: 1px solid #007bff;
+                        background-color: #fff;
+                        color: #007bff;
+                        transition: all 0.3s ease;
+                        font-weight: 600;
+                        font-size: 13px;
+                        cursor: pointer;
+                    }
+
+                    .category-btn.active,
+                    .category-btn:hover {
+                        background-color: #007bff;
+                        color: #fff;
+                        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+                    }
+
+                    /* --- Mobile Responsive --- */
+                    @media (max-width: 991px) {
+                        .nav-search-wrapper {
+                            max-width: 100px;
+                        }
+
+                        .nav-search-wrapper:focus-within {
+                            max-width: 130px;
+                        }
+                    }
+                </style>
+                
+
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
-                    <div class="search-box d-flex flex-grow-1 ms-2" style="max-width: 180px;">
+                    <div class="nav-search-wrapper d-flex align-items-center ms-2">
                         <i class="fa-solid fa-magnifying-glass text-info"></i>
-                        <input type="text" placeholder="Search..."
-                            style="width: 100%; background: transparent; border: none; color: white; outline: none; font-size: 11px; margin-left: 5px;">
+                        <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
                     <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-
                     <a href="#" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
                             style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
                     </a>
-
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
-
                     </a>
-
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
+
+                
 
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
@@ -93,9 +227,11 @@
                                 <li><a class="dropdown-item" href="product.html">Accessories</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -411,66 +547,62 @@
 
 
     <!-- start porpular brands -->
-    <section class="py-5 bg-light">
+
+    <section class="py-5 bg-white border-top border-bottom border-dark border-2">
         <div class="container">
-            <div class="mb-4">
-                <h3 class="fw-bold text-dark mb-1">Popular Brands</h3>
-                <p class="text-secondary small">Top brands we have in our
-                    store</p>
+            <div class="row mb-5 align-items-end">
+                <div class="col-md-7">
+                    <h6 class="text-info fw-black ls-3 text-uppercase mb-2">Authorized Dealer</h6>
+                    <h2 class="display-5 fw-black text-dark mb-0">POPULAR <span class="text-info">BRANDS.</span></h2>
+                    <div class="bg-info mt-3" style="width: 100px; height: 6px;"></div>
+                </div>
+                <div class="col-md-5 text-md-end d-none d-md-block">
+                    <p class="text-dark fw-black small">ကမ္ဘာကျော် Brand အစစ်အမှန်များကို တစ်နေရာတည်းတွင်
+                        ရရှိနိုင်ပါသည်။</p>
+                </div>
             </div>
 
-            <div class="row g-4 justify-content-center align-items-center text-center">
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <i class="fa-brands fa-apple fa-3x text-dark"></i>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">Apple</p>
-                        </div>
+            <div class="row g-0 border border-dark border-2">
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <i class="fa-brands fa-apple display-4 text-dark brand-icon"></i>
+                        <p class="brand-name mt-3 mb-0">APPLE</p>
                     </a>
                 </div>
-
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <i class="fa-brands fa-samsung fa-3x text-primary"></i>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">Samsung</p>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <i class="fa-brands fa-samsung display-4 text-dark brand-icon"></i>
+                        <p class="brand-name mt-3 mb-0">SAMSUNG</p>
                     </a>
                 </div>
-
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <i class="fa-solid fa-laptop-code fa-3x text-info"></i>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">Dell</p>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <i class="fa-solid fa-laptop-code display-5 text-dark brand-icon"></i>
+                        <p class="brand-name mt-3 mb-0">DELL</p>
                     </a>
                 </div>
-
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <span class="h1 fw-bolder text-dark d-block mb-0" style="line-height: 1;">SONY</span>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">Sony</p>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <span class="h2 fw-black text-dark brand-icon mb-0">SONY</span>
+                        <p class="brand-name mt-3 mb-0">SONY</p>
                     </a>
                 </div>
-
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <span class="h1 fw-bold text-primary d-block mb-0">hp</span>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">HP</p>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <span class="h1 fw-bold text-dark brand-icon mb-0">hp</span>
+                        <p class="brand-name mt-3 mb-0">HP</p>
                     </a>
                 </div>
-
-                <div class="col-4 col-md-2">
-                    <a href="#" class="brand-item text-decoration-none">
-                        <div class="bg-white p-4 rounded-4 shadow-sm hover-up">
-                            <i class="fa-solid fa-mobile-screen-button fa-3x text-warning"></i>
-                            <p class="small fw-bold mt-2 mb-0 text-dark">Xiaomi</p>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-2 brand-box border-bottom border-dark p-4">
+                    <a href="#"
+                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
+                        <i class="fa-solid fa-mobile-screen-button display-5 text-dark brand-icon"></i>
+                        <p class="brand-name mt-3 mb-0">XIAOMI</p>
                     </a>
                 </div>
             </div>
@@ -478,20 +610,71 @@
     </section>
 
     <style>
-        .hover-up {
-            transition: transform 0.3s ease, shadow 0.3s ease;
+        .fw-black {
+            font-weight: 900 !important;
         }
 
-        .hover-up:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        .ls-3 {
+            letter-spacing: 3px;
         }
 
-        .brand-item i {
-            display: block;
-            margin-bottom: 5px;
+        /* Brand Box ပြင်ဆင်ချက် */
+        .brand-box {
+            background-color: #ffffff;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            min-height: 180px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-name {
+            color: #333;
+            /* အရောင်ကို ပိုရင့်လိုက်တယ် */
+            font-weight: 900;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .brand-icon {
+            transition: all 0.3s ease;
+            opacity: 1 !important;
+            /* မှေးမှိန်မနေစေရ */
+        }
+
+        /* Hover လုပ်ရင် လင်းလာစေမယ့် Glow Effect */
+        .brand-box:hover {
+            background-color: #000814;
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: inset 0 0 20px rgba(0, 247, 255, 0.2);
+            /* အထဲဘက်ကို Glow ထည့်လိုက်တယ် */
+        }
+
+        .brand-box:hover .brand-icon {
+            color: #00f7ff !important;
+            text-shadow: 0 0 15px rgba(0, 247, 255, 0.7);
+            /* စာလုံးကို Neon လင်းစေတယ် */
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .brand-box:hover .brand-name {
+            color: #ffffff;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* အရောင်တွေကို အစစ်အတိုင်း တောက်တောက်ပြောင်ပြောင်ထားမယ် */
+        .text-info {
+            color: #00f7ff !important;
+        }
+
+        .bg-info {
+            background-color: #00f7ff !important;
         }
     </style>
+
+
     <!-- end porpular brand -->
 
     <section class="py-5 bg-white">
