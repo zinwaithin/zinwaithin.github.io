@@ -37,14 +37,25 @@
 
                 <div class="col-lg-6 d-none d-lg-block">
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link active-link" href="#home">Home</a></li>
+
+
                         <li class="nav-item dropdown">
                             <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
@@ -55,9 +66,8 @@
                     </ul>
                 </div>
 
-                
-                    <style>
 
+                <style>
                     /* --- General Body Style --- */
                     body {
                         background-color: #f4f7f6;
@@ -189,7 +199,7 @@
                         }
                     }
                 </style>
-                
+
 
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
                     <div class="nav-search-wrapper d-flex align-items-center ms-2">
@@ -197,34 +207,50 @@
                         <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
-                    <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-                    <a href="#" class="text-info position-relative">
+                    <a href="wishlist.html" class="text-white"><i class="fa-solid fa-heart"
+                            style="font-size: 18px;"></i></a>
+                    <a href="card.html" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
-                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
+                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">4</span>
                     </a>
-                    <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <i class="fa-solid fa-user" style="font-size: 18px;"></i>
+
+
+
+                    <a href="#" class="text-white" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="fa-solid fa-user"></i>
                     </a>
+
                     <button class="navbar-toggler border-0 p-0 d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#zgNavMobile">
                         <span class="navbar-toggler-icon" style="width: 22px;"></span>
                     </button>
                 </div>
 
-                
+
 
                 <div class="collapse w-100 d-lg-none" id="zgNavMobile">
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2 active-link" href="#home">Home</a></li>
+
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="product.html" id="mobileCat"
+                            <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
-                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                            <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
@@ -238,6 +264,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- end nav -->
     <!-- start bunner -->
@@ -318,7 +345,7 @@
             </div>
 
             <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -345,7 +372,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -372,7 +399,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -399,7 +426,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -433,7 +460,7 @@
             </a>
 
             <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
@@ -460,7 +487,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
@@ -487,7 +514,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -514,7 +541,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-5% Off</span>
@@ -692,7 +719,7 @@
             </div>
 
             <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
@@ -727,7 +754,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-10% Off</span>
@@ -762,7 +789,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-15% Off</span>
@@ -797,7 +824,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div
                         class="card h-100 border-0 rounded-4 overflow-hidden position-relative product-card-dark shadow-sm">
                         <span class="badge bg-danger position-absolute mt-2 ms-2" style="z-index: 1;">-5% Off</span>
@@ -955,8 +982,10 @@
 
     <!-- end customer Reviews -->
     <!--  -->
+    
     <!-- start login -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white border-secondary">
                 <div class="modal-header border-0">
@@ -968,7 +997,7 @@
 
                     <form class="needs-validation" novalidate>
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Email
+                            <label class="form-label small text-white">Email
                                 Address</label>
                             <input type="email"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
@@ -978,7 +1007,7 @@
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Password</label>
+                            <label class="form-label small text-white">Password</label>
                             <input type="password"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
                                 placeholder="Enter password" required>
@@ -999,7 +1028,7 @@
                     </form>
 
                     <div class="text-center mt-4">
-                        <p class="small text-secondary">
+                        <p class="small text-white">
                             Don't have an account?
                             <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
                                 data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a>
@@ -1023,7 +1052,7 @@
 
                     <form class="needs-validation" novalidate>
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Full
+                            <label class="form-label small text-white">Full
                                 Name</label>
                             <input type="text"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
@@ -1033,7 +1062,7 @@
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Email
+                            <label class="form-label small text-white">Email
                                 Address</label>
                             <input type="email"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
@@ -1043,7 +1072,7 @@
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Phone
+                            <label class="form-label small text-white">Phone
                                 Number</label>
                             <input type="tel"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
@@ -1053,7 +1082,7 @@
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label small text-secondary">Password</label>
+                            <label class="form-label small text-white">Password</label>
                             <input type="password"
                                 class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
                                 placeholder="Create password" required minlength="6">
@@ -1062,7 +1091,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <p class="small text-secondary" style="font-size: 11px;">
+                            <p class="small text-white" style="font-size: 11px;">
                                 By signing up, you agree to our <a href="#" class="text-info">Terms &
                                     Conditions</a>.
                             </p>
@@ -1073,7 +1102,7 @@
                     </form>
 
                     <div class="text-center mt-4">
-                        <p class="small text-secondary">Already have an
+                        <p class="small text-white">Already have an
                             account?
                             <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
                                 data-bs-target="#loginModal" data-bs-dismiss="modal">Login Here</a>

@@ -74,6 +74,7 @@
     </style>
 
 </head>
+
 <body>
 
 
@@ -93,16 +94,28 @@
                 <div class="col-lg-6 d-none d-lg-block">
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
+                      
+                        
+                         <li class="nav-item dropdown">
+                            <a class="nav-link custom-nav-link dropdown-toggle active-link" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="contact.html">Contact</a></li>
@@ -110,8 +123,7 @@
                 </div>
 
 
-                    <style>
-
+                <style>
                     /* --- General Body Style --- */
                     body {
                         background-color: #f4f7f6;
@@ -243,7 +255,7 @@
                         }
                     }
                 </style>
-                
+
 
                 <div class="col-lg-3 col d-flex justify-content-end align-items-center gap-2 gap-md-3 ms-auto">
                     <div class="nav-search-wrapper d-flex align-items-center ms-2">
@@ -251,11 +263,11 @@
                         <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
-                    <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-                    <a href="#" class="text-info position-relative">
+                    <a href="wishlist.html" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
+                    <a href="card.html" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
-                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
+                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">4</span>
                     </a>
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
@@ -272,16 +284,28 @@
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
                         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="product.html" id="mobileCat"
+                      
+
+                         <li class="nav-item dropdown">
+                            <a class="nav-link custom-nav-link dropdown-toggle active-link" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
-                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                            <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="contact.html">Contact</a></li>
@@ -365,7 +389,64 @@
             "ph13": { name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png", specs: { "Camera": "XMAGE", "Screen": "Kunlun Glass", "RAM": "8GB" } },
             "ph14": { name: "Realme GT 5", price: "550$", img: "images/product/phone14.png", specs: { "Charging": "240W", "RAM": "16GB", "CPU": "Snapdragon 8 Gen 2" } },
             "ph15": { name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png", specs: { "Type": "Flip", "Screen": "165Hz pOLED", "RAM": "8GB" } },
-            "ph16": { name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png", specs: { "Battery": "Silicon-carbon", "Camera": "180MP Telephoto", "RAM": "12GB" } }
+            "ph16": { name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png", specs: { "Battery": "Silicon-carbon", "Camera": "180MP Telephoto", "RAM": "12GB" } },
+
+            // Keyboards (kb1 - kb16)
+            "kb1": { name: "Logitech G Pro X", price: "150$", img: "images/product/keyboard1.png", specs: { "Switch": "GX Blue Clicky", "Layout": "TKL", "RGB": "Lightsync" } },
+            "kb2": { name: "Razer BlackWidow V4", price: "180$", img: "images/product/keyboard2.png", specs: { "Switch": "Yellow Mechanical", "Polling": "8000Hz", "Keys": "Mechanical" } },
+            "kb3": { name: "Keychron K2 V2", price: "100$", img: "images/product/keyboard3.png", specs: { "Mode": "Wireless/Wired", "Battery": "4000mAh", "Backlight": "RGB" } },
+            "kb4": { name: "Corsair K70 RGB", price: "160$", img: "images/product/keyboard4.png", specs: { "Switch": "Cherry MX Speed", "Frame": "Aluminum", "USB": "Passthrough" } },
+            "kb5": { name: "SteelSeries Apex Pro", price: "210$", img: "images/product/keyboard5.png", specs: { "Switch": "OmniPoint 2.0", "Response": "0.54ms", "OLED": "Smart Display" } },
+            "kb6": { name: "ASUS ROG Strix Scope", price: "140$", img: "images/product/keyboard6.png", specs: { "Switch": "ROG NX Red", "Layout": "Full Size", "Stealth Key": "Included" } },
+            "kb7": { name: "Ducky One 3 Mini", price: "120$", img: "images/product/keyboard7.png", specs: { "Size": "60%", "Switch": "Cherry MX Brown", "Keycaps": "PBT Double-shot" } },
+            "kb8": { name: "HyperX Alloy Origins", price: "110$", img: "images/product/keyboard8.png", specs: { "Switch": "HyperX Red", "Body": "Aircraft-grade Alum", "Memory": "3 Profiles" } },
+            "kb9": { name: "Razer Huntsman Mini", price: "130$", img: "images/product/keyboard9.png", specs: { "Switch": "Optical Linear", "Size": "60%", "Cable": "Detachable Type-C" } },
+            "kb10": { name: "Logitech G915 TKL", price: "230$", img: "images/product/keyboard10.png", specs: { "Type": "Low Profile", "Wireless": "Lightspeed", "Battery": "40 Hours" } },
+            "kb11": { name: "Keychron Q3 Pro", price: "200$", img: "images/product/keyboard11.png", specs: { "Body": "Full Aluminum", "Switch": "Keychron K Pro", "Knob": "Programmable" } },
+            "kb12": { name: "Akko 3068B Plus", price: "90$", img: "images/product/keyboard12.png", specs: { "Switch": "Akko Jelly Pink", "Modes": "Multi-host 5.0", "Hotswap": "Yes" } },
+            "kb13": { name: "Glorious GMMK 2", price: "120$", img: "images/product/keyboard13.png", specs: { "Layout": "96% Compact", "Switch": "Glorious Fox", "Plate": "Aluminum" } },
+            "kb14": { name: "EPOMAKER TH80 Pro", price: "95$", img: "images/product/keyboard14.png", specs: { "Layout": "75%", "Battery": "4000mAh", "Connection": "Tri-Mode" } },
+            "kb15": { name: "Royal Kludge RK61", price: "55$", img: "images/product/keyboard15.png", specs: { "Size": "60% Portable", "Bluetooth": "Dual Mode", "Battery": "Standard" } },
+            "kb16": { name: "Redragon K552 RGB", price: "45$", img: "images/product/keyboard16.png", specs: { "Switch": "Dust Proof Blue", "Layout": "87 Keys", "Material": "Metal/ABS" } },
+
+            // Mice Specs (ms1 - ms12)
+            "ms1": { name: "Logitech G Pro X Superlight", price: "150$", img: "images/product/mouse1.png", specs: { "Sensor": "HERO 25K", "Weight": "63g", "Battery": "70 Hours" } },
+            "ms2": { name: "Razer DeathAdder V3 Pro", price: "140$", img: "images/product/mouse2.png", specs: { "Sensor": "Focus Pro 30K", "Weight": "63g", "Polling": "4000Hz" } },
+            "ms3": { name: "Logitech G502 X Plus", price: "160$", img: "images/product/mouse3.png", specs: { "Switch": "Lightforce Hybrid", "RGB": "Lightsync", "Weight": "106g" } },
+            "ms4": { name: "SteelSeries Aerox 3", price: "100$", img: "images/product/mouse4.png", specs: { "Design": "Honey Shell", "Weight": "68g", "Protection": "IP54" } },
+            "ms5": { name: "Razer Viper V2 Pro", price: "150$", img: "images/product/mouse5.png", specs: { "Sensor": "Focus Pro 30K", "Switches": "Gen-3 Optical", "Weight": "58g" } },
+            "ms6": { name: "Glorious Model O", price: "85$", img: "images/product/mouse6.png", specs: { "Type": "Honeycomb", "Weight": "69g", "Cable": "Ascended Cord" } },
+            "ms7": { name: "Zowie EC2-C", price: "70$", img: "images/product/mouse7.png", specs: { "Sensor": "3360", "Design": "Ergonomic", "Weight": "73g" } },
+            "ms8": { name: "Corsair Dark Core RGB", price: "90$", img: "images/product/mouse8.png", specs: { "Polling": "2000Hz", "Charging": "Qi Wireless", "RGB": "9-Zone" } },
+            "ms9": { name: "ASUS ROG Spatha X", price: "145$", img: "images/product/mouse9.png", specs: { "Connectivity": "Dual-mode", "Buttons": "12 Programmable", "Dock": "Magnetic" } },
+            "ms10": { name: "HyperX Pulsefire Haste", price: "50$", img: "images/product/mouse10.png", specs: { "Weight": "59g", "Switches": "TTC Golden", "Feet": "PTFE Grade" } },
+            "ms11": { name: "Logitech MX Master 3S", price: "110$", img: "images/product/mouse11.png", specs: { "Type": "Productivity", "Sensor": "8K DPI", "Feature": "Quiet Click" } },
+            "ms12": { name: "Razer Basilisk V3", price: "75$", img: "images/product/mouse12.png", specs: { "Buttons": "11 Programmable", "Scroll": "HyperScroll Tilt", "RGB": "11 Chroma Zones" } },
+
+            // Gamepad Specs (gp1 - gp9)
+            "gp1": { name: "Sony DualSense PS5", price: "75$", img: "images/product/gamepad1.png", specs: { "Feature": "Haptic Feedback", "Triggers": "Adaptive", "Battery": "1560mAh" } },
+            "gp2": { name: "Xbox Elite Series 2", price: "180$", img: "images/product/gamepad2.png", specs: { "Build": "Premium Rubberized", "Paddles": "4 Interchangeable", "Battery": "40 Hours" } },
+            "gp3": { name: "Logitech F710", price: "50$", img: "images/product/gamepad3.png", specs: { "Connection": "2.4 GHz Wireless", "Vibration": "Dual Motor", "Mode": "XInput/DirectInput" } },
+            "gp4": { name: "Razer Wolverine V2", price: "150$", img: "images/product/gamepad4.png", specs: { "Buttons": "Mecha-Tactile", "Triggers": "Hair Trigger Mode", "Grip": "Non-slip Rubber" } },
+            "gp5": { name: "Nintendo Switch Pro", price: "70$", img: "images/product/gamepad5.png", specs: { "Sensor": "Motion Control", "Feature": "Amiibo Support", "Battery": "40 Hours" } },
+            "gp6": { name: "SteelSeries Stratus+", price: "60$", img: "images/product/gamepad6.png", specs: { "Platform": "Android/PC", "Connection": "Bluetooth/Wired", "Battery": "90 Hours" } },
+            "gp7": { name: "8BitDo Pro 2", price: "50$", img: "images/product/gamepad7.png", specs: { "Profile": "Custom Switching", "Back Buttons": "2 Pro-level", "Software": "8BitDo Ultimate" } },
+            "gp8": { name: "MSI Force GC30V2", price: "45$", img: "images/product/gamepad8.png", specs: { "Battery": "600mAh Lithium", "Switches": "2M Clicks", "D-pad": "Interchangeable" } },
+            "gp9": { name: "PowerA Fusion Pro", price: "80$", img: "images/product/gamepad9.png", specs: { "Mappable": "Pro Pack Paddles", "Locks": "3-Way Trigger", "Faceplates": "Swappable" } },
+
+            // Camera Specs (cm1 - cm12)
+            "cm1": { name: "Canon EOS R5", price: "3,899$", img: "images/product/camera1.png", specs: { "Sensor": "45MP Full-frame", "Video": "8K RAW", "Focus": "Dual Pixel AF" } },
+            "cm2": { name: "Sony A7 IV", price: "2,499$", img: "images/product/camera2.png", specs: { "Sensor": "33MP Full-frame", "Video": "4K 60p", "AF": "Real-time Eye AF" } },
+            "cm3": { name: "Nikon Z6 II", price: "1,999$", img: "images/product/camera3.png", specs: { "Sensor": "24.5MP Full-frame", "Video": "4K 60p", "Card Slot": "Dual Slots" } },
+            "cm4": { name: "Fujifilm X-T5", price: "1,699$", img: "images/product/camera4.png", specs: { "Sensor": "40MP APS-C", "Video": "6.2K 30p", "Style": "Classic Design" } },
+            "cm5": { name: "Panasonic GH6", price: "2,199$", img: "images/product/camera5.png", specs: { "Sensor": "25.2MP Micro 4/3", "Video": "5.7K 60p", "Feature": "Internal Cooling" } },
+            "cm6": { name: "GoPro HERO 12", price: "399$", img: "images/product/camera6.png", specs: { "Type": "Action Camera", "Video": "5.3K 60p", "Feature": "Waterproof" } },
+            "cm7": { name: "DJI Osmo Pocket 3", price: "519$", img: "images/product/camera7.png", specs: { "Sensor": "1-inch CMOS", "Gimbal": "3-Axis Stable", "Screen": "2-inch Rotatable" } },
+            "cm8": { name: "Insta360 X3", price: "449$", img: "images/product/camera8.png", specs: { "Type": "360 Camera", "Video": "5.7K 360", "Feature": "Invisible Selfie Stick" } },
+            "cm9": { name: "Sony ZV-E10", price: "699$", img: "images/product/camera9.png", specs: { "Type": "Vlogging Camera", "AF": "Fast Hybrid", "Audio": "Directional Mic" } },
+            "cm10": { name: "Canon G7 X Mark III", price: "749$", img: "images/product/camera10.png", specs: { "Sensor": "20.1MP 1-inch", "Zoom": "4.2x Optical", "Live Stream": "YouTube support" } },
+            "cm11": { name: "Nikon Z9", price: "5,499$", img: "images/product/camera11.png", specs: { "Sensor": "45.7MP Stacked", "Video": "8K/60p", "Durability": "Pro Build" } },
+            "cm12": { name: "Leica Q3", price: "5,995$", img: "images/product/camera12.png", specs: { "Sensor": "60MP Full-frame", "Lens": "28mm f/1.7", "AF": "Phase Detection" } }
         };
 
 
@@ -464,22 +545,23 @@
             alert("ပစ္စည်းကို ခြင်းတောင်းထဲ ထည့်လိုက်ပါပြီ မိတ်ဆွေ!");
         }
 
-        function buyNow(productId) {
-            window.location.href = `checkout.html?id=${productId}`;
+
+        function addToCart() {
+            alert("ပစ္စည်းကို ခြင်းတောင်းထဲ ထည့်လိုက်ပါပြီ မိတ်ဆွေ!");
         }
 
-        //product page ထဲက ပစ္စည်းတွေအတွက်
         function buyNow(productId) {
-            // ပစ္စည်းရှိမရှိ အရင်စစ်မယ်
-            if (products[productId]) {
-                const item = products[productId];
-                // ပစ္စည်းရဲ့ ID, နာမည် နဲ့ ဈေးနှုန်းကို နောက်စာမျက်နှာဆီ URL ကနေတစ်ဆင့် ပို့မယ်
+            const item = products[productId];
+            if (item) {
+                // ID, Name နဲ့ Price ကို checkout page ဆီ ပို့ပေးမယ်
                 const checkoutUrl = `checkout.html?id=${productId}&name=${encodeURIComponent(item.name)}&price=${encodeURIComponent(item.price)}`;
                 window.location.href = checkoutUrl;
             } else {
                 alert("ပစ္စည်းအချက်အလက် ရှာမတွေ့ပါ!");
             }
         }
+
+
     </script>
 
 

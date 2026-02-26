@@ -45,5 +45,62 @@
             { id: 'ph13', name: 'Asus ROG Phone 8', price: '1,099$', category: 'phone', img: 'images/product/phone13.png' },
             { id: 'ph14', name: 'Sony Xperia 1 V', price: '1,199$', category: 'phone', img: 'images/product/phone14.png' },
             { id: 'ph15', name: 'Huawei P60 Pro', price: '899$', category: 'phone', img: 'images/product/phone15.png' },
-            { id: 'ph16', name: 'Motorola Edge 40', price: '499$', category: 'phone', img: 'images/product/phone16.png' }
-        ];
+            { id: 'ph16', name: 'Motorola Edge 40', price: '499$', category: 'phone', img: 'images/product/phone16.png' },
+
+            // --- Keyboards (၁၆ မျိုး အပြည့်အစုံ) ---
+            { id: 'kb1', name: 'Logitech G Pro X', price: '150$', category: 'keyboard', img: 'images/product/keyboard1.png' },
+            { id: 'kb2', name: 'Razer BlackWidow V4', price: '180$', category: 'keyboard', img: 'images/product/keyboard2.png' },
+            { id: 'kb3', name: 'Keychron K2 V2', price: '100$', category: 'keyboard', img: 'images/product/keyboard3.png' },
+            { id: 'kb4', name: 'Corsair K70 RGB Pro', price: '160$', category: 'keyboard', img: 'images/product/keyboard4.png' },
+            { id: 'kb5', name: 'SteelSeries Apex Pro', price: '210$', category: 'keyboard', img: 'images/product/keyboard5.png' },
+            { id: 'kb6', name: 'ASUS ROG Strix Scope', price: '140$', category: 'keyboard', img: 'images/product/keyboard6.png' },
+            { id: 'kb7', name: 'Ducky One 3 Mini', price: '120$', category: 'keyboard', img: 'images/product/keyboard7.png' },
+            { id: 'kb8', name: 'HyperX Alloy Origins', price: '110$', category: 'keyboard', img: 'images/product/keyboard8.png' },
+            { id: 'kb9', name: 'Razer Huntsman Mini', price: '130$', category: 'keyboard', img: 'images/product/keyboard9.png' },
+            { id: 'kb10', name: 'Logitech G915 TKL', price: '230$', category: 'keyboard', img: 'images/product/keyboard10.png' },
+            { id: 'kb11', name: 'Keychron Q3 Pro', price: '200$', category: 'keyboard', img: 'images/product/keyboard11.png' },
+            { id: 'kb12', name: 'Akko 3068B Plus', price: '90$', category: 'keyboard', img: 'images/product/keyboard12.png' },
+            { id: 'kb13', name: 'Glorious GMMK 2', price: '120$', category: 'keyboard', img: 'images/product/keyboard13.png' },
+            { id: 'kb14', name: 'EPOMAKER TH80 Pro', price: '95$', category: 'keyboard', img: 'images/product/keyboard14.png' },
+            { id: 'kb15', name: 'Royal Kludge RK61', price: '55$', category: 'keyboard', img: 'images/product/keyboard15.png' },
+            { id: 'kb16', name: 'Redragon K552 RGB', price: '45$', category: 'keyboard', img: 'images/product/keyboard16.png' },
+
+            // --- Mouse (၁၂ မျိုး အပြည့်အစုံ) ---
+            { id: 'ms1', name: 'Logitech G Pro X Superlight', price: '150$', category: 'mouse', img: 'images/product/mouse1.png' },
+            { id: 'ms2', name: 'Razer DeathAdder V3 Pro', price: '140$', category: 'mouse', img: 'images/product/mouse2.png' },
+            { id: 'ms3', name: 'Logitech G502 X Plus', price: '160$', category: 'mouse', img: 'images/product/mouse3.png' },
+            { id: 'ms4', name: 'SteelSeries Aerox 3', price: '100$', category: 'mouse', img: 'images/product/mouse4.png' },
+            { id: 'ms5', name: 'Razer Viper V2 Pro', price: '150$', category: 'mouse', img: 'images/product/mouse5.png' },
+            { id: 'ms6', name: 'Glorious Model O Wireless', price: '85$', category: 'mouse', img: 'images/product/mouse6.png' },
+            { id: 'ms7', name: 'Zowie EC2-C', price: '70$', category: 'mouse', img: 'images/product/mouse7.png' },
+            { id: 'ms8', name: 'Corsair Dark Core RGB', price: '90$', category: 'mouse', img: 'images/product/mouse8.png' },
+            { id: 'ms9', name: 'ASUS ROG Spatha X', price: '145$', category: 'mouse', img: 'images/product/mouse9.png' },
+            { id: 'ms10', name: 'HyperX Pulsefire Haste', price: '50$', category: 'mouse', img: 'images/product/mouse10.png' },
+            { id: 'ms11', name: 'Logitech MX Master 3S', price: '110$', category: 'mouse', img: 'images/product/mouse11.png' },
+            { id: 'ms12', name: 'Razer Basilisk V3', price: '75$', category: 'mouse', img: 'images/product/mouse12.png' },
+
+            // --- Gamepads (၉ မျိုး အပြည့်အစုံ) ---
+            { id: 'gp1', name: 'Sony DualSense PS5', price: '75$', category: 'gamepad', img: 'images/product/gamepad1.png' },
+            { id: 'gp2', name: 'Xbox Elite Series 2', price: '180$', category: 'gamepad', img: 'images/product/gamepad2.png' },
+            { id: 'gp3', name: 'Logitech F710 Wireless', price: '50$', category: 'gamepad', img: 'images/product/gamepad3.png' },
+            { id: 'gp4', name: 'Razer Wolverine V2', price: '150$', category: 'gamepad', img: 'images/product/gamepad4.png' },
+            { id: 'gp5', name: 'Nintendo Switch Pro', price: '70$', category: 'gamepad', img: 'images/product/gamepad5.png' },
+            { id: 'gp6', name: 'SteelSeries Stratus+', price: '60$', category: 'gamepad', img: 'images/product/gamepad6.png' },
+            { id: 'gp7', name: '8BitDo Pro 2', price: '50$', category: 'gamepad', img: 'images/product/gamepad7.png' },
+            { id: 'gp8', name: 'MSI Force GC30V2', price: '45$', category: 'gamepad', img: 'images/product/gamepad8.png' },
+            { id: 'gp9', name: 'PowerA Fusion Pro', price: '80$', category: 'gamepad', img: 'images/product/gamepad9.png' },
+
+            // --- Cameras (၁၂ မျိုး အပြည့်အစုံ) ---
+            { id: 'cm1', name: 'Canon EOS R5', price: '3,899$', category: 'camera', img: 'images/product/camera1.png' },
+            { id: 'cm2', name: 'Sony A7 IV', price: '2,499$', category: 'camera', img: 'images/product/camera2.png' },
+            { id: 'cm3', name: 'Nikon Z6 II', price: '1,999$', category: 'camera', img: 'images/product/camera3.png' },
+            { id: 'cm4', name: 'Fujifilm X-T5', price: '1,699$', category: 'camera', img: 'images/product/camera4.png' },
+            { id: 'cm5', name: 'Panasonic GH6', price: '2,199$', category: 'camera', img: 'images/product/camera5.png' },
+            { id: 'cm6', name: 'GoPro HERO 12', price: '399$', category: 'camera', img: 'images/product/camera6.png' },
+            { id: 'cm7', name: 'DJI Osmo Pocket 3', price: '519$', category: 'camera', img: 'images/product/camera7.png' },
+            { id: 'cm8', name: 'Insta360 X3', price: '449$', category: 'camera', img: 'images/product/camera8.png' },
+            { id: 'cm9', name: 'Sony ZV-E10', price: '699$', category: 'camera', img: 'images/product/camera9.png' },
+            { id: 'cm10', name: 'Canon G7 X Mark III', price: '749$', category: 'camera', img: 'images/product/camera10.png' },
+            { id: 'cm11', name: 'Nikon Z9', price: '5,499$', category: 'camera', img: 'images/product/camera11.png' },
+            { id: 'cm12', name: 'Leica Q3', price: '5,995$', category: 'camera', img: 'images/product/camera12.png' }
+            ];

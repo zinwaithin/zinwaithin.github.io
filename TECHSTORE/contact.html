@@ -41,20 +41,30 @@
                 <div class="col-lg-6 d-none d-lg-block">
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+                     
                         <li class="nav-item dropdown">
                             <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="service.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link custom-nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link custom-nav-link active-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -200,11 +210,11 @@
                         <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
-                    <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-                    <a href="#" class="text-info position-relative">
+                    <a href="wishlist.html" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
+                    <a href="card.html" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
-                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
+                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">4</span>
                     </a>
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
@@ -220,20 +230,30 @@
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
                         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
+                      
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="product.html" id="mobileCat"
+                            <a class="nav-link custom-nav-link dropdown-toggle" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
-                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="product.html">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="product.html">Laptops</a></li>
-                                <li><a class="dropdown-item" href="product.html">Accessories</a></li>
+                            <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="service.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-white py-2" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link text-white py-2 active-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -441,6 +461,157 @@
 
     <!-- end footer -->
 
+     
+    <!-- start login -->
+
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Login to ZG</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter password" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Password
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label small" for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="text-info small text-decoration-none">Forgot
+                                Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Login</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-white">
+                            Don't have an account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Create Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Full
+                                Name</label>
+                            <input type="text"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter your name" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">နာမည်ဖြည့်ရန်
+                                လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email မှန်ကန်စွာ
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Phone
+                                Number</label>
+                            <input type="tel"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="09xxxxxxxxx" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">ဖုန်းနံပါတ်
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Create password" required minlength="6">
+                            <div class="invalid-feedback" style="font-size: 11px;">Password အနည်းဆုံး
+                                ၆ လုံး ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="small text-white" style="font-size: 11px;">
+                                By signing up, you agree to our <a href="#" class="text-info">Terms &
+                                    Conditions</a>.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Create
+                            Account</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-white">Already have an
+                            account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" data-bs-dismiss="modal">Login Here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Bootstrap Validation Script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+    <!-- end login -->
+    <!--  -->
 
 
 </body>

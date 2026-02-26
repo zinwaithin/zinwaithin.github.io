@@ -175,13 +175,24 @@
                 <div class="col-lg-6 d-none d-lg-block">
                     <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="index.html">Home</a></li>
+                      
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link custom-nav-link dropdown-toggle" href="#product" id="productDrop"
+                            <a class="nav-link custom-nav-link dropdown-toggle active-link" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
                             <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
-                                <li><a class="dropdown-item" href="#product">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#product">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#product">Accessories</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link custom-nav-link" href="promotion.html">Promotion</a>
@@ -200,11 +211,11 @@
                         <input type="text" placeholder="Search..." onkeyup="filterItemsNavbar(this)">
                     </div>
 
-                    <a href="#" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
-                    <a href="#" class="text-info position-relative">
+                    <a href="wishlist.html" class="text-white"><i class="fa-solid fa-heart" style="font-size: 18px;"></i></a>
+                    <a href="card.html" class="text-info position-relative">
                         <i class="fa-solid fa-cart-shopping" style="font-size: 18px;"></i>
                         <span class="badge rounded-pill bg-info text-dark"
-                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">2</span>
+                            style="font-size: 9px; position: absolute; top: -8px; right: -10px;">4</span>
                     </a>
                     <a href="#" class="text-white ms-1" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-user" style="font-size: 18px;"></i>
@@ -220,13 +231,25 @@
                     <ul class="navbar-nav text-start p-3 mt-2 rounded shadow"
                         style="background: #1a1d20; border: 1px solid rgba(255,255,255,0.1);">
                         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
+                        
+
+                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle py-2" href="#product" id="mobileCat"
+                            <a class="nav-link custom-nav-link dropdown-toggle active-link" href="product.html" id="productDrop"
                                 data-bs-toggle="dropdown">Products</a>
-                            <ul class="dropdown-menu dropdown-menu-dark border-0 shadow">
-                                <li><a class="dropdown-item" href="#product">Smartphones</a></li>
-                                <li><a class="dropdown-item" href="#product">Laptops</a></li>
-                                <li><a class="dropdown-item" href="#product">Accessories</a></li>
+                            <ul class="dropdown-menu shadow-lg border-0 custom-compact-dropdown">
+                                <li><a class="dropdown-item" href="product.html?cat=phone"
+                                        onclick="saveCategory('phone')">Smartphones</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=laptop"
+                                        onclick="saveCategory('laptop')">Laptops</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=keyboard"
+                                        onclick="saveCategory('keyboard')">Keyboards</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=mouse"
+                                        onclick="saveCategory('mouse')">Mouses</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=gamepad"
+                                        onclick="saveCategory('gamepad')">Gamepads</a></li>
+                                <li><a class="dropdown-item" href="product.html?cat=camera"
+                                        onclick="saveCategory('camera')">Cameras</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-white py-2" href="promotion.html">Promotion</a>
@@ -261,6 +284,9 @@
             <button class="category-btn" onclick="filterCategory('laptop', this)">Laptops</button>
             <button class="category-btn" onclick="filterCategory('phone', this)">Smartphones</button>
             <button class="category-btn" onclick="filterCategory('keyboard', this)">Keyboards</button>
+            <button class="category-btn" onclick="filterCategory('mouse', this)">Mouse</button>
+            <button class="category-btn" onclick="filterCategory('gamepad', this)">Gamepads</button>
+            <button class="category-btn" onclick="filterCategory('camera', this)">Cameras</button>
         </div>
 
         <div class="row g-4" id="productGrid">
@@ -334,13 +360,84 @@
             { id: 'kb13', name: 'Grey-Yellow Mechanical', price: '90$', category: 'keyboard', img: 'images/product/keyboard13.png' },
             { id: 'kb14', name: 'Acer Wired Office KB', price: '25$', category: 'keyboard', img: 'images/product/keyboard14.png' },
             { id: 'kb15', name: 'Rapoo Wireless Grey', price: '45$', category: 'keyboard', img: 'images/product/keyboard15.png' },
-            { id: 'kb16', name: 'Custom RGB Wood Case', price: '140$', category: 'keyboard', img: 'images/product/keyboard16.png' }
+            { id: 'kb16', name: 'Custom RGB Wood Case', price: '140$', category: 'keyboard', img: 'images/product/keyboard16.png' },
+
+            // --- Mouse (၁၂ မျိုး အပြည့်အစုံ) ---
+            { id: 'ms1', name: 'Logitech G Pro X Superlight', price: '150$', category: 'mouse', img: 'images/product/mouse1.png' },
+            { id: 'ms2', name: 'Razer DeathAdder V3 Pro', price: '140$', category: 'mouse', img: 'images/product/mouse2.png' },
+            { id: 'ms3', name: 'Logitech G502 X Plus', price: '160$', category: 'mouse', img: 'images/product/mouse3.png' },
+            { id: 'ms4', name: 'SteelSeries Aerox 3', price: '100$', category: 'mouse', img: 'images/product/mouse4.png' },
+            { id: 'ms5', name: 'Razer Viper V2 Pro', price: '150$', category: 'mouse', img: 'images/product/mouse5.png' },
+            { id: 'ms6', name: 'Glorious Model O Wireless', price: '85$', category: 'mouse', img: 'images/product/mouse6.png' },
+            { id: 'ms7', name: 'Zowie EC2-C', price: '70$', category: 'mouse', img: 'images/product/mouse7.png' },
+            { id: 'ms8', name: 'Corsair Dark Core RGB', price: '90$', category: 'mouse', img: 'images/product/mouse8.png' },
+            { id: 'ms9', name: 'ASUS ROG Spatha X', price: '145$', category: 'mouse', img: 'images/product/mouse9.png' },
+            { id: 'ms10', name: 'HyperX Pulsefire Haste', price: '50$', category: 'mouse', img: 'images/product/mouse10.png' },
+            { id: 'ms11', name: 'Logitech MX Master 3S', price: '110$', category: 'mouse', img: 'images/product/mouse11.png' },
+            { id: 'ms12', name: 'Razer Basilisk V3', price: '75$', category: 'mouse', img: 'images/product/mouse12.png' },
+
+            //gamepad 
+            { id: 'gp1', name: 'Sony DualSense PS5', price: '75$', img: 'images/product/gamepad1.png' },
+            { id: 'gp2', name: 'Xbox Elite Series 2', price: '180$', img: 'images/product/gamepad2.png' },
+            { id: 'gp3', name: 'Logitech F710 Wireless', price: '50$', img: 'images/product/gamepad3.png' },
+            { id: 'gp4', name: 'Razer Wolverine V2', price: '150$', img: 'images/product/gamepad4.png' },
+            { id: 'gp5', name: 'Nintendo Switch Pro', price: '70$', img: 'images/product/gamepad5.png' },
+            { id: 'gp6', name: 'SteelSeries Stratus+', price: '60$', img: 'images/product/gamepad6.png' },
+            { id: 'gp7', name: '8BitDo Pro 2', price: '50$', img: 'images/product/gamepad7.png' },
+            { id: 'gp8', name: 'MSI Force GC30V2', price: '45$', img: 'images/product/gamepad8.png' },
+            { id: 'gp9', name: 'PowerA Fusion Pro', price: '80$', img: 'images/product/gamepad9.png' },
+
+            // --- Cameras (၁၂ မျိုး အပြည့်အစုံ) ---
+            { id: 'cm1', name: 'Canon EOS R5', price: '3,899$', category: 'camera', img: 'images/product/camera1.png' },
+            { id: 'cm2', name: 'Sony A7 IV', price: '2,499$', category: 'camera', img: 'images/product/camera2.png' },
+            { id: 'cm3', name: 'Nikon Z6 II', price: '1,999$', category: 'camera', img: 'images/product/camera3.png' },
+            { id: 'cm4', name: 'Fujifilm X-T5', price: '1,699$', category: 'camera', img: 'images/product/camera4.png' },
+            { id: 'cm5', name: 'Panasonic GH6', price: '2,199$', category: 'camera', img: 'images/product/camera5.png' },
+            { id: 'cm6', name: 'GoPro HERO 12', price: '399$', category: 'camera', img: 'images/product/camera6.png' },
+            { id: 'cm7', name: 'DJI Osmo Pocket 3', price: '519$', category: 'camera', img: 'images/product/camera7.png' },
+            { id: 'cm8', name: 'Insta360 X3', price: '449$', category: 'camera', img: 'images/product/camera8.png' },
+            { id: 'cm9', name: 'Sony ZV-E10', price: '699$', category: 'camera', img: 'images/product/camera9.png' },
+            { id: 'cm10', name: 'Canon G7 X Mark III', price: '749$', category: 'camera', img: 'images/product/camera10.png' },
+            { id: 'cm11', name: 'Nikon Z9', price: '5,499$', category: 'camera', img: 'images/product/camera11.png' },
+            { id: 'cm12', name: 'Leica Q3', price: '5,995$', category: 'camera', img: 'images/product/camera12.png' }
         ];
+
+       // dropdown 
+   //
+        window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cat = urlParams.get('cat');
+
+    if (cat) {
+        // ၁။ Category ကို filter လုပ်မယ်
+        currentCategory = cat;
+        applyFilters();
+
+        // ၂။ သက်ဆိုင်ရာ Button ကို Active ပြောင်းမယ်
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            if (btn.innerText.toLowerCase().includes(cat)) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // ၃။ ပစ္စည်း Grid ရှိတဲ့နေရာကို Scroll ဆွဲမယ်
+        setTimeout(() => {
+            const grid = document.getElementById('productGrid');
+            if (grid) {
+                grid.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 300); // ပုံတွေ load ဖြစ်ဖို့ ခဏစောင့်တာပါ
+    }
+};
+   
+
 
         function renderItems(data) {
             const grid = document.getElementById('productGrid');
             grid.innerHTML = data.map(p => `
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="product-card">
                     <img src="${p.img}" class="product-img" alt="${p.name}" loading="lazy">
                     <h6 class="fw-bold text-truncate">${p.name}</h6>
@@ -357,12 +454,23 @@
 
         let currentCategory = 'all';
 
-        // Laptop ၂၈ ခုလုံးမှာ category: 'laptop' လို့ မပါသေးရင် အလိုအလျောက် ထည့်ပေးလိုက်မယ်
+        // ဒီအပိုင်းလေးကို အစားထိုးလိုက်ပါ (Logic ပိုမှန်သွားအောင်)
         products.forEach(p => {
-            if (!p.id.startsWith('ph')) p.category = 'laptop';
-            else if (p.id.startsWith('ph')) p.category = 'phone';
-            else if (p.id.startsWith('kb')) p.category = 'keyboard';
+            if (p.id.startsWith('ph')) {
+                p.category = 'phone';
+            } else if (p.id.startsWith('kb')) {
+                p.category = 'keyboard';
+            } else if (p.id.startsWith('lp')) {
+                p.category = 'laptop';
+            } else if (p.id.startsWith('ms')) {
+                p.category = 'mouse';
+            } else if (p.id.startsWith('gp')) {
+                p.category = 'gamepad';
+            }else if (p.id.startsWith('cm')) {
+                p.category = 'camera';}
+
         });
+
 
         function filterCategory(cat, btn) {
             currentCategory = cat;
@@ -476,6 +584,158 @@
     </footer>
 
     <!-- end footer -->
+
+     
+    <!-- start login -->
+
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Login to ZG</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter password" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Password
+                                ဖြည့်ရန်လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label small" for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="text-info small text-decoration-none">Forgot
+                                Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Login</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-white">
+                            Don't have an account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#signUpModal" data-bs-dismiss="modal">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Create Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Full
+                                Name</label>
+                            <input type="text"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Enter your name" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">နာမည်ဖြည့်ရန်
+                                လိုအပ်ပါသည်။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="name@example.com" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">Email မှန်ကန်စွာ
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Phone
+                                Number</label>
+                            <input type="tel"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="09xxxxxxxxx" required>
+                            <div class="invalid-feedback" style="font-size: 11px;">ဖုန်းနံပါတ်
+                                ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label class="form-label small text-white">Password</label>
+                            <input type="password"
+                                class="form-control bg-secondary bg-opacity-10 border-secondary text-white shadow-none"
+                                placeholder="Create password" required minlength="6">
+                            <div class="invalid-feedback" style="font-size: 11px;">Password အနည်းဆုံး
+                                ၆ လုံး ဖြည့်ပေးပါ။</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="small text-white" style="font-size: 11px;">
+                                By signing up, you agree to our <a href="#" class="text-info">Terms &
+                                    Conditions</a>.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-info w-100 fw-bold py-2 rounded-pill">Create
+                            Account</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-white">Already have an
+                            account?
+                            <a href="#" class="text-info text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#loginModal" data-bs-dismiss="modal">Login Here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Bootstrap Validation Script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+    <!-- end login -->
+    <!--  -->
 
 
 

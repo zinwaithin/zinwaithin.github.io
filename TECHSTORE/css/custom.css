@@ -17,41 +17,32 @@
     color: #0dcaf0 !important;
 }
 
-/* Smooth Dropdown (Slide Down Effect) */
 .custom-compact-dropdown {
-    background-color: #1a1d20 !important;
-    min-width: 200px;
-    padding: 10px 0;
-    border-top: 3px solid #0dcaf0 !important;
-    border-radius: 0 0 10px 10px !important;
-    margin-top: 10px !important;
-    
-    /* Animation initial state */
-    display: block !important;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-15px); /* အပေါ်မှာ ဖျောက်ထားမယ် */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #212529; /* ဒါမှမဟုတ် မိတ်ဆွေကြိုက်တဲ့ အရောင်အမှောင် */
 }
 
-/* Hover to Show Dropdown */
-.nav-item.dropdown:hover .custom-compact-dropdown {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0); /* အောက်သို့ အိဆင်းလာမယ် */
+
+/* Dropdown Menu တစ်ခုလုံးရဲ့ Background */
+.custom-compact-dropdown {
+    background-color: #212529 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* အနားသတ်လေး နည်းနည်းလင်းအောင် */
+    min-width: 180px;
+    padding: 8px 0;
 }
 
-/* Dropdown Item Style */
+/* Dropdown Item Style (မိတ်ဆွေ ရေးထားတာကို အချောသတ်ထားတာပါ) */
 .dropdown-item {
     color: #ffffff !important;
     font-size: 13px;
     padding: 10px 20px;
-    transition: 0.2s;
+    transition: all 0.3s ease;
+    background: transparent !important; /* ပုံမှန်အချိန်မှာ background မရှိစေဖို့ */
 }
 
+/* Hover လုပ်တဲ့အခါ (မောက်စ်တင်လိုက်တဲ့အခါ) */
 .dropdown-item:hover {
-    background-color: rgba(13, 202, 240, 0.1) !important;
-    color: #0dcaf0 !important;
+    background-color: #0dcaf0 !important; /* မိတ်ဆွေသုံးထားတဲ့ Cyan ရောင် */
+    color: #000000 !important; /* Hover လုပ်ရင် စာသားကို အမည်းပြောင်းလိုက်ရင် ပိုဖတ်လို့ကောင်းပါတယ် */
     padding-left: 25px;
 }
 
@@ -111,6 +102,17 @@
     }
 }
 
+
+/* လက်ရှိရောက်နေတဲ့ Page အရောင် (ဥပမာ- အပြာနုရောင်) */
+.active-link {
+    color: #007bff !important; 
+    font-weight: 700;
+}
+
+/* Navbar links တွေရဲ့ Hover Effect ကိုလည်း တစ်ပါတည်း ညှိလိုက်ပါ */
+.custom-nav-link:hover {
+    color: #007bff !important;
+}
 /* end nav */
 /*  */
 /* start bunner */
@@ -515,3 +517,6 @@
 
 /* end footer */
 /*  */
+
+
+

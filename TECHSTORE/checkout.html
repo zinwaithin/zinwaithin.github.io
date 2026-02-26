@@ -75,7 +75,7 @@
                                 <i class="fas fa-check-circle me-2"></i> Confirm Order
                             </button>
                             <button class="btn btn-link text-decoration-none text-muted mt-2"
-                                onclick="location.href='index.html'">
+                                onclick="location.href='product.html'">
                                 <i class="fas fa-arrow-left me-1"></i> Back to Home
                             </button>
                         </div>
@@ -87,76 +87,133 @@
 
 
     <script>
-    // ၁။ Product စာရင်း (Detail page က အတိုင်း ၂၈ လုံး + ၁၆ လုံး အပြည့်ထည့်ထားသည်)
-    const products = {
-        // Promotion Items
-        "pro-laptop-001": { name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png" },
-        "pro-laptop-002": { name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png" },
-        "pro-laptop-003": { name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png" },
-        "pro-laptop-004": { name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png" },
-        "pro-phone-001": { name: "iPhone 14 Plus", price: "1,199$", img: "images/promotion/pro-phone1.png" },
-        "pro-phone-002": { name: "Samsung Galaxy S24 Ultra", price: "1,169$", img: "images/promotion/pro-phone2.png" },
-        "pro-phone-003": { name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png" },
-        "pro-phone-004": { name: "iPhone 15 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png" },
+        // ၁။ Product စာရင်း (Detail page က အတိုင်း ၂၈ လုံး + ၁၆ လုံး အပြည့်ထည့်ထားသည်)
+        const products = {
+            // Promotion Items
+            "pro-laptop-001": { name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png" },
+            "pro-laptop-002": { name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png" },
+            "pro-laptop-003": { name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png" },
+            "pro-laptop-004": { name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png" },
+            "pro-phone-001": { name: "iPhone 14 Plus", price: "1,199$", img: "images/promotion/pro-phone1.png" },
+            "pro-phone-002": { name: "Samsung Galaxy S24 Ultra", price: "1,169$", img: "images/promotion/pro-phone2.png" },
+            "pro-phone-003": { name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png" },
+            "pro-phone-004": { name: "iPhone 15 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png" },
 
-        // Laptops (lp1 - lp28)
-        "lp1": { name: "MacBook Air M1", price: "950$", img: "images/product/laptop1.png" },
-        "lp2": { name: "Lenovo Yoga 7i", price: "1,150$", img: "images/product/laptop2.png" },
-        "lp3": { name: "Acer Swift X 14", price: "950$", img: "images/product/laptop3.png" },
-        "lp4": { name: "HP Pavilion Gaming", price: "1,080$", img: "images/product/laptop4.png" },
-        "lp5": { name: "ASUS Zenbook 14", price: "1,200$", img: "images/product/laptop5.png" },
-        "lp6": { name: "Dell XPS 13", price: "1,450$", img: "images/product/laptop6.png" },
-        "lp7": { name: "MSI Modern 14", price: "650$", img: "images/product/laptop7.png" },
-        "lp8": { name: "Dell Latitude 5440", price: "890$", img: "images/product/laptop8.png" },
-        "lp9": { name: "Acer Aspire 7", price: "790$", img: "images/product/laptop9.png" },
-        "lp10": { name: "Lenovo IdeaPad 3", price: "550$", img: "images/product/laptop10.png" },
-        "lp11": { name: "HP Victus 15", price: "850$", img: "images/product/laptop11.png" },
-        "lp12": { name: "ASUS ROG Zephyrus", price: "1,600$", img: "images/product/laptop12.png" },
-        "lp13": { name: "Microsoft Surface Pro 9", price: "1,100$", img: "images/product/laptop13.png" },
-        "lp14": { name: "Razer Blade 15", price: "2,400$", img: "images/product/laptop14.png" },
-        "lp15": { name: "Samsung Galaxy Book 3", price: "1,300$", img: "images/product/laptop15.png" },
-        "lp16": { name: "LG Gram 17", price: "1,500$", img: "images/product/laptop16.png" },
-        "lp17": { name: "MacBook Air M2", price: "1,099$", img: "images/product/laptop17.png" },
-        "lp18": { name: "MacBook Pro M3 Max", price: "3,199$", img: "images/product/laptop18.png" },
-        "lp19": { name: "GIGABYTE G5", price: "900$", img: "images/product/laptop19.png" },
-        "lp20": { name: "Lenovo ThinkPad X1", price: "1,700$", img: "images/product/laptop20.png" },
-        "lp21": { name: "Huawei MateBook D15", price: "600$", img: "images/product/laptop21.png" },
-        "lp22": { name: "Dell Vostro 3510", price: "720$", img: "images/product/laptop22.png" },
-        "lp23": { name: "ASUS VivoBook S15", price: "880$", img: "images/product/laptop23.png" },
-        "lp24": { name: "Acer Predator Helios", price: "1,400$", img: "images/product/laptop24.png" },
-        "lp25": { name: "HP Envy x360", price: "980$", img: "images/product/laptop25.png" },
-        "lp26": { name: "MSI Katana GF66", price: "1,050$", img: "images/product/laptop26.png" },
-        "lp27": { name: "Apple MacBook Pro 14", price: "1,999$", img: "images/product/laptop27.png" },
-        "lp28": { name: "Lenovo Legion 5", price: "1,250$", img: "images/product/laptop28.png" },
+            // Laptops (lp1 - lp28)
+            "lp1": { name: "MacBook Air M1", price: "950$", img: "images/product/laptop1.png" },
+            "lp2": { name: "Lenovo Yoga 7i", price: "1,150$", img: "images/product/laptop2.png" },
+            "lp3": { name: "Acer Swift X 14", price: "950$", img: "images/product/laptop3.png" },
+            "lp4": { name: "HP Pavilion Gaming", price: "1,080$", img: "images/product/laptop4.png" },
+            "lp5": { name: "ASUS Zenbook 14", price: "1,200$", img: "images/product/laptop5.png" },
+            "lp6": { name: "Dell XPS 13", price: "1,450$", img: "images/product/laptop6.png" },
+            "lp7": { name: "MSI Modern 14", price: "650$", img: "images/product/laptop7.png" },
+            "lp8": { name: "Dell Latitude 5440", price: "890$", img: "images/product/laptop8.png" },
+            "lp9": { name: "Acer Aspire 7", price: "790$", img: "images/product/laptop9.png" },
+            "lp10": { name: "Lenovo IdeaPad 3", price: "550$", img: "images/product/laptop10.png" },
+            "lp11": { name: "HP Victus 15", price: "850$", img: "images/product/laptop11.png" },
+            "lp12": { name: "ASUS ROG Zephyrus", price: "1,600$", img: "images/product/laptop12.png" },
+            "lp13": { name: "Microsoft Surface Pro 9", price: "1,100$", img: "images/product/laptop13.png" },
+            "lp14": { name: "Razer Blade 15", price: "2,400$", img: "images/product/laptop14.png" },
+            "lp15": { name: "Samsung Galaxy Book 3", price: "1,300$", img: "images/product/laptop15.png" },
+            "lp16": { name: "LG Gram 17", price: "1,500$", img: "images/product/laptop16.png" },
+            "lp17": { name: "MacBook Air M2", price: "1,099$", img: "images/product/laptop17.png" },
+            "lp18": { name: "MacBook Pro M3 Max", price: "3,199$", img: "images/product/laptop18.png" },
+            "lp19": { name: "GIGABYTE G5", price: "900$", img: "images/product/laptop19.png" },
+            "lp20": { name: "Lenovo ThinkPad X1", price: "1,700$", img: "images/product/laptop20.png" },
+            "lp21": { name: "Huawei MateBook D15", price: "600$", img: "images/product/laptop21.png" },
+            "lp22": { name: "Dell Vostro 3510", price: "720$", img: "images/product/laptop22.png" },
+            "lp23": { name: "ASUS VivoBook S15", price: "880$", img: "images/product/laptop23.png" },
+            "lp24": { name: "Acer Predator Helios", price: "1,400$", img: "images/product/laptop24.png" },
+            "lp25": { name: "HP Envy x360", price: "980$", img: "images/product/laptop25.png" },
+            "lp26": { name: "MSI Katana GF66", price: "1,050$", img: "images/product/laptop26.png" },
+            "lp27": { name: "Apple MacBook Pro 14", price: "1,999$", img: "images/product/laptop27.png" },
+            "lp28": { name: "Lenovo Legion 5", price: "1,250$", img: "images/product/laptop28.png" },
 
-        // Phones (ph1 - ph16)
-        "ph1": { name: "iPhone 15 Pro Max", price: "1,350$", img: "images/product/phone1.png" },
-        "ph2": { name: "Samsung S24 Ultra", price: "1,200$", img: "images/product/phone2.png" },
-        "ph3": { name: "Google Pixel 8 Pro", price: "950$", img: "images/product/phone3.png" },
-        "ph4": { name: "OnePlus 12", price: "800$", img: "images/product/phone4.png" },
-        "ph5": { name: "Xiaomi 14 Ultra", price: "1,100$", img: "images/product/phone5.png" },
-        "ph6": { name: "Sony Xperia 1 V", price: "1,050$", img: "images/product/phone6.png" },
-        "ph7": { name: "Oppo Reno 11 Pro", price: "600$", img: "images/product/phone7.png" },
-        "ph8": { name: "Vivo X100 Pro", price: "900$", img: "images/product/phone8.png" },
-        "ph9": { name: "Asus ROG Phone 8", price: "1,000$", img: "images/product/phone9.png" },
-        "ph10": { name: "Samsung Z Fold 5", price: "1,799$", img: "images/product/phone10.png" },
-        "ph11": { name: "Samsung Z Flip 5", price: "950$", img: "images/product/phone11.png" },
-        "ph12": { name: "Nothing Phone (2)", price: "650$", img: "images/product/phone12.png" },
-        "ph13": { name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png" },
-        "ph14": { name: "Realme GT 5", price: "550$", img: "images/product/phone14.png" },
-        "ph15": { name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png" },
-        "ph16": { name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png" }
-    };
+            // Phones (ph1 - ph16)
+            "ph1": { name: "iPhone 15 Pro Max", price: "1,350$", img: "images/product/phone1.png" },
+            "ph2": { name: "Samsung S24 Ultra", price: "1,200$", img: "images/product/phone2.png" },
+            "ph3": { name: "Google Pixel 8 Pro", price: "950$", img: "images/product/phone3.png" },
+            "ph4": { name: "OnePlus 12", price: "800$", img: "images/product/phone4.png" },
+            "ph5": { name: "Xiaomi 14 Ultra", price: "1,100$", img: "images/product/phone5.png" },
+            "ph6": { name: "Sony Xperia 1 V", price: "1,050$", img: "images/product/phone6.png" },
+            "ph7": { name: "Oppo Reno 11 Pro", price: "600$", img: "images/product/phone7.png" },
+            "ph8": { name: "Vivo X100 Pro", price: "900$", img: "images/product/phone8.png" },
+            "ph9": { name: "Asus ROG Phone 8", price: "1,000$", img: "images/product/phone9.png" },
+            "ph10": { name: "Samsung Z Fold 5", price: "1,799$", img: "images/product/phone10.png" },
+            "ph11": { name: "Samsung Z Flip 5", price: "950$", img: "images/product/phone11.png" },
+            "ph12": { name: "Nothing Phone (2)", price: "650$", img: "images/product/phone12.png" },
+            "ph13": { name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png" },
+            "ph14": { name: "Realme GT 5", price: "550$", img: "images/product/phone14.png" },
+            "ph15": { name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png" },
+            "ph16": { name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png" },
 
-    // ၂။ URL ကနေ ID ဖတ်ပြီး UI ထုတ်ခြင်း
-    window.onload = function() {
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
-        const checkoutDiv = document.getElementById('checkout-item');
-        const item = products[id];
+            // Keyboards (kb1 - kb16)
+            "kb1": { name: "Logitech G Pro X", price: "150$", img: "images/product/keyboard1.png" },
+            "kb2": { name: "Razer BlackWidow V4", price: "180$", img: "images/product/keyboard2.png" },
+            "kb3": { name: "Keychron K2 V2", price: "100$", img: "images/product/keyboard3.png" },
+            "kb4": { name: "Corsair K70 RGB Pro", price: "160$", img: "images/product/keyboard4.png" },
+            "kb5": { name: "SteelSeries Apex Pro", price: "210$", img: "images/product/keyboard5.png" },
+            "kb6": { name: "ASUS ROG Strix Scope", price: "140$", img: "images/product/keyboard6.png" },
+            "kb7": { name: "Ducky One 3 Mini", price: "120$", img: "images/product/keyboard7.png" },
+            "kb8": { name: "HyperX Alloy Origins", price: "110$", img: "images/product/keyboard8.png" },
+            "kb9": { name: "Razer Huntsman Mini", price: "130$", img: "images/product/keyboard9.png" },
+            "kb10": { name: "Logitech G915 TKL", price: "230$", img: "images/product/keyboard10.png" },
+            "kb11": { name: "Keychron Q3 Pro", price: "200$", img: "images/product/keyboard11.png" },
+            "kb12": { name: "Akko 3068B Plus", price: "90$", img: "images/product/keyboard12.png" },
+            "kb13": { name: "Glorious GMMK 2", price: "120$", img: "images/product/keyboard13.png" },
+            "kb14": { name: "EPOMAKER TH80 Pro", price: "95$", img: "images/product/keyboard14.png" },
+            "kb15": { name: "Royal Kludge RK61", price: "55$", img: "images/product/keyboard15.png" },
+            "kb16": { name: "Redragon K552 RGB", price: "45$", img: "images/product/keyboard16.png" },
 
-        if (item) {
-            checkoutDiv.innerHTML = `
+            // Mice for Checkout (ms1 - ms12)
+            "ms1": { name: "Logitech G Pro X Superlight", price: "150$", img: "images/product/mouse1.png" },
+            "ms2": { name: "Razer DeathAdder V3 Pro", price: "140$", img: "images/product/mouse2.png" },
+            "ms3": { name: "Logitech G502 X Plus", price: "160$", img: "images/product/mouse3.png" },
+            "ms4": { name: "SteelSeries Aerox 3", price: "100$", img: "images/product/mouse4.png" },
+            "ms5": { name: "Razer Viper V2 Pro", price: "150$", img: "images/product/mouse5.png" },
+            "ms6": { name: "Glorious Model O Wireless", price: "85$", img: "images/product/mouse6.png" },
+            "ms7": { name: "Zowie EC2-C", price: "70$", img: "images/product/mouse7.png" },
+            "ms8": { name: "Corsair Dark Core RGB", price: "90$", img: "images/product/mouse8.png" },
+            "ms9": { name: "ASUS ROG Spatha X", price: "145$", img: "images/product/mouse9.png" },
+            "ms10": { name: "HyperX Pulsefire Haste", price: "50$", img: "images/product/mouse10.png" },
+            "ms11": { name: "Logitech MX Master 3S", price: "110$", img: "images/product/mouse11.png" },
+            "ms12": { name: "Razer Basilisk V3", price: "75$", img: "images/product/mouse12.png" },
+
+            // Gamepad for Checkout (gp1 - gp9)
+            "gp1": { name: "Sony DualSense PS5", price: "75$", img: "images/product/gamepad1.png" },
+            "gp2": { name: "Xbox Elite Series 2", price: "180$", img: "images/product/gamepad2.png" },
+            "gp3": { name: "Logitech F710 Wireless", price: "50$", img: "images/product/gamepad3.png" },
+            "gp4": { name: "Razer Wolverine V2", price: "150$", img: "images/product/gamepad4.png" },
+            "gp5": { name: "Nintendo Switch Pro", price: "70$", img: "images/product/gamepad5.png" },
+            "gp6": { name: "SteelSeries Stratus+", price: "60$", img: "images/product/gamepad6.png" },
+            "gp7": { name: "8BitDo Pro 2", price: "50$", img: "images/product/gamepad7.png" },
+            "gp8": { name: "MSI Force GC30V2", price: "45$", img: "images/product/gamepad8.png" },
+            "gp9": { name: "PowerA Fusion Pro", price: "80$", img: "images/product/gamepad9.png" },
+
+            // Camera for Checkout (cm1 - cm12)
+            "cm1": { name: "Canon EOS R5", price: "3,899$", img: "images/product/camera1.png" },
+            "cm2": { name: "Sony A7 IV", price: "2,499$", img: "images/product/camera2.png" },
+            "cm3": { name: "Nikon Z6 II", price: "1,999$", img: "images/product/camera3.png" },
+            "cm4": { name: "Fujifilm X-T5", price: "1,699$", img: "images/product/camera4.png" },
+            "cm5": { name: "Panasonic GH6", price: "2,199$", img: "images/product/camera5.png" },
+            "cm6": { name: "GoPro HERO 12", price: "399$", img: "images/product/camera6.png" },
+            "cm7": { name: "DJI Osmo Pocket 3", price: "519$", img: "images/product/camera7.png" },
+            "cm8": { name: "Insta360 X3", price: "449$", img: "images/product/camera8.png" },
+            "cm9": { name: "Sony ZV-E10", price: "699$", img: "images/product/camera9.png" },
+            "cm10": { name: "Canon G7 X Mark III", price: "749$", img: "images/product/camera10.png" },
+            "cm11": { name: "Nikon Z9", price: "5,499$", img: "images/product/camera11.png" },
+            "cm12": { name: "Leica Q3", price: "5,995$", img: "images/product/camera12.png" }
+        };
+
+        // ၂။ URL ကနေ ID ဖတ်ပြီး UI ထုတ်ခြင်း
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const checkoutDiv = document.getElementById('checkout-item');
+            const item = products[id];
+
+            if (item) {
+                checkoutDiv.innerHTML = `
                 <div class="product-box d-flex align-items-center p-3 shadow-sm animate__animated animate__fadeIn">
                     <img src="${item.img}" width="80" class="rounded me-3 border">
                     <div>
@@ -165,31 +222,53 @@
                     </div>
                 </div>
             `;
-        } else {
-            checkoutDiv.innerHTML = `
+            } else {
+                checkoutDiv.innerHTML = `
                 <div class="alert alert-danger text-center">
                     <i class="fas fa-exclamation-triangle me-2"></i> ပစ္စည်းအချက်အလက် မတွေ့ပါဘူး မိတ်ဆွေ။ (ID: ${id})
                 </div>`;
-            document.getElementById('order-form').style.display = 'none';
+                document.getElementById('order-form').style.display = 'none';
+            }
+        };
+
+
+        function orderDone() {
+            const phone = document.getElementById('user-phone').value.trim();
+            const address = document.getElementById('user-address').value.trim();
+
+            // URL ကနေ ပစ္စည်း ID ကို ယူပြီး ပစ္စည်းအမည်နဲ့ ဈေးနှုန်းကို ဆွဲထုတ်မယ်
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const item = products[id];
+
+            if (phone === "" || address === "") {
+                alert("မိတ်ဆွေ... ဖုန်းနံပါတ်နှင့် လိပ်စာကို ပြည့်စုံစွာ ဖြည့်စွက်ပေးပါ။");
+                return;
+            }
+
+            // Telegram ဆီ ပို့မယ့် စာသားပုံစံကို တည်ဆောက်ခြင်း
+            const message = `🛒 *Order New Item*%0A` +
+                `--------------------------%0A` +
+                `📦 *Item:* ${item.name}%0A` +
+                `💰 *Price:* ${item.price}%0A` +
+                `📞 *Phone:* ${phone}%0A` +
+                `🏠 *Address:* ${address}%0A` +
+                `--------------------------`;
+
+            // Telegram Link (မိတ်ဆွေရဲ့ Username ဆီ တန်းရောက်သွားစေမယ်)
+            const telegramUrl = `https://t.me/zinwaithin06?text=${message}`;
+
+            // Telegram App သို့မဟုတ် Web သို့ ပို့ပေးခြင်း
+            window.open(telegramUrl, '_blank');
+
+            // Telegram ပို့ပြီးရင် Home ကို ပြန်သွားချင်ရင်
+            // window.location.href = 'index.html';
         }
-    };
 
-    // ၃။ Order တင်ခြင်း Function
-    function orderDone() {
-        const phone = document.getElementById('user-phone').value.trim();
-        const address = document.getElementById('user-address').value.trim();
 
-        if (phone === "" || address === "") {
-            alert("မိတ်ဆွေ... ဖုန်းနံပါတ်နှင့် လိပ်စာကို ပြည့်စုံစွာ ဖြည့်စွက်ပေးပါ။");
-            return;
-        }
+    </script>
 
-        alert("Order တင်တာ အောင်မြင်ပါတယ် မိတ်ဆွေ! မကြာခင် ဆက်သွယ်ပေးပါမယ်။");
-        window.location.href = 'index.html';
-    }
-</script>
 
-    
 </body>
 
 </html>
