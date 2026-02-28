@@ -234,181 +234,187 @@
     <script>
 
         const products = {
-                // --- Promotion Items ---
-                "pro-laptop-001": { category: "laptops", name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png", specs: { "Brand": "ASUS", "Display": "15.6 inch FHD", "CPU": "Intel Core i5" } },
-                "pro-laptop-002": { category: "laptops", name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png", specs: { "Brand": "Acer", "RAM": "8GB DDR4", "Storage": "512GB SSD" } },
-                "pro-laptop-003": { category: "laptops", name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png", specs: { "Brand": "Dell", "CPU": "Intel Core i7", "RAM": "16GB" } },
-                "pro-laptop-004": { category: "laptops", name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png", specs: { "Type": "Gaming", "GPU": "NVIDIA RTX 3050", "Keyboard": "Red Backlit" } },
-                "pro-phone-001": { category: "smartphones", name: "iPhone 14 Plus", price: "1,199$", img: "images/promotion/pro-phone1.png", specs: { "Chip": "A15 Bionic", "Display": "6.7 inch", "Camera": "12MP Dual" } },
-                "pro-phone-002": { category: "smartphones", name: "Samsung Galaxy S24 Ultra", price: "1,169$", img: "images/promotion/pro-phone2.png", specs: { "Chip": "Snapdragon 8 Gen 3", "RAM": "12GB", "Camera": "200MP" } },
-                "pro-phone-003": { category: "smartphones", name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png", specs: { "Chip": "Dimensity 8200", "RAM": "12GB", "Battery": "4600mAh" } },
-                "pro-phone-004": { category: "smartphones", name: "iPhone 15 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png", specs: { "Chip": "A17 Pro", "RAM": "8GB", "Camera": "48MP Main" } },
+            // --- Promotion Items ---
+            "pro-laptop-001": { category: "laptops", name: "ASUS VivoBook 15", price: "1,099$", img: "images/promotion/pro-laptop1.png", specs: { "Brand": "ASUS", "Display": "15.6 inch FHD", "CPU": "Intel Core i5" } },
+            "pro-laptop-002": { category: "laptops", name: "Acer Aspire 5", price: "1,099$", img: "images/promotion/pro-laptop2.png", specs: { "Brand": "Acer", "RAM": "8GB DDR4", "Storage": "512GB SSD" } },
+            "pro-laptop-003": { category: "laptops", name: "Dell Vostro 3510", price: "1,099$", img: "images/promotion/pro-laptop3.png", specs: { "Brand": "Dell", "CPU": "Intel Core i7", "RAM": "16GB" } },
+            "pro-laptop-004": { category: "laptops", name: "MSI Gaming GF63", price: "1,099$", img: "images/promotion/pro-laptop4.png", specs: { "Type": "Gaming", "GPU": "NVIDIA RTX 3050", "Keyboard": "Red Backlit" } },
+            "pro-phone-001": { category: "smartphones", name: "iPhone 14 Plus", price: "1,199$", img: "images/promotion/pro-phone1.png", specs: { "Chip": "A15 Bionic", "Display": "6.7 inch", "Camera": "12MP Dual" } },
+            "pro-phone-002": { category: "smartphones", name: "Samsung Galaxy S24 Ultra", price: "1,169$", img: "images/promotion/pro-phone2.png", specs: { "Chip": "Snapdragon 8 Gen 3", "RAM": "12GB", "Camera": "200MP" } },
+            "pro-phone-003": { category: "smartphones", name: "OPPO Reno11 Pro", price: "899$", img: "images/promotion/pro-phone3.png", specs: { "Chip": "Dimensity 8200", "RAM": "12GB", "Battery": "4600mAh" } },
+            "pro-phone-004": { category: "smartphones", name: "iPhone 15 Pro Max", price: "1,169$", img: "images/promotion/pro-phone4.png", specs: { "Chip": "A17 Pro", "RAM": "8GB", "Camera": "48MP Main" } },
 
-                // --- Laptops (lp1 - lp28) ---
-                "lp1": { category: "laptops", name: "MacBook Air M1", price: "950$", img: "images/product/laptop1.png", specs: { "Chip": "Apple M1", "RAM": "8GB", "SSD": "256GB" } },
-                "lp2": { category: "laptops", name: "Lenovo Yoga 7i", price: "1,150$", img: "images/product/laptop2.png", specs: { "Display": "Touch/360°", "CPU": "i7 13th Gen", "RAM": "16GB" } },
-                "lp3": { category: "laptops", name: "Acer Swift X 14", price: "950$", img: "images/product/laptop3.png", specs: { "GPU": "RTX 3050", "CPU": "Ryzen 7", "RAM": "16GB" } },
-                "lp4": { category: "laptops", name: "HP Pavilion Gaming", price: "1,080$", img: "images/product/laptop4.png", specs: { "Type": "Gaming", "GPU": "GTX 1650", "RAM": "8GB" } },
-                "lp5": { category: "laptops", name: "ASUS Zenbook 14", price: "1,200$", img: "images/product/laptop5.png", specs: { "Screen": "OLED", "CPU": "i7 12th Gen", "RAM": "16GB" } },
-                "lp6": { category: "laptops", name: "Dell XPS 13", price: "1,450$", img: "images/product/laptop6.png", specs: { "Display": "4K InfinityEdge", "CPU": "i7", "RAM": "16GB" } },
-                "lp7": { category: "laptops", name: "MSI Modern 14", price: "650$", img: "images/product/laptop7.png", specs: { "CPU": "i5 11th Gen", "RAM": "8GB", "SSD": "512GB" } },
-                "lp8": { category: "laptops", name: "Dell Latitude 5440", price: "890$", img: "images/product/laptop8.png", specs: { "CPU": "i5 13th Gen", "RAM": "16GB", "SSD": "512GB" } },
-                "lp9": { category: "laptops", name: "Acer Aspire 7", price: "790$", img: "images/product/laptop9.png", specs: { "GPU": "GTX 1650", "RAM": "8GB", "SSD": "512GB" } },
-                "lp10": { category: "laptops", name: "Lenovo IdeaPad 3", price: "550$", img: "images/product/laptop10.png", specs: { "CPU": "Ryzen 5", "RAM": "8GB", "SSD": "256GB" } },
-                "lp11": { category: "laptops", name: "HP Victus 15", price: "850$", img: "images/product/laptop11.png", specs: { "Type": "Gaming", "GPU": "RTX 3050", "RAM": "16GB" } },
-                "lp12": { category: "laptops", name: "ASUS ROG Zephyrus", price: "1,600$", img: "images/product/laptop12.png", specs: { "GPU": "RTX 4060", "CPU": "Ryzen 9", "RAM": "16GB" } },
-                "lp13": { category: "laptops", name: "Microsoft Surface Pro 9", price: "1,100$", img: "images/product/laptop13.png", specs: { "Type": "2-in-1", "CPU": "i5", "RAM": "8GB" } },
-                "lp14": { category: "laptops", name: "Razer Blade 15", price: "2,400$", img: "images/product/laptop14.png", specs: { "GPU": "RTX 4070", "Display": "240Hz", "RAM": "32GB" } },
-                "lp15": { category: "laptops", name: "Samsung Galaxy Book 3", price: "1,300$", img: "images/product/laptop15.png", specs: { "Display": "AMOLED", "CPU": "i7", "RAM": "16GB" } },
-                "lp16": { category: "laptops", name: "LG Gram 17", price: "1,500$", img: "images/product/laptop16.png", specs: { "Weight": "1.3kg", "Display": "17 inch", "RAM": "16GB" } },
-                "lp17": { category: "laptops", name: "MacBook Air M2", price: "1,099$", img: "images/product/laptop17.png", specs: { "Chip": "Apple M2", "Battery": "18 Hours", "RAM": "8GB" } },
-                "lp18": { category: "laptops", name: "MacBook Pro M3 Max", price: "3,199$", img: "images/product/laptop18.png", specs: { "Chip": "M3 Max", "RAM": "36GB", "SSD": "1TB" } },
-                "lp19": { category: "laptops", name: "GIGABYTE G5", price: "900$", img: "images/product/laptop19.png", specs: { "GPU": "RTX 4050", "CPU": "i5", "RAM": "16GB" } },
-                "lp20": { category: "laptops", name: "Lenovo ThinkPad X1", price: "1,700$", img: "images/product/laptop20.png", specs: { "CPU": "i7 vPro", "RAM": "32GB", "Security": "Fingerprint" } },
-                "lp21": { category: "laptops", name: "Huawei MateBook D15", price: "600$", img: "images/product/laptop21.png", specs: { "CPU": "i5", "RAM": "8GB", "SSD": "512GB" } },
-                "lp22": { category: "laptops", name: "Dell Vostro 3510", price: "720$", img: "images/product/laptop22.png", specs: { "CPU": "i5 11th Gen", "RAM": "8GB", "SSD": "512GB" } },
-                "lp23": { category: "laptops", name: "ASUS VivoBook S15", price: "880$", img: "images/product/laptop23.png", specs: { "CPU": "Ryzen 7", "RAM": "16GB", "Display": "OLED" } },
-                "lp24": { category: "laptops", name: "Acer Predator Helios", price: "1,400$", img: "images/product/laptop24.png", specs: { "GPU": "RTX 4060", "CPU": "i7", "RAM": "16GB" } },
-                "lp25": { category: "laptops", name: "HP Envy x360", price: "980$", img: "images/product/laptop25.png", specs: { "Type": "Convertible", "CPU": "Ryzen 5", "RAM": "16GB" } },
-                "lp26": { category: "laptops", name: "MSI Katana GF66", price: "1,050$", img: "images/product/laptop26.png", specs: { "GPU": "RTX 3060", "CPU": "i7", "RAM": "16GB" } },
-                "lp27": { category: "laptops", name: "Apple MacBook Pro 14", price: "1,999$", img: "images/product/laptop27.png", specs: { "Chip": "M3 Pro", "Display": "Liquid Retina", "RAM": "18GB" } },
-                "lp28": { category: "laptops", name: "Lenovo Legion 5", price: "1,250$", img: "images/product/laptop28.png", specs: { "GPU": "RTX 3070", "CPU": "Ryzen 7", "RAM": "16GB" } },
+            // --- Laptops (lp1 - lp28) ---
+            "lp1": { category: "laptops", name: "MacBook Air M1", price: "950$", img: "images/product/laptop1.png", specs: { "Chip": "Apple M1", "RAM": "8GB", "SSD": "256GB" } },
+            "lp2": { category: "laptops", name: "Lenovo Yoga 7i", price: "1,150$", img: "images/product/laptop2.png", specs: { "Display": "Touch/360°", "CPU": "i7 13th Gen", "RAM": "16GB" } },
+            "lp3": { category: "laptops", name: "Acer Swift X 14", price: "950$", img: "images/product/laptop3.png", specs: { "GPU": "RTX 3050", "CPU": "Ryzen 7", "RAM": "16GB" } },
+            "lp4": { category: "laptops", name: "HP Pavilion Gaming", price: "1,080$", img: "images/product/laptop4.png", specs: { "Type": "Gaming", "GPU": "GTX 1650", "RAM": "8GB" } },
+            "lp5": { category: "laptops", name: "ASUS Zenbook 14", price: "1,200$", img: "images/product/laptop5.png", specs: { "Screen": "OLED", "CPU": "i7 12th Gen", "RAM": "16GB" } },
+            "lp6": { category: "laptops", name: "Dell XPS 13", price: "1,450$", img: "images/product/laptop6.png", specs: { "Display": "4K InfinityEdge", "CPU": "i7", "RAM": "16GB" } },
+            "lp7": { category: "laptops", name: "MSI Modern 14", price: "650$", img: "images/product/laptop7.png", specs: { "CPU": "i5 11th Gen", "RAM": "8GB", "SSD": "512GB" } },
+            "lp8": { category: "laptops", name: "Dell Latitude 5440", price: "890$", img: "images/product/laptop8.png", specs: { "CPU": "i5 13th Gen", "RAM": "16GB", "SSD": "512GB" } },
+            "lp9": { category: "laptops", name: "Acer Aspire 7", price: "790$", img: "images/product/laptop9.png", specs: { "GPU": "GTX 1650", "RAM": "8GB", "SSD": "512GB" } },
+            "lp10": { category: "laptops", name: "Lenovo IdeaPad 3", price: "550$", img: "images/product/laptop10.png", specs: { "CPU": "Ryzen 5", "RAM": "8GB", "SSD": "256GB" } },
+            "lp11": { category: "laptops", name: "HP Victus 15", price: "850$", img: "images/product/laptop11.png", specs: { "Type": "Gaming", "GPU": "RTX 3050", "RAM": "16GB" } },
+            "lp12": { category: "laptops", name: "ASUS ROG Zephyrus", price: "1,600$", img: "images/product/laptop12.png", specs: { "GPU": "RTX 4060", "CPU": "Ryzen 9", "RAM": "16GB" } },
+            "lp13": { category: "laptops", name: "Microsoft Surface Pro 9", price: "1,100$", img: "images/product/laptop13.png", specs: { "Type": "2-in-1", "CPU": "i5", "RAM": "8GB" } },
+            "lp14": { category: "laptops", name: "Razer Blade 15", price: "2,400$", img: "images/product/laptop14.png", specs: { "GPU": "RTX 4070", "Display": "240Hz", "RAM": "32GB" } },
+            "lp15": { category: "laptops", name: "Samsung Galaxy Book 3", price: "1,300$", img: "images/product/laptop15.png", specs: { "Display": "AMOLED", "CPU": "i7", "RAM": "16GB" } },
+            "lp16": { category: "laptops", name: "LG Gram 17", price: "1,500$", img: "images/product/laptop16.png", specs: { "Weight": "1.3kg", "Display": "17 inch", "RAM": "16GB" } },
+            "lp17": { category: "laptops", name: "MacBook Air M2", price: "1,099$", img: "images/product/laptop17.png", specs: { "Chip": "Apple M2", "Battery": "18 Hours", "RAM": "8GB" } },
+            "lp18": { category: "laptops", name: "MacBook Pro M3 Max", price: "3,199$", img: "images/product/laptop18.png", specs: { "Chip": "M3 Max", "RAM": "36GB", "SSD": "1TB" } },
+            "lp19": { category: "laptops", name: "GIGABYTE G5", price: "900$", img: "images/product/laptop19.png", specs: { "GPU": "RTX 4050", "CPU": "i5", "RAM": "16GB" } },
+            "lp20": { category: "laptops", name: "Lenovo ThinkPad X1", price: "1,700$", img: "images/product/laptop20.png", specs: { "CPU": "i7 vPro", "RAM": "32GB", "Security": "Fingerprint" } },
+            "lp21": { category: "laptops", name: "Huawei MateBook D15", price: "600$", img: "images/product/laptop21.png", specs: { "CPU": "i5", "RAM": "8GB", "SSD": "512GB" } },
+            "lp22": { category: "laptops", name: "Dell Vostro 3510", price: "720$", img: "images/product/laptop22.png", specs: { "CPU": "i5 11th Gen", "RAM": "8GB", "SSD": "512GB" } },
+            "lp23": { category: "laptops", name: "ASUS VivoBook S15", price: "880$", img: "images/product/laptop23.png", specs: { "CPU": "Ryzen 7", "RAM": "16GB", "Display": "OLED" } },
+            "lp24": { category: "laptops", name: "Acer Predator Helios", price: "1,400$", img: "images/product/laptop24.png", specs: { "GPU": "RTX 4060", "CPU": "i7", "RAM": "16GB" } },
+            "lp25": { category: "laptops", name: "HP Envy x360", price: "980$", img: "images/product/laptop25.png", specs: { "Type": "Convertible", "CPU": "Ryzen 5", "RAM": "16GB" } },
+            "lp26": { category: "laptops", name: "MSI Katana GF66", price: "1,050$", img: "images/product/laptop26.png", specs: { "GPU": "RTX 3060", "CPU": "i7", "RAM": "16GB" } },
+            "lp27": { category: "laptops", name: "Apple MacBook Pro 14", price: "1,999$", img: "images/product/laptop27.png", specs: { "Chip": "M3 Pro", "Display": "Liquid Retina", "RAM": "18GB" } },
+            "lp28": { category: "laptops", name: "Lenovo Legion 5", price: "1,250$", img: "images/product/laptop28.png", specs: { "GPU": "RTX 3070", "CPU": "Ryzen 7", "RAM": "16GB" } },
 
-                // --- Phones (ph1 - ph16) ---
-                "ph1": { category: "smartphones", name: "iPhone 15 Pro Max", price: "1,350$", img: "images/product/phone1.png", specs: { "Chip": "A17 Pro", "Camera": "48MP Main", "Battery": "4,422mAh" } },
-                "ph2": { category: "smartphones", name: "Samsung S24 Ultra", price: "1,200$", img: "images/product/phone2.png", specs: { "Chip": "Snapdragon 8 Gen 3", "Camera": "200MP", "S-Pen": "Included" } },
-                "ph3": { category: "smartphones", name: "Google Pixel 8 Pro", price: "950$", img: "images/product/phone3.png", specs: { "Chip": "Tensor G3", "Camera": "AI Pro-level", "Screen": "LTPO OLED" } },
-                "ph4": { category: "smartphones", name: "OnePlus 12", price: "800$", img: "images/product/phone4.png", specs: { "RAM": "16GB", "Charging": "100W Fast", "Camera": "Hasselblad" } },
-                "ph5": { category: "smartphones", name: "Xiaomi 14 Ultra", price: "1,100$", img: "images/product/phone5.png", specs: { "Lens": "Leica Optical", "RAM": "12GB", "Battery": "5000mAh" } },
-                "ph6": { category: "smartphones", name: "Sony Xperia 1 V", price: "1,050$", img: "images/product/phone6.png", specs: { "Display": "4K HDR OLED", "Audio": "Hi-Res", "Camera": "Exmor T" } },
-                "ph7": { category: "smartphones", name: "Oppo Reno 11 Pro", price: "600$", img: "images/product/phone7.png", specs: { "Chip": "Dimensity 8200", "Charging": "80W", "RAM": "12GB" } },
-                "ph8": { category: "smartphones", name: "Vivo X100 Pro", price: "900$", img: "images/product/phone8.png", specs: { "Camera": "Zeiss Optics", "Chip": "Dimensity 9300", "RAM": "16GB" } },
-                "ph9": { category: "smartphones", name: "Asus ROG Phone 8", price: "1,000$", img: "images/product/phone9.png", specs: { "Type": "Gaming", "Screen": "165Hz", "RAM": "16GB" } },
-                "ph10": { category: "smartphones", name: "Samsung Z Fold 5", price: "1,799$", img: "images/product/phone10.png", specs: { "Design": "Foldable", "Internal": "7.6 inch", "RAM": "12GB" } },
-                "ph11": { category: "smartphones", name: "Samsung Z Flip 5", price: "950$", img: "images/product/phone11.png", specs: { "Design": "Flip", "Cover Screen": "3.4 inch", "RAM": "8GB" } },
-                "ph12": { category: "smartphones", name: "Nothing Phone (2)", price: "650$", img: "images/product/phone12.png", specs: { "Design": "Glyph Interface", "Chip": "Snapdragon 8+ Gen 1", "RAM": "12GB" } },
-                "ph13": { category: "smartphones", name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png", specs: { "Camera": "XMAGE", "Screen": "Kunlun Glass", "RAM": "8GB" } },
-                "ph14": { category: "smartphones", name: "Realme GT 5", price: "550$", img: "images/product/phone14.png", specs: { "Charging": "240W", "RAM": "16GB", "CPU": "Snapdragon 8 Gen 2" } },
-                "ph15": { category: "smartphones", name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png", specs: { "Type": "Flip", "Screen": "165Hz pOLED", "RAM": "8GB" } },
-                "ph16": { category: "smartphones", name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png", specs: { "Battery": "Silicon-carbon", "Camera": "180MP Telephoto", "RAM": "12GB" } },
+            // --- Phones (ph1 - ph16) ---
+            "ph1": { category: "smartphones", name: "iPhone 15 Pro Max", price: "1,350$", img: "images/product/phone1.png", specs: { "Chip": "A17 Pro", "Camera": "48MP Main", "Battery": "4,422mAh" } },
+            "ph2": { category: "smartphones", name: "Samsung S24 Ultra", price: "1,200$", img: "images/product/phone2.png", specs: { "Chip": "Snapdragon 8 Gen 3", "Camera": "200MP", "S-Pen": "Included" } },
+            "ph3": { category: "smartphones", name: "Google Pixel 8 Pro", price: "950$", img: "images/product/phone3.png", specs: { "Chip": "Tensor G3", "Camera": "AI Pro-level", "Screen": "LTPO OLED" } },
+            "ph4": { category: "smartphones", name: "OnePlus 12", price: "800$", img: "images/product/phone4.png", specs: { "RAM": "16GB", "Charging": "100W Fast", "Camera": "Hasselblad" } },
+            "ph5": { category: "smartphones", name: "Xiaomi 14 Ultra", price: "1,100$", img: "images/product/phone5.png", specs: { "Lens": "Leica Optical", "RAM": "12GB", "Battery": "5000mAh" } },
+            "ph6": { category: "smartphones", name: "Sony Xperia 1 V", price: "1,050$", img: "images/product/phone6.png", specs: { "Display": "4K HDR OLED", "Audio": "Hi-Res", "Camera": "Exmor T" } },
+            "ph7": { category: "smartphones", name: "Oppo Reno 11 Pro", price: "600$", img: "images/product/phone7.png", specs: { "Chip": "Dimensity 8200", "Charging": "80W", "RAM": "12GB" } },
+            "ph8": { category: "smartphones", name: "Vivo X100 Pro", price: "900$", img: "images/product/phone8.png", specs: { "Camera": "Zeiss Optics", "Chip": "Dimensity 9300", "RAM": "16GB" } },
+            "ph9": { category: "smartphones", name: "Asus ROG Phone 8", price: "1,000$", img: "images/product/phone9.png", specs: { "Type": "Gaming", "Screen": "165Hz", "RAM": "16GB" } },
+            "ph10": { category: "smartphones", name: "Samsung Z Fold 5", price: "1,799$", img: "images/product/phone10.png", specs: { "Design": "Foldable", "Internal": "7.6 inch", "RAM": "12GB" } },
+            "ph11": { category: "smartphones", name: "Samsung Z Flip 5", price: "950$", img: "images/product/phone11.png", specs: { "Design": "Flip", "Cover Screen": "3.4 inch", "RAM": "8GB" } },
+            "ph12": { category: "smartphones", name: "Nothing Phone (2)", price: "650$", img: "images/product/phone12.png", specs: { "Design": "Glyph Interface", "Chip": "Snapdragon 8+ Gen 1", "RAM": "12GB" } },
+            "ph13": { category: "smartphones", name: "Huawei P60 Pro", price: "850$", img: "images/product/phone13.png", specs: { "Camera": "XMAGE", "Screen": "Kunlun Glass", "RAM": "8GB" } },
+            "ph14": { category: "smartphones", name: "Realme GT 5", price: "550$", img: "images/product/phone14.png", specs: { "Charging": "240W", "RAM": "16GB", "CPU": "Snapdragon 8 Gen 2" } },
+            "ph15": { category: "smartphones", name: "Motorola Razr+", price: "800$", img: "images/product/phone15.png", specs: { "Type": "Flip", "Screen": "165Hz pOLED", "RAM": "8GB" } },
+            "ph16": { category: "smartphones", name: "Honor Magic 6 Pro", price: "950$", img: "images/product/phone16.png", specs: { "Battery": "Silicon-carbon", "Camera": "180MP Telephoto", "RAM": "12GB" } },
 
-                // --- Keyboards (kb1 - kb16) ---
-                "kb1": { category: "keyboards", name: "Logitech G Pro X", price: "150$", img: "images/product/keyboard1.png", specs: { "Switch": "GX Blue Clicky", "Layout": "TKL", "RGB": "Lightsync" } },
-                "kb2": { category: "keyboards", name: "Razer BlackWidow V4", price: "180$", img: "images/product/keyboard2.png", specs: { "Switch": "Yellow Mechanical", "Polling": "8000Hz" } },
-                "kb3": { category: "keyboards", name: "Keychron K2 V2", price: "100$", img: "images/product/keyboard3.png", specs: { "Mode": "Wireless/Wired", "Battery": "4000mAh" } },
-                "kb4": { category: "keyboards", name: "Corsair K70 RGB", price: "160$", img: "images/product/keyboard4.png", specs: { "Switch": "Cherry MX Speed", "Frame": "Aluminum" } },
-                "kb5": { category: "keyboards", name: "SteelSeries Apex Pro", price: "210$", img: "images/product/keyboard5.png", specs: { "Switch": "OmniPoint 2.0", "Response": "0.54ms" } },
-                "kb6": { category: "keyboards", name: "ASUS ROG Strix Scope", price: "140$", img: "images/product/keyboard6.png", specs: { "Switch": "ROG NX Red", "Layout": "Full Size" } },
-                "kb7": { category: "keyboards", name: "Ducky One 3 Mini", price: "120$", img: "images/product/keyboard7.png", specs: { "Size": "60%", "Switch": "Cherry MX Brown" } },
-                "kb8": { category: "keyboards", name: "HyperX Alloy Origins", price: "110$", img: "images/product/keyboard8.png", specs: { "Switch": "HyperX Red", "Body": "Aircraft-grade" } },
-                "kb9": { category: "keyboards", name: "Razer Huntsman Mini", price: "130$", img: "images/product/keyboard9.png", specs: { "Switch": "Optical Linear", "Size": "60%" } },
-                "kb10": { category: "keyboards", name: "Logitech G915 TKL", price: "230$", img: "images/product/keyboard10.png", specs: { "Type": "Low Profile", "Wireless": "Lightspeed" } },
-                "kb11": { category: "keyboards", name: "Keychron Q3 Pro", price: "200$", img: "images/product/keyboard11.png", specs: { "Body": "Full Aluminum", "Switch": "Keychron K Pro" } },
-                "kb12": { category: "keyboards", name: "Akko 3068B Plus", price: "90$", img: "images/product/keyboard12.png", specs: { "Switch": "Akko Jelly Pink", "Hotswap": "Yes" } },
-                "kb13": { category: "keyboards", name: "Glorious GMMK 2", price: "120$", img: "images/product/keyboard13.png", specs: { "Layout": "96% Compact", "Switch": "Glorious Fox" } },
-                "kb14": { category: "keyboards", name: "EPOMAKER TH80 Pro", price: "95$", img: "images/product/keyboard14.png", specs: { "Layout": "75%", "Connection": "Tri-Mode" } },
-                "kb15": { category: "keyboards", name: "Royal Kludge RK61", price: "55$", img: "images/product/keyboard15.png", specs: { "Size": "60% Portable", "Bluetooth": "Dual Mode" } },
-                "kb16": { category: "keyboards", name: "Redragon K552 RGB", price: "45$", img: "images/product/keyboard16.png", specs: { "Switch": "Dust Proof Blue", "Material": "Metal/ABS" } },
+            // --- Keyboards (kb1 - kb16) ---
+            "kb1": { category: "keyboards", name: "Logitech G Pro X", price: "150$", img: "images/product/keyboard1.png", specs: { "Switch": "GX Blue Clicky", "Layout": "TKL", "RGB": "Lightsync" } },
+            "kb2": { category: "keyboards", name: "Razer BlackWidow V4", price: "180$", img: "images/product/keyboard2.png", specs: { "Switch": "Yellow Mechanical", "Polling": "8000Hz" } },
+            "kb3": { category: "keyboards", name: "Keychron K2 V2", price: "100$", img: "images/product/keyboard3.png", specs: { "Mode": "Wireless/Wired", "Battery": "4000mAh" } },
+            "kb4": { category: "keyboards", name: "Corsair K70 RGB", price: "160$", img: "images/product/keyboard4.png", specs: { "Switch": "Cherry MX Speed", "Frame": "Aluminum" } },
+            "kb5": { category: "keyboards", name: "SteelSeries Apex Pro", price: "210$", img: "images/product/keyboard5.png", specs: { "Switch": "OmniPoint 2.0", "Response": "0.54ms" } },
+            "kb6": { category: "keyboards", name: "ASUS ROG Strix Scope", price: "140$", img: "images/product/keyboard6.png", specs: { "Switch": "ROG NX Red", "Layout": "Full Size" } },
+            "kb7": { category: "keyboards", name: "Ducky One 3 Mini", price: "120$", img: "images/product/keyboard7.png", specs: { "Size": "60%", "Switch": "Cherry MX Brown" } },
+            "kb8": { category: "keyboards", name: "HyperX Alloy Origins", price: "110$", img: "images/product/keyboard8.png", specs: { "Switch": "HyperX Red", "Body": "Aircraft-grade" } },
+            "kb9": { category: "keyboards", name: "Razer Huntsman Mini", price: "130$", img: "images/product/keyboard9.png", specs: { "Switch": "Optical Linear", "Size": "60%" } },
+            "kb10": { category: "keyboards", name: "Logitech G915 TKL", price: "230$", img: "images/product/keyboard10.png", specs: { "Type": "Low Profile", "Wireless": "Lightspeed" } },
+            "kb11": { category: "keyboards", name: "Keychron Q3 Pro", price: "200$", img: "images/product/keyboard11.png", specs: { "Body": "Full Aluminum", "Switch": "Keychron K Pro" } },
+            "kb12": { category: "keyboards", name: "Akko 3068B Plus", price: "90$", img: "images/product/keyboard12.png", specs: { "Switch": "Akko Jelly Pink", "Hotswap": "Yes" } },
+            "kb13": { category: "keyboards", name: "Glorious GMMK 2", price: "120$", img: "images/product/keyboard13.png", specs: { "Layout": "96% Compact", "Switch": "Glorious Fox" } },
+            "kb14": { category: "keyboards", name: "EPOMAKER TH80 Pro", price: "95$", img: "images/product/keyboard14.png", specs: { "Layout": "75%", "Connection": "Tri-Mode" } },
+            "kb15": { category: "keyboards", name: "Royal Kludge RK61", price: "55$", img: "images/product/keyboard15.png", specs: { "Size": "60% Portable", "Bluetooth": "Dual Mode" } },
+            "kb16": { category: "keyboards", name: "Redragon K552 RGB", price: "45$", img: "images/product/keyboard16.png", specs: { "Switch": "Dust Proof Blue", "Material": "Metal/ABS" } },
 
-                // --- Mice (ms1 - ms12) ---
-                "ms1": { category: "mouse", name: "Logitech G Pro X Superlight", price: "150$", img: "images/product/mouse1.png", specs: { "Sensor": "HERO 25K", "Weight": "63g", "Battery": "70 Hours" } },
-                "ms2": { category: "mouse", name: "Razer DeathAdder V3 Pro", price: "140$", img: "images/product/mouse2.png", specs: { "Sensor": "Focus Pro 30K", "Weight": "63g" } },
-                "ms3": { category: "mouse", name: "Logitech G502 X Plus", price: "160$", img: "images/product/mouse3.png", specs: { "Switch": "Lightforce Hybrid", "Weight": "106g" } },
-                "ms4": { category: "mouse", name: "SteelSeries Aerox 3", price: "100$", img: "images/product/mouse4.png", specs: { "Design": "Honeycomb Shell", "Weight": "68g" } },
-                "ms5": { category: "mouse", name: "Razer Viper V2 Pro", price: "150$", img: "images/product/mouse5.png", specs: { "Sensor": "Focus Pro 30K", "Weight": "58g" } },
-                "ms6": { category: "mouse", name: "Glorious Model O", price: "85$", img: "images/product/mouse6.png", specs: { "Type": "Honeycomb", "Weight": "69g" } },
-                "ms7": { category: "mouse", name: "Zowie EC2-C", price: "70$", img: "images/product/mouse7.png", specs: { "Sensor": "3360", "Design": "Ergonomic" } },
-                "ms8": { category: "mouse", name: "Corsair Dark Core RGB", price: "90$", img: "images/product/mouse8.png", specs: { "Polling": "2000Hz", "Charging": "Qi Wireless" } },
-                "ms9": { category: "mouse", name: "ASUS ROG Spatha X", price: "145$", img: "images/product/mouse9.png", specs: { "Connectivity": "Dual-mode", "Buttons": "12" } },
-                "ms10": { category: "mouse", name: "HyperX Pulsefire Haste", price: "50$", img: "images/product/mouse10.png", specs: { "Weight": "59g", "Switches": "TTC Golden" } },
-                "ms11": { category: "mouse", name: "Logitech MX Master 3S", price: "110$", img: "images/product/mouse11.png", specs: { "Type": "Productivity", "Sensor": "8K DPI" } },
-                "ms12": { category: "mouse", name: "Razer Basilisk V3", price: "75$", img: "images/product/mouse12.png", specs: { "Buttons": "11", "Scroll": "HyperScroll" } },
+            // --- Mice (ms1 - ms12) ---
+            "ms1": { category: "mouse", name: "Logitech G Pro X Superlight", price: "150$", img: "images/product/mouse1.png", specs: { "Sensor": "HERO 25K", "Weight": "63g", "Battery": "70 Hours" } },
+            "ms2": { category: "mouse", name: "Razer DeathAdder V3 Pro", price: "140$", img: "images/product/mouse2.png", specs: { "Sensor": "Focus Pro 30K", "Weight": "63g" } },
+            "ms3": { category: "mouse", name: "Logitech G502 X Plus", price: "160$", img: "images/product/mouse3.png", specs: { "Switch": "Lightforce Hybrid", "Weight": "106g" } },
+            "ms4": { category: "mouse", name: "SteelSeries Aerox 3", price: "100$", img: "images/product/mouse4.png", specs: { "Design": "Honeycomb Shell", "Weight": "68g" } },
+            "ms5": { category: "mouse", name: "Razer Viper V2 Pro", price: "150$", img: "images/product/mouse5.png", specs: { "Sensor": "Focus Pro 30K", "Weight": "58g" } },
+            "ms6": { category: "mouse", name: "Glorious Model O", price: "85$", img: "images/product/mouse6.png", specs: { "Type": "Honeycomb", "Weight": "69g" } },
+            "ms7": { category: "mouse", name: "Zowie EC2-C", price: "70$", img: "images/product/mouse7.png", specs: { "Sensor": "3360", "Design": "Ergonomic" } },
+            "ms8": { category: "mouse", name: "Corsair Dark Core RGB", price: "90$", img: "images/product/mouse8.png", specs: { "Polling": "2000Hz", "Charging": "Qi Wireless" } },
+            "ms9": { category: "mouse", name: "ASUS ROG Spatha X", price: "145$", img: "images/product/mouse9.png", specs: { "Connectivity": "Dual-mode", "Buttons": "12" } },
+            "ms10": { category: "mouse", name: "HyperX Pulsefire Haste", price: "50$", img: "images/product/mouse10.png", specs: { "Weight": "59g", "Switches": "TTC Golden" } },
+            "ms11": { category: "mouse", name: "Logitech MX Master 3S", price: "110$", img: "images/product/mouse11.png", specs: { "Type": "Productivity", "Sensor": "8K DPI" } },
+            "ms12": { category: "mouse", name: "Razer Basilisk V3", price: "75$", img: "images/product/mouse12.png", specs: { "Buttons": "11", "Scroll": "HyperScroll" } },
 
-                // --- Gamepads (gp1 - gp9) ---
-                "gp1": { category: "gamepads", name: "Sony DualSense PS5", price: "75$", img: "images/product/gamepad1.png", specs: { "Feature": "Haptic Feedback", "Triggers": "Adaptive" } },
-                "gp2": { category: "gamepads", name: "Xbox Elite Series 2", price: "180$", img: "images/product/gamepad2.png", specs: { "Build": "Premium Rubberized", "Battery": "40 Hours" } },
-                "gp3": { category: "gamepads", name: "Logitech F710", price: "50$", img: "images/product/gamepad3.png", specs: { "Connection": "2.4 GHz Wireless", "Vibration": "Dual Motor" } },
-                "gp4": { category: "gamepads", name: "Razer Wolverine V2", price: "150$", img: "images/product/gamepad4.png", specs: { "Buttons": "Mecha-Tactile", "Grip": "Non-slip" } },
-                "gp5": { category: "gamepads", name: "Nintendo Switch Pro", price: "70$", img: "images/product/gamepad5.png", specs: { "Sensor": "Motion Control", "Battery": "40 Hours" } },
-                "gp6": { category: "gamepads", name: "SteelSeries Stratus+", price: "60$", img: "images/product/gamepad6.png", specs: { "Platform": "Android/PC", "Battery": "90 Hours" } },
-                "gp7": { category: "gamepads", name: "8BitDo Pro 2", price: "50$", img: "images/product/gamepad7.png", specs: { "Profile": "Custom Switching", "Back Buttons": "2" } },
-                "gp8": { category: "gamepads", name: "MSI Force GC30V2", price: "45$", img: "images/product/gamepad8.png", specs: { "Battery": "600mAh", "D-pad": "Interchangeable" } },
-                "gp9": { category: "gamepads", name: "PowerA Fusion Pro", price: "80$", img: "images/product/gamepad9.png", specs: { "Mappable": "Paddles", "Locks": "3-Way Trigger" } },
+            // --- Gamepads (gp1 - gp9) ---
+            "gp1": { category: "gamepads", name: "Sony DualSense PS5", price: "75$", img: "images/product/gamepad1.png", specs: { "Feature": "Haptic Feedback", "Triggers": "Adaptive" } },
+            "gp2": { category: "gamepads", name: "Xbox Elite Series 2", price: "180$", img: "images/product/gamepad2.png", specs: { "Build": "Premium Rubberized", "Battery": "40 Hours" } },
+            "gp3": { category: "gamepads", name: "Logitech F710", price: "50$", img: "images/product/gamepad3.png", specs: { "Connection": "2.4 GHz Wireless", "Vibration": "Dual Motor" } },
+            "gp4": { category: "gamepads", name: "Razer Wolverine V2", price: "150$", img: "images/product/gamepad4.png", specs: { "Buttons": "Mecha-Tactile", "Grip": "Non-slip" } },
+            "gp5": { category: "gamepads", name: "Nintendo Switch Pro", price: "70$", img: "images/product/gamepad5.png", specs: { "Sensor": "Motion Control", "Battery": "40 Hours" } },
+            "gp6": { category: "gamepads", name: "SteelSeries Stratus+", price: "60$", img: "images/product/gamepad6.png", specs: { "Platform": "Android/PC", "Battery": "90 Hours" } },
+            "gp7": { category: "gamepads", name: "8BitDo Pro 2", price: "50$", img: "images/product/gamepad7.png", specs: { "Profile": "Custom Switching", "Back Buttons": "2" } },
+            "gp8": { category: "gamepads", name: "MSI Force GC30V2", price: "45$", img: "images/product/gamepad8.png", specs: { "Battery": "600mAh", "D-pad": "Interchangeable" } },
+            "gp9": { category: "gamepads", name: "PowerA Fusion Pro", price: "80$", img: "images/product/gamepad9.png", specs: { "Mappable": "Paddles", "Locks": "3-Way Trigger" } },
 
-                // --- Cameras (cm1 - cm12) ---
-                "cm1": { category: "cameras", name: "Canon EOS R5", price: "3,899$", img: "images/product/camera1.png", specs: { "Sensor": "45MP Full-frame", "Video": "8K RAW" } },
-                "cm2": { category: "cameras", name: "Sony A7 IV", price: "2,499$", img: "images/product/camera2.png", specs: { "Sensor": "33MP Full-frame", "Video": "4K 60p" } },
-                "cm3": { category: "cameras", name: "Nikon Z6 II", price: "1,999$", img: "images/product/camera3.png", specs: { "Sensor": "24.5MP Full-frame", "Video": "4K 60p" } },
-                "cm4": { category: "cameras", name: "Fujifilm X-T5", price: "1,699$", img: "images/product/camera4.png", specs: { "Sensor": "40MP APS-C", "Video": "6.2K 30p" } },
-                "cm5": { category: "cameras", name: "Panasonic GH6", price: "2,199$", img: "images/product/camera5.png", specs: { "Sensor": "25.2MP Micro 4/3", "Video": "5.7K 60p" } },
-                "cm6": { category: "cameras", name: "GoPro HERO 12", price: "399$", img: "images/product/camera6.png", specs: { "Type": "Action Camera", "Video": "5.3K 60p" } },
-                "cm7": { category: "cameras", name: "DJI Osmo Pocket 3", price: "519$", img: "images/product/camera7.png", specs: { "Sensor": "1-inch CMOS", "Gimbal": "3-Axis" } },
-                "cm8": { category: "cameras", name: "Insta360 X3", price: "449$", img: "images/product/camera8.png", specs: { "Type": "360 Camera", "Video": "5.7K 360" } },
-                "cm9": { category: "cameras", name: "Sony ZV-E10", price: "699$", img: "images/product/camera9.png", specs: { "Type": "Vlogging Camera", "AF": "Fast Hybrid" } },
-                "cm10": { category: "cameras", name: "Canon G7 X Mark III", price: "749$", img: "images/product/camera10.png", specs: { "Sensor": "20.1MP 1-inch", "Zoom": "4.2x" } },
-                "cm11": { category: "cameras", name: "Nikon Z9", price: "5,499$", img: "images/product/camera11.png", specs: { "Sensor": "45.7MP Stacked", "Video": "8K/60p" } },
-                "cm12": { category: "cameras", name: "Leica Q3", price: "5,995$", img: "images/product/camera12.png", specs: { "Sensor": "60MP Full-frame", "Lens": "28mm f/1.7" } }
-            };
+            // --- Cameras (cm1 - cm12) ---
+            "cm1": { category: "cameras", name: "Canon EOS R5", price: "3,899$", img: "images/product/camera1.png", specs: { "Sensor": "45MP Full-frame", "Video": "8K RAW" } },
+            "cm2": { category: "cameras", name: "Sony A7 IV", price: "2,499$", img: "images/product/camera2.png", specs: { "Sensor": "33MP Full-frame", "Video": "4K 60p" } },
+            "cm3": { category: "cameras", name: "Nikon Z6 II", price: "1,999$", img: "images/product/camera3.png", specs: { "Sensor": "24.5MP Full-frame", "Video": "4K 60p" } },
+            "cm4": { category: "cameras", name: "Fujifilm X-T5", price: "1,699$", img: "images/product/camera4.png", specs: { "Sensor": "40MP APS-C", "Video": "6.2K 30p" } },
+            "cm5": { category: "cameras", name: "Panasonic GH6", price: "2,199$", img: "images/product/camera5.png", specs: { "Sensor": "25.2MP Micro 4/3", "Video": "5.7K 60p" } },
+            "cm6": { category: "cameras", name: "GoPro HERO 12", price: "399$", img: "images/product/camera6.png", specs: { "Type": "Action Camera", "Video": "5.3K 60p" } },
+            "cm7": { category: "cameras", name: "DJI Osmo Pocket 3", price: "519$", img: "images/product/camera7.png", specs: { "Sensor": "1-inch CMOS", "Gimbal": "3-Axis" } },
+            "cm8": { category: "cameras", name: "Insta360 X3", price: "449$", img: "images/product/camera8.png", specs: { "Type": "360 Camera", "Video": "5.7K 360" } },
+            "cm9": { category: "cameras", name: "Sony ZV-E10", price: "699$", img: "images/product/camera9.png", specs: { "Type": "Vlogging Camera", "AF": "Fast Hybrid" } },
+            "cm10": { category: "cameras", name: "Canon G7 X Mark III", price: "749$", img: "images/product/camera10.png", specs: { "Sensor": "20.1MP 1-inch", "Zoom": "4.2x" } },
+            "cm11": { category: "cameras", name: "Nikon Z9", price: "5,499$", img: "images/product/camera11.png", specs: { "Sensor": "45.7MP Stacked", "Video": "8K/60p" } },
+            "cm12": { category: "cameras", name: "Leica Q3", price: "5,995$", img: "images/product/camera12.png", specs: { "Sensor": "60MP Full-frame", "Lens": "28mm f/1.7" } }
+        };
 
 
 
-      
-            // ၂။ လက်ဆောင် Bundle စာရင်း
-    const zinGyiBundles = {
-        'laptops': { title: 'Laptop Premium Bundle', items: [{ n: 'Backpack', i: 'fa-laptop-house' }, { n: 'Wireless Mouse', i: 'fa-mouse' }, { n: 'Cleaning Kit', i: 'fa-spray-can' }, { n: 'Mouse Pad', i: 'fa-square' }] },
-        'smartphones': { title: 'Mobile Essential Gifts', items: [{ n: 'Fast Charger', i: 'fa-bolt' }, { n: 'Clear Case', i: 'fa-shield-alt' }, { n: 'Screen Guard', i: 'fa-mobile-alt' }] },
-        'keyboards': { title: 'Keyboard Accessories', items: [{ n: 'Keycap Puller', i: 'fa-wrench' }, { n: 'Dust Cover', i: 'fa-keyboard' }] },
-        'mouse': { title: 'Mouse Combo Pack', items: [{ n: 'Gaming Mousepad', i: 'fa-square' }, { n: 'USB Receiver', i: 'fa-microchip' }] },
-        'gamepads': { title: 'Gaming Bundle', items: [{ n: 'Analog Grips', i: 'fa-circle' }, { n: 'Charging Dock', i: 'fa-plug' }] },
-        'cameras': { title: 'Photography Kit', items: [{ n: 'Camera Bag', i: 'fa-camera-retro' }, { n: '128GB SD Card', i: 'fa-sd-card' }] }
-    };
 
-    // ၃။ လက်ဆောင်များကို Render လုပ်မည့် Function
-    function renderProductBundle(catName) {
-        const container = document.getElementById('product-bundle-all');
-        if (!container || !catName) return;
-        const data = zinGyiBundles[catName.toLowerCase()];
-        if (!data) return;
+        // ၂။ လက်ဆောင် Bundle စာရင်း
+        const zinGyiBundles = {
+            'laptops': { title: 'Laptop Premium Bundle', items: [{ n: 'Backpack', i: 'fa-laptop-house' }, { n: 'Wireless Mouse', i: 'fa-mouse' }, { n: 'Cleaning Kit', i: 'fa-spray-can' }, { n: 'Mouse Pad', i: 'fa-square' }] },
+            'smartphones': { title: 'Mobile Essential Gifts', items: [{ n: 'Fast Charger', i: 'fa-bolt' }, { n: 'Clear Case', i: 'fa-shield-alt' }, { n: 'Screen Guard', i: 'fa-mobile-alt' }] },
+            'keyboards': { title: 'Keyboard Accessories', items: [{ n: 'Keycap Puller', i: 'fa-wrench' }, { n: 'Dust Cover', i: 'fa-keyboard' }] },
+            'mouse': { title: 'Mouse Combo Pack', items: [{ n: 'Gaming Mousepad', i: 'fa-square' }, { n: 'USB Receiver', i: 'fa-microchip' }] },
+            'gamepads': { title: 'Gaming Bundle', items: [{ n: 'Analog Grips', i: 'fa-circle' }, { n: 'Charging Dock', i: 'fa-plug' }] },
+            'cameras': { title: 'Photography Kit', items: [{ n: 'Camera Bag', i: 'fa-camera-retro' }, { n: '128GB SD Card', i: 'fa-sd-card' }] }
+        };
 
-        let html = `
+        // ၃။ လက်ဆောင်များကို Render လုပ်မည့် Function
+        function renderProductBundle(catName) {
+            const container = document.getElementById('product-bundle-all');
+            if (!container || !catName) return;
+            const data = zinGyiBundles[catName.toLowerCase()];
+            if (!data) return;
+
+            let html = `
             <div class="p-3 border rounded-4 bg-white mb-4 shadow-sm" style="border-left: 5px solid #007bff !important;">
                 <h6 class="fw-bold mb-3 text-primary"><i class="fas fa-gift me-2"></i>${data.title}</h6>
                 <div class="row g-2">`;
-        data.items.forEach(gift => {
-            html += `
+            data.items.forEach(gift => {
+                html += `
                 <div class="col-6">
                     <div class="p-2 border rounded-3 bg-light text-center h-100">
                         <i class="fas ${gift.i} d-block mb-1 text-primary" style="font-size: 1.2rem;"></i>
                         <small class="fw-bold" style="font-size: 0.7rem;">${gift.n}</small>
                     </div>
                 </div>`;
-        });
-        html += `</div></div>`;
-        container.innerHTML = html;
-    }
-
-    // --- Main Rendering Logic ---
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id')?.trim();
-    const contentDiv = document.getElementById('detail-content');
-    const item = products[id];
-
-    if (item) {
-        let specHTML = "";
-        for (let key in item.specs) {
-            specHTML += `<div class="d-flex justify-content-between border-bottom py-2"><span class="text-muted small">${key}</span><span class="fw-bold small">${item.specs[key]}</span></div>`;
+            });
+            html += `</div></div>`;
+            container.innerHTML = html;
         }
 
-        // ညီလေးရဲ့ မူလ HTML Structure ကို ဒီမှာ ပြန်ထည့်ပါ
-        contentDiv.innerHTML = `
+        // --- Main Rendering Logic ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id')?.trim();
+        const contentDiv = document.getElementById('detail-content');
+        const item = products[id];
+
+        if (item) {
+            let specHTML = "";
+            for (let key in item.specs) {
+                specHTML += `<div class="d-flex justify-content-between border-bottom py-2"><span class="text-muted small">${key}</span><span class="fw-bold small">${item.specs[key]}</span></div>`;
+            }
+
+            // ညီလေးရဲ့ မူလ HTML Structure ကို ဒီမှာ ပြန်ထည့်ပါ
+            contentDiv.innerHTML = `
         <div class="row g-0">
             <div class="col-md-6 p-4 text-center">
                 <div class="main-img-container shadow-sm bg-white p-3 rounded-4">
                     <img id="main-img" src="${item.img}" class="img-fluid animate__animated animate__zoomIn">
+                     <div class="detail-wishlist-btn" onclick="toggleWishlistDetail(this)" title="Add to Wishlist">
+                        <i class="fas fa-heart fa-lg"></i>
+                </div>
+
+
                 </div>
             </div>
             <div class="col-md-6 p-4 p-lg-5">
-                <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">HOT DEAL</span>
+                   <span class="badge bg-danger px-3 py-2 rounded-pill mb-3">HOT DEAL</span>
+               
                 <h1 class="fw-bold text-dark mb-2">${item.name}</h1>
                 <h2 class="text-primary fw-bold mb-4">${item.price}</h2>
                 
@@ -418,27 +424,88 @@
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-6"><button onclick="addToCart()" class="btn btn-outline-primary w-100 py-3 fw-bold rounded-3">Add to Cart</button></div>
+                    <div class="col-6"><button onclick="addToCart()" class="btn btn-primary w-100 py-3 fw-bold rounded-3">Add to Cart</button></div>
                     <div class="col-6"><button onclick="buyNow('${id}')" class="btn btn-primary w-100 py-3 fw-bold rounded-3 shadow">Buy Now</button></div>
+                    
                 </div>
             </div>
         </div>`;
 
-        // လက်ဆောင်ကို ခေါ်ထုတ်ခြင်း
-        renderProductBundle(item.category);
 
-    } else {
-        contentDiv.innerHTML = `<div class="p-5 text-center"><h2>Product Not Found</h2><a href="index.html" class="btn btn-primary mt-3">Go Home</a></div>`;
-    }
+            //wishlist
 
-    function addToCart() { alert("ခြင်းတောင်းထဲသို့ ထည့်ပြီးပါပြီ!"); }
-    function buyNow(productId) { 
-        const item = products[productId];
-        window.location.href = `checkout.html?id=${productId}&name=${encodeURIComponent(item.name)}&price=${encodeURIComponent(item.price)}`;
-    }
-</script>
-           
-           
+            function toggleWishlistDetail(element) {
+                // နှိပ်လိုက်ရင် Animation လေးဖြစ်သွားအောင်
+                element.style.transform = "scale(1.4)";
+                setTimeout(() => {
+                    element.style.transform = "scale(1.1)";
+                }, 200);
+
+                // လောလောဆယ် Alert လေးနဲ့ ပြပေးထားမယ်
+                console.log("Added to wishlist!");
+            }
+
+
+
+
+            // လက်ဆောင်ကို ခေါ်ထုတ်ခြင်း
+            renderProductBundle(item.category);
+
+        } else {
+            contentDiv.innerHTML = `<div class="p-5 text-center"><h2>Product Not Found</h2><a href="index.html" class="btn btn-primary mt-3">Go Home</a></div>`;
+        }
+
+        function addToCart() { alert("ခြင်းတောင်းထဲသို့ ထည့်ပြီးပါပြီ!"); }
+        function buyNow(productId) {
+            const item = products[productId];
+            window.location.href = `checkout.html?id=${productId}&name=${encodeURIComponent(item.name)}&price=${encodeURIComponent(item.price)}`;
+        }
+    </script>
+
+
+    <style>
+        /* Image Container ထဲမှာ Relative Position သတ်မှတ်ရန် */
+        .main-img-container {
+            position: relative;
+            /* ဒါက မရှိမဖြစ် လိုအပ်ပါတယ် */
+        }
+
+        /* Wishlist Button ကို နေရာချခြင်း (ပုံရဲ့ အပေါ်ညာဘက်ထောင့်) */
+        .detail-wishlist-btn {
+            position: absolute;
+            top: 15px;
+            /* အပေါ်မှ အကွာအဝေး */
+            right: 15px;
+            /* ညာဘက်မှ အကွာအဝေး */
+            z-index: 10;
+            /* ပုံရဲ့ အပေါ်မှာ ပေါ်နေစေရန် */
+
+            /* Wishlist Button Style */
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.8);
+            /* နောက်ခံကို အကြည်လေးထားမယ် */
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #ff4757;
+            /* Heart အမြဲအနီရောင် */
+            transition: all 0.4s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover တင်ရင် Glow လင်းလာမည့် Effect */
+        .detail-wishlist-btn:hover {
+            transform: scale(1.1);
+            background: white;
+            box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+            /* Glow Effect */
+        }
+    </style>
+
 
 
 </body>
