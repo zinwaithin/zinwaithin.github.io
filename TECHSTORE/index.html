@@ -575,129 +575,88 @@
 
     <!-- start porpular brands -->
 
-    <section class="py-5 bg-white border-top border-bottom border-dark border-2">
-        <div class="container">
-            <div class="row mb-5 align-items-end">
-                <div class="col-md-7">
-                    <h6 class="text-info fw-black ls-3 text-uppercase mb-2">Authorized Dealer</h6>
-                    <h2 class="display-5 fw-black text-dark mb-0">POPULAR <span class="text-info">BRANDS.</span></h2>
-                    <div class="bg-info mt-3" style="width: 100px; height: 6px;"></div>
-                </div>
-                <div class="col-md-5 text-md-end d-none d-md-block">
-                    <p class="text-dark fw-black small">ကမ္ဘာကျော် Brand အစစ်အမှန်များကို တစ်နေရာတည်းတွင်
-                        ရရှိနိုင်ပါသည်။</p>
-                </div>
+    <div class="container my-5">
+        <h3 class="my-3 fw-bold ">Porpular Brands</h3>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-0 border shadow-sm rounded-3 overflow-hidden">
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="brand-logo"
+                    alt="Apple">
+                <span class="mt-2 fw-bold text-uppercase">Apple</span>
             </div>
-
-            <div class="row g-0 border border-dark border-2">
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <i class="fa-brands fa-apple display-4 text-dark brand-icon"></i>
-                        <p class="brand-name mt-3 mb-0">APPLE</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <i class="fa-brands fa-samsung display-4 text-dark brand-icon"></i>
-                        <p class="brand-name mt-3 mb-0">SAMSUNG</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <i class="fa-solid fa-laptop-code display-5 text-dark brand-icon"></i>
-                        <p class="brand-name mt-3 mb-0">DELL</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <span class="h2 fw-black text-dark brand-icon mb-0">SONY</span>
-                        <p class="brand-name mt-3 mb-0">SONY</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-end border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <span class="h1 fw-bold text-dark brand-icon mb-0">hp</span>
-                        <p class="brand-name mt-3 mb-0">HP</p>
-                    </a>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 brand-box border-bottom border-dark p-4">
-                    <a href="#"
-                        class="text-decoration-none d-flex flex-column align-items-center justify-content-center h-100">
-                        <i class="fa-solid fa-mobile-screen-button display-5 text-dark brand-icon"></i>
-                        <p class="brand-name mt-3 mb-0">XIAOMI</p>
-                    </a>
-                </div>
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" class="brand-logo"
+                    alt="Dell">
+                <span class="mt-2 fw-bold text-uppercase">Dell</span>
+            </div>
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg" class="brand-logo"
+                    alt="Sony">
+                <span class="mt-2 fw-bold text-uppercase">Sony</span>
+            </div>
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" class="brand-logo"
+                    alt="HP">
+                <span class="mt-2 fw-bold text-uppercase">HP</span>
+            </div>
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-%29.svg"
+                    class="brand-logo" alt="Xiaomi">
+                <span class="mt-2 fw-bold text-uppercase">Xiaomi</span>
+            </div>
+            <div class="brand-item border d-flex flex-column align-items-center justify-content-center p-4">
+                <img src="https://www.vectorlogo.zone/logos/samsung/samsung-ar21.svg" class="brand-logo" alt="Samsung">
+                <span class="mt-2 fw-bold text-uppercase">Samsung</span>
             </div>
         </div>
-    </section>
+    </div>
+
 
     <style>
-        .fw-black {
-            font-weight: 900 !important;
+        /* တစ်ကွက်ချင်းစီအတွက် */
+        .brand-item {
+            background: #ffffff;
+            transition: all 0.3s ease;
+            height: 150px;
+            text-decoration: none;
+            border: 1px solid #eee;
+            /* Border လေးရှိရင် ပိုလှတယ် */
         }
 
-        .ls-3 {
-            letter-spacing: 3px;
-        }
+        /* Logo ပုံတွေအတွက် (အမြဲအရောင်ပေါ်အောင် ပြင်ထားတာ) */
+        .brand-logo {
+            width: 100px;
+            /* Samsung အတွက်ပါ အဆင်ပြေအောင် နည်းနည်းချဲ့လိုက်တယ် */
+            height: 50px;
+            object-fit: contain;
 
-        /* Brand Box ပြင်ဆင်ချက် */
-        .brand-box {
-            background-color: #ffffff;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            min-height: 180px;
-            position: relative;
-            z-index: 1;
-        }
+            /* ဒီနှစ်ကြောင်းကို ပြင်လိုက်တာပါ */
+            filter: grayscale(0%);
+            /* ခဲရောင်ကို ပိတ်လိုက်ပြီ (အရောင်အစစ်ပေါ်မယ်) */
+            opacity: 1;
+            /* မှိန်မနေတော့ဘဲ အလင်းအပြည့်ဖြစ်သွားမယ် */
 
-        .brand-name {
-            color: #333;
-            /* အရောင်ကို ပိုရင့်လိုက်တယ် */
-            font-weight: 900;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
             transition: all 0.3s ease;
         }
 
-        .brand-icon {
-            transition: all 0.3s ease;
-            opacity: 1 !important;
-            /* မှေးမှိန်မနေစေရ */
-        }
-
-        /* Hover လုပ်ရင် လင်းလာစေမယ့် Glow Effect */
-        .brand-box:hover {
-            background-color: #000814;
+        /* Mouse တင်ရင် အရောင်ကတော့ မပြောင်းတော့ဘူး၊ ဒါပေမဲ့ နည်းနည်းလေး ကြီးလာရင် ပိုလှတယ် */
+        .brand-item:hover {
+            background: #fdfdfd;
             cursor: pointer;
-            z-index: 2;
-            box-shadow: inset 0 0 20px rgba(0, 247, 255, 0.2);
-            /* အထဲဘက်ကို Glow ထည့်လိုက်တယ် */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            /* Mouse တင်ရင် Shadow လေးပဲ ထွက်လာမယ် */
         }
 
-        .brand-box:hover .brand-icon {
-            color: #00f7ff !important;
-            text-shadow: 0 0 15px rgba(0, 247, 255, 0.7);
-            /* စာလုံးကို Neon လင်းစေတယ် */
-            transform: scale(1.1) translateY(-5px);
+        .brand-item:hover .brand-logo {
+            transform: scale(1.1);
+            /* အရောင်မပြောင်းပေမယ့် တုန်ခါမှုလေးတော့ ရှိနေမယ် */
         }
 
-        .brand-box:hover .brand-name {
-            color: #ffffff;
-            letter-spacing: 4px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        /* အရောင်တွေကို အစစ်အတိုင်း တောက်တောက်ပြောင်ပြောင်ထားမယ် */
-        .text-info {
-            color: #00f7ff !important;
-        }
-
-        .bg-info {
-            background-color: #00f7ff !important;
+        .brand-item span {
+            font-size: 0.75rem;
+            color: #333;
+            /* စာလုံးအရောင်ကိုလည်း နည်းနည်း ပိုရင့်လိုက်တယ် */
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
     </style>
 
@@ -938,7 +897,6 @@
                         <p class="review-text">"Laptop ဝယ်တာ ဝန်ဆောင်မှုရော ပစ္စည်းရော အရမ်းစိတ်တိုင်းကျပါတယ်။ Delivery
                             လည်း တကယ်မြန်တယ်!"</p>
                         <div class="user-info">
-                            <img src="https://i.pravatar.cc/150?img=1" alt="User" class="user-img">
                             <div>
                                 <h6 class="mb-0 fw-bold">ကိုအောင်ကျော်</h6>
                                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -953,7 +911,6 @@
                         <p class="review-text text-white">"Official Warranty ပါတော့ စိတ်အေးရတယ်။ ဖုန်းကလည်း အသစ်စက်စက်
                             လုံးဝ အထစ်အငေါ့မရှိဘူး။"</p>
                         <div class="user-info border-white-50">
-                            <img src="https://i.pravatar.cc/150?img=2" alt="User" class="user-img">
                             <div>
                                 <h6 class="mb-0 fw-bold text-white">မစုစုဝင်း</h6>
                                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -968,7 +925,6 @@
                         <p class="review-text">"ဈေးနှုန်းက တခြားဆိုင်တွေထက် ပိုတန်သလိုပဲ။ အာမခံကိစ္စတွေလည်း
                             သေချာရှင်းပြပေးလို့ ကျေးဇူးပါ။"</p>
                         <div class="user-info">
-                            <img src="https://i.pravatar.cc/150?img=3" alt="User" class="user-img">
                             <div>
                                 <h6 class="mb-0 fw-bold">ကိုမင်းမင်း</h6>
                                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -982,10 +938,10 @@
 
     <!-- end customer Reviews -->
     <!--  -->
-    
+
     <!-- start login -->
 
- <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content bg-dark text-white border-secondary">
                 <div class="modal-header border-0">
@@ -1138,175 +1094,190 @@
 
 
     <footer class="main-footer">
-    <div class="container py-5">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <h2 class="fw-black text-white mb-3">TECH<span class="gradient-text">STORE</span></h2>
-                <p class="text-white mb-4" style="line-height: 1.8;">
-                    မြန်မာနိုင်ငံ၏ အကောင်းဆုံးနှင့် အစုံလင်ဆုံး Tech Gadgets များကို တစ်နေရာတည်းတွင် စိတ်ချယုံကြည်စွာ ဝယ်ယူရရှိနိုင်ပါသည်။
-                </p>
-                <div class="footer-socials d-flex gap-2">
-                    <a href="https://www.facebook.com/" class="s-link"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.viber.com/" class="s-link"><i class="fa-brands fa-viber"></i></a>
-                    <a href="https://t.me/zinwaithin06" class="s-link"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="https://www.tiktok.com/" class="s-link"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 ps-lg-5">
-                <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Quick Links</h6>
-                <ul class="list-unstyled footer-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="promotion.html">Promotion</a></li>
-                    <li><a href="service.html">service</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Store Info</h6>
-                <div class="contact-box">
-                    <p class="text-white small mb-3">
-                        <i class="fa-solid fa-location-dot me-2 text-info"></i> လမ်း ၃၀၊ ရန်ကုန်မြို့။
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h2 class="fw-black text-white mb-3">TECH<span class="gradient-text">STORE</span></h2>
+                    <p class="text-white mb-4" style="line-height: 1.8;">
+                        မြန်မာနိုင်ငံ၏ အကောင်းဆုံးနှင့် အစုံလင်ဆုံး Tech Gadgets များကို တစ်နေရာတည်းတွင်
+                        စိတ်ချယုံကြည်စွာ ဝယ်ယူရရှိနိုင်ပါသည်။
                     </p>
-                    <div class="contact-card-simple">
-                        <div class="icon-box-simple">
-                            <i class="fa-solid fa-phone-volume"></i>
+                    <div class="footer-socials d-flex gap-2">
+                        <a href="https://www.facebook.com/" class="s-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.viber.com/" class="s-link"><i class="fa-brands fa-viber"></i></a>
+                        <a href="https://t.me/zinwaithin06" class="s-link"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.tiktok.com/" class="s-link"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 ps-lg-5">
+                    <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Quick Links</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="promotion.html">Promotion</a></li>
+                        <li><a href="service.html">service</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Store Info</h6>
+                    <div class="contact-box">
+                        <p class="text-white small mb-3">
+                            <i class="fa-solid fa-location-dot me-2 text-info"></i> လမ်း ၃၀၊ ရန်ကုန်မြို့။
+                        </p>
+                        <div class="contact-card-simple">
+                            <div class="icon-box-simple">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <span class="d-block text-white-50" style="font-size: 11px;">Hotline Number</span>
+                                <a href="tel:09123456789" class="text-white fw-bold text-decoration-none">09 123 456
+                                    789</a>
+                            </div>
                         </div>
-                        <div>
-                            <span class="d-block text-white-50" style="font-size: 11px;">Hotline Number</span>
-                            <a href="tel:09123456789" class="text-white fw-bold text-decoration-none">09 123 456 789</a>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Newsletter</h6>
+                    <p class="text-white small mb-3">Promotion သတင်းကောင်းများ အမြဲရယူရန်။</p>
+                    <div class="premium-sub-box">
+                        <input type="email" placeholder="Email Address..." class="form-control">
+                        <button class="btn-sub"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center">
+                        <div class="small-icon-circle me-2"><i class="fa-solid fa-envelope"></i></div>
+                        <span class="text-white-50 small">info@techstore.com</span>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h6 class="fw-bold text-white text-uppercase mb-4" style="letter-spacing: 1px;">Newsletter</h6>
-                <p class="text-white small mb-3">Promotion သတင်းကောင်းများ အမြဲရယူရန်။</p>
-                <div class="premium-sub-box">
-                    <input type="email" placeholder="Email Address..." class="form-control">
-                    <button class="btn-sub"><i class="fa-solid fa-paper-plane"></i></button>
-                </div>
-                <div class="mt-4 d-flex align-items-center">
-                    <div class="small-icon-circle me-2"><i class="fa-solid fa-envelope"></i></div>
-                    <span class="text-white-50 small">info@techstore.com</span>
-                </div>
+            <hr class="my-5 border-secondary opacity-25">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="small text-white-50 mb-0">© 2026 TECH STORE. All rights reserved.</p>
+                <p class="small text-white-50 mb-0">Crafted with Passion by <span class="text-info fw-bold">ZG</span>
+                </p>
             </div>
         </div>
+    </footer>
 
-        <hr class="my-5 border-secondary opacity-25">
+    <style>
+        /* Footer Background */
+        .main-footer {
+            background: #111111;
+            /* ပိုရိုးရှင်းတဲ့ အနက်ရောင် */
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <p class="small text-white-50 mb-0">© 2026 TECH STORE. All rights reserved.</p>
-            <p class="small text-white-50 mb-0">Crafted with Passion by <span class="text-info fw-bold">ZG</span></p>
-        </div>
-    </div>
-</footer>
+        .fw-black {
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
 
-<style>
-/* Footer Background */
-.main-footer {
-    background: #111111; /* ပိုရိုးရှင်းတဲ့ အနက်ရောင် */
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
+        .gradient-text {
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.fw-black { font-weight: 900; letter-spacing: -1.5px; }
+        /* Social Icons - လှုပ်တာတွေ ဖြုတ်ထားတယ် */
+        .s-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
 
-.gradient-text {
-    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .s-link:hover {
+            background: #0dcaf0;
+            color: #000;
+        }
 
-/* Social Icons - လှုပ်တာတွေ ဖြုတ်ထားတယ် */
-.s-link {
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
+        /* Nav Links */
+        .footer-nav li {
+            margin-bottom: 10px;
+        }
 
-.s-link:hover {
-    background: #0dcaf0;
-    color: #000;
-}
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.841);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
 
-/* Nav Links */
-.footer-nav li { margin-bottom: 10px; }
-.footer-nav a {
-    color: rgba(255, 255, 255, 0.841);
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-.footer-nav a:hover {
-    color: #0dcaf0;
-}
+        .footer-nav a:hover {
+            color: #0dcaf0;
+        }
 
-/* Contact Card - တုန်ခါတာ ဖြုတ်ထားတယ် */
-.contact-card-simple {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 12px;
-    border-radius: 12px;
-}
-.icon-box-simple {
-    color: #0dcaf0;
-    font-size: 1.2rem;
-}
+        /* Contact Card - တုန်ခါတာ ဖြုတ်ထားတယ် */
+        .contact-card-simple {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 12px;
+        }
 
-/* New Subscribe Style */
-.premium-sub-box {
-    display: flex;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.premium-sub-box .form-control {
-    background: transparent !important;
-    border: none !important;
-    color: #ffffff !important;
-    font-size: 13px;
-    font-weight: bolder;
-    box-shadow: none !important;
-}
-.btn-sub {
-    background: #0dcaf0;
-    color: #000;
-    border: none;
-    width: 40px;
-    height: 35px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-.btn-sub:hover {
-    background: #fff;
-}
+        .icon-box-simple {
+            color: #0dcaf0;
+            font-size: 1.2rem;
+        }
 
-.small-icon-circle {
-    width: 25px;
-    height: 25px;
-    background: rgba(13, 202, 240, 0.1);
-    color: #0dcaf0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-}
-</style>
+        /* New Subscribe Style */
+        .premium-sub-box {
+            display: flex;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .premium-sub-box .form-control {
+            background: transparent !important;
+            border: none !important;
+            color: #ffffff !important;
+            font-size: 13px;
+            font-weight: bolder;
+            box-shadow: none !important;
+        }
+
+        .btn-sub {
+            background: #0dcaf0;
+            color: #000;
+            border: none;
+            width: 40px;
+            height: 35px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-sub:hover {
+            background: #fff;
+        }
+
+        .small-icon-circle {
+            width: 25px;
+            height: 25px;
+            background: rgba(13, 202, 240, 0.1);
+            color: #0dcaf0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+    </style>
 
     <!-- end footer -->
 

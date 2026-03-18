@@ -453,9 +453,9 @@
                 <h6 class="fw-bold text-truncate" style="font-size: 0.9rem;">${p.name}</h6>
                 <p class="price-text mb-3 text-primary fw-bold">${p.price}</p>
                 
-                <div class="d-grid gap-2">
-                    <a href="product-detail.html?id=${productId}" class="btn btn-primary btn-sm rounded-pill fw-bold"><i class="fa-solid fa-circle-info me-1"></i>Detail</a>
-                    <button class="btn btn-dark btn-sm rounded-pill fw-bold" onclick="addToCart('${productId}')">Add to Cart</button>
+                <div class="d-flex gap-2">
+                    <a href="product-detail.html?id=${productId}" class="btn btn-primary btn-sm rounded-pill fw-bold flex-fill d-flex align-items-center justify-content-center"><i class="fa-solid fa-circle-info me-1"></i>Detail</a>
+                    <button class="btn btn-dark btn-sm rounded-pill fw-bold flex-fill d-flex align-items-center justify-content-center" onclick="addToCart('${productId}')">Add to Cart</button>
                 </div>
             </div>
         </div>
