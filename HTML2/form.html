@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Registriation Form</h1>
+
+    <form action="request_PHP" method="get"> 
+        <!-- post -->
+
+        <label for="name">Name</label><br>
+        <input type="text" name="stu_name" id="name">
+        <br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="stu_email" id="email">
+        <br><br>
+
+        <label for="phone">Phone</label><br>
+        <input type="number" name="stu_phone" id="phone">
+        <br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="stu_password" id="password">
+        <br><br>
+
+        <label for="dob">Date Of Birth</label><br>
+        <input type="date" name="stu_dob" id="dob">
+        <br><br>
+
+        <label for="passport">Passport</label><br>
+        <input type="file" accept=".png,.jpg" name="stu_passport" id="passport">
+        <br><br>
+        <label for="year">Year</label>
+        <select name="stu_year" id="year">
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Final Year</option>
+        </select>
+        <br><br>
+        <label for="">Gender</label>
+        <br>
+        <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+        <input type="radio" name="gender" value="other" id="other"><label for="other">Other</label>
+        <br><br>
+        <label for="">Hobby</label>
+        <br>
+        <input type="checkbox" name="reading" id="reading" value="reading"><label for="reading">Reading</label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
