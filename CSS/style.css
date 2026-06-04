@@ -1,0 +1,59 @@
+/* universal selector */
+/* *{
+    color: red;
+} */
+
+/* text/keyword selector */
+h1{
+    color: red;
+    text-align: center;
+}
+
+/* attribute selector */
+a[target="_blank"]{
+    color: green;
+}
+
+/* id selector */
+#idselector{
+    color: blue;
+    font-size: 20px;
+}
+
+/* class selector */
+.classselector{
+    color: brown;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+/* descendant selector */
+.desc a{
+    color: red;
+}
+
+/* child selector */
+.child > a{
+    color: red;
+}
+
+a:link{
+    color: green;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: black;
+}
+
+a:visited{
+    color: purple;
+}
+
+:target{
+    color: red;
+}
