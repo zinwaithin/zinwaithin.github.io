@@ -1,0 +1,68 @@
+body{
+    background-color: #8fe3cafa;
+}
+
+h1{
+    color: #d82231fa;
+    text-align: center;
+}
+
+#myForm{
+    margin: auto;
+    width: 40%;
+}
+
+input[type="text"], input[type="email"], input[type="number"]{
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
+    color: red;
+    letter-spacing: 5px;
+    border: 1px solid #846912fa;
+}
+
+input[type="radio"]:checked + label{
+    color: red;
+    text-transform: uppercase;
+}
+
+input[type="checkbox"]:enabled + label{
+    color: red;
+    text-transform: uppercase;
+}
+
+input[type="checkbox"]:disabled + label{
+    color: red;
+    text-transform: lowercase;
+}
+
+input[type="checkbox"]:checked + label{
+    color: green;
+    font-style: italic;
+}
+
+ul li:first-child{
+    background-color: green;
+}
+
+ul li:last-child{
+    background-color: blue;
+}
+
+ul li:nth-child(3){
+    background-color: red;
+}
+
+p:empty{
+    background-color: rgb(227, 26, 163);
+    height: 20px;
+}
+
+.register-btn{
+    width: 100px;
+    height: 30px;
+}
+
