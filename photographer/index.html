@@ -1,57 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tracy | Modern Photography Portfolio</title>
 
-        <link rel="stylesheet" href="fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy | Modern Photography Portfolio</title>
+    <link rel="icon" href="images/logo.png">
 
-        <link rel="stylesheet" href="css/style.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="fontawesome/js/all.min.js"></script>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" style="font-size: 30px;"
-                    href="#home">Tracy<i class="fa-solid fa-clover"></i></a>
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link ms-lg-4 fs-5 active"
-                                aria-current="page"
-                                href="#">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-lg-4 fs-5" href="#">REVIEWS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-lg-4 fs-5" href="#">CONTACT</a>
-                        </li>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-                    </ul>
-                </div>
+<body>
+
+    <!-- start nav -->
+    <header>
+        <nav class="navbar">
+
+
+            <div>
+                <img src="images/logo.png" alt="logo_img" class="logo_img">
             </div>
+
+            <ul class="nav_item">
+                <li>
+                    <a class="nav-link active" href="#index">HOME</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="review.html">REVIEWS</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="gallery.html">GALLERY</a>
+                </li>
+            </ul>
+
         </nav>
+    </header>
+    <!-- end nav -->
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide"
-            data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/banner.png" class="d-block w-100 banner_img" alt="...">
-                </div>
-                
+    <!-- start banner -->
+    <div class="banner">
+        <div class="banner_text">
+            <h1>Tracy</h1>
+            <p>Portrait • Couple • Wedding Photography</p>
+        </div>
+    </div>
+    <!-- end banner -->
+
+    <!-- start about -->
+
+    <section class="home_about">
+        <h2 class="about_title">About Me</h2>
+        <hr class="section_line">
+
+        <div class="home_about_content">
+
+            <div class="home_about_img">
+                <img src="images/homeabout.jpg" alt="my photo">
             </div>
+
+            <div class="home_about_text">
+                <h2>Hi, I'm Tracy ✨</h2>
+                <p>
+                    I am a professional photographer based in Myanmar, specializing in Wedding, Couple, and Portrait
+                    photography.
+                    My goal is to capture genuine emotions and turn your special moments into timeless memories.
+                </p>
+                <p style="margin-top: 15px;">
+                    Every love story is unique, and I would love to be the one to capture yours!
+                </p>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+
+        <hr class="hr">
+
+    </section>
+
+    <!-- end about -->
+
+
+    <!-- start service -->
+
+        <section class="service_section">
+
+            <div class="service">
+            <h2 class="service_title">My Service</h2>
+            <hr class="service_line">
+
+            <div class="service_box">
+
+            <div class="service_card">
+                <div class="service_img">
+                    <img src="images/couple-home.jpg" alt="">
+                </div>
+
+                    <h2>Couple Photos</h2>
+                    <p>Sweet pre-wedding, anniversary, or casual date photography that tells your unique story.</p>
+            </div>
+
+            <div class="service_card">
+                <div class="service_img">
+                    <img src="images/portrait-home.jpg" alt="">
+                </div>
+
+                    <h2>Portrait Photos</h2>
+                    <p>Sweet pre-wedding, anniversary, or casual date photography that tells your unique story.</p>
+            </div>
+
+
+            <div class="service_card">
+                <div class="service_img">
+                    <img src="images/kid-home.jpg" alt="">
+                </div>
+
+                    <h2>Kid Photos</h2>
+                    <p>Sweet pre-wedding, anniversary, or casual date photography that tells your unique story.</p>
+            </div>
+
+
+            <div class="service_card">
+                <div class="service_img">
+                    <img src="images/wedding-home.jpg" alt="">
+                </div>
+
+                    <h2>Wedding Photos</h2>
+                    <p>Sweet pre-wedding, anniversary, or casual date photography that tells your unique story.</p>
+            </div>
+
+            </div>
+
+            </div>
+        </section>
+
+    <!-- end service -->
+
+    <!-- start gallery -->
+
+    <section class="gallery_section">
+        <h2 class="about_title">Sweet Images</h2>
+        <hr class="section_line">
+
+        <div class="gallery_card">
+
+        <div class="gallery_img">
+            <img src="images/gallery3.jpg" alt="">
         </div>
 
-    </body>
+        <div class="gallery_img">
+            <img src="images/gallery1.jpg" alt="">
+        </div>
+
+        <div class="gallery_img">
+            <img src="images/gallery2.jpg" alt="">
+        </div>
+
+        <div class="gallery_img">
+            <img src="images/gallery4.jpg" alt="">
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- end gallery -->
+
+    <!-- start footer -->
+    <footer class="footer_section">
+    <div class="footer_container">
+        
+        <div class="footer_left">
+            <p>&copy; 2026 Tracy Photography. All rights reserved.</p>
+        </div>
+
+        <div class="footer_right">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </div>
+
+    </div>
+</footer>
+
+<!-- end footer -->
+</body>
+
 </html>

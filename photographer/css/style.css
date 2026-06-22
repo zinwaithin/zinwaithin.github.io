@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+body {
+  background: #f7f3f2;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../Font/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf);
+}
+
+/* start nav */
+.navbar {
+  background: #f7f3f2;
+  top: 0%;
+  padding: 0px 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_item {
+  display: flex;
+  list-style: none;
+  margin: auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding-right: 40px;
+  font-size: 23px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.nav_item a:hover {
+  color: #c97310;
+}
+
+.active {
+  color: #c97310;
+}
+
+.logo_img {
+  width: 90px;
+  height: 85px;
+}
+
+/* end nav */
+
+/* start banner */
+.banner {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center 5%;
+  align-items: center;
+  filter: brightness(1);
+  width: 100;
+  height: 73vh;
+  display: flex;
+  padding-top: 100px;
+  align-items: center;
+  background-origin: content-box;
+  background-clip: padding-box;
+  margin-bottom: 70px;
+}
+
+.banner_text h1,
+.banner_text p {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+.banner_text h1 {
+  font-size: 40px;
+  padding-left: 180px;
+  margin-bottom: 20px;
+}
+
+.banner_text p {
+  font-size: 30px;
+  padding-left: 180px;
+}
+
+/* end banner */
+
+/* start about */
+
+.about_title {
+  text-align: center;
+  font-size: 25px;
+  /* color: #c97310; */
+}
+
+.section_line {
+  width: 130px;
+  height: 1px;
+  margin: auto;
+  background-color: #1c1002;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  /* border: none; */
+}
+
+.home_about_content {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.home_about_img {
+  float: left;
+  width: 45%;
+}
+
+.home_about_img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.home_about_text h2 {
+  /* color: #c97310; */
+  font-size: 28px;
+  padding-top: 200px;
+  margin-bottom: 20px;
+}
+
+.home_about_text p {
+  /* color: #c97310; */
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.clear {
+  clear: both;
+}
+
+.hr {
+  width: 80%;
+  height: 1px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #c97310;
+  border: none;
+}
+
+/* 
+.home_about{
+  margin-bottom: 100px;
+}  */
+
+/* end about */
+
+/* start service */
+
+.service_section {
+  margin-top: 100px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.service {
+  width: 80%;
+  margin: auto;
+}
+
+.service_title {
+  /* color: #c97310; */
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.service_line {
+  width: 130px;
+  height: 2px;
+  background-color: #1e1103;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  border: none;
+}
+
+.service_box {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+}
+
+.service_card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  padding-bottom: 25px;
+}
+
+.service_img {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.service_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.service_img img:hover {
+  transform: scale(1.2);
+  transition: 0.8s ease;
+}
+
+.service_card h2{
+  /* color: #c97310; */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* .service_card p{
+  color: #c97310;
+} */
+
+/* end service */
+
+/* start gallery */
+
+.gallery_card{
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.gallery_img{
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.gallery_img img{
+  width: 100%;
+  height: 100%;
+}
+
+.gallery_img img:hover{
+  transform: scale(1.2);
+  transition: 0.8s ease;
+}
+
+/* end gallery */
+
+
+/* ==================== START FOOTER ==================== */
+
+.footer_container {
+  width: 80%; /* တခြား Section တွေနဲ့ အကျယ် တူညီအောင် ထိန်းတာပါ */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.footer_section {
+  background-color: #f7f3f2; /* Navbar နဲ့ တစ်ရောင်တည်း သုံးထားပါတယ် */
+  padding: 30px 0;
+  width: 100%;
+  border-top: 1px solid rgba(201, 115, 16, 0.2);
+  margin-top: 100px; /* အပေါ်ကနေ လိုင်းလေး ခပ်ပါးပါး တားထားတာပါ */
+}
+
+
+/* ✍️ Copyright စာသား ပုံစံသွင်းခြင်း */
+.footer_left p {
+  color: #555555;
+  font-size: 16px;
+}
+
+/* 🔗 Social Links များ ပုံစံသွင်းခြင်း */
+.footer_right a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 25px; /* လင့်ခ်တစ်ခုနဲ့တစ်ခုကြား အကွာအဝေး */
+  transition: color 0.3s ease;
+}
+
+.footer_right a:hover {
+  color: #c97310;
+}
+/* ==================== END FOOTER ==================== */
+
+/* ==================== START ABOUT PAGE ==================== */
+.about_page_section {
+  padding-top: 140px; /* Navbar ကပ်နေလို့ အပေါ်ကနေ စနစ်တကျ တွန်းချတာပါ */
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+.about_page_container {
+  width: 80%;
+  margin: auto;
+}
+
+/* 💡 ဘယ်ဘက်ပုံနဲ့ ညာဘက်စာသားကို ၅၀% စီ သပ်သပ်ရပ်ရပ် ခွဲပြမည့် Grid */
+.about_page_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center; /* ပုံနဲ့ စာသားကို အပေါ်အောက် အလယ်တည့်တည့် ညှိတာပါ */
+}
+
+/* 📸 ဘယ်ဘက်က ပုံစတိုင် */
+.about_page_img {
+  width: 100%;
+  height: 700px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.about_page_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✍️ ညာဘက်က စာသားစတိုင် */
+.about_page_text {
+  padding-left: 10px;
+}
+
+.about_page_title {
+  color: #c97310;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left; /* စာမျက်နှာအကျယ်ကြီးမို့လို့ ဘယ်ဘက်ကပ်ထားတာ လှပါတယ် */
+}
+
+.about_page_line {
+  width: 80px;
+  height: 2.5px;
+  background-color: #c97310;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.about_page_text p {
+  color: #444444;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* 💡 အောက်ခြေက အချက်အလက်အကွက်လေးများ */
+.about_skills {
+  margin-top: 100px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.skill_item {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.skill_item:last-child {
+  margin-bottom: 0; /* အောက်ဆုံးစာကြောင်းကို margin ဖြုတ်တာပါ */
+}
+/* ==================== END ABOUT PAGE ==================== */
+
+
+/* ==================== START REVIEWS PAGE ==================== */
+
+.reviews_page_section {
+  padding-top: 40px; /* Navbar အောက်က လွတ်အောင်ပါ */
+  /* padding-bottom: 50px; */
+  width: 100%;
+}
+
+.reviews_page_container {
+  width: 80%;
+  margin: auto;
+}
+
+.reviews_page_title {
+  text-align: center;
+  color: #c97310;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.reviews_page_line {
+  width: 130px;
+  height: 2px;
+  background-color: #c97310;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 💡 Review ကတ် ၃ ခုကို ၃ ကော်လံ ခွဲပြမည့် Grid */
+.reviews_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.review_card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(201, 115, 16, 0.08); /* ပါးပါးလေး ပတ်ထားတဲ့ ဘောင် */
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+/* 👤 Customer Profile အဝိုင်းလေး */
+.client_profile {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px auto;
+  border: 2px solid #c97310;
+}
+
+.client_profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rating_stars {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.review_text {
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic; /* စာသားကို စောင်းစောင်းလေးနဲ့ ဖတ်လို့ကောင်းအောင်ပါ */
+  margin-bottom: 20px;
+}
+
+.client_name {
+  color: #c97310;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ✨ Mouse တင်ရင် ကတ်လေး ကြွတက်ပြီး အရောင်လေး ပိုလင်းလာမည့် စနစ် */
+.review_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(21, 12, 2, 0.1);
+  border-color: rgba(201, 115, 16, 0.3);
+}
+
+/* ==================== END REVIEWS PAGE ==================== */
+
+
+/* start gallery */
+
+.gallery {
+  padding-top: 140px; /* Navbar အောက်က လွတ်အောင် တွန်းချလိုက်ပါတယ် */
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 25% 75%; /* ဘယ်ဘက် Sidebar ၂၅% နဲ့ ညာဘက် ၇၅% ခွဲပါတယ် */
+  gap: 40px;
+}
+
+.gallery_items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery_items li {
+  margin-bottom: 15px; /* ခလုတ်တစ်ခုချင်းစီကြား အကွာအဝေး */
+}
+
+
+.gallery_item {
+  display: block;
+  background-color: #ffffff;
+  color: #c97310;
+  border: 2px solid #c97310;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.gallery_item:hover {
+  background-color: #c97310;
+  color: #ffffff;
+}
+
+
+.photos_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photos_grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.gallery_box{
+  margin-bottom: 500px;
+  scroll-margin-top: 140px;
+}
+
+
+/* end gallery */
