@@ -8,19 +8,26 @@
 <body>
     <script>
         let count = 0;
+
         let num = Number(prompt("Enter Your Number"));
+        count++;
         
-
+        while(num !== 75){
+        
         if(num < 75){
-            document.write(`Your number is small.Try again!`);
+        num = Number(prompt(`Your number is small.Try again!`));
+
         }else if(num > 75){
-            document.write(`Your number is gread.Try again!`);
-        }else{
-            document.write(`Congratulations. Your number is ture! .You tried ${count} times`);
-        }
-        for(let i=1; i <= count; i++){
+        num = Number(prompt(`Your number is gread.Try again!`));
 
         }
+
+        count++;
+
+        }
+        document.write(`Congratulations! Your number is True. You tried ${count} times`);
+
+
     </script>
 </body>
 </html>
