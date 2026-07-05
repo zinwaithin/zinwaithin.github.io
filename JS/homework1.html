@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="myForm">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="price">Price</label><br>
+        <input type="number" id="price" name="price"><br><br>
+
+        <label for="Qty">Qty</label><br>
+        <input type="number" id="Qty" name="Qty"><br><br>
+
+        <button type="button" onclick="showData()">Add</button><br><br>
+    </form>
+
+    <table cellpadding="20" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="myBody">
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Grand Total</td>
+                <td id="grandTotal"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+
+        //get data
+        let menuList = [];
+
+        function showData() {
+            let name = document.getElementById("name").value;
+            let price = Number(document.getElementById("price").value);
+            let Qty = Number(document.getElementById("Qty").value);
+            // console.log(name,price,Qty);
+
+
+            //create obj
+            let menu = {
+                itName: name,
+                itPrice: price,
+                itQty: Qty,
+
+            }
+            // console.log(menu);
+
+            //push object to array
+            menuList.push(menu);
+            console.log(menuList);
+
+            menuListTable();
+
+        }
+
+        function menuListTable() {
+            let html = '';
+            let gTotal = 0;
+
+            for (let i = 0; i < menuList.length; i++) {
+
+                let itemTotal = menuList[i].itPrice * menuList[i].itQty;
+                gTotal += itemTotal;
+
+                html += `<tr> 
+                            <td>${i + 1}</td>
+                            <td>${menuList[i].itName}</td>
+                            <td>${menuList[i].itPrice}</td>
+                            <td>${menuList[i].itQty}</td>
+                            <td>${itemTotal}</td>
+               
+                </tr>`;
+
+            }
+
+            document.getElementById("myBody").innerHTML = html;
+
+            document.getElementById("grandTotal").innerHTML = gTotal;
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

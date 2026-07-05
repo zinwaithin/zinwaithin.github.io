@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event</h1>
+
+    <img src="images/cartoon1.jpg" alt="" width="200px" height="200px" onmouseover="photo">
+
+    <input type="text" onchange="result()" id="myInput">
+    <p id="myP">
+
+    </p>
+
+    <script>
+        function result(){
+            let myInput =document.getElementById("myInput").value;
+
+            let myP =document.getElementById("myP");
+            myP.innerText = myInput;
+
+        }
+    </script>
+</body>
+</html>

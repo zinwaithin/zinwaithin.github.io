@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Property</h1>
+
+    <h2 id="setTextNode"></h2>
+
+    <p id="setAttr">This is set Attr</p>
+    <p id="getAttr" style="color: green; font-size: 30px;">This is get attr</p>
+    <p id="removeAttr" style="color: red;">This is remove attr</p>
+
+
+    <button onclick="setTextNode()">Set Text Node</button>
+    <button onclick="setAttr()">Set Attribute</button>
+    <button onclick="getAttr()">Get Attribute</button>
+    <button onclick="removeAttr()">Remove Attribute</button>
+
+    <script>
+
+        //set text node
+        function setTextNode(){
+            let h2 = document.getElementById("setTextNode");
+            //h2.innerText = "Hello World";
+            let textNode = document.createTextNode("Hello World");
+            h2.appendChild(textNode);
+        }
+
+        //set Attr
+        function setAttr() {
+            let h3 = document.createElement("small");
+            h3.innerText = "Create Element";
+            document.body.appendChild (h3);
+        }
+
+        //set attr
+        function setAttr(){
+            let p = document.getElementById('setAttr');
+            p.setAttribute("style", "color:red; border: 1px solid black;");
+
+        }
+
+        //get attr
+
+        function getAttr(){
+            let p = document.getElementById('getAttr');
+            let myAttr = p.getAttribute('style');
+            console.log(myAttr);
+        }
+
+        //remove attr
+        function removeAttr(){
+            let p = document.getElementById("removeAttr");
+            let myAttr = p.getAttribute('style');
+            
+            if(myAttr == 'color:red'){
+                p.removeAttribute('style');
+                p.setAttribute('style', 'color:green');
+
+            }else{
+                p.removeAttribute('style');
+                p.setAttribute('style', 'color:red');
+            }
+        }
+
+    </script>
+</body>
+</html>
