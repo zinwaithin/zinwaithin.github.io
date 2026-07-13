@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <!-- Add Student Form -->
+    <div id="addStudent">
+        <h3>Add New Student</h3>
+        Name : <input type="text" name="name" id="name"><br><br>
+        Email: <input type="email" name="email" id="email"><br><br>
+        Phone: <input type="number" name="phone" id="phone"><br><br>
+        Year: <select name="year" id="year">
+            <option value="">Choose Year</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+        </select><br><br>
+        <button id="add">Add Student</button>
+    </div>
+
+    <h3>Students List</h3>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>1</td>
+                <td>Kaung Htet Aung</td>
+                <td>kaunghtetaung@gmail.com</td>
+                <td>09877887887</td>
+                <td>Second</td>
+                <td>
+                    <button>Delete</button>
+                    <button>Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

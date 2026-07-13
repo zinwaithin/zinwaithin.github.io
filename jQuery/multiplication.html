@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    Number:: <input type="number" name="number" id="number">
+    <button id="multiply">Multiply</button>
+
+    <table>
+        <tbody id="my-tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $('#multiply').click(function(){
+
+                let num = $("#number").val();
+                let number = Number(num);
+                console.log(number);
+                console.log(typeof(number))
+
+                let data='';
+                for(let i = 1; i <= 12; i++){
+                    let result = number * i;
+                    console.log(result);
+
+                    data+=`<tr>
+                        <td>${number} x ${i}</td>
+                        <td>=</td>
+                        <td>${result}</td>
+                        </tr>`
+                }
+
+                $("#my-tbody").html(data);
+            })
+        })
+    </script>
+</body>
+</html>
