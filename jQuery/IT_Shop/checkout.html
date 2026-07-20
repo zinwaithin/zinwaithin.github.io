@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="fontawesome/js/all.min.js"></script>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- start header -->
+    <header class="navbar">
+
+        <div class="logo">IT Shop</div>
+
+        <div class="nav-links">
+
+            <a href="#" class="home-btn">Home</a>
+
+            <div class="cart-icon">
+                <a href="checkout.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="item-count">0</span>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- end header -->
+
+
+    <table border="1" cellpadding="30" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <button id="order">Order Now</button>
+        
+</body>
+</html>

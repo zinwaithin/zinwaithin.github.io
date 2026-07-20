@@ -22,6 +22,24 @@
         <button id="add">Add Student</button>
     </div>
 
+    <div id="updStudent">
+        <h3>Update Student</h3>
+
+        <input type="hidden" name="key" id="key">
+
+
+        Name : <input type="text" name="name" id="upd_name"><br><br>
+        Email: <input type="email" name="email" id="upd_email"><br><br>
+        Phone: <input type="number" name="phone" id="upd_phone"><br><br>
+        Year: <select name="year" id="upd_year">
+            <option value="">Choose Year</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+        </select><br><br>
+        <button id="upd">Update Student</button>
+    </div>
+
     <h3>Students List</h3>
     <table border="1" cellspacing="0" cellpadding="20">
         <thead>
@@ -41,6 +59,9 @@
 
     <script>
         $(document).ready(function(){
+
+            $("#updStudent").hide();
+
             $("#add").click(function(){
                 // input ထဲက data တစ်ခုချင်းစီလက်ခံ
 
@@ -123,8 +144,8 @@
                 <td>${phone}</td>
                 <td>${year}</td>
                 <td>
-                    <button>Delete</button>
-                    <button>Edit</button>
+                    <button class ="delete" data-key="${i}">Delete</button>
+                    <button class ="edit" data-key="${i}"  data-name="${name}"  data-email="${email}"  data-phone="${phone}"  data-year="${year}">Edit</button>
                 </td>
                </tr> `;
                    
@@ -132,9 +153,90 @@
                 })
                 $("#tbody").html(data);
 
-                 
                 
             }
+
+            //for delete
+
+            $('#tbody').on('click', '.delete', function(){
+                let key = $(this).data('key');
+                console.log(key);
+
+                let ans = confirm("Are you sure to delete?");
+                console.log(ans);
+
+                if(ans){
+                    let studentData = localStorage.getItem('students_key');
+                    if(studentData){
+                        let studentArray = JSON.parse(studentData);
+                        studentArray.splice(key,1);//array.splice(index,number)
+
+                        let studentString = JSON.stringify(studentArray);
+                        localStorage.setItem('students_key', studentString);
+                        getData();
+                    }
+                }
+                
+                
+            })
+
+            //for edit
+            $('#tbody').on('click', '.edit',function(){
+                $('#addStudent').hide();
+                $('#updStudent').show();
+
+                let key =$(this).data('key');
+                let name =$(this).data('name');
+                let email =$(this).data('email');
+                let phone =$(this).data('phone');
+                let year =$(this).data('year');
+
+                console.log(key,name,email,phone,year);
+
+
+                $('#key').val(key);
+                $('#upd_name').val(name);
+                $('#upd_email').val(email);
+                $('#upd_phone').val(phone);
+                $('#upd_year').val(year);
+                
+            })
+
+            //for update
+
+            $('#upd').click(function(){
+                let key = $('#key').val();
+                let name = $('#upd_name').val();
+                let email = $('#upd_email').val();
+                let phone = $('#upd_phone').val();
+                let year = $('#upd_year').val();
+
+                console.log(key,name,email,phone,year);
+
+                let studentData = localStorage.getItem('students_key');
+                if(studentData){
+                    let studentArray = JSON.parse(studentData);
+
+                    console.log(studentArray[key].stu_name);
+
+                    studentArray[key].stu_name = name;
+                    studentArray[key].stu_email = email;
+                    studentArray[key].stu_phone = phone;
+                    studentArray[key].stu_year = year;
+
+
+                    let studentString = JSON.stringify(studentArray);
+                    localStorage.setItem('students_key', studentString);
+
+                    getData();
+                    
+                }
+                
+
+
+            })
+
+
         })
     </script>
 
