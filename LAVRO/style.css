@@ -1,0 +1,1439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Geist";
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("font/Geist/Geist-VariableFont_wght.ttf");
+}
+
+
+
+/* =========================
+   Start Header
+========================= */
+
+.custom-navbar {
+    height: 80px;
+    padding: 0 24px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #EAEAEA;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Navbar Container */
+
+.nav-container {
+    width: 100%;
+    max-width: 1120px;
+
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+
+/* Navigation */
+
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+
+    gap: 32px;
+}
+
+.nav-link {
+    padding: 0 !important;
+
+    color: #111111 !important;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #2F5DFF !important;
+}
+
+
+/* Request Demo Button */
+
+.nav-btn {
+    height: 52px;
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2F5DFF;
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #244EE8;
+    color: #ffffff;
+}
+
+/* =========================
+   End Header
+========================= */
+
+/* =========================
+   Start Hero Section
+========================= */
+
+.hero-section {
+    padding: 64px 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Hero Container */
+
+.hero-container {
+    max-width: 1120px;
+}
+
+
+/* Subtitle */
+
+.hero-subtitle {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: #2F5DFF;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+
+/* Main Heading */
+
+.hero-title {
+    margin-bottom: 24px;
+
+    color: #111111;
+
+    font-size: 72px;
+    font-weight: 700;
+
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+
+/* Description */
+
+.hero-description {
+    max-width: 520px;
+
+    margin-bottom: 32px;
+
+    color: #737373;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* Buttons Group */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* Primary Button */
+
+.hero-primary-btn {
+    height: 52px;
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: #2F5DFF;
+    color: #FFFFFF;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.hero-primary-btn:hover {
+    background-color: #244EE8;
+    color: #FFFFFF;
+}
+
+
+/* Secondary Button */
+
+.hero-secondary-btn {
+    height: 52px;
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+    color: #111111;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.hero-secondary-btn:hover {
+    border-color: #111111;
+    color: #111111;
+}
+
+
+/* Hero Image */
+
+.hero-image-wrapper {
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* =========================
+   End Hero Section
+========================= */
+
+/* =========================
+   Start Benefits Section
+========================= */
+
+.benefits-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.benefits-container {
+    max-width: 1120px;
+}
+
+
+/* Card */
+
+.benefit-card {
+    height: 100%;
+    padding: 32px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+}
+
+
+/* Icon */
+
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F7F7F5;
+    color: #111111;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+/* Card Title */
+
+.benefit-title {
+    margin-bottom: 16px;
+
+    color: #111111;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Card Text */
+
+.benefit-text {
+    margin-bottom: 0;
+
+    color: #737373;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   End Benefits Section
+========================= */
+
+/* =========================
+   Start Services Section
+========================= */
+
+.services-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.services-container {
+    max-width: 1120px;
+}
+
+
+/* Heading Area */
+
+.services-heading {
+    margin-bottom: 48px;
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+
+/* Small Blue Title */
+
+.section-subtitle {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #2F5DFF;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+}
+
+
+/* Main Title */
+
+.section-title {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 40px;
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+/* Explore All Services */
+
+.services-link {
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.services-link i {
+    margin-left: 8px;
+}
+
+.services-link:hover {
+    color: #2F5DFF;
+}
+
+
+/* Service Card */
+
+.service-card {
+    height: 340px;
+    padding: 24px;
+
+    background-color: #F7F7F5;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s ease;
+
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #D1D1D1;
+}
+
+
+/* Icon */
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+    color: #111111;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+/* Card Title */
+
+.service-content h3 {
+    margin-bottom: 16px;
+
+    color: #111111;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Card Text */
+
+.service-content p {
+    margin-bottom: 24px;
+
+    color: #737373;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* Arrow */
+
+.service-content a {
+    display: block;
+
+    color: #111111;
+
+    font-size: 16px;
+    text-align: right;
+}
+
+.service-content a:hover {
+    color: #2F5DFF;
+}
+
+/* =========================
+   End Services Section
+========================= */
+
+
+/* =========================
+   Start Portfolio Section
+========================= */
+
+.portfolio-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.portfolio-container {
+    max-width: 1120px;
+}
+
+
+/* Heading */
+
+.portfolio-heading {
+    margin-bottom: 48px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+/* Right Link */
+
+.portfolio-link {
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.portfolio-link i {
+    margin-left: 8px;
+}
+
+.portfolio-link:hover {
+    color: #2F5DFF;
+}
+
+
+/* Card */
+
+.portfolio-card {
+    overflow: hidden;
+
+    background-color: #F7F7F5;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Card Hover */
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: #D1D1D1;
+}
+
+
+/* Image Area */
+
+.portfolio-image {
+    width: 100%;
+    height: 240px;
+
+    overflow: hidden;
+}
+
+
+/* Image */
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.3s ease;
+}
+
+
+/* Image Zoom Hover */
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.04);
+}
+
+
+/* Content */
+
+.portfolio-content {
+    padding: 24px;
+}
+
+
+/* Category */
+
+.portfolio-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #2F5DFF;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Title */
+
+.portfolio-content h3 {
+    margin-bottom: 8px;
+
+    color: #111111;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.portfolio-content p {
+    margin-bottom: 24px;
+
+    color: #737373;
+
+    font-size: 16px;
+}
+
+
+/* Link */
+
+.portfolio-content a {
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+/* Arrow */
+
+.portfolio-content a i {
+    margin-left: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Arrow Move */
+
+.portfolio-card:hover .portfolio-content a i {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   End Portfolio Section
+========================= */
+
+
+/* =========================
+   Start Industries Section
+========================= */
+
+.industries-section {
+    padding: 0 24px 128px;
+
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.industries-container {
+    max-width: 1120px;
+}
+
+
+/* Heading */
+
+.industries-heading {
+    margin-bottom: 48px;
+}
+
+
+/* Industry Card */
+
+.industry-card {
+    height: 150px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* Icon */
+
+.industry-card i {
+    margin-bottom: 16px;
+
+    color: #111111;
+
+    font-size: 28px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Title */
+
+.industry-card h3 {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Hover */
+
+.industry-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #2F5DFF;
+}
+
+
+/* Icon Hover */
+
+.industry-card:hover i {
+    color: #2F5DFF;
+}
+
+/* =========================
+   End Industries Section
+========================= */
+
+/* =========================
+   Start Process Section
+========================= */
+
+.process-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.process-container {
+    max-width: 1120px;
+}
+
+
+/* Heading */
+
+.process-heading {
+    margin-bottom: 48px;
+}
+
+
+/* Process Layout */
+
+.process-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+/* Line Behind Numbers */
+
+.process-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    left: 8%;
+    right: 8%;
+
+    height: 1px;
+
+    background-color: #EAEAEA;
+
+    z-index: 0;
+}
+
+
+/* Each Step */
+
+.process-item {
+    width: 16%;
+
+    position: relative;
+
+    cursor: pointer;
+
+    z-index: 1;
+}
+
+
+/* Number Circle */
+
+.process-number {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #FFFFFF;
+    color: #111111;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 50%;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+/* Title */
+
+.process-item h3 {
+    margin-bottom: 12px;
+
+    color: #111111;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.process-item p {
+    margin: 0;
+
+    color: #737373;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Hover
+========================= */
+
+.process-item:hover .process-number {
+    background-color: #2F5DFF;
+    border-color: #2F5DFF;
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   Clicked / Active
+========================= */
+
+.process-item.active .process-number {
+    background-color: #2F5DFF;
+    border-color: #2F5DFF;
+    color: #FFFFFF;
+}
+
+/* =========================
+   End Process Section
+========================= */
+
+
+/* =========================
+   Start About Section
+========================= */
+
+.about-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.about-container {
+    max-width: 1120px;
+}
+
+
+/* Left Title */
+
+.about-title {
+    margin-bottom: 24px;
+
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.15;
+}
+
+
+/* Description */
+
+.about-text {
+    margin: 0;
+
+    color: #737373;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* Middle Info */
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 32px;
+}
+
+
+/* Info Item */
+
+.about-info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* Icon */
+
+.about-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F7F7F5;
+    color: #111111;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    transition: 0.2s ease;
+}
+
+
+/* Info Title */
+
+.about-info-item h3 {
+    margin-bottom: 2px;
+
+    color: #111111;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* Info Text */
+
+.about-info-item p {
+    margin: 0;
+
+    color: #737373;
+
+    font-size: 14px;
+}
+
+
+/* Image */
+
+.about-image {
+    width: 100%;
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Simple Hover */
+
+.about-info-item:hover .about-icon {
+    background-color: #2F5DFF;
+    color: #FFFFFF;
+}
+
+/* =========================
+   End About Section
+========================= */
+
+/* =========================
+   Start FAQ Section
+========================= */
+
+.faq-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.faq-container {
+    max-width: 1120px;
+}
+
+
+/* Heading */
+
+.faq-heading {
+    margin-bottom: 48px;
+}
+
+
+/* FAQ Box */
+
+.faq-item {
+    margin-bottom: 16px;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* Question */
+
+.faq-question {
+    width: 100%;
+    min-height: 56px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #FFFFFF;
+    color: #111111;
+
+    border: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+/* Question Hover */
+
+.faq-question:hover {
+    color: #2F5DFF;
+}
+
+
+/* Plus Icon */
+
+.faq-icon::before {
+    content: "+";
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+/* When FAQ is Open */
+
+.faq-question[aria-expanded="true"] {
+    color: #2F5DFF;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon::before {
+    content: "−";
+}
+
+
+/* Answer */
+
+.faq-answer {
+    padding: 0 20px 20px;
+
+    color: #737373;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   End FAQ Section
+========================= */
+
+/* =========================
+   Start Contact Section
+========================= */
+
+.contact-section {
+    padding: 0 24px 128px;
+    background-color: #FFFFFF;
+}
+
+
+/* Container */
+
+.contact-container {
+    max-width: 1120px;
+}
+
+
+/* Left Title */
+
+.contact-title {
+    margin-bottom: 24px;
+
+    color: #111111;
+
+    font-size: 40px;
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+
+/* Description */
+
+.contact-text {
+    max-width: 400px;
+
+    margin-bottom: 32px;
+
+    color: #737373;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* Contact Info */
+
+.contact-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #737373;
+
+    font-size: 16px;
+}
+
+.contact-info i {
+    color: #111111;
+    font-size: 20px;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* Input */
+
+.contact-form .form-control {
+    height: 56px;
+
+    padding: 0 16px;
+
+    color: #111111;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    box-shadow: none;
+}
+
+
+/* Input Focus */
+
+.contact-form .form-control:focus {
+    border-color: #2F5DFF;
+    box-shadow: none;
+}
+
+
+/* Textarea */
+
+.contact-form textarea.form-control {
+    height: 140px;
+
+    padding: 16px;
+
+    resize: none;
+}
+
+
+/* Button */
+
+.contact-btn {
+    height: 52px;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background-color: #2F5DFF;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+/* Button Hover */
+
+.contact-btn:hover {
+    background-color: #244EE8;
+}
+
+
+/* Arrow Hover */
+
+.contact-btn i {
+    transition: 0.2s ease;
+}
+
+.contact-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* =========================
+   End Contact Section
+========================= */
+
+
+/* =========================
+   Start Footer
+========================= */
+
+.footer {
+    padding: 24px;
+
+    background-color: #FFFFFF;
+
+    border-top: 1px solid #EAEAEA;
+}
+
+
+/* Container */
+
+.footer-container {
+    max-width: 1120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.footer-logo a {
+    color: #111111;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* Copyright */
+
+.footer-copy {
+    color: #737373;
+
+    font-size: 14px;
+}
+
+
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #737373;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #2F5DFF;
+}
+
+
+/* Social Icons */
+
+.footer-social {
+    display: flex;
+
+    gap: 16px;
+}
+
+.footer-social a {
+    color: #111111;
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: #2F5DFF;
+}
+
+/* =========================
+   End Footer
+========================= */
