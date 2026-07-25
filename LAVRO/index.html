@@ -20,63 +20,86 @@
   <body>
 
     <!-- start header -->
-    <nav class="custom-navbar">
-      <div class="container nav-container">
+    <nav class="navbar navbar-expand-xl bg-white border-bottom sticky-top py-3">
+      <div class="container">
 
         <!-- Logo -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand p-0" href="index.html">
           <img src="images/Logo Primary.svg" alt="LAVRO Logo">
         </a>
 
-        <!-- Navigation Links -->
-        <div>
-          <ul class="navbar-nav">
+        <!-- Tablet / Mobile Menu Button -->
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+          <!-- Navigation -->
+          <ul class="navbar-nav mx-xl-auto gap-xl-4">
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#services">Services</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Industries</a>
+              <a class="nav-link" href="#industries">Industries</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
 
           </ul>
-        </div>
 
-        <!-- Right Button -->
-        <a href="#" class="nav-btn">Request a Demo</a>
+          <!-- CTA -->
+          <a href="#contact" class="nav-btn px-3 py-2 mt-3 mt-xl-0">
+            Contact Us
+          </a>
+
+        </div>
 
       </div>
     </nav>
     <!-- end header -->
 
     <!-- start hero section -->
-    <section class="hero-section">
-      <div class="container hero-container">
+    <section class="hero-section py-4">
+      <div class="container">
 
         <div class="row align-items-center g-5">
 
           <!-- Left Content -->
-          <div class="col-lg-6">
+          <div class="col-12 col-lg-5">
 
-            <span class="hero-subtitle">
+            <span class="hero-eyebrow">
               360° VIRTUAL EXPERIENCES
             </span>
 
+            <p class="hero-support">
+              Let customers experience your space
+            </p>
+
             <h1 class="hero-title">
-              Let customers experience your space before they arrive.
+              Before they arrive.
             </h1>
 
             <p class="hero-description">
@@ -84,32 +107,29 @@
               for businesses and institutions in Laos.
             </p>
 
-            <!-- Buttons -->
-            <div class="hero-buttons">
+            <div class="d-flex gap-3">
 
               <a href="#contact" class="hero-primary-btn">
-                Request a Demo
-                <i class="fa-solid fa-arrow-right"></i>
+                Contact Us
               </a>
 
-              <a href="#portfolio" class="hero-secondary-btn">
-                Explore 360° Demo
-              </a>
+              <!-- Real demo live ဖြစ်မှ href ချိတ်မယ် -->
+              <span class="hero-secondary-btn">
+                View 360° Demo
+              </span>
 
             </div>
 
           </div>
 
           <!-- Right Image -->
-          <div class="col-lg-6">
+          <div class="col-12 col-lg-7">
 
-            <div class="hero-image-wrapper">
-
+            <div class="hero-image">
               <img
                 src="images/hero-img.jpg"
-                alt="LAVRO 360 virtual experience preview"
-                class="hero-image">
-
+                alt="LAVRO virtual experience"
+                class="img-fluid">
             </div>
 
           </div>
@@ -122,87 +142,106 @@
 
     <!-- start benefits section -->
     <section class="benefits-section">
-      <div class="container benefits-container">
+      <div class="container">
 
-        <div class="row g-4">
+        <!-- Section Label -->
+        <p class="benefits-eyebrow mb-4 mb-md-5">
+          A CLEARER WAY TO EXPERIENCE A SPACE
+        </p>
 
-          <!-- Card 1 -->
-          <div class="col-lg-3">
-            <div class="benefit-card">
+        <div class="row g-4 g-xl-0">
 
-              <div class="benefit-icon">
+          <!-- Benefit 1 -->
+          <div class="col-12 col-md-6 col-xl-3 position-relative">
+
+            <div class="benefit-item pe-xl-4">
+
+              <div class="benefit-icon mb-3">
                 <i class="fa-solid fa-globe"></i>
               </div>
 
-              <h3 class="benefit-title">
+              <h3 class="benefit-title mb-2">
                 Explore Remotely
               </h3>
 
-              <p class="benefit-text">
-                Let people explore your space online before visiting in person.
+              <p class="benefit-text mb-0">
+                Visit a space from anywhere.
               </p>
 
             </div>
+
+            <!-- Desktop Divider -->
+            <div class="benefit-divider d-none d-xl-block"></div>
+
           </div>
 
-          <!-- Card 2 -->
-          <div class="col-lg-3">
-            <div class="benefit-card">
+          <!-- Benefit 2 -->
+          <div class="col-12 col-md-6 col-xl-3 position-relative">
 
-              <div class="benefit-icon">
+            <div class="benefit-item px-xl-4">
+
+              <div class="benefit-icon mb-3">
                 <i class="fa-solid fa-cube"></i>
               </div>
 
-              <h3 class="benefit-title">
+              <h3 class="benefit-title mb-2">
                 Understand the Space
               </h3>
 
-              <p class="benefit-text">
-                Give visitors a clearer sense of your rooms, facilities and
-                layout.
+              <p class="benefit-text mb-0">
+                See how rooms and areas connect.
               </p>
 
             </div>
+
+            <!-- Desktop Divider -->
+            <div class="benefit-divider d-none d-xl-block"></div>
+
           </div>
 
-          <!-- Card 3 -->
-          <div class="col-lg-3">
-            <div class="benefit-card">
+          <!-- Benefit 3 -->
+          <div class="col-12 col-md-6 col-xl-3 position-relative">
 
-              <div class="benefit-icon">
-                <i class="fa-regular fa-circle-check"></i>
+            <div class="benefit-item px-xl-4">
+
+              <div class="benefit-icon mb-3">
+                <i class="fa-solid fa-shield-halved"></i>
               </div>
 
-              <h3 class="benefit-title">
+              <h3 class="benefit-title mb-2">
                 Build Confidence
               </h3>
 
-              <p class="benefit-text">
-                Help potential visitors understand what to expect before they
-                arrive.
+              <p class="benefit-text mb-0">
+                Know what to expect before arriving.
               </p>
 
             </div>
+
+            <!-- Desktop Divider -->
+            <div class="benefit-divider d-none d-xl-block"></div>
+
           </div>
 
-          <!-- Card 4 -->
-          <div class="col-lg-3">
-            <div class="benefit-card">
+          <!-- Benefit 4 -->
+          <div class="col-12 col-md-6 col-xl-3">
 
-              <div class="benefit-icon">
-                <i class="fa-solid fa-share-nodes"></i>
+            <div class="benefit-item ps-xl-4">
+
+              <div class="benefit-icon mb-3">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </div>
 
-              <h3 class="benefit-title">
+              <h3 class="benefit-title mb-2">
                 Easy to Share
               </h3>
 
-              <p class="benefit-text">
-                Share your virtual experience through websites, links and QR
-                codes.
+              <p class="benefit-text mb-0">
+                Share through website, link or QR.
               </p>
 
             </div>
+
           </div>
 
         </div>
@@ -213,575 +252,98 @@
 
     <!-- start services section -->
     <section class="services-section" id="services">
+      <div class="container">
 
-      <div class="container services-container">
-
-        <!-- Section Heading -->
-        <div class="services-heading">
-
-          <div>
-            <span class="section-subtitle">OUR SERVICES</span>
-
-            <h2 class="section-title">
-              Premium Visual Solutions<br>
-              for Every Space
-            </h2>
-          </div>
-
-          <a href="#" class="services-link">
-            Explore All Services
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-
-        <!-- Service Cards -->
-        <div class="row g-4">
-
-          <!-- Card 1 -->
-          <div class="col-lg-3">
-            <div class="service-card">
-
-              <div class="service-icon">
-                <i class="fa-solid fa-panorama"></i>
-              </div>
-
-              <div class="service-content">
-
-                <h3>Virtual Tours</h3>
-
-                <p>
-                  Interactive 360° tours that allow people
-                  to explore every corner of your space.
-                </p>
-
-                <a href="#">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-lg-3">
-            <div class="service-card">
-
-              <div class="service-icon">
-                <i class="fa-solid fa-camera"></i>
-              </div>
-
-              <div class="service-content">
-
-                <h3>Photography</h3>
-
-                <p>
-                  Professional photography to present
-                  your spaces clearly and beautifully.
-                </p>
-
-                <a href="#">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-lg-3">
-            <div class="service-card">
-
-              <div class="service-icon">
-                <i class="fa-solid fa-paper-plane"></i>
-              </div>
-
-              <div class="service-content">
-
-                <h3>Drone</h3>
-
-                <p>
-                  Aerial perspectives that showcase
-                  your property and surroundings.
-                </p>
-
-                <a href="#">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-lg-3">
-            <div class="service-card">
-
-              <div class="service-icon">
-                <i class="fa-solid fa-video"></i>
-              </div>
-
-              <div class="service-content">
-
-                <h3>Videography</h3>
-
-                <p>
-                  Cinematic video content that helps
-                  present your space and story.
-                </p>
-
-                <a href="#">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- end services section -->
-
-    <!-- start portfolio section -->
-    <section class="portfolio-section" id="portfolio">
-
-      <div class="container portfolio-container">
-
-        <!-- Section Heading -->
-        <div class="portfolio-heading">
-
-          <div>
-            <span class="section-subtitle">
-              FEATURED PORTFOLIO
-            </span>
-
-            <h2 class="section-title">
-              Immersive Experiences<br>
-              We're Building
-            </h2>
-          </div>
-
-          <a href="#" class="portfolio-link">
-            View Portfolio
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-
-        </div>
-
-        <!-- Portfolio Cards -->
-        <div class="row g-4">
-
-          <!-- Card 1 -->
-          <div class="col-lg-4">
-
-            <div class="portfolio-card">
-
-              <div class="portfolio-image">
-
-                <img
-                  src="images/hero-img.jpg"
-                  alt="School virtual tour demo">
-
-              </div>
-
-              <div class="portfolio-content">
-
-                <span class="portfolio-category">
-                  SCHOOL
-                </span>
-
-                <h3>
-                  School Campus Demo
-                </h3>
-
-                <p>
-                  360° Virtual Tour Demo
-                </p>
-
-                <a href="#">
-                  Explore Demo
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-lg-4">
-
-            <div class="portfolio-card">
-
-              <div class="portfolio-image">
-
-                <img
-                  src="images/hero-img.jpg"
-                  alt="Hospitality virtual tour demo">
-
-              </div>
-
-              <div class="portfolio-content">
-
-                <span class="portfolio-category">
-                  HOSPITALITY
-                </span>
-
-                <h3>
-                  Hospitality Space Demo
-                </h3>
-
-                <p>
-                  360° Virtual Tour Demo
-                </p>
-
-                <a href="#">
-                  Explore Demo
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-lg-4">
-
-            <div class="portfolio-card">
-
-              <div class="portfolio-image">
-
-                <img
-                  src="images/hero-img.jpg"
-                  alt="Commercial space virtual tour demo">
-
-              </div>
-
-              <div class="portfolio-content">
-
-                <span class="portfolio-category">
-                  COMMERCIAL
-                </span>
-
-                <h3>
-                  Commercial Space Demo
-                </h3>
-
-                <p>
-                  360° Virtual Tour Demo
-                </p>
-
-                <a href="#">
-                  Explore Demo
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- end portfolio section -->
-
-    <!-- start industries section -->
-    <section class="industries-section" id="industries">
-
-      <div class="container industries-container">
-
-        <!-- Section Heading -->
-        <div class="industries-heading">
-
-          <span class="section-subtitle">
-            INDUSTRIES WE SERVE
-          </span>
-
-          <h2 class="section-title">
-            Spaces Designed to Be Explored
-          </h2>
-
-        </div>
-
-        <!-- Industry Cards -->
-        <div class="row g-3">
-
-          <!-- Card 1 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-school"></i>
-
-              <h3>Schools</h3>
-
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-hotel"></i>
-
-              <h3>Hotels</h3>
-
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-house"></i>
-
-              <h3>Real Estate</h3>
-
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-utensils"></i>
-
-              <h3>Restaurants</h3>
-
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-store"></i>
-
-              <h3>Showrooms</h3>
-
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="col-lg-2">
-            <div class="industry-card">
-
-              <i class="fa-solid fa-building"></i>
-
-              <h3>Other Spaces</h3>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- end industries section -->
-
-    <!-- start process section -->
-    <section class="process-section">
-
-      <div class="container process-container">
-
-        <!-- Section Heading -->
-        <div class="process-heading">
-
-          <span class="section-subtitle">
-            OUR PROCESS
-          </span>
-
-          <h2 class="section-title">
-            Simple Process, Clear Experience
-          </h2>
-
-        </div>
-
-        <!-- Process Steps -->
-        <div class="process-wrapper">
-
-          <!-- Step 1 -->
-          <div class="process-item active">
-
-            <div class="process-number">
-              1
-            </div>
-
-            <h3>Inquiry</h3>
-
-            <p>
-              Tell us about your space and what you need.
-            </p>
-
-          </div>
-
-          <!-- Step 2 -->
-          <div class="process-item">
-
-            <div class="process-number">
-              2
-            </div>
-
-            <h3>Plan</h3>
-
-            <p>
-              We plan the spaces and visitor journey.
-            </p>
-
-          </div>
-
-          <!-- Step 3 -->
-          <div class="process-item">
-
-            <div class="process-number">
-              3
-            </div>
-
-            <h3>Capture</h3>
-
-            <p>
-              We capture your space professionally on location.
-            </p>
-
-          </div>
-
-          <!-- Step 4 -->
-          <div class="process-item">
-
-            <div class="process-number">
-              4
-            </div>
-
-            <h3>Build</h3>
-
-            <p>
-              We create the interactive virtual experience.
-            </p>
-
-          </div>
-
-          <!-- Step 5 -->
-          <div class="process-item">
-
-            <div class="process-number">
-              5
-            </div>
-
-            <h3>Review</h3>
-
-            <p>
-              You review the experience before publishing.
-            </p>
-
-          </div>
-
-          <!-- Step 6 -->
-          <div class="process-item">
-
-            <div class="process-number">
-              6
-            </div>
-
-            <h3>Publish</h3>
-
-            <p>
-              Your tour is ready to embed, link and share.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-    <!-- end process section -->
-
-    <!-- start about section -->
-    <section class="about-section" id="about">
-
-      <div class="container about-container">
-
-        <div class="row align-items-center g-4">
+        <div class="row align-items-center g-4 g-xl-5">
 
           <!-- Left Content -->
-          <div class="col-lg-4">
+          <div class="col-12 col-md-5 col-xl-3">
 
-            <span class="section-subtitle">
-              ABOUT LAVRO
-            </span>
+            <p class="services-eyebrow mb-3">
+              OUR SERVICES
+            </p>
 
-            <h2 class="about-title">
-              Our Mission is to Connect People with Spaces
+            <h2 class="services-title mb-4">
+              Built around the way people experience spaces.
             </h2>
 
-            <p class="about-text">
-              We help businesses present their physical spaces through
-              immersive digital experiences that people can explore
-              before they arrive.
+            <p class="services-description mb-0">
+              LAVRO focuses on interactive 360° virtual experiences,
+              supported by professional visual media when needed.
             </p>
 
           </div>
 
-          <!-- Middle Stats -->
-          <div class="col-lg-2">
+          <!-- Center Image -->
+          <div class="col-12 col-md-7 col-xl-5">
 
-            <div class="about-info">
-
-              <!-- Stat 1 -->
-              <div class="about-info-item">
-
-                <div class="about-icon">
-                  <i class="fa-solid fa-users"></i>
-                </div>
-
-                <div>
-                  <h3>100+</h3>
-                  <p>Projects Completed</p>
-                </div>
-
-              </div>
-
-              <!-- Stat 2 -->
-              <div class="about-info-item">
-
-                <div class="about-icon">
-                  <i class="fa-solid fa-globe"></i>
-                </div>
-
-                <div>
-                  <h3>10+</h3>
-                  <p>Countries Served</p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Right Image -->
-          <div class="col-lg-6">
-
-            <div class="about-image">
+            <div class="services-image">
 
               <img
                 src="images/hero-img.jpg"
-                alt="LAVRO immersive virtual experience">
+                alt="LAVRO spatial media service" class="img-fluid">
+
+            </div>
+
+          </div>
+
+          <!-- Right Services -->
+          <div class="col-12 col-xl-4">
+
+            <div class="services-list">
+
+              <!-- Primary Service -->
+              <div class="service-primary pb-4">
+
+                <h3 class="service-primary-title mt-2 mb-3">
+                  360° Virtual Tours
+                </h3>
+
+                <p class="service-text mb-0">
+                  Interactive digital experiences that let people
+                  explore and understand a real space online.
+                </p>
+
+              </div>
+
+              <!-- Photography -->
+              <div class="service-item py-3">
+
+                <span class="service-number">
+                  02
+                </span>
+
+                <h3 class="service-item-title mb-0">
+                  Photography
+                </h3>
+
+              </div>
+
+              <!-- Drone -->
+              <div class="service-item py-3">
+
+                <span class="service-number">
+                  03
+                </span>
+
+                <h3 class="service-item-title mb-0">
+                  Drone
+                </h3>
+
+              </div>
+
+              <!-- Videography -->
+              <div class="service-item pt-3">
+
+                <span class="service-number">
+                  04
+                </span>
+
+                <h3 class="service-item-title mb-0">
+                  Videography
+                </h3>
+
+              </div>
 
             </div>
 
@@ -790,224 +352,63 @@
         </div>
 
       </div>
-
     </section>
-    <!-- end about section -->
+    <!-- end services section -->
 
-
-    <!-- start FAQ section -->
-<section class="faq-section">
-
-  <div class="container faq-container">
+    <!-- start featured experience section -->
+<section class="featured-section" id="portfolio">
+  <div class="container">
 
     <!-- Section Heading -->
-    <div class="faq-heading">
+    <div class="row">
+      <div class="col-12">
 
-      <span class="section-subtitle">
-        FAQ
-      </span>
+        <p class="featured-eyebrow mb-3">
+          FEATURED EXPERIENCE
+        </p>
 
-      <h2 class="section-title">
-        Frequently Asked Questions
-      </h2>
+        <h2 class="featured-heading mb-4">
+          See what it feels like to be there.
+        </h2>
 
+      </div>
     </div>
 
 
-    <div class="row g-4">
+    <!-- Featured Content -->
+    <div class="row align-items-center g-4 g-lg-5">
 
-      <!-- Left Column -->
-      <div class="col-lg-6">
+      <!-- Image -->
+      <div class="col-12 col-lg-7">
 
-
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq1"
-            aria-expanded="false">
-
-            <span>What is a 360° virtual tour?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq1">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq2"
-            aria-expanded="false">
-
-            <span>How long does it take to complete a project?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq2">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed posuere consectetur est at lobortis.
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq3"
-            aria-expanded="false">
-
-            <span>Do you offer international services?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq3">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Maecenas faucibus mollis interdum.
-
-            </div>
-
-          </div>
-
+        <div class="featured-image">
+          <img
+            src="images/hero-img.jpg"
+            class="img-fluid"
+            alt="LAVRO 360 virtual experience">
         </div>
 
       </div>
 
 
-      <!-- Right Column -->
-      <div class="col-lg-6">
+      <!-- Demo Information -->
+      <div class="col-12 col-lg-5">
 
+        <div class="featured-content ps-lg-3">
 
-        <!-- FAQ 4 -->
-        <div class="faq-item">
+          <h3 class="featured-title mb-3">
+            LAVRO 360° Demo
+          </h3>
 
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq4"
-            aria-expanded="false">
+          <p class="featured-text mb-4">
+            A sample experience showcasing how LAVRO captures
+            and presents a space with clarity and detail.
+          </p>
 
-            <span>How do I share my virtual tour?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq4">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Donec ullamcorper nulla non metus auctor fringilla.
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq5"
-            aria-expanded="false">
-
-            <span>What equipment do you use?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq5">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Cras mattis consectetur purus sit amet fermentum.
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- FAQ 6 -->
-        <div class="faq-item">
-
-          <button
-            class="faq-question"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#faq6"
-            aria-expanded="false">
-
-            <span>Can you work with tight deadlines?</span>
-
-            <span class="faq-icon"></span>
-
-          </button>
-
-
-          <div class="collapse" id="faq6">
-
-            <div class="faq-answer">
-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Aenean lacinia bibendum nulla sed consectetur.
-
-            </div>
-
-          </div>
+          <!-- Real demo ready ဖြစ်တဲ့အချိန် link ချိတ်မယ် -->
+          <span class="featured-btn">
+            Explore the Experience
+          </span>
 
         </div>
 
@@ -1016,94 +417,653 @@
     </div>
 
   </div>
-
 </section>
-<!-- end FAQ section -->
+<!-- end featured experience section -->
 
+<!-- start industries section -->
+<section class="industries-section" id="industries">
+  <div class="container">
 
-<!-- start contact section -->
-<section class="contact-section" id="contact">
+    <!-- Section Heading -->
+    <div class="row">
+      <div class="col-12">
 
-  <div class="container contact-container">
-
-    <div class="row g-5">
-
-      <!-- Left Side -->
-      <div class="col-lg-5">
-
-        <span class="section-subtitle">
-          CONTACT US
-        </span>
-
-        <h2 class="contact-title">
-          Let's Bring Your Space to Life
-        </h2>
-
-        <p class="contact-text">
-          Tell us about your space and what you would like people to explore.
+        <p class="industries-eyebrow mb-3">
+          INDUSTRIES
         </p>
 
-        <div class="contact-info">
-          <i class="fa-regular fa-envelope"></i>
+        <h2 class="industries-heading mb-4">
+          Built for spaces people need to understand.
+        </h2>
 
-          <span>
-            Contact details will be added before launch.
-          </span>
+      </div>
+    </div>
+
+
+    <!-- Industries -->
+    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-6 g-3">
+
+      <!-- Schools -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Schools">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Schools
+          </h3>
+
+        </div>
+      </div>
+
+
+      <!-- Hotels & Resorts -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Hotels and Resorts">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Hotels &amp; Resorts
+          </h3>
+
+        </div>
+      </div>
+
+
+      <!-- Real Estate -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Real Estate">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Real Estate
+          </h3>
+
+        </div>
+      </div>
+
+
+      <!-- Restaurants & Cafés -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Restaurants and Cafes">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Restaurants &amp; Cafés
+          </h3>
+
+        </div>
+      </div>
+
+
+      <!-- Showrooms -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Showrooms">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Showrooms
+          </h3>
+
+        </div>
+      </div>
+
+
+      <!-- Other Spaces -->
+      <div class="col">
+        <div class="industry-item">
+
+          <div class="industry-image">
+            <img
+              src="images/hero-img.jpg"
+              alt="Other commercial spaces">
+          </div>
+
+          <h3 class="industry-title mt-2 mb-0">
+            Other Remarkable Spaces
+          </h3>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- end industries section -->
+
+
+<!-- start process section -->
+<section class="process-section">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="row">
+      <div class="col-12">
+
+        <p class="process-eyebrow mb-3">
+          PROCESS
+        </p>
+
+        <h2 class="process-heading mb-4">
+          Simple from capture to launch.
+        </h2>
+
+      </div>
+    </div>
+
+
+    <!-- Process Steps -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-6 g-4 g-xl-3">
+
+
+      <!-- Step 01 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">01</span>
+            <span class="process-line d-none d-xl-block"></span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Inquiry
+          </h3>
+
+          <p class="process-text mb-0">
+            Tell us about your space and goals.
+          </p>
+
         </div>
 
       </div>
 
 
-      <!-- Right Side -->
-      <div class="col-lg-7">
+      <!-- Step 02 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">02</span>
+            <span class="process-line d-none d-xl-block"></span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Plan
+          </h3>
+
+          <p class="process-text mb-0">
+            We plan the scope, schedule and details.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Step 03 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">03</span>
+            <span class="process-line d-none d-xl-block"></span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Capture
+          </h3>
+
+          <p class="process-text mb-0">
+            We capture high-quality 360° and media.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Step 04 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">04</span>
+            <span class="process-line d-none d-xl-block"></span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Build
+          </h3>
+
+          <p class="process-text mb-0">
+            We craft your tour with care and precision.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Step 05 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">05</span>
+            <span class="process-line d-none d-xl-block"></span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Review
+          </h3>
+
+          <p class="process-text mb-0">
+            You review and we refine together.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Step 06 -->
+      <div class="col">
+
+        <div class="process-item">
+
+          <div class="process-top d-flex align-items-center mb-3">
+            <span class="process-number">06</span>
+          </div>
+
+          <h3 class="process-title mb-2">
+            Publish
+          </h3>
+
+          <p class="process-text mb-0">
+            Your experience goes live and is easy to share.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+<!-- end process section -->
+
+<!-- start about section -->
+<section class="about-section" id="about">
+  <div class="container">
+
+    <div class="row align-items-center g-4 g-lg-5">
+
+      <!-- Left Image -->
+      <div class="col-12 col-lg-6">
+
+        <div class="about-image">
+          <img
+            src="images/hero-img.jpg"
+            class="img-fluid"
+            alt="Modern architectural space">
+        </div>
+
+      </div>
+
+
+      <!-- Right Content -->
+      <div class="col-12 col-lg-5 offset-lg-1">
+
+        <div class="about-content">
+
+          <p class="about-eyebrow mb-3">
+            ABOUT LAVRO
+          </p>
+
+          <h2 class="about-heading mb-4">
+            Making remarkable spaces easier to experience.
+          </h2>
+
+          <p class="about-text mb-3">
+            LAVRO is a Laos-based spatial media company specializing
+            in 360° virtual experiences. We help businesses and
+            institutions present their spaces with clarity, context,
+            and confidence.
+          </p>
+
+          <p class="about-text mb-4">
+            Our approach is simple: capture accurately, present
+            beautifully, and make it easy for people to understand
+            a space — anytime, anywhere.
+          </p>
+
+          <span class="about-link">
+            Learn more about us
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- end about section -->
+
+<!-- start FAQ section -->
+<section class="faq-section">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="row">
+      <div class="col-12">
+
+        <p class="faq-eyebrow mb-3">
+          FAQ
+        </p>
+
+        <h2 class="faq-heading mb-4">
+          Frequently asked questions
+        </h2>
+
+      </div>
+    </div>
+
+
+    <!-- FAQ Accordion -->
+    <div class="row">
+      <div class="col-12">
+
+        <div
+          class="accordion accordion-flush"
+          id="faqAccordion">
+
+
+          <!-- FAQ 01 -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqOne"
+                aria-expanded="false"
+                aria-controls="faqOne">
+
+                What is a 360° virtual tour?
+
+              </button>
+            </h3>
+
+            <div
+              id="faqOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                A 360° virtual tour is an interactive experience that allows
+                people to explore a real space online, move between different
+                areas, and understand the environment before visiting in person.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 02 -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqTwo"
+                aria-expanded="false"
+                aria-controls="faqTwo">
+
+                Where can the virtual tour be used?
+
+              </button>
+            </h3>
+
+            <div
+              id="faqTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Your virtual tour can be shared through your website, a direct
+                link, QR codes, social media, and other digital touchpoints where
+                customers, parents, guests, or visitors discover your space.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 03 -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqThree"
+                aria-expanded="false"
+                aria-controls="faqThree">
+
+                How long does a project take?
+
+              </button>
+            </h3>
+
+            <div
+              id="faqThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Project timing depends on the size of the space, the number of
+                areas to capture, and the complexity of the final experience.
+                We confirm the scope and expected timeline before production begins.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 04 -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFour"
+                aria-expanded="false"
+                aria-controls="faqFour">
+
+                Can the tour be shared by link or QR code?
+
+              </button>
+            </h3>
+
+            <div
+              id="faqFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                Yes. A virtual tour can be shared through a direct link or QR
+                code, making it easy to access on phones, tablets, and computers.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FAQ 05 -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqFive"
+                aria-expanded="false"
+                aria-controls="faqFive">
+
+                What types of spaces can LAVRO capture?
+
+              </button>
+            </h3>
+
+            <div
+              id="faqFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body">
+                LAVRO focuses on spaces where understanding the environment
+                matters — including schools, hotels and resorts, real estate,
+                showrooms, restaurants, cafés, and other commercial spaces.
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- end FAQ section -->
+
+<!-- start contact section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="row align-items-start g-4 g-lg-5">
+
+      <!-- Left Content -->
+      <div class="col-12 col-lg-5">
+
+        <p class="contact-eyebrow mb-3">
+          START A CONVERSATION
+        </p>
+
+        <h2 class="contact-heading mb-3">
+          Have a space worth experiencing?
+        </h2>
+
+        <p class="contact-text mb-0">
+          Let’s create a virtual experience that helps your
+          audience explore with confidence.
+        </p>
+
+      </div>
+
+
+      <!-- Right Form -->
+      <div class="col-12 col-lg-7">
 
         <form class="contact-form">
 
           <!-- Name + Email -->
-          <div class="row g-3">
+          <div class="row g-3 mb-3">
 
-            <div class="col-lg-6">
+            <div class="col-12 col-md-6">
               <input
                 type="text"
-                class="form-control"
+                class="form-control contact-input"
                 placeholder="Your Name">
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-12 col-md-6">
               <input
                 type="email"
-                class="form-control"
+                class="form-control contact-input"
                 placeholder="Email Address">
             </div>
 
           </div>
 
 
-          <!-- Company -->
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Company / Organization">
+          <!-- Company + Phone -->
+          <div class="row g-3 mb-3">
 
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control contact-input"
+                placeholder="Company / Organisation">
+            </div>
 
-          <!-- Business Type -->
-          <select class="form-control">
-            <option selected disabled>
-              Business Type
-            </option>
+            <div class="col-12 col-md-6">
+              <input
+                type="tel"
+                class="form-control contact-input"
+                placeholder="Phone Number">
+            </div>
 
-            <option>International School</option>
-            <option>Hotel / Resort</option>
-            <option>Real Estate</option>
-            <option>Restaurant / Cafe</option>
-            <option>Other</option>
-          </select>
+          </div>
 
 
           <!-- Message -->
-          <textarea
-            class="form-control"
-            placeholder="Your Message"></textarea>
+          <div class="mb-3">
+
+            <textarea
+              class="form-control contact-input contact-message"
+              placeholder="Tell us about your space"></textarea>
+
+          </div>
 
 
           <!-- Button -->
@@ -1111,9 +1071,7 @@
             type="button"
             class="contact-btn">
 
-            Send Message
-
-            <i class="fa-solid fa-arrow-right"></i>
+            Contact Us
 
           </button>
 
@@ -1124,57 +1082,141 @@
     </div>
 
   </div>
-
 </section>
 <!-- end contact section -->
 
-
 <!-- start footer -->
-<footer class="footer">
+<footer class="footer-section">
+  <div class="container">
 
-  <div class="container footer-container">
+    <!-- Top Footer -->
+    <div class="row g-4 g-xl-5">
 
-    <!-- Logo -->
-    <div class="footer-logo">
-      <a href="index.html">LAVRO</a>
+      <!-- Brand -->
+      <div class="col-12 col-md-6 col-xl-4">
+
+        <a href="index.html" class="footer-logo d-inline-block mb-3">
+          <img
+            src="images/Logo Primary.svg"
+            alt="LAVRO Logo">
+        </a>
+
+        <p class="footer-brand-text mb-3">
+          360° Virtual Experiences / Spatial Media — Laos
+        </p>
+
+        <!-- Social link ထည့်မယ်ဆို real account confirm ပြီးမှချိတ်မယ် -->
+
+      </div>
+
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-3 col-xl-2">
+
+        <h3 class="footer-title mb-3">
+          Navigation
+        </h3>
+
+        <ul class="footer-list list-unstyled mb-0">
+
+          <li>
+            <a href="#services">Services</a>
+          </li>
+
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#industries">Industries</a>
+          </li>
+
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Services -->
+      <div class="col-6 col-md-3 col-xl-2">
+
+        <h3 class="footer-title mb-3">
+          Services
+        </h3>
+
+        <ul class="footer-list list-unstyled mb-0">
+
+          <li>
+            <span>360° Virtual Tours</span>
+          </li>
+
+          <li>
+            <span>Photography</span>
+          </li>
+
+          <li>
+            <span>Drone</span>
+          </li>
+
+          <li>
+            <span>Videography</span>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Contact -->
+      <div class="col-12 col-md-6 col-xl-4">
+
+        <h3 class="footer-title mb-3">
+          Contact
+        </h3>
+
+        <p class="footer-contact-text mb-3">
+          Let’s discuss your project.
+        </p>
+
+        <a href="#contact" class="footer-contact-link">
+          Start a conversation
+          <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+
+      </div>
+
     </div>
 
 
-    <!-- Copyright -->
-    <div class="footer-copy">
-      © 2026 LAVRO. All rights reserved.
-    </div>
+    <!-- Bottom Footer -->
+    <div class="footer-bottom mt-5 pt-4">
 
+      <div class="row g-3">
 
-    <!-- Footer Links -->
-    <div class="footer-links">
+        <div class="col-12 col-md-6">
+          <p class="footer-copyright mb-0">
+            © 2026 LAVRO. All rights reserved.
+          </p>
+        </div>
 
-      <a href="#">Privacy Policy</a>
+        <div class="col-12 col-md-6">
+          <p class="footer-note text-md-end mb-0">
+            Built in Laos. Serving remarkable spaces.
+          </p>
+        </div>
 
-      <a href="#">Terms of Service</a>
-
-    </div>
-
-
-    <!-- Social Icons -->
-    <div class="footer-social">
-
-      <a href="#">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-
-      <a href="#">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
+      </div>
 
     </div>
 
   </div>
-
 </footer>
 <!-- end footer -->
 

@@ -8,212 +8,157 @@
 @font-face {
     font-family: "Geist";
     src: url("font/Geist/Geist-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
-
 
 
 /* =========================
-   Start Header
+   Navbar
 ========================= */
 
-.custom-navbar {
-    height: 80px;
-    padding: 0 24px;
-
-    background-color: #ffffff;
-    border-bottom: 1px solid #EAEAEA;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    display: flex;
-    align-items: center;
-}
-
-
-/* Navbar Container */
-
-.nav-container {
-    width: 100%;
-    max-width: 1120px;
-
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
-
-
-/* Logo */
-
-.navbar-brand {
-    margin: 0;
-    padding: 0;
-}
-
 .navbar-brand img {
+    height: 26px;
     width: auto;
-    height: 30px;
     display: block;
 }
 
 
 /* Navigation */
 
-.navbar-nav {
-    display: flex !important;
-    flex-direction: row !important;
-
-    gap: 32px;
-}
-
 .nav-link {
-    padding: 0 !important;
+    color: #111111;
 
-    color: #111111 !important;
-
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-
-    text-decoration: none;
 
     transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-    color: #2F5DFF !important;
+    color: #2F5DFF;
 }
 
 
-/* Request Demo Button */
-
+/* Contact Button */
 .nav-btn {
-    height: 52px;
-    padding: 0 28px;
+    color: #2F5DFF;
+    background-color: #FFFFFF;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid #2F5DFF;
+    border-radius: 6px;
 
-    background-color: #2F5DFF;
-    color: #ffffff;
-
-    border-radius: 12px;
-
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
 
     text-decoration: none;
+    white-space: nowrap;
 
-    transition: background-color 0.2s ease;
+    transition: 0.2s ease;
 }
 
+
 .nav-btn:hover {
-    background-color: #244EE8;
-    color: #ffffff;
+    color: #FFFFFF;
+    background-color: #2F5DFF;
+}
+
+
+/* Mobile Menu Button */
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 /* =========================
    End Header
 ========================= */
 
+
 /* =========================
-   Start Hero Section
+   Start Hero
 ========================= */
 
 .hero-section {
-    padding: 64px 24px 128px;
     background-color: #FFFFFF;
 }
 
 
-/* Hero Container */
+/* Eyebrow */
 
-.hero-container {
-    max-width: 1120px;
-}
-
-
-/* Subtitle */
-
-.hero-subtitle {
-    display: inline-block;
+.hero-eyebrow {
+    display: block;
 
     margin-bottom: 16px;
 
     color: #2F5DFF;
 
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Supporting Text */
+
+.hero-support {
+    margin-bottom: 8px;
+
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 400;
 }
 
 
 /* Main Heading */
 
 .hero-title {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
     color: #111111;
 
-    font-size: 72px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
 
-    line-height: 1.05;
-    letter-spacing: -2px;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 
 /* Description */
 
 .hero-description {
-    max-width: 520px;
-
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 
     color: #737373;
 
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
 
-    line-height: 1.5;
-}
-
-
-/* Buttons Group */
-
-.hero-buttons {
-    display: flex;
-    align-items: center;
-
-    gap: 16px;
+    line-height: 1.6;
 }
 
 
 /* Primary Button */
 
 .hero-primary-btn {
-    height: 52px;
-    padding: 0 28px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
+    padding: 10px 18px;
 
     background-color: #2F5DFF;
     color: #FFFFFF;
 
-    border-radius: 12px;
+    border: 1px solid #2F5DFF;
+    border-radius: 6px;
 
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
 
     text-decoration: none;
 
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .hero-primary-btn:hover {
@@ -225,131 +170,106 @@
 /* Secondary Button */
 
 .hero-secondary-btn {
-    height: 52px;
-    padding: 0 28px;
+    padding: 10px 18px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #FFFFFF;
     color: #111111;
+    background-color: #FFFFFF;
 
     border: 1px solid #EAEAEA;
-    border-radius: 12px;
+    border-radius: 6px;
 
-    font-size: 16px;
-    font-weight: 600;
-
-    text-decoration: none;
-
-    transition: 0.2s;
-}
-
-.hero-secondary-btn:hover {
-    border-color: #111111;
-    color: #111111;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 
-/* Hero Image */
-
-.hero-image-wrapper {
-    width: 100%;
-    height: 520px;
-
-    overflow: hidden;
-
-    border-radius: 20px;
-}
+/* Image */
 
 .hero-image {
-    width: 100%;
-    height: 100%;
+    overflow: hidden;
 
-    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
 
     display: block;
 }
 
 /* =========================
-   End Hero Section
+   End Hero
 ========================= */
+
 
 /* =========================
    Start Benefits Section
 ========================= */
 
 .benefits-section {
-    padding: 0 24px 128px;
-    background-color: #FFFFFF;
-}
-
-
-/* Container */
-
-.benefits-container {
-    max-width: 1120px;
-}
-
-
-/* Card */
-
-.benefit-card {
-    height: 100%;
-    padding: 32px;
-
-    background-color: #FFFFFF;
-
-    border: 1px solid #EAEAEA;
-    border-radius: 20px;
-}
-
-
-/* Icon */
-
-.benefit-icon {
-    width: 48px;
-    height: 48px;
-
-    margin-bottom: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: clamp(48px, 6vw, 80px);
+    padding-bottom: clamp(48px, 6vw, 80px);
 
     background-color: #F7F7F5;
-    color: #111111;
+}
 
-    border-radius: 50%;
+
+/* Section Label */
+
+.benefits-eyebrow {
+    color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Benefit Icon */
+
+.benefit-icon {
+    color: #111111;
 
     font-size: 20px;
 }
 
 
-/* Card Title */
+/* Benefit Title */
 
 .benefit-title {
-    margin-bottom: 16px;
-
     color: #111111;
 
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 
-/* Card Text */
+/* Benefit Description */
 
 .benefit-text {
-    margin-bottom: 0;
-
     color: #737373;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 
-    line-height: 1.5;
+    line-height: 1.6;
+}
+
+
+/* Vertical Divider */
+
+.benefit-divider {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: #EAEAEA;
 }
 
 /* =========================
@@ -361,294 +281,95 @@
 ========================= */
 
 .services-section {
-    padding: 0 24px 128px;
-    background-color: #FFFFFF;
-}
-
-
-/* Container */
-
-.services-container {
-    max-width: 1120px;
-}
-
-
-/* Heading Area */
-
-.services-heading {
-    margin-bottom: 48px;
-
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-}
-
-
-/* Small Blue Title */
-
-.section-subtitle {
-    display: block;
-
-    margin-bottom: 16px;
-
-    color: #2F5DFF;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    letter-spacing: 1px;
-}
-
-
-/* Main Title */
-
-.section-title {
-    margin: 0;
-
-    color: #111111;
-
-    font-size: 40px;
-    font-weight: 600;
-
-    line-height: 1.1;
-}
-
-
-/* Explore All Services */
-
-.services-link {
-    color: #111111;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-.services-link i {
-    margin-left: 8px;
-}
-
-.services-link:hover {
-    color: #2F5DFF;
-}
-
-
-/* Service Card */
-
-.service-card {
-    height: 340px;
-    padding: 24px;
-
-    background-color: #F7F7F5;
-
-    border: 1px solid #EAEAEA;
-    border-radius: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: 0.2s ease;
-
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    border-color: #D1D1D1;
-}
-
-
-/* Icon */
-
-.service-icon {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: clamp(48px, 6vw, 80px) 0;
 
     background-color: #FFFFFF;
-    color: #111111;
-
-    border-radius: 50%;
-
-    font-size: 20px;
 }
 
 
-/* Card Title */
+/* Small Heading */
 
-.service-content h3 {
-    margin-bottom: 16px;
+.services-eyebrow {
+    color: #2F5DFF;
 
-    color: #111111;
-
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 600;
+
+    letter-spacing: 1.5px;
 }
 
 
-/* Card Text */
+/* Main Heading */
 
-.service-content p {
-    margin-bottom: 24px;
+.services-title {
+    color: #111111;
 
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.services-description {
     color: #737373;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 
-    line-height: 1.5;
+    line-height: 1.7;
 }
-
-
-/* Arrow */
-
-.service-content a {
-    display: block;
-
-    color: #111111;
-
-    font-size: 16px;
-    text-align: right;
-}
-
-.service-content a:hover {
-    color: #2F5DFF;
-}
-
-/* =========================
-   End Services Section
-========================= */
 
 
 /* =========================
-   Start Portfolio Section
+   Image
 ========================= */
 
-.portfolio-section {
-    padding: 0 24px 128px;
-    background-color: #FFFFFF;
-}
-
-
-/* Container */
-
-.portfolio-container {
-    max-width: 1120px;
-}
-
-
-/* Heading */
-
-.portfolio-heading {
-    margin-bottom: 48px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-
-
-/* Right Link */
-
-.portfolio-link {
-    color: #111111;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-.portfolio-link i {
-    margin-left: 8px;
-}
-
-.portfolio-link:hover {
-    color: #2F5DFF;
-}
-
-
-/* Card */
-
-.portfolio-card {
+.services-image {
     overflow: hidden;
 
-    background-color: #F7F7F5;
-
-    border: 1px solid #EAEAEA;
-    border-radius: 20px;
-
-    transition: 0.2s ease;
+    border-radius: 10px;
 }
 
-
-/* Card Hover */
-
-.portfolio-card:hover {
-    transform: translateY(-6px);
-    border-color: #D1D1D1;
-}
-
-
-/* Image Area */
-
-.portfolio-image {
-    width: 100%;
-    height: 240px;
-
-    overflow: hidden;
-}
-
-
-/* Image */
-
-.portfolio-image img {
+.services-image img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-
-    transition: 0.3s ease;
 }
 
 
-/* Image Zoom Hover */
+/* =========================
+   Services List
+========================= */
 
-.portfolio-card:hover .portfolio-image img {
-    transform: scale(1.04);
+.services-list {
+    border-top: 1px solid #EAEAEA;
 }
 
 
-/* Content */
+/* Number */
 
-.portfolio-content {
-    padding: 24px;
-}
+.service-number {
+    color: #737373;
 
-
-/* Category */
-
-.portfolio-category {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #2F5DFF;
-
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 
-/* Title */
+/* Primary Service */
 
-.portfolio-content h3 {
-    margin-bottom: 8px;
+.service-primary {
+    padding-top: 24px;
 
-    color: #111111;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.service-primary-title {
+    color: #2F5DFF;
 
     font-size: 24px;
     font-weight: 600;
@@ -657,114 +378,34 @@
 
 /* Description */
 
-.portfolio-content p {
-    margin-bottom: 24px;
-
+.service-text {
     color: #737373;
 
-    font-size: 16px;
+    font-size: 14px;
+
+    line-height: 1.6;
 }
 
 
-/* Link */
+/* Supporting Services */
 
-.portfolio-content a {
-    color: #111111;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    text-decoration: none;
-}
-
-
-/* Arrow */
-
-.portfolio-content a i {
-    margin-left: 8px;
-
-    transition: 0.2s ease;
-}
-
-
-/* Arrow Move */
-
-.portfolio-card:hover .portfolio-content a i {
-    transform: translateX(5px);
-}
-
-
-/* =========================
-   End Portfolio Section
-========================= */
-
-
-/* =========================
-   Start Industries Section
-========================= */
-
-.industries-section {
-    padding: 0 24px 128px;
-
-    background-color: #FFFFFF;
-}
-
-
-/* Container */
-
-.industries-container {
-    max-width: 1120px;
-}
-
-
-/* Heading */
-
-.industries-heading {
-    margin-bottom: 48px;
-}
-
-
-/* Industry Card */
-
-.industry-card {
-    height: 150px;
-
-    padding: 24px;
-
+.service-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
-    background-color: #FFFFFF;
+    gap: 24px;
 
-    border: 1px solid #EAEAEA;
-    border-radius: 20px;
+    border-bottom: 1px solid #EAEAEA;
+}
 
-    text-align: center;
-
-    transition: 0.2s ease;
+.service-item:last-child {
+    border-bottom: none;
 }
 
 
-/* Icon */
+/* Supporting Title */
 
-.industry-card i {
-    margin-bottom: 16px;
-
-    color: #111111;
-
-    font-size: 28px;
-
-    transition: 0.2s ease;
-}
-
-
-/* Title */
-
-.industry-card h3 {
-    margin: 0;
-
+.service-item-title {
     color: #111111;
 
     font-size: 16px;
@@ -774,17 +415,183 @@
 
 /* Hover */
 
-.industry-card:hover {
-    transform: translateY(-4px);
+.service-item {
+    transition: 0.2s ease;
+}
 
-    border-color: #2F5DFF;
+.service-item:hover .service-item-title {
+    color: #2F5DFF;
+}
+
+/* =========================
+   End Services Section
+========================= */
+
+/* =========================
+   Start Featured Experience
+========================= */
+
+.featured-section {
+    padding: clamp(48px, 6vw, 80px) 0;
+
+    background-color: #FFFFFF;
+    border-top: 1px solid #EAEAEA;
 }
 
 
-/* Icon Hover */
+/* Small Section Label */
 
-.industry-card:hover i {
+.featured-eyebrow {
     color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Main Section Heading */
+
+.featured-heading {
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* Image */
+
+.featured-image {
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* Demo Title */
+
+.featured-title {
+    color: #111111;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* Demo Description */
+
+.featured-text {
+    color: #737373;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* Demo Button */
+
+.featured-btn {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    color: #2F5DFF;
+    background-color: #FFFFFF;
+
+    border: 1px solid #2F5DFF;
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: default;
+}
+
+/* =========================
+   End Featured Experience
+========================= */
+
+/* =========================
+   Start Industries Section
+========================= */
+
+.industries-section {
+    padding: clamp(48px, 6vw, 80px) 0;
+
+    background-color: #FFFFFF;
+}
+
+
+/* Small Heading */
+
+.industries-eyebrow {
+    color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Main Heading */
+
+.industries-heading {
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* Image */
+
+.industry-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.industry-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Industry Name */
+
+.industry-title {
+    color: #111111;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    text-align: center;
 }
 
 /* =========================
@@ -796,278 +603,187 @@
 ========================= */
 
 .process-section {
-    padding: 0 24px 128px;
-    background-color: #FFFFFF;
+    padding: clamp(48px, 6vw, 80px) 0;
+
+    background-color: #F7F7F5;
+
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
 }
 
 
-/* Container */
+/* Small Heading */
 
-.process-container {
-    max-width: 1120px;
+.process-eyebrow {
+    color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
 }
 
 
-/* Heading */
+/* Main Heading */
 
 .process-heading {
-    margin-bottom: 48px;
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
 }
 
 
-/* Process Layout */
+/* Number */
 
-.process-wrapper {
-    display: flex;
-    justify-content: space-between;
+.process-number {
+    flex-shrink: 0;
 
-    position: relative;
+    color: #111111;
+
+    font-size: 16px;
+    font-weight: 500;
 }
 
 
-/* Line Behind Numbers */
+/* Connecting Line */
 
-.process-wrapper::before {
-    content: "";
-
-    position: absolute;
-
-    top: 24px;
-    left: 8%;
-    right: 8%;
+.process-line {
+    flex-grow: 1;
 
     height: 1px;
 
-    background-color: #EAEAEA;
+    margin-left: 20px;
 
-    z-index: 0;
+    background-color: #D6D6D6;
 }
 
 
-/* Each Step */
+/* Step Title */
 
-.process-item {
-    width: 16%;
-
-    position: relative;
-
-    cursor: pointer;
-
-    z-index: 1;
-}
-
-
-/* Number Circle */
-
-.process-number {
-    width: 48px;
-    height: 48px;
-
-    margin-bottom: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #FFFFFF;
+.process-title {
     color: #111111;
 
-    border: 1px solid #EAEAEA;
-    border-radius: 50%;
-
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
+}
 
+
+/* Step Description */
+
+.process-text {
+    color: #737373;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+/* Process Hover */
+
+.process-number,
+.process-title,
+.process-line {
     transition: 0.2s ease;
 }
 
-
-/* Title */
-
-.process-item h3 {
-    margin-bottom: 12px;
-
-    color: #111111;
-
-    font-size: 18px;
-    font-weight: 600;
+.process-item:hover .process-number,
+.process-item:hover .process-title {
+    color: #2F5DFF;
 }
 
-
-/* Description */
-
-.process-item p {
-    margin: 0;
-
-    color: #737373;
-
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-
-/* =========================
-   Hover
-========================= */
-
-.process-item:hover .process-number {
+.process-item:hover .process-line {
     background-color: #2F5DFF;
-    border-color: #2F5DFF;
-    color: #FFFFFF;
-}
-
-
-/* =========================
-   Clicked / Active
-========================= */
-
-.process-item.active .process-number {
-    background-color: #2F5DFF;
-    border-color: #2F5DFF;
-    color: #FFFFFF;
 }
 
 /* =========================
    End Process Section
 ========================= */
 
-
 /* =========================
    Start About Section
 ========================= */
 
 .about-section {
-    padding: 0 24px 128px;
+    padding: clamp(48px, 6vw, 80px) 0;
+
     background-color: #FFFFFF;
-}
 
-
-/* Container */
-
-.about-container {
-    max-width: 1120px;
-}
-
-
-/* Left Title */
-
-.about-title {
-    margin-bottom: 24px;
-
-    color: #111111;
-
-    font-size: 30px;
-    font-weight: 600;
-
-    line-height: 1.15;
-}
-
-
-/* Description */
-
-.about-text {
-    margin: 0;
-
-    color: #737373;
-
-    font-size: 16px;
-    font-weight: 400;
-
-    line-height: 1.6;
-}
-
-
-/* Middle Info */
-
-.about-info {
-    display: flex;
-    flex-direction: column;
-
-    gap: 32px;
-}
-
-
-/* Info Item */
-
-.about-info-item {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-}
-
-
-/* Icon */
-
-.about-icon {
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #F7F7F5;
-    color: #111111;
-
-    border-radius: 50%;
-
-    flex-shrink: 0;
-
-    transition: 0.2s ease;
-}
-
-
-/* Info Title */
-
-.about-info-item h3 {
-    margin-bottom: 2px;
-
-    color: #111111;
-
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-/* Info Text */
-
-.about-info-item p {
-    margin: 0;
-
-    color: #737373;
-
-    font-size: 14px;
+    border-top: 1px solid #EAEAEA;
 }
 
 
 /* Image */
 
 .about-image {
-    width: 100%;
-    height: 300px;
-
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 8px;
 }
-
 
 .about-image img {
     width: 100%;
-    height: 100%;
-
-    object-fit: cover;
+    height: auto;
 
     display: block;
 }
 
 
-/* Simple Hover */
+/* Small Heading */
 
-.about-info-item:hover .about-icon {
-    background-color: #2F5DFF;
-    color: #FFFFFF;
+.about-eyebrow {
+    color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Main Heading */
+
+.about-heading {
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.about-text {
+    color: #737373;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* Learn More */
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+
+    color: #2F5DFF;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+.about-link:hover {
+    color: #244EE8;
 }
 
 /* =========================
@@ -1078,104 +794,132 @@
    Start FAQ Section
 ========================= */
 
+
 .faq-section {
-    padding: 0 24px 128px;
+    padding: clamp(48px, 6vw, 80px) 0;
+
     background-color: #FFFFFF;
 }
 
 
-/* Container */
+/* Small Heading */
 
-.faq-container {
-    max-width: 1120px;
+.faq-eyebrow {
+    color: #2F5DFF;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
 }
 
 
-/* Heading */
+/* Main Heading */
 
 .faq-heading {
-    margin-bottom: 48px;
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
 }
 
 
-/* FAQ Box */
+/* Accordion Item */
 
-.faq-item {
-    margin-bottom: 16px;
+.faq-section .accordion-item {
+    background-color: transparent;
 
-    border: 1px solid #EAEAEA;
-    border-radius: 12px;
+    border: 0;
+    border-bottom: 1px solid #EAEAEA;
+}
 
-    overflow: hidden;
+
+/* First Item Top Border */
+
+.faq-section .accordion-item:first-child {
+    border-top: 1px solid #EAEAEA;
 }
 
 
 /* Question */
 
-.faq-question {
-    width: 100%;
-    min-height: 56px;
+.faq-section .accordion-button {
+    padding: 18px 8px;
 
-    padding: 0 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: #FFFFFF;
     color: #111111;
+    background-color: transparent;
 
-    border: none;
-
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 
-    text-align: left;
-
-    cursor: pointer;
+    box-shadow: none;
 }
 
 
-/* Question Hover */
+/* Remove Bootstrap Default Arrow */
 
-.faq-question:hover {
-    color: #2F5DFF;
-}
+.faq-section .accordion-button::after {
+    width: auto;
+    height: auto;
 
+    margin-left: auto;
 
-/* Plus Icon */
+    background-image: none;
 
-.faq-icon::before {
     content: "+";
 
-    font-size: 20px;
+    color: #111111;
+
+    font-size: 18px;
     font-weight: 400;
+
+    transform: none;
 }
 
 
-/* When FAQ is Open */
+/* Change + to − when open */
 
-.faq-question[aria-expanded="true"] {
-    color: #2F5DFF;
-}
-
-.faq-question[aria-expanded="true"] .faq-icon::before {
+.faq-section .accordion-button:not(.collapsed)::after {
     content: "−";
+
+    background-image: none;
+
+    transform: none;
+}
+
+
+/* Open Question */
+
+.faq-section .accordion-button:not(.collapsed) {
+    color: #2F5DFF;
+    background-color: transparent;
+
+    box-shadow: none;
+}
+
+
+/* Focus */
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
 }
 
 
 /* Answer */
 
-.faq-answer {
-    padding: 0 20px 20px;
+.faq-section .accordion-body {
+    padding: 0 8px 20px;
 
     color: #737373;
 
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
+
 
 /* =========================
    End FAQ Section
@@ -1186,170 +930,7 @@
 ========================= */
 
 .contact-section {
-    padding: 0 24px 128px;
-    background-color: #FFFFFF;
-}
-
-
-/* Container */
-
-.contact-container {
-    max-width: 1120px;
-}
-
-
-/* Left Title */
-
-.contact-title {
-    margin-bottom: 24px;
-
-    color: #111111;
-
-    font-size: 40px;
-    font-weight: 600;
-
-    line-height: 1.1;
-}
-
-
-/* Description */
-
-.contact-text {
-    max-width: 400px;
-
-    margin-bottom: 32px;
-
-    color: #737373;
-
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-
-/* Contact Info */
-
-.contact-info {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    color: #737373;
-
-    font-size: 16px;
-}
-
-.contact-info i {
-    color: #111111;
-    font-size: 20px;
-}
-
-
-/* =========================
-   Form
-========================= */
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-
-    gap: 16px;
-}
-
-
-/* Input */
-
-.contact-form .form-control {
-    height: 56px;
-
-    padding: 0 16px;
-
-    color: #111111;
-
-    background-color: #FFFFFF;
-
-    border: 1px solid #EAEAEA;
-    border-radius: 12px;
-
-    font-size: 16px;
-
-    box-shadow: none;
-}
-
-
-/* Input Focus */
-
-.contact-form .form-control:focus {
-    border-color: #2F5DFF;
-    box-shadow: none;
-}
-
-
-/* Textarea */
-
-.contact-form textarea.form-control {
-    height: 140px;
-
-    padding: 16px;
-
-    resize: none;
-}
-
-
-/* Button */
-
-.contact-btn {
-    height: 52px;
-
-    padding: 0 28px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    background-color: #2F5DFF;
-    color: #FFFFFF;
-
-    border: none;
-    border-radius: 12px;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    transition: 0.2s ease;
-}
-
-
-/* Button Hover */
-
-.contact-btn:hover {
-    background-color: #244EE8;
-}
-
-
-/* Arrow Hover */
-
-.contact-btn i {
-    transition: 0.2s ease;
-}
-
-.contact-btn:hover i {
-    transform: translateX(5px);
-}
-
-/* =========================
-   End Contact Section
-========================= */
-
-
-/* =========================
-   Start Footer
-========================= */
-
-.footer {
-    padding: 24px;
+    padding: clamp(48px, 6vw, 80px) 0;
 
     background-color: #FFFFFF;
 
@@ -1357,81 +938,228 @@
 }
 
 
-/* Container */
+/* Small Heading */
 
-.footer-container {
-    max-width: 1120px;
+.contact-eyebrow {
+    color: #2F5DFF;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Main Heading */
+
+.contact-heading {
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.contact-text {
+    color: #737373;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+.contact-input {
+    padding: 12px 14px;
+
+    color: #111111;
+    background-color: #FFFFFF;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    box-shadow: none;
+}
+
+
+/* Placeholder */
+
+.contact-input::placeholder {
+    color: #9A9A9A;
+}
+
+
+/* Focus */
+
+.contact-input:focus {
+    color: #111111;
+
+    background-color: #FFFFFF;
+
+    border-color: #2F5DFF;
+
+    box-shadow: none;
+}
+
+
+/* Message */
+
+.contact-message {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* Button */
+
+.contact-btn {
+    padding: 10px 24px;
+
+    color: #FFFFFF;
+    background-color: #2F5DFF;
+
+    border: 1px solid #2F5DFF;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+.contact-btn:hover {
+    background-color: #244EE8;
+    border-color: #244EE8;
+}
+
+/* =========================
+   End Contact Section
+========================= */
+
+/* =========================
+   Start Footer
+========================= */
+
+.footer-section {
+    padding: clamp(48px, 6vw, 80px) 0 32px;
+
+    background-color: #F7F7F5;
+
+    border-top: 1px solid #EAEAEA;
 }
 
 
 /* Logo */
 
-.footer-logo a {
+.footer-logo img {
+    height: 28px;
+    width: auto;
+
+    display: block;
+}
+
+
+/* Brand Description */
+
+.footer-brand-text {
+    color: #737373;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+/* Column Heading */
+
+.footer-title {
     color: #111111;
 
-    font-size: 24px;
+    font-size: 13px;
     font-weight: 600;
-
-    text-decoration: none;
 }
 
 
-/* Copyright */
+/* Navigation / Services */
 
-.footer-copy {
+.footer-list li {
+    margin-bottom: 8px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-list a,
+.footer-list span {
     color: #737373;
 
-    font-size: 14px;
-}
-
-
-/* Footer Links */
-
-.footer-links {
-    display: flex;
-
-    gap: 24px;
-}
-
-.footer-links a {
-    color: #737373;
-
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 400;
 
     text-decoration: none;
 
     transition: 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-list a:hover {
     color: #2F5DFF;
 }
 
 
-/* Social Icons */
+/* Contact */
 
-.footer-social {
-    display: flex;
+.footer-contact-text {
+    color: #737373;
 
-    gap: 16px;
+    font-size: 13px;
+    line-height: 1.6;
 }
 
-.footer-social a {
-    color: #111111;
+.footer-contact-link {
+    display: inline-flex;
+    align-items: center;
 
-    font-size: 16px;
+    color: #2F5DFF;
+
+    font-size: 13px;
+    font-weight: 500;
 
     text-decoration: none;
 
     transition: 0.2s ease;
 }
 
-.footer-social a:hover {
-    color: #2F5DFF;
+.footer-contact-link:hover {
+    color: #244EE8;
+}
+
+
+/* Bottom Footer */
+
+.footer-bottom {
+    border-top: 1px solid #EAEAEA;
+}
+
+.footer-copyright,
+.footer-note {
+    color: #737373;
+
+    font-size: 12px;
+    font-weight: 400;
 }
 
 /* =========================
