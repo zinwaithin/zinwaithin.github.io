@@ -1,50 +1,104 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     font-family: "Geist", "Noto Sans Lao", "Phetsarath OT", sans-serif;
 }
 
+
 @font-face {
+
     font-family: "Geist";
+
     src: url("font/Geist/Geist-VariableFont_wght.ttf");
+
     font-weight: 100 900;
     font-style: normal;
+
     font-display: swap;
 }
 
+
+
+:root {
+
+    --lavro-blue: #2F5DFF;
+
+    --lavro-blue-dark: #244EE8;
+
+    --lavro-text: #111111;
+
+    --lavro-muted: #737373;
+
+    --lavro-soft-bg: #F7F7F5;
+
+    --lavro-border: #EAEAEA;
+
+
+    /* Same vertical spacing for all main sections */
+
+    --section-space: clamp(24px, 2.5vw, 32px);
+
+}
+
+
+
 /* =========================
-   Navbar
+   Start Navbar
 ========================= */
 
+
 .navbar-brand img {
+
+    width: 102px;
     height: 26px;
-    width: auto;
 
     display: block;
+
+    object-fit: contain;
+
 }
+
 
 
 /* Navigation */
 
 .nav-link {
+
     color: #111111;
 
     font-size: 14px;
     font-weight: 500;
 
     transition: color 0.2s ease;
+
 }
 
-.nav-link:hover {
-    color: #2F5DFF;
+
+.navbar-nav .nav-link {
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+
 }
+
+
+.nav-link:hover,
+.nav-link:focus {
+
+    color: #2F5DFF;
+
+}
+
 
 
 /* Contact Button */
 
 .nav-btn {
+
     color: #2F5DFF;
+
     background-color: #FFFFFF;
 
     border: 1px solid #2F5DFF;
@@ -54,32 +108,44 @@
     font-weight: 500;
 
     text-decoration: none;
+
     white-space: nowrap;
 
     transition: 0.2s ease;
+
 }
 
+
 .nav-btn:hover {
+
     color: #FFFFFF;
+
     background-color: #2F5DFF;
+
 }
+
 
 
 /* =========================
    Language Switcher
 ========================= */
 
+
 .language-switcher {
+
     gap: 7px;
 
     white-space: nowrap;
+
 }
 
 
 .language-btn {
+
     padding: 0;
 
     color: #737373;
+
     background-color: transparent;
 
     border: 0;
@@ -92,64 +158,104 @@
     line-height: 1.2;
 
     transition: color 0.2s ease;
-}
 
-
-.language-btn:hover {
-    color: #2F5DFF;
 }
 
 
 .language-btn.active {
+
     color: #111111;
 
     font-weight: 600;
+
 }
+
+
+.language-btn:hover,
+.language-btn.active:hover {
+
+    color: #2F5DFF;
+
+}
+
 
 
 /* Lao Language */
 
 .lao-language {
+
     font-family: "Noto Sans Lao", "Phetsarath OT", sans-serif;
 
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 
     line-height: 1.2;
+
 }
 
 
 .language-divider {
+
     color: #D6D6D6;
 
     font-size: 12px;
+
 }
+
 
 
 /* Focus */
 
 .language-btn:focus {
+
     outline: none;
+
 }
 
+
 .navbar-toggler:focus {
+
     box-shadow: none;
+
 }
+
+
+/* Mobile / Tablet CTA should not become full width */
+
+.nav-right .nav-btn {
+
+    align-self: flex-start;
+
+}
+
+
+/* =========================
+   End Navbar
+========================= */
+
+
 
 
 
 /* =========================
-   Hero
+   Start Hero
 ========================= */
 
+
 .hero-section {
+
+    padding: var(--section-space) 0;
+
     background-color: #FFFFFF;
+
 }
+
 
 
 /* Eyebrow */
 
 .hero-eyebrow {
+
     display: block;
 
     margin-bottom: 16px;
@@ -160,24 +266,30 @@
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Supporting Line */
 
 .hero-support {
+
     margin-bottom: 8px;
 
     color: #111111;
 
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
+
 }
+
 
 
 /* Main Heading */
 
 .hero-title {
+
     margin-bottom: 20px;
 
     color: #111111;
@@ -188,12 +300,15 @@
     line-height: 1.1;
 
     letter-spacing: -1px;
+
 }
+
 
 
 /* Description */
 
 .hero-description {
+
     margin-bottom: 24px;
 
     color: #737373;
@@ -202,15 +317,19 @@
     font-weight: 400;
 
     line-height: 1.6;
+
 }
+
 
 
 /* Primary CTA */
 
 .hero-primary-btn {
+
     padding: 10px 18px;
 
     color: #FFFFFF;
+
     background-color: #2F5DFF;
 
     border: 1px solid #2F5DFF;
@@ -222,27 +341,43 @@
     text-decoration: none;
 
     transition: 0.2s ease;
+
 }
 
+
 .hero-primary-btn:hover {
+
     color: #FFFFFF;
+
     background-color: #244EE8;
+
 }
+
 
 
 /* Hero Image */
 
 .hero-image {
+
+    width: 100%;
+
     overflow: hidden;
 
     border-radius: 10px;
+
 }
 
+
 .hero-image img {
+
     width: 100%;
-    height: auto;
+
+    height: clamp(260px, 32vw, 420px);
 
     display: block;
+
+    object-fit: cover;
+
 }
 
 
@@ -250,63 +385,84 @@
    End Hero
 ========================= */
 
+
+
+
+
 /* =========================
-   Start Benefits Section
+   Start Benefits
 ========================= */
 
+
 .benefits-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #F7F7F5;
+
 }
+
 
 
 /* Section Label */
 
 .benefits-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
 
 
-/* Benefit Icon */
+
+/* Icon */
 
 .benefit-icon {
+
     color: #111111;
 
     font-size: 20px;
+
 }
 
 
-/* Benefit Title */
+
+/* Title */
 
 .benefit-title {
+
     color: #111111;
 
     font-size: 16px;
     font-weight: 500;
+
 }
 
 
-/* Benefit Description */
+
+/* Description */
 
 .benefit-text {
+
     color: #737373;
 
     font-size: 14px;
     font-weight: 400;
 
     line-height: 1.6;
+
 }
 
 
-/* Vertical Divider */
+
+/* Divider */
 
 .benefit-divider {
+
     position: absolute;
 
     top: 0;
@@ -316,245 +472,331 @@
     height: 100%;
 
     background-color: #EAEAEA;
+
 }
 
-/* =========================
-   End Benefits Section
-========================= */
 
 /* =========================
-   Start Services Section
+   End Benefits
 ========================= */
+
+
+
+
+
+/* =========================
+   Start Services
+========================= */
+
 
 .services-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #FFFFFF;
+
 }
+
 
 
 /* Small Heading */
 
 .services-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .services-title {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 600;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Description */
 
 .services-description {
+
     color: #737373;
 
     font-size: 15px;
     font-weight: 400;
 
     line-height: 1.7;
+
 }
 
 
-/* =========================
-   Image
-========================= */
+
+/* Image */
 
 .services-image {
+
+    width: 100%;
+
     overflow: hidden;
 
     border-radius: 10px;
+
 }
+
 
 .services-image img {
+
     width: 100%;
-    height: auto;
+
+    height: clamp(240px, 26vw, 330px);
 
     display: block;
+
+    object-fit: cover;
+
 }
 
 
-/* =========================
-   Services List
-========================= */
+
+/* Services List */
 
 .services-list {
-    border-top: 1px solid #EAEAEA;
+
+    border-top: none;
+
 }
+
 
 
 /* Number */
 
 .service-number {
+
     color: #737373;
 
     font-size: 12px;
     font-weight: 500;
+
 }
+
 
 
 /* Primary Service */
 
 .service-primary {
-    padding-top: 24px;
+
+    padding-top: 0;
 
     border-bottom: 1px solid #EAEAEA;
+
 }
 
+
 .service-primary-title {
+
     color: #2F5DFF;
 
     font-size: 24px;
     font-weight: 600;
+
 }
+
 
 
 /* Description */
 
 .service-text {
+
     color: #737373;
 
     font-size: 14px;
 
     line-height: 1.6;
+
 }
+
 
 
 /* Supporting Services */
 
 .service-item {
+
     display: flex;
+
     align-items: center;
 
     gap: 24px;
 
     border-bottom: 1px solid #EAEAEA;
+
+    transition: 0.2s ease;
+
 }
 
+
 .service-item:last-child {
+
     border-bottom: none;
+
 }
+
 
 
 /* Supporting Title */
 
 .service-item-title {
+
     color: #111111;
 
     font-size: 16px;
     font-weight: 500;
+
 }
+
 
 
 /* Hover */
 
-.service-item {
-    transition: 0.2s ease;
+.service-item:hover .service-item-title {
+
+    color: #2F5DFF;
+
 }
 
-.service-item:hover .service-item-title {
-    color: #2F5DFF;
-}
 
 /* =========================
-   End Services Section
+   End Services
 ========================= */
+
+
+
+
 
 /* =========================
    Start Featured Experience
 ========================= */
 
+
 .featured-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #FFFFFF;
+
     border-top: 1px solid #EAEAEA;
+
 }
 
 
-/* Small Section Label */
+
+/* Small Heading */
 
 .featured-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
 
 
-/* Main Section Heading */
+
+/* Main Heading */
 
 .featured-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Image */
 
 .featured-image {
+
+    width: 100%;
+
     overflow: hidden;
 
     border-radius: 8px;
+
 }
+
 
 .featured-image img {
+
     width: 100%;
-    height: auto;
+
+    height: clamp(240px, 28vw, 340px);
 
     display: block;
+
+    object-fit: cover;
+
 }
+
 
 
 /* Demo Title */
 
 .featured-title {
+
     color: #111111;
 
     font-size: 18px;
     font-weight: 600;
+
 }
+
 
 
 /* Demo Description */
 
 .featured-text {
+
     color: #737373;
 
     font-size: 14px;
     font-weight: 400;
 
     line-height: 1.7;
+
 }
+
 
 
 /* Demo Button */
 
 .featured-btn {
+
     display: inline-block;
 
     padding: 10px 16px;
 
     color: #2F5DFF;
+
     background-color: #FFFFFF;
 
     border: 1px solid #2F5DFF;
@@ -564,72 +806,110 @@
     font-weight: 500;
 
     cursor: default;
+
 }
+
 
 /* =========================
    End Featured Experience
 ========================= */
 
+
+
+
+
 /* =========================
-   Start Industries Section
+   Start Industries
 ========================= */
 
+
 .industries-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #FFFFFF;
+
 }
+
 
 
 /* Small Heading */
 
 .industries-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .industries-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
 
 
-/* Image */
+
+/* Image Container */
 
 .industry-image {
+
     width: 100%;
 
-    aspect-ratio: 1 / 1;
+    height: clamp(140px, 12vw, 180px);
 
     overflow: hidden;
 
     border-radius: 8px;
+
 }
 
+
+
+/* Image */
+
 .industry-image img {
+
     width: 100%;
     height: 100%;
 
     display: block;
 
     object-fit: cover;
+
+    transition: transform 0.3s ease;
+
 }
+
+
+
+/* Image Zoom Only */
+
+.industry-item:hover .industry-image img {
+
+    transform: scale(1.08);
+
+}
+
 
 
 /* Industry Name */
 
 .industry-title {
+
     color: #111111;
 
     font-size: 14px;
@@ -638,65 +918,85 @@
     line-height: 1.4;
 
     text-align: center;
+
 }
 
-/* =========================
-   End Industries Section
-========================= */
 
 /* =========================
-   Start Process Section
+   End Industries
 ========================= */
+
+
+
+
+
+/* =========================
+   Start Process
+========================= */
+
 
 .process-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #F7F7F5;
 
     border-top: 1px solid #EAEAEA;
     border-bottom: 1px solid #EAEAEA;
+
 }
+
 
 
 /* Small Heading */
 
 .process-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .process-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Number */
 
 .process-number {
+
     flex-shrink: 0;
 
     color: #111111;
 
     font-size: 17px;
     font-weight: 500;
+
 }
+
 
 
 /* Connecting Line */
 
 .process-line {
+
     flex-grow: 1;
 
     height: 1px;
@@ -704,194 +1004,262 @@
     margin-left: 20px;
 
     background-color: #D6D6D6;
+
 }
 
 
-/* Step Title */
+
+/* Title */
 
 .process-title {
+
     color: #111111;
 
     font-size: 15px;
     font-weight: 600;
+
 }
 
 
-/* Step Description */
+
+/* Description */
 
 .process-text {
+
     color: #737373;
 
     font-size: 14px;
     font-weight: 400;
 
     line-height: 1.6;
+
 }
 
-/* Process Hover */
+
+
+/* Hover */
 
 .process-number,
 .process-title,
 .process-line {
+
     transition: 0.2s ease;
+
 }
+
 
 .process-item:hover .process-number,
 .process-item:hover .process-title {
+
     color: #2F5DFF;
+
 }
+
 
 .process-item:hover .process-line {
+
     background-color: #2F5DFF;
+
 }
 
-/* =========================
-   End Process Section
-========================= */
 
 /* =========================
-   Start About Section
+   End Process
 ========================= */
+
+
+
+
+
+/* =========================
+   Start About
+========================= */
+
 
 .about-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #FFFFFF;
 
     border-top: 1px solid #EAEAEA;
+
 }
+
 
 
 /* Image */
 
 .about-image {
+
+    width: 100%;
+
     overflow: hidden;
 
     border-radius: 8px;
+
 }
+
 
 .about-image img {
+
     width: 100%;
-    height: auto;
+
+    height: clamp(260px, 28vw, 340px);
 
     display: block;
+
+    object-fit: cover;
+
 }
+
 
 
 /* Small Heading */
 
 .about-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .about-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Description */
 
 .about-text {
+
     color: #737373;
 
     font-size: 14px;
     font-weight: 400;
 
     line-height: 1.7;
+
 }
 
 
 /* =========================
-   End About Section
+   End About
 ========================= */
 
+
+
+
+
 /* =========================
-   Start FAQ Section
+   Start FAQ
 ========================= */
 
 
 .faq-section {
-    padding: 56px 0;
 
-    background-color: #FFFFFF;
+    padding: var(--section-space) 0;
+
+    background-color: #F7F7F5;
+
 }
+
 
 
 /* Small Heading */
 
 .faq-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .faq-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Accordion Item */
 
 .faq-section .accordion-item {
+
     background-color: transparent;
 
     border: 0;
+
     border-bottom: 1px solid #EAEAEA;
+
 }
 
-
-/* First Item Top Border */
 
 .faq-section .accordion-item:first-child {
+
     border-top: 1px solid #EAEAEA;
+
 }
+
 
 
 /* Question */
 
 .faq-section .accordion-button {
+
     padding: 18px 8px;
 
     color: #111111;
+
     background-color: transparent;
 
     font-size: 14px;
     font-weight: 500;
 
     white-space: normal;
+
     overflow-wrap: anywhere;
 
     box-shadow: none;
+
 }
 
 
-/* Remove Bootstrap Default Arrow */
+
+/* Custom + */
 
 .faq-section .accordion-button::after {
+
     width: auto;
     height: auto;
 
@@ -907,40 +1275,53 @@
     font-weight: 400;
 
     transform: none;
+
 }
 
 
-/* Change + to − when open */
+
+/* Open − */
 
 .faq-section .accordion-button:not(.collapsed)::after {
+
     content: "−";
 
     background-image: none;
 
     transform: none;
+
 }
+
 
 
 /* Open Question */
 
 .faq-section .accordion-button:not(.collapsed) {
+
     color: #2F5DFF;
+
     background-color: transparent;
 
     box-shadow: none;
+
 }
+
 
 
 /* Focus */
 
 .faq-section .accordion-button:focus {
+
     box-shadow: none;
+
 }
+
 
 
 /* Answer */
 
 .faq-section .accordion-body {
+
     padding: 0 8px 20px;
 
     color: #737373;
@@ -949,70 +1330,88 @@
     font-weight: 400;
 
     line-height: 1.7;
+
 }
 
 
 /* =========================
-   End FAQ Section
+   End FAQ
 ========================= */
+
+
+
+
 
 /* =========================
-   Start Contact Section
+   Start Contact
 ========================= */
 
+
 .contact-section {
-    padding: 56px 0;
+
+    padding: var(--section-space) 0;
 
     background-color: #FFFFFF;
 
     border-top: 1px solid #EAEAEA;
+
 }
+
 
 
 /* Small Heading */
 
 .contact-eyebrow {
+
     color: #2F5DFF;
 
     font-size: 12px;
     font-weight: 600;
 
     letter-spacing: 1.5px;
+
 }
+
 
 
 /* Main Heading */
 
 .contact-heading {
+
     color: #111111;
 
     font-size: 30px;
     font-weight: 500;
 
     line-height: 1.2;
+
 }
+
 
 
 /* Description */
 
 .contact-text {
+
     color: #737373;
 
     font-size: 14px;
     font-weight: 400;
 
     line-height: 1.7;
+
 }
 
 
-/* =========================
-   Form
-========================= */
+
+/* Form */
 
 .contact-input {
+
     padding: 10px 12px;
 
     color: #111111;
+
     background-color: #FFFFFF;
 
     border: 1px solid #EAEAEA;
@@ -1021,19 +1420,25 @@
     font-size: 13px;
 
     box-shadow: none;
+
 }
+
 
 
 /* Placeholder */
 
 .contact-input::placeholder {
+
     color: #9A9A9A;
+
 }
+
 
 
 /* Focus */
 
 .contact-input:focus {
+
     color: #111111;
 
     background-color: #FFFFFF;
@@ -1041,24 +1446,31 @@
     border-color: #2F5DFF;
 
     box-shadow: none;
+
 }
+
 
 
 /* Message */
 
 .contact-message {
+
     min-height: 110px;
 
     resize: vertical;
+
 }
+
 
 
 /* Button */
 
 .contact-btn {
+
     padding: 10px 20px;
 
     color: #FFFFFF;
+
     background-color: #2F5DFF;
 
     border: 1px solid #2F5DFF;
@@ -1068,83 +1480,160 @@
     font-weight: 500;
 
     transition: 0.2s ease;
+
 }
+
 
 .contact-btn:hover {
+
     background-color: #244EE8;
+
     border-color: #244EE8;
+
 }
 
+
 /* =========================
-   End Contact Section
+   End Contact
 ========================= */
+
+
+
+
 
 /* =========================
    Start Footer
 ========================= */
 
+
 .footer-section {
-    padding: 56px 0 32px;
+
+    padding: 40px 0 24px;
 
     background-color: #F7F7F5;
 
     border-top: 1px solid #EAEAEA;
+
 }
+
 
 
 /* Logo */
 
 .footer-logo img {
-    height: 18px;
-    width: auto;
+
+    width: 92px;
+    height: 24px;
 
     display: block;
+
+    object-fit: contain;
+
 }
+
 
 
 /* Brand Description */
 
 .footer-brand-text {
+
     color: #737373;
 
     font-size: 13px;
     font-weight: 400;
 
     line-height: 1.6;
+
 }
 
 
 
+/* Direct Contact */
 
-.footer-social-handle {
+.footer-direct-links li {
+
+    margin-bottom: 7px;
+
+}
+
+
+.footer-direct-links li:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.footer-direct-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
     color: #737373;
 
     font-size: 13px;
     font-weight: 400;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
 }
+
+
+.footer-direct-link i {
+
+    width: 14px;
+
+    text-align: center;
+
+}
+
+
+.footer-direct-link:hover,
+.footer-direct-link:focus {
+
+    color: #2F5DFF;
+
+}
+
+
 
 /* Column Heading */
 
 .footer-title {
+
     color: #111111;
 
     font-size: 13px;
     font-weight: 600;
+
 }
+
 
 
 /* Navigation / Services */
 
 .footer-list li {
+
     margin-bottom: 8px;
+
 }
 
+
 .footer-list li:last-child {
+
     margin-bottom: 0;
+
 }
+
 
 .footer-list a,
 .footer-list span {
+
     color: #737373;
 
     font-size: 13px;
@@ -1153,24 +1642,35 @@
     text-decoration: none;
 
     transition: 0.2s ease;
+
 }
 
+
 .footer-list a:hover {
+
     color: #2F5DFF;
+
 }
+
 
 
 /* Contact */
 
 .footer-contact-text {
+
     color: #737373;
 
     font-size: 13px;
+
     line-height: 1.6;
+
 }
 
+
 .footer-contact-link {
+
     display: inline-flex;
+
     align-items: center;
 
     color: #2F5DFF;
@@ -1181,26 +1681,37 @@
     text-decoration: none;
 
     transition: 0.2s ease;
+
 }
 
+
 .footer-contact-link:hover {
+
     color: #244EE8;
+
 }
+
 
 
 /* Bottom Footer */
 
 .footer-bottom {
+
     border-top: 1px solid #EAEAEA;
+
 }
+
 
 .footer-copyright,
 .footer-note {
+
     color: #737373;
 
     font-size: 12px;
     font-weight: 400;
+
 }
+
 
 /* =========================
    End Footer
