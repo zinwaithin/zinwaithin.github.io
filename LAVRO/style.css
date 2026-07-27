@@ -51,8 +51,8 @@
 
 .navbar-brand img {
 
-    width: 102px;
-    height: 26px;
+    width: min(102px, calc(84px + 2vw));
+    height: min(26px, calc(21px + 0.55vw));
 
     display: block;
 
@@ -78,8 +78,8 @@
 
 .navbar-nav .nav-link {
 
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: min(6px, calc(4.5px + 0.15vw));
+    padding-bottom: min(6px, calc(4.5px + 0.15vw));
 
 }
 
@@ -186,7 +186,7 @@
 
     font-family: "Noto Sans Lao", "Phetsarath OT", sans-serif;
 
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 
     line-height: 1.2;
@@ -1408,7 +1408,7 @@
 
 .contact-input {
 
-    padding: 10px 12px;
+    padding: min(10px, calc(7px + 0.4vw)) 12px;
 
     color: #111111;
 
@@ -1467,7 +1467,7 @@
 
 .contact-btn {
 
-    padding: 10px 20px;
+    padding: min(10px, calc(7px + 0.4vw)) min(20px, calc(14px + 0.8vw));
 
     color: #FFFFFF;
 
@@ -1522,8 +1522,8 @@
 
 .footer-logo img {
 
-    width: 92px;
-    height: 24px;
+    width: min(92px, calc(75px + 2vw));
+    height: min(24px, calc(19.5px + 0.55vw));
 
     display: block;
 
