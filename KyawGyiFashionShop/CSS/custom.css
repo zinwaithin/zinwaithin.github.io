@@ -1,0 +1,92 @@
+*{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* start navbar */
+
+.logo{
+  width: 140px;
+}
+.noti_icon{
+  position: relative;
+  top: -20px;
+  left: -15px;
+}
+.navbar_menu:hover{
+  color: #fd3332 !important;
+}
+
+/* navbar end */
+
+/* start banner */
+
+.carousel_img{
+  height: 65vh;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* end banner */
+
+/* start services */
+.service_icon{
+  width: 60px;
+  height: 60px;
+}
+.service_card:hover{
+  transform: translateY(-5px);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+/* end services */
+
+
+/* start promotion products */
+.title_underline_center{
+  width: 100px;
+  height: 3px;
+  background-color: #fd3332;
+  margin: auto;
+}
+.promotion_card:hover{
+  transform: translateY(-5px);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+/* end promotion products */
+
+
+/* start Category */
+.title_underline_left{
+  width: 100px;
+  height: 3px;
+  background-color: #fd3332;
+}
+
+.category_img{
+  filter: brightness(0.6);
+}
+
+.category_card:hover{
+  transform: translateY(-5px);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.category_card:hover .category_img{
+  filter: brightness(0.8);
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+/* end Category */
+
+
+/* start blog */
+
+.blog_card:hover .blog_img{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
