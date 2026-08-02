@@ -1,0 +1,736 @@
+/* ========================================
+   UNIVERSAL SELECTOR
+======================================== */
+
+* {
+    font-family: "Geist", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   GEIST FONT
+======================================== */
+
+@font-face {
+    font-family: "Geist";
+
+    src: url("../font/Geist/Geist-VariableFont_wght.ttf")
+         format("truetype");
+
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+
+/* ========================================
+   UNIVERSAL SELECTOR
+======================================== */
+
+* {
+    font-family: "Geist", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   NEXLAP COLORS
+======================================== */
+
+:root {
+    /* Designer-approved core colors */
+    --nexlap-black: #0b0d10;
+    --nexlap-white: #ffffff;
+    --nexlap-gray: #f5f7fa;
+    --nexlap-teal: #007c91;
+
+    /* Supporting UI colors */
+    --nexlap-teal-hover: #006b7d;
+    --nexlap-icon: #5c5c5c;
+}
+
+
+/* ========================================
+   BASIC SETUP
+======================================== */
+
+body {
+    color: var(--nexlap-black);
+    background-color: var(--nexlap-white);
+}
+
+
+/* ========================================
+   NEXLAP TEXT COLOR
+======================================== */
+
+.text-nexlap {
+    color: var(--nexlap-teal);
+}
+
+
+/* ========================================
+   START HEADER
+======================================== */
+
+.navbar {
+    min-height: 72px;
+}
+
+
+/* Brand Logo */
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+/* Navigation Links */
+
+.navbar .nav-link {
+    color: var(--nexlap-black);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 200ms ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--nexlap-teal);
+}
+
+
+/* Language Switcher */
+
+.language-switch {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.language-switch a:hover,
+.language-switch a:focus {
+    color: var(--nexlap-teal) !important;
+}
+
+
+/* ========================================
+   WISHLIST AND CART ICONS
+======================================== */
+
+.nav-action-icon {
+    width: 34px;
+    height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--nexlap-icon);
+    background-color: transparent;
+
+    font-size: 25px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition: color 200ms ease;
+}
+
+.nav-action-icon:hover,
+.nav-action-icon:focus {
+    color: var(--nexlap-teal);
+}
+
+
+/* Wishlist and Cart Count */
+
+.icon-count {
+    min-width: 22px;
+    height: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    color: var(--nexlap-white);
+    background-color: var(--nexlap-teal);
+
+    border: 2px solid var(--nexlap-white);
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* ========================================
+   SHOP BUTTON
+======================================== */
+
+.btn-nexlap {
+    width: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: var(--nexlap-white);
+    background-color: var(--nexlap-teal);
+    border-color: var(--nexlap-teal);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 200ms ease,
+        border-color 200ms ease;
+}
+
+.btn-nexlap:hover,
+.btn-nexlap:focus {
+    color: var(--nexlap-white);
+    background-color: var(--nexlap-teal-hover);
+    border-color: var(--nexlap-teal-hover);
+}
+
+
+/* ========================================
+   TABLET AND MOBILE NAVBAR
+======================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 8px;
+    }
+
+    .navbar-actions {
+        gap: 16px !important;
+    }
+
+    .navbar .nav-link {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .btn-nexlap {
+        align-self: flex-start;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 575.98px) {
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .language-switch {
+        font-size: 14px;
+    }
+
+    .nav-action-icon {
+        width: 34px;
+        height: 36px;
+
+        font-size: 24px;
+    }
+
+    .icon-count {
+        min-width: 21px;
+        height: 21px;
+
+        padding: 0 5px;
+
+        font-size: 11px;
+    }
+
+    .btn-nexlap {
+        padding: 9px 18px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* ========================================
+   END HEADER
+======================================== */
+
+/* ========================================
+   START HERO SECTION
+======================================== */
+
+.hero-section {
+    overflow: hidden;
+
+    color: var(--nexlap-white);
+    background-color: var(--nexlap-black);
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 560px;
+}
+
+
+/* Hero Label */
+
+.hero-label {
+    color: var(--nexlap-teal);
+
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Hero Heading */
+
+.hero-title {
+    color: var(--nexlap-white);
+
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+
+/* Hero Description */
+
+.hero-description {
+    max-width: 520px;
+
+    color: #b8bec7;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Hero Buttons */
+
+.hero-section .btn {
+    width: auto;
+
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+}
+
+
+/* Hero Secondary Button */
+
+.hero-section .btn-outline-light {
+    color: var(--nexlap-white);
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.65);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 6px;
+}
+
+.hero-section .btn-outline-light:hover,
+.hero-section .btn-outline-light:focus {
+    color: var(--nexlap-black);
+    background-color: var(--nexlap-white);
+    border-color: var(--nexlap-white);
+}
+
+
+/* Hero Image Wrapper */
+
+.hero-image-wrap {
+    width: 100%;
+}
+
+
+/* Hero Image */
+
+.hero-image {
+    width: 100%;
+    max-width: 720px;
+    max-height: 440px;
+
+    object-fit: contain;
+}
+
+
+/* ========================================
+   END HERO SECTION
+======================================== */
+
+/* ========================================
+   START SHOP BY USE SECTION
+======================================== */
+
+.shop-use-section {
+    background-color: var(--nexlap-white);
+}
+
+
+/* Section Heading */
+
+.section-label {
+    color: var(--nexlap-teal);
+
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.section-title {
+    color: var(--nexlap-black);
+
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-description {
+    max-width: 620px;
+
+    color: #667085;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section-link {
+    color: var(--nexlap-teal);
+
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.section-link:hover,
+.section-link:focus {
+    color: var(--nexlap-teal-hover);
+}
+
+
+/* Use Case Card */
+
+.use-card {
+    overflow: hidden;
+
+    background-color: var(--nexlap-white);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    transition:
+        transform 200ms ease,
+        border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.use-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--nexlap-teal);
+
+    box-shadow: 0 14px 30px rgba(11, 13, 16, 0.08);
+}
+
+
+/* Card Image */
+
+.use-card-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Card Icon */
+
+.use-card-icon-box {
+    background-color: var(--nexlap-white);
+}
+
+.use-card-icon {
+    color: var(--nexlap-teal);
+
+    font-size: 30px;
+    /* line-height: 1; */
+}
+
+
+/* Card Content */
+
+.use-card .card-body {
+    background-color: var(--nexlap-white);
+}
+
+.use-title {
+    color: var(--nexlap-black);
+
+    font-size: 22px;
+}
+
+.use-description {
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.use-link {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--nexlap-teal);
+
+    font-size: 14px;
+}
+
+.use-link:hover {
+    color: var(--nexlap-teal-hover);
+}
+
+
+/* ========================================
+   END SHOP BY USE SECTION
+======================================== */
+
+
+/* ========================================
+   START FEATURED LAPTOPS SECTION
+======================================== */
+
+.featured-section {
+    background-color: var(--nexlap-gray) !important;
+}
+
+
+/* Product Card */
+
+.product-card {
+    overflow: hidden;
+
+    background-color: var(--nexlap-white);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    transition:
+        transform 200ms ease,
+        border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--nexlap-teal);
+
+    box-shadow: 0 14px 30px rgba(11, 13, 16, 0.08);
+}
+
+
+/* Product Image */
+
+.product-image-link {
+    display: block;
+}
+
+.product-image-box {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background-color: var(--nexlap-white);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 250ms ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.03);
+}
+
+
+/* Product Content */
+
+.product-brand {
+    color: var(--nexlap-teal);
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.product-title {
+    color: var(--nexlap-black);
+
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.product-title a {
+    color: var(--nexlap-black);
+}
+
+.product-title a:hover,
+.product-title a:focus {
+    color: var(--nexlap-teal);
+}
+
+.product-price {
+    color: var(--nexlap-teal);
+
+    font-size: 16px;
+}
+
+.product-use {
+    color: #475467;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.product-status {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+.product-link {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--nexlap-teal);
+
+    font-size: 14px;
+}
+
+.product-link:hover,
+.product-link:focus {
+    color: var(--nexlap-teal-hover);
+}
+
+
+/* ========================================
+   END FEATURED LAPTOPS SECTION
+======================================== */
+
+/* ========================================
+   START BRANDS SECTION
+======================================== */
+
+.brands-section {
+    background-color: var(--nexlap-white);
+}
+
+
+/* Brand Item */
+
+.brand-item {
+    min-height: 110px;
+
+    padding: 16px;
+
+    overflow: hidden;
+
+    background-color: var(--nexlap-white);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+
+    transition:
+        color 200ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        transform 200ms ease;
+}
+
+.brand-item:hover,
+.brand-item:focus {
+    color: var(--nexlap-teal);
+    background-color: var(--nexlap-gray);
+    border-color: var(--nexlap-teal);
+
+    transform: translateY(-3px);
+}
+
+
+/* Normal Brand Logos */
+
+.brand-logo {
+    display: block;
+
+    width: auto;
+    max-width: 130px;
+    max-height: 42px;
+
+    object-fit: contain;
+}
+
+
+/* ASUS Logo
+   Original PNG has large transparent space.
+*/
+
+.brand-logo-asus {
+    width: 240px;
+    height: auto;
+
+    max-width: none;
+    max-height: none;
+}
+
+
+/* Apple Icon */
+
+.brand-item .fa-apple {
+    font-size: 27px;
+}
+
+/* hp */
+.brand-logo-hp {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
+/* ========================================
+   END BRANDS SECTION
+======================================== */
