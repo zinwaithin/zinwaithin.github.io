@@ -28,63 +28,76 @@
         <!-- Start Header -->
         <header class="bg-white border-bottom">
 
-            <nav class="navbar navbar-expand-lg bg-white py-3"
+            <nav
+                class="navbar navbar-expand-lg bg-white py-3"
                 data-bs-theme="light">
                 <div class="container">
 
                     <!-- Brand Logo -->
-                    <a class="navbar-brand fw-bold me-0" href="index.html"
+                    <a
+                        class="navbar-brand fw-bold me-0"
+                        href="index.html"
                         aria-label="NexLap home">
                         <span class="text-dark">Nex</span><span
                             class="text-nexlap">Lap</span>
                     </a>
 
                     <!-- Hamburger Button -->
-                    <button class="navbar-toggler border-0 shadow-none"
-                        type="button" data-bs-toggle="collapse"
-                        data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                    <button
+                        class="navbar-toggler collapsed border-0 shadow-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!-- Navbar Content -->
-                    <div class="collapse navbar-collapse pt-3 pt-lg-0"
+                    <div
+                        class="collapse navbar-collapse pt-3 pt-lg-0"
                         id="mainNavbar">
 
                         <!-- Navigation Links -->
                         <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
 
                             <li class="nav-item">
-                                <a class="nav-link py-2 px-lg-3"
+                                <a
+                                    class="nav-link py-2 px-lg-3"
                                     href="laptops.html">
                                     Laptops
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link py-2 px-lg-3"
-                                    href="#shop-by-use">
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="index.html#shop-by-use">
                                     Shop by Use
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link py-2 px-lg-3" href="#brands">
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="index.html#brands">
                                     Brands
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link py-2 px-lg-3"
-                                    href="#how-to-order">
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="index.html#how-to-order">
                                     How to Order
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link py-2 px-lg-3"
-                                    href="#contact">
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="index.html#contact">
                                     Support
                                 </a>
                             </li>
@@ -94,13 +107,12 @@
                         <!-- Right Side Actions -->
                         <div
                             class="navbar-actions d-flex flex-column flex-lg-row
-                               align-items-start align-items-lg-center
-                               gap-3 mt-lg-0">
+                           align-items-start align-items-lg-center
+                           gap-3">
 
                             <!-- Language Switcher -->
                             <div
                                 class="language-switch d-flex align-items-center gap-2">
-
                                 <a
                                     class="text-dark fw-semibold text-decoration-none"
                                     href="#"
@@ -112,27 +124,29 @@
                                     |
                                 </span>
 
-                                <a class="text-secondary text-decoration-none"
-                                    href="#" aria-label="Myanmar language">
+                                <a
+                                    class="text-secondary text-decoration-none"
+                                    href="#"
+                                    aria-label="Myanmar language">
                                     MM
                                 </a>
-
                             </div>
 
                             <!-- Wishlist and Cart -->
-                            <div class="d-flex align-items-center gap-3">
+                            <div
+                                class="nav-icon-group d-flex align-items-center gap-2">
 
                                 <!-- Wishlist -->
-                                <a class="nav-action-icon position-relative"
+                                <a
+                                    class="nav-action-icon"
                                     href="wishlist.html"
                                     aria-label="View wishlist"
                                     title="Wishlist">
-                                    <i class="fa-solid fa-heart"
+                                    <i
+                                        class="fa-solid fa-heart"
                                         aria-hidden="true"></i>
 
-                                    <span class="icon-count position-absolute
-                                           top-0 start-100 translate-middle
-                                           rounded-pill">
+                                    <span class="icon-count">
                                         0
 
                                         <span class="visually-hidden">
@@ -142,16 +156,16 @@
                                 </a>
 
                                 <!-- Shopping Cart -->
-                                <a class="nav-action-icon position-relative"
+                                <a
+                                    class="nav-action-icon"
                                     href="cart.html"
                                     aria-label="View shopping cart"
                                     title="Shopping cart">
-                                    <i class="fa-solid fa-cart-shopping"
+                                    <i
+                                        class="fa-solid fa-cart-shopping"
                                         aria-hidden="true"></i>
 
-                                    <span class="icon-count position-absolute
-                                           top-0 start-100 translate-middle
-                                           rounded-pill">
+                                    <span class="icon-count">
                                         0
 
                                         <span class="visually-hidden">
@@ -163,7 +177,9 @@
                             </div>
 
                             <!-- Shop Button -->
-                            <a class="btn btn-nexlap px-4" href="laptops.html">
+                            <a
+                                class="btn btn-nexlap nav-shop-button"
+                                href="laptops.html">
                                 Shop Laptops
                             </a>
 
@@ -177,1128 +193,1521 @@
         </header>
         <!-- End Header -->
 
-        <!-- ========================================
+        <main>
+
+    <!-- ========================================
          START LAPTOP LISTING PAGE
     ========================================= -->
 
-        <!-- Page Header -->
-        <section class="laptops-page-header py-5">
-            <div class="container">
+    <!-- Page Header -->
+    <section class="laptops-page-header py-5">
 
-                <div class="row align-items-end g-3">
+        <div class="container">
 
-                    <div class="col-12 col-lg-8">
+            <div class="row align-items-end g-3">
 
-                        <p class="section-label text-uppercase fw-bold mb-2">
-                            Browse laptops
-                        </p>
+                <!-- Page Heading -->
+                <div class="col-12 col-lg-8">
 
-                        <h1 class="laptops-page-title fw-bold mb-3">
-                            Find the right laptop.
-                        </h1>
+                    <p class="section-label text-uppercase fw-bold mb-2">
+                        Browse laptops
+                    </p>
 
-                        <p class="laptops-page-description mb-0">
-                            Explore new laptops for study, office work,
-                            programming and gaming.
-                        </p>
+                    <h1 class="laptops-page-title fw-bold mb-3">
+                        Find the right laptop.
+                    </h1>
 
-                    </div>
-
-                    <div class="col-12 col-lg-4 text-lg-end">
-
-                        <a
-                            class="laptops-help-link text-decoration-none fw-semibold"
-                            href="contact.html">
-                            Need help choosing?
-
-                            <i
-                                class="fa-solid fa-arrow-right ms-2"
-                                aria-hidden="true"></i>
-                        </a>
-
-                    </div>
+                    <p class="laptops-page-description mb-0">
+                        Explore new laptops for study, office work,
+                        programming and gaming.
+                    </p>
 
                 </div>
 
-            </div>
-        </section>
 
-        <!-- Listing Content -->
-        <section class="laptops-listing-section py-5">
-            <div class="container">
+                <!-- Help Link -->
+                <div class="col-12 col-lg-4 text-lg-end">
 
-                <!-- Listing Toolbar -->
-                <div
-                    class="d-flex flex-column flex-md-row
-                       justify-content-between align-items-md-center
-                       gap-3 pb-4 mb-4 border-bottom">
+                    <a
+                        class="laptops-help-link text-decoration-none fw-semibold"
+                        href="contact.html"
+                    >
+                        Need help choosing?
 
-                    <!-- Left Side -->
-                    <div class="d-flex align-items-center gap-3">
-
-                        <!-- Mobile / Tablet Filter Button -->
-                        <button
-                            class="btn btn-outline-dark d-lg-none"
-                            type="button"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#filterOffcanvas"
-                            aria-controls="filterOffcanvas">
-                            <i
-                                class="fa-solid fa-sliders me-2"
-                                aria-hidden="true"></i>
-
-                            Filters
-                        </button>
-
-                        <!-- Results Count -->
-                        <p class="listing-result-count mb-0">
-                            Laptops available
-                        </p>
-
-                    </div>
-
-                    <!-- Sort -->
-                    <div class="d-flex align-items-center gap-2">
-
-                        <label
-                            class="listing-sort-label"
-                            for="sortLaptops">
-                            Sort by
-                        </label>
-
-                        <select
-                            class="form-select listing-sort-select"
-                            id="sortLaptops"
-                            aria-label="Sort laptops">
-                            <option selected>Recommended</option>
-                            <option value="name-asc">Name: A to Z</option>
-                            <option value="name-desc">Name: Z to A</option>
-                        </select>
-
-                    </div>
+                        <i
+                            class="fa-solid fa-arrow-right ms-2"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
 
                 </div>
-
-                <!-- Main Listing Grid -->
-                <div class="row g-4">
-
-                    <!-- Desktop Filter Sidebar -->
-                    <aside class="col-lg-3 d-none d-lg-block">
-
-                        <div class="filter-sidebar">
-
-                            <div
-                                class="d-flex justify-content-between
-                                   align-items-center mb-4">
-                                <h2 class="filter-title fw-bold mb-0">
-                                    Filters
-                                </h2>
-
-                                <button
-                                    class="btn btn-link filter-clear-button
-                                       text-decoration-none p-0"
-                                    type="button">
-                                    Clear
-                                </button>
-                            </div>
-
-                            <!-- Filter by Use -->
-                            <div class="filter-group pb-4 mb-4 border-bottom">
-
-                                <h3 class="filter-group-title fw-bold mb-3">
-                                    Shop by Use
-                                </h3>
-
-                                <div class="d-grid gap-3">
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="study"
-                                            id="desktopStudy">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopStudy">
-                                            Study
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="office"
-                                            id="desktopOffice">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopOffice">
-                                            Office
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="programming"
-                                            id="desktopProgramming">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopProgramming">
-                                            Programming
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="gaming"
-                                            id="desktopGaming">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopGaming">
-                                            Gaming
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Filter by Brand -->
-                            <div class="filter-group">
-
-                                <h3 class="filter-group-title fw-bold mb-3">
-                                    Brand
-                                </h3>
-
-                                <div class="d-grid gap-3">
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="asus"
-                                            id="desktopAsus">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopAsus">
-                                            ASUS
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="lenovo"
-                                            id="desktopLenovo">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopLenovo">
-                                            Lenovo
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="acer"
-                                            id="desktopAcer">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopAcer">
-                                            Acer
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="hp"
-                                            id="desktopHp">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopHp">
-                                            HP
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="dell"
-                                            id="desktopDell">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopDell">
-                                            Dell
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value="apple"
-                                            id="desktopApple">
-
-                                        <label
-                                            class="form-check-label"
-                                            for="desktopApple">
-                                            Apple
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </aside>
-
-                    <!-- Product Area -->
-                    <div class="col-12 col-lg-9">
-
-                        <div
-                            class="row row-cols-1 row-cols-md-2
-                               row-cols-xl-3 g-4"
-                            id="laptopGrid">
-
-                        </div>
-
-                        <div
-                            class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4"
-                            id="laptopGrid">
-
-                            <!-- ASUS Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="asus">
-
-                                    <!-- Product Image -->
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/asus-laptop.png"
-                                                alt="ASUS laptop">
-                                        </a>
-
-                                        <!-- Wishlist Button -->
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add ASUS laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <!-- Product Content -->
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            ASUS
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                ASUS Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <!-- Lenovo Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="lenovo">
-
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/lenovo-laptop.png"
-                                                alt="Lenovo laptop">
-                                        </a>
-
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add Lenovo laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            Lenovo
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                Lenovo Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <!-- Acer Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="acer">
-
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/acer-laptop.png"
-                                                alt="Acer laptop">
-                                        </a>
-
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add Acer laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            Acer
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                Acer Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <!-- HP Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="hp">
-
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/hp-laptop.png"
-                                                alt="HP laptop">
-                                        </a>
-
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add HP laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            HP
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                HP Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <!-- Dell Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="dell">
-
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/dell-laptop.png"
-                                                alt="Dell laptop">
-                                        </a>
-
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add Dell laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            Dell
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                Dell Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                            <!-- Apple Laptop -->
-                            <div class="col">
-                                <article
-                                    class="card listing-product-card h-100"
-                                    data-brand="apple">
-
-                                    <div class="listing-product-image-box">
-
-                                        <a href="product-detail.html">
-                                            <img
-                                                class="listing-product-image"
-                                                src="images/laptops/apple-laptop.png"
-                                                alt="Apple laptop">
-                                        </a>
-
-                                        <button
-                                            class="listing-wishlist-button"
-                                            type="button"
-                                            aria-label="Add Apple laptop to wishlist"
-                                            title="Add to wishlist">
-                                            <i
-                                                class="fa-regular fa-heart"
-                                                aria-hidden="true"></i>
-                                        </button>
-
-                                    </div>
-
-                                    <div
-                                        class="card-body d-flex flex-column p-4">
-
-                                        <p
-                                            class="listing-product-brand text-uppercase fw-bold mb-2">
-                                            Apple
-                                        </p>
-
-                                        <h2
-                                            class="listing-product-title fw-bold mb-2">
-                                            <a
-                                                class="text-decoration-none"
-                                                href="product-detail.html">
-                                                Apple Laptop
-                                            </a>
-                                        </h2>
-
-                                        <p class="listing-product-summary mb-3">
-                                            Model details to be confirmed.
-                                        </p>
-
-                                        <div
-                                            class="listing-product-specs d-grid gap-2 mb-4">
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-microchip me-2"></i>
-                                                Processor to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-memory me-2"></i>
-                                                Memory to be confirmed
-                                            </p>
-
-                                            <p class="mb-0">
-                                                <i
-                                                    class="fa-solid fa-hard-drive me-2"></i>
-                                                Storage to be confirmed
-                                            </p>
-
-                                        </div>
-
-                                        <div class="mt-auto">
-
-                                            <p
-                                                class="listing-product-price fw-semibold mb-1">
-                                                Contact for price
-                                            </p>
-
-                                            <p
-                                                class="listing-product-status mb-3">
-                                                Availability to be confirmed
-                                            </p>
-
-                                            <a
-                                                class="listing-product-link text-decoration-none fw-semibold"
-                                                href="product-detail.html">
-                                                View product
-
-                                                <i
-                                                    class="fa-solid fa-arrow-right ms-2"></i>
-                                            </a>
-
-                                        </div>
-
-                                    </div>
-
-                                </article>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Mobile / Tablet Filter Offcanvas -->
-        <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="filterOffcanvas"
-            aria-labelledby="filterOffcanvasLabel">
-
-            <div class="offcanvas-header border-bottom">
-
-                <h2
-                    class="offcanvas-title fw-bold"
-                    id="filterOffcanvasLabel">
-                    Filters
-                </h2>
-
-                <button
-                    class="btn-close shadow-none"
-                    type="button"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-
-            </div>
-
-            <div class="offcanvas-body">
-
-                <!-- Mobile Filter by Use -->
-                <div class="filter-group pb-4 mb-4 border-bottom">
-
-                    <h3 class="filter-group-title fw-bold mb-3">
-                        Shop by Use
-                    </h3>
-
-                    <div class="d-grid gap-3">
-
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="mobileStudy">
-
-                            <label
-                                class="form-check-label"
-                                for="mobileStudy">
-                                Study
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="mobileOffice">
-
-                            <label
-                                class="form-check-label"
-                                for="mobileOffice">
-                                Office
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="mobileProgramming">
-
-                            <label
-                                class="form-check-label"
-                                for="mobileProgramming">
-                                Programming
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="mobileGaming">
-
-                            <label
-                                class="form-check-label"
-                                for="mobileGaming">
-                                Gaming
-                            </label>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Mobile Filter by Brand -->
-                <div class="filter-group mb-4">
-
-                    <h3 class="filter-group-title fw-bold mb-3">
-                        Brand
-                    </h3>
-
-                    <div class="row row-cols-2 g-3">
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileAsus">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileAsus">
-                                    ASUS
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileLenovo">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileLenovo">
-                                    Lenovo
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileAcer">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileAcer">
-                                    Acer
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileHp">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileHp">
-                                    HP
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileDell">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileDell">
-                                    Dell
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="mobileApple">
-
-                                <label
-                                    class="form-check-label"
-                                    for="mobileApple">
-                                    Apple
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button
-                    class="btn btn-nexlap w-100 py-3"
-                    type="button"
-                    data-bs-dismiss="offcanvas">
-                    View Results
-                </button>
 
             </div>
 
         </div>
 
-        <!-- ========================================
+    </section>
+
+
+    <!-- Listing Content -->
+    <section class="laptops-listing-section py-5">
+
+        <div class="container">
+
+            <!-- Listing Toolbar -->
+            <div
+                class="d-flex flex-column flex-md-row
+                       justify-content-between align-items-md-center
+                       gap-3 pb-4 mb-4 border-bottom"
+            >
+
+                <!-- Toolbar Left -->
+                <div class="d-flex align-items-center gap-3">
+
+                    <!-- Mobile and Tablet Filter Button -->
+                    <button
+                        class="btn btn-outline-dark d-lg-none"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#filterOffcanvas"
+                        aria-controls="filterOffcanvas"
+                    >
+                        <i
+                            class="fa-solid fa-sliders me-2"
+                            aria-hidden="true"
+                        ></i>
+
+                        Filters
+                    </button>
+
+
+                    <!-- Results Count -->
+                    <p class="listing-result-count mb-0">
+                        Laptops available
+                    </p>
+
+                </div>
+
+
+                <!-- Sort -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <label
+                        class="listing-sort-label"
+                        for="sortLaptops"
+                    >
+                        Sort by
+                    </label>
+
+                    <select
+                        class="form-select listing-sort-select"
+                        id="sortLaptops"
+                        aria-label="Sort laptops"
+                    >
+                        <option selected>
+                            Recommended
+                        </option>
+
+                        <option value="name-asc">
+                            Name: A to Z
+                        </option>
+
+                        <option value="name-desc">
+                            Name: Z to A
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Main Listing Grid -->
+            <div class="row gx-4 gy-0 align-items-start">
+
+                <!-- Desktop Filter Sidebar -->
+                <aside class="col-lg-3 d-none d-lg-block">
+
+                    <div class="filter-sidebar">
+
+                        <!-- Filter Heading -->
+                        <div
+                            class="d-flex justify-content-between
+                                   align-items-center mb-4"
+                        >
+                            <h2 class="filter-title fw-bold mb-0">
+                                Filters
+                            </h2>
+
+                            <button
+                                class="btn btn-link filter-clear-button
+                                       text-decoration-none p-0"
+                                type="button"
+                            >
+                                Clear
+                            </button>
+                        </div>
+
+
+                        <!-- Filter by Use -->
+                        <div class="filter-group pb-4 mb-4 border-bottom">
+
+                            <h3 class="filter-group-title fw-bold mb-3">
+                                Shop by Use
+                            </h3>
+
+                            <div class="d-grid gap-3">
+
+                                <!-- Study -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="study"
+                                        id="desktopStudy"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopStudy"
+                                    >
+                                        Study
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Office -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="office"
+                                        id="desktopOffice"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopOffice"
+                                    >
+                                        Office
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Programming -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="programming"
+                                        id="desktopProgramming"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopProgramming"
+                                    >
+                                        Programming
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Gaming -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="gaming"
+                                        id="desktopGaming"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopGaming"
+                                    >
+                                        Gaming
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Filter by Brand -->
+                        <div class="filter-group">
+
+                            <h3 class="filter-group-title fw-bold mb-3">
+                                Brand
+                            </h3>
+
+                            <div class="d-grid gap-3">
+
+                                <!-- ASUS -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="asus"
+                                        id="desktopAsus"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopAsus"
+                                    >
+                                        ASUS
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Lenovo -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="lenovo"
+                                        id="desktopLenovo"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopLenovo"
+                                    >
+                                        Lenovo
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Acer -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="acer"
+                                        id="desktopAcer"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopAcer"
+                                    >
+                                        Acer
+                                    </label>
+
+                                </div>
+
+
+                                <!-- HP -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="hp"
+                                        id="desktopHp"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopHp"
+                                    >
+                                        HP
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Dell -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="dell"
+                                        id="desktopDell"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopDell"
+                                    >
+                                        Dell
+                                    </label>
+
+                                </div>
+
+
+                                <!-- Apple -->
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value="apple"
+                                        id="desktopApple"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="desktopApple"
+                                    >
+                                        Apple
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- Product Area -->
+                <div class="col-12 col-lg-9">
+
+                    <!-- Product Grid -->
+                    <!-- laptopGrid ID ကို တစ်ခါတည်းသာထားမယ် -->
+                    <div
+                        class="row row-cols-1 row-cols-md-2
+                               row-cols-xl-3 g-4"
+                        id="laptopGrid"
+                    >
+
+                        <!-- ASUS Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="asus"
+                            >
+
+                                <!-- Product Image -->
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/asus-laptop.png"
+                                            alt="ASUS laptop"
+                                        >
+
+                                    </a>
+
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add ASUS laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <!-- Product Content -->
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        ASUS
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            ASUS Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+
+                                    <!-- Specifications -->
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+
+                                    <!-- Price and Action -->
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- Lenovo Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="lenovo"
+                            >
+
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/lenovo-laptop.png"
+                                            alt="Lenovo laptop"
+                                        >
+
+                                    </a>
+
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add Lenovo laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        Lenovo
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            Lenovo Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- Acer Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="acer"
+                            >
+
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/acer-laptop.png"
+                                            alt="Acer laptop"
+                                        >
+
+                                    </a>
+
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add Acer laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        Acer
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            Acer Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- HP Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="hp"
+                            >
+
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/hp-laptop.png"
+                                            alt="HP laptop"
+                                        >
+
+                                    </a>
+
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add HP laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        HP
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            HP Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- Dell Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="dell"
+                            >
+
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/dell-laptop.png"
+                                            alt="Dell laptop"
+                                        >
+
+                                    </a>
+
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add Dell laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        Dell
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            Dell Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- Apple Laptop -->
+                        <div class="col">
+
+                            <article
+                                class="card listing-product-card h-100"
+                                data-brand="apple"
+                            >
+
+                                <div class="listing-product-image-box">
+
+                                    <a href="product-detail.html">
+
+                                        <img
+                                            class="listing-product-image"
+                                            src="images/laptops/apple-laptop.png"
+                                            alt="Apple laptop"
+                                        >
+
+                                    </a>
+
+                                    <button
+                                        class="listing-wishlist-button"
+                                        type="button"
+                                        aria-label="Add Apple laptop to wishlist"
+                                        title="Add to wishlist"
+                                    >
+                                        <i
+                                            class="fa-regular fa-heart"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+
+                                </div>
+
+
+                                <div class="card-body d-flex flex-column p-4">
+
+                                    <p
+                                        class="listing-product-brand
+                                               text-uppercase fw-bold mb-2"
+                                    >
+                                        Apple
+                                    </p>
+
+                                    <h2
+                                        class="listing-product-title
+                                               fw-bold mb-2"
+                                    >
+                                        <a
+                                            class="text-decoration-none"
+                                            href="product-detail.html"
+                                        >
+                                            Apple Laptop
+                                        </a>
+                                    </h2>
+
+                                    <p class="listing-product-summary mb-3">
+                                        Model details to be confirmed.
+                                    </p>
+
+                                    <div
+                                        class="listing-product-specs
+                                               d-grid gap-2 mb-4"
+                                    >
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-microchip me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Processor to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-memory me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Memory to be confirmed
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <i
+                                                class="fa-solid
+                                                       fa-hard-drive me-2"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Storage to be confirmed
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mt-auto">
+
+                                        <p
+                                            class="listing-product-price
+                                                   fw-semibold mb-1"
+                                        >
+                                            Contact for price
+                                        </p>
+
+                                        <p class="listing-product-status mb-3">
+                                            Availability to be confirmed
+                                        </p>
+
+                                        <a
+                                            class="listing-product-link
+                                                   text-decoration-none
+                                                   fw-semibold"
+                                            href="product-detail.html"
+                                        >
+                                            View product
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-arrow-right ms-2"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mobile and Tablet Filter Offcanvas -->
+    <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="filterOffcanvas"
+        aria-labelledby="filterOffcanvasLabel"
+    >
+
+        <!-- Offcanvas Header -->
+        <div class="offcanvas-header border-bottom">
+
+            <h2
+                class="offcanvas-title fw-bold"
+                id="filterOffcanvasLabel"
+            >
+                Filters
+            </h2>
+
+            <button
+                class="btn-close shadow-none"
+                type="button"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+            ></button>
+
+        </div>
+
+
+        <!-- Offcanvas Body -->
+        <div class="offcanvas-body">
+
+            <!-- Filter by Use -->
+            <div class="filter-group pb-4 mb-4 border-bottom">
+
+                <h3 class="filter-group-title fw-bold mb-3">
+                    Shop by Use
+                </h3>
+
+                <div class="d-grid gap-3">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="study"
+                            id="mobileStudy"
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="mobileStudy"
+                        >
+                            Study
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="office"
+                            id="mobileOffice"
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="mobileOffice"
+                        >
+                            Office
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="programming"
+                            id="mobileProgramming"
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="mobileProgramming"
+                        >
+                            Programming
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="gaming"
+                            id="mobileGaming"
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="mobileGaming"
+                        >
+                            Gaming
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Filter by Brand -->
+            <div class="filter-group mb-4">
+
+                <h3 class="filter-group-title fw-bold mb-3">
+                    Brand
+                </h3>
+
+                <div class="row row-cols-2 g-3">
+
+                    <!-- ASUS -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="asus"
+                                id="mobileAsus"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileAsus"
+                            >
+                                ASUS
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Lenovo -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="lenovo"
+                                id="mobileLenovo"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileLenovo"
+                            >
+                                Lenovo
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Acer -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="acer"
+                                id="mobileAcer"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileAcer"
+                            >
+                                Acer
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HP -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="hp"
+                                id="mobileHp"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileHp"
+                            >
+                                HP
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Dell -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="dell"
+                                id="mobileDell"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileDell"
+                            >
+                                Dell
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Apple -->
+                    <div class="col">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value="apple"
+                                id="mobileApple"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="mobileApple"
+                            >
+                                Apple
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- View Results Button -->
+            <button
+                class="btn btn-nexlap w-100 py-3"
+                type="button"
+                data-bs-dismiss="offcanvas"
+            >
+                View Results
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================
          END LAPTOP LISTING PAGE
     ========================================= -->
+
+</main>
+     
 
         <!-- Start Footer -->
         <footer class="site-footer pt-5">
@@ -1505,9 +1914,6 @@
 
         </footer>
         <!-- End Footer -->
-
-        <!-- Bootstrap JavaScript -->
-        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Bootstrap JavaScript -->
         <script src="bootstrap/js/bootstrap.bundle.min.js"></script>

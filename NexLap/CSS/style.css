@@ -74,7 +74,7 @@ body {
 ======================================== */
 
 .navbar {
-    min-height: 72px;
+    min-height: 68px;
 }
 
 
@@ -84,6 +84,17 @@ body {
     font-size: 25px;
     font-weight: 700;
     letter-spacing: -1px;
+}
+
+
+/* Hamburger Button */
+
+.navbar-toggler {
+    padding: 4px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 
@@ -121,9 +132,15 @@ body {
    WISHLIST AND CART ICONS
 ======================================== */
 
+.nav-icon-group {
+    padding-top: 3px;
+}
+
 .nav-action-icon {
-    width: 34px;
-    height: 36px;
+    position: relative;
+
+    width: 29px;
+    height: 31px;
 
     display: inline-flex;
     align-items: center;
@@ -132,7 +149,7 @@ body {
     color: var(--nexlap-icon);
     background-color: transparent;
 
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1;
 
     text-decoration: none;
@@ -149,35 +166,38 @@ body {
 /* Wishlist and Cart Count */
 
 .icon-count {
-    min-width: 22px;
-    height: 22px;
+    position: absolute;
+
+    top: -6px;
+    right: -7px;
+
+    min-width: 17px;
+    height: 17px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 0 6px;
+    padding: 0 4px;
 
     color: var(--nexlap-white);
     background-color: var(--nexlap-teal);
 
     border: 2px solid var(--nexlap-white);
+    border-radius: 20px;
 
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 700;
     line-height: 1;
 }
 
 
 /* ========================================
-   SHOP BUTTON
+   NEXLAP BUTTON
 ======================================== */
 
 .btn-nexlap {
     width: auto;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
 
     color: var(--nexlap-white);
     background-color: var(--nexlap-teal);
@@ -203,6 +223,16 @@ body {
 }
 
 
+/* Navbar Shop Button Only */
+
+.nav-shop-button {
+    padding: 7px 13px;
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
 /* ========================================
    TABLET AND MOBILE NAVBAR
 ======================================== */
@@ -214,11 +244,18 @@ body {
     }
 
     .navbar-collapse {
+        padding-top: 16px;
         padding-bottom: 8px;
     }
 
+    .navbar-nav {
+        width: 100%;
+    }
+
     .navbar-actions {
-        gap: 16px !important;
+        width: 100%;
+
+        gap: 14px !important;
     }
 
     .navbar .nav-link {
@@ -226,7 +263,7 @@ body {
         padding-bottom: 10px;
     }
 
-    .btn-nexlap {
+    .nav-shop-button {
         align-self: flex-start;
     }
 
@@ -248,25 +285,28 @@ body {
     }
 
     .nav-action-icon {
-        width: 34px;
-        height: 36px;
+        width: 28px;
+        height: 30px;
 
-        font-size: 24px;
+        font-size: 19px;
     }
 
     .icon-count {
-        min-width: 21px;
-        height: 21px;
+        top: -5px;
+        right: -6px;
 
-        padding: 0 5px;
+        min-width: 16px;
+        height: 16px;
 
-        font-size: 11px;
+        padding: 0 4px;
+
+        font-size: 9px;
     }
 
-    .btn-nexlap {
-        padding: 9px 18px;
+    .nav-shop-button {
+        padding: 5px 9px;
 
-        font-size: 14px;
+        font-size: 12px;
     }
 
 }
@@ -275,7 +315,6 @@ body {
 /* ========================================
    END HEADER
 ======================================== */
-
 /* ========================================
    START HERO SECTION
 ======================================== */
@@ -1116,15 +1155,18 @@ a.footer-contact:focus {
 /* laptop page */
 /* laptop page */
 /* laptop page */
-
 /* ========================================
    START LAPTOP LISTING PAGE
 ======================================== */
 
-/* Page Header */
+
+/* ========================================
+   PAGE HEADER
+======================================== */
 
 .laptops-page-header {
     background-color: var(--nexlap-gray);
+
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -1157,14 +1199,18 @@ a.footer-contact:focus {
 }
 
 
-/* Listing Section */
+/* ========================================
+   LISTING SECTION
+======================================== */
 
 .laptops-listing-section {
     background-color: var(--nexlap-white);
 }
 
 
-/* Toolbar */
+/* ========================================
+   TOOLBAR
+======================================== */
 
 .listing-result-count {
     color: #667085;
@@ -1188,13 +1234,17 @@ a.footer-contact:focus {
 }
 
 
-/* Filter Sidebar */
+/* ========================================
+   FILTER SIDEBAR
+======================================== */
 
 .filter-sidebar {
     position: sticky;
     top: 24px;
 
     padding: 24px;
+
+    background-color: var(--nexlap-white);
 
     border: 1px solid #e5e7eb;
     border-radius: 8px;
@@ -1230,6 +1280,10 @@ a.footer-contact:focus {
     font-size: 15px;
 }
 
+.filter-group .form-check-input {
+    border-color: #d0d5dd;
+}
+
 .filter-group .form-check-input:checked {
     background-color: var(--nexlap-teal);
     border-color: var(--nexlap-teal);
@@ -1242,7 +1296,9 @@ a.footer-contact:focus {
 }
 
 
-/* Filter Button */
+/* ========================================
+   FILTER BUTTON
+======================================== */
 
 .laptops-listing-section .btn-outline-dark {
     font-size: 14px;
@@ -1250,7 +1306,9 @@ a.footer-contact:focus {
 }
 
 
-/* Offcanvas */
+/* ========================================
+   OFFCANVAS
+======================================== */
 
 #filterOffcanvas {
     width: 340px;
@@ -1264,12 +1322,7 @@ a.footer-contact:focus {
 
 
 /* ========================================
-   END LAPTOP LISTING PAGE
-======================================== */
-
-
-/* ========================================
-   START LISTING PRODUCT CARDS
+   LISTING PRODUCT CARD
 ======================================== */
 
 .listing-product-card {
@@ -1280,22 +1333,25 @@ a.footer-contact:focus {
     border: 1px solid #e5e7eb;
     border-radius: 8px;
 
+    transform: none;
+
     transition:
-        transform 200ms ease,
         border-color 200ms ease,
         box-shadow 200ms ease;
 }
 
 .listing-product-card:hover {
-    transform: translateY(-4px);
-
     border-color: var(--nexlap-teal);
 
     box-shadow: 0 14px 30px rgba(11, 13, 16, 0.08);
+
+    transform: none;
 }
 
 
-/* Product Image Area */
+/* ========================================
+   PRODUCT IMAGE
+======================================== */
 
 .listing-product-image-box {
     position: relative;
@@ -1312,12 +1368,15 @@ a.footer-contact:focus {
     overflow: hidden;
 
     background-color: var(--nexlap-gray);
+
     border-bottom: 1px solid #e5e7eb;
 }
 
 .listing-product-image-box > a {
     width: 100%;
     height: 100%;
+
+    display: block;
 }
 
 .listing-product-image {
@@ -1336,7 +1395,9 @@ a.footer-contact:focus {
 }
 
 
-/* Wishlist Button */
+/* ========================================
+   WISHLIST BUTTON
+======================================== */
 
 .listing-wishlist-button {
     position: absolute;
@@ -1373,7 +1434,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Brand */
+/* ========================================
+   PRODUCT BRAND
+======================================== */
 
 .listing-product-brand {
     color: var(--nexlap-teal);
@@ -1383,7 +1446,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Title */
+/* ========================================
+   PRODUCT TITLE
+======================================== */
 
 .listing-product-title {
     font-size: 21px;
@@ -1400,7 +1465,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Summary */
+/* ========================================
+   PRODUCT SUMMARY
+======================================== */
 
 .listing-product-summary {
     color: #667085;
@@ -1410,7 +1477,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Specifications */
+/* ========================================
+   PRODUCT SPECIFICATIONS
+======================================== */
 
 .listing-product-specs {
     color: #475467;
@@ -1428,7 +1497,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Price */
+/* ========================================
+   PRODUCT PRICE
+======================================== */
 
 .listing-product-price {
     color: var(--nexlap-black);
@@ -1437,7 +1508,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Availability */
+/* ========================================
+   PRODUCT AVAILABILITY
+======================================== */
 
 .listing-product-status {
     color: #667085;
@@ -1446,7 +1519,9 @@ a.footer-contact:focus {
 }
 
 
-/* Product Link */
+/* ========================================
+   PRODUCT LINK
+======================================== */
 
 .listing-product-link {
     display: inline-flex;
@@ -1464,5 +1539,5 @@ a.footer-contact:focus {
 
 
 /* ========================================
-   END LISTING PRODUCT CARDS
+   END LAPTOP LISTING PAGE
 ======================================== */
