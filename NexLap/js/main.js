@@ -982,3 +982,623 @@ $(document).ready(function () {
 // ========================================
 // END LAPTOPS PAGE
 // ========================================
+
+
+
+// ========================================
+// START WISHLIST AND CART
+// ========================================
+
+$(document).ready(function () {
+
+
+    // ========================================
+    // STORAGE KEYS
+    // ========================================
+
+    const wishlistKey =
+        "nexlapWishlist";
+
+    const cartKey =
+        "nexlapCart";
+
+
+    // ========================================
+    // GET WISHLIST
+    // ========================================
+
+    function getWishlist() {
+
+        const savedWishlist =
+            localStorage.getItem(
+                wishlistKey
+            );
+
+
+        if (savedWishlist) {
+
+            return JSON.parse(
+                savedWishlist
+            );
+
+        }
+
+
+        return [];
+
+    }
+
+
+    // ========================================
+    // SAVE WISHLIST
+    // ========================================
+
+    function saveWishlist(wishlist) {
+
+        localStorage.setItem(
+            wishlistKey,
+            JSON.stringify(wishlist)
+        );
+
+
+        updateNavCounts();
+
+        updateWishlistButtons();
+
+    }
+
+
+    // ========================================
+    // GET CART
+    // ========================================
+
+    function getCart() {
+
+        const savedCart =
+            localStorage.getItem(
+                cartKey
+            );
+
+
+        if (savedCart) {
+
+            return JSON.parse(
+                savedCart
+            );
+
+        }
+
+
+        return [];
+
+    }
+
+
+    // ========================================
+    // SAVE CART
+    // ========================================
+
+    function saveCart(cart) {
+
+        localStorage.setItem(
+            cartKey,
+            JSON.stringify(cart)
+        );
+
+
+        updateNavCounts();
+
+    }
+
+
+    // ========================================
+    // GET PRODUCT INFORMATION
+    // ========================================
+
+    function getProductInfo($button) {
+
+
+        // ========================================
+        // LAPTOPS PAGE PRODUCT
+        // ========================================
+
+        const $card =
+            $button.closest(
+                ".listing-product-card"
+            );
+
+
+        if ($card.length > 0) {
+
+            return {
+
+                id:
+                    String(
+                        $card.data("id")
+                    ),
+
+                brand:
+                    $card
+                        .find(
+                            ".listing-product-brand"
+                        )
+                        .text()
+                        .trim(),
+
+                name:
+                    $card
+                        .find(
+                            ".listing-product-title"
+                        )
+                        .text()
+                        .trim(),
+
+                price:
+                    $card
+                        .find(
+                            ".listing-product-price"
+                        )
+                        .text()
+                        .trim(),
+
+                image:
+                    $card
+                        .find(
+                            ".listing-product-image"
+                        )
+                        .attr("src")
+
+            };
+
+        }
+
+
+        // ========================================
+        // PRODUCT DETAIL PAGE
+        // ========================================
+
+        if (
+            $("#productDetailContent")
+                .length > 0
+        ) {
+
+            return {
+
+                id:
+                    String(
+                        $button.attr(
+                            "data-product-id"
+                        )
+                    ),
+
+                brand:
+                    $("#productBrand")
+                        .text()
+                        .trim(),
+
+                name:
+                    $("#productName")
+                        .text()
+                        .trim(),
+
+                price:
+                    $("#productPrice")
+                        .text()
+                        .trim(),
+
+                image:
+                    $("#productImage")
+                        .attr("src")
+
+            };
+
+        }
+
+
+        return null;
+
+    }
+
+
+    // ========================================
+    // UPDATE NAV COUNTS
+    // ========================================
+
+    function updateNavCounts() {
+
+        const wishlist =
+            getWishlist();
+
+        const cart =
+            getCart();
+
+
+        // Wishlist Count
+        const wishlistCount =
+            wishlist.length;
+
+
+        // Cart Count
+        let cartCount = 0;
+
+
+        cart.forEach(
+            function (item) {
+
+                cartCount +=
+                    item.quantity;
+
+            }
+        );
+
+
+        // Wishlist Header Count
+        $(
+            '.nav-action-icon[href="wishlist.html"] .icon-count'
+        ).text(
+            wishlistCount
+        );
+
+
+        // Cart Header Count
+        $(
+            '.nav-action-icon[href="cart.html"] .icon-count'
+        ).text(
+            cartCount
+        );
+
+    }
+
+
+    // ========================================
+    // UPDATE WISHLIST BUTTONS
+    // ========================================
+
+    function updateWishlistButtons() {
+
+        const wishlist =
+            getWishlist();
+
+
+        const wishlistIds =
+            wishlist.map(
+                function (item) {
+
+                    return item.id;
+
+                }
+            );
+
+
+        // ========================================
+        // LAPTOP LISTING HEARTS
+        // ========================================
+
+        $(".listing-wishlist-button")
+            .each(
+                function () {
+
+                    const $button =
+                        $(this);
+
+
+                    const productId =
+                        String(
+                            $button
+                                .closest(
+                                    ".listing-product-card"
+                                )
+                                .data("id")
+                        );
+
+
+                    const isSaved =
+                        wishlistIds.includes(
+                            productId
+                        );
+
+
+                    const $icon =
+                        $button.find("i");
+
+
+                    if (isSaved) {
+
+                        $button.addClass(
+                            "is-active"
+                        );
+
+
+                        $icon
+                            .removeClass(
+                                "fa-regular"
+                            )
+                            .addClass(
+                                "fa-solid"
+                            );
+
+
+                        $button.attr(
+                            "title",
+                            "Remove from wishlist"
+                        );
+
+                    } else {
+
+                        $button.removeClass(
+                            "is-active"
+                        );
+
+
+                        $icon
+                            .removeClass(
+                                "fa-solid"
+                            )
+                            .addClass(
+                                "fa-regular"
+                            );
+
+
+                        $button.attr(
+                            "title",
+                            "Add to wishlist"
+                        );
+
+                    }
+
+                }
+            );
+
+
+        // ========================================
+        // PRODUCT DETAIL WISHLIST BUTTON
+        // ========================================
+
+        const $detailButton =
+            $("#productWishlistButton");
+
+
+        if (
+            $detailButton.length > 0
+        ) {
+
+            const productId =
+                String(
+                    $detailButton.attr(
+                        "data-product-id"
+                    )
+                );
+
+
+            const isSaved =
+                wishlistIds.includes(
+                    productId
+                );
+
+
+            if (isSaved) {
+
+                $detailButton.html(
+                    '<i class="fa-solid fa-heart me-2" aria-hidden="true"></i>' +
+                    "Remove from Wishlist"
+                );
+
+            } else {
+
+                $detailButton.html(
+                    '<i class="fa-regular fa-heart me-2" aria-hidden="true"></i>' +
+                    "Add to Wishlist"
+                );
+
+            }
+
+        }
+
+    }
+
+
+    // ========================================
+    // WISHLIST CLICK
+    // ========================================
+
+    $(document).on(
+        "click",
+        ".listing-wishlist-button, #productWishlistButton",
+        function () {
+
+            const $button =
+                $(this);
+
+
+            const product =
+                getProductInfo(
+                    $button
+                );
+
+
+            if (
+                !product ||
+                !product.id
+            ) {
+
+                return;
+
+            }
+
+
+            const wishlist =
+                getWishlist();
+
+
+            const existingIndex =
+                wishlist.findIndex(
+                    function (item) {
+
+                        return (
+                            item.id ===
+                            product.id
+                        );
+
+                    }
+                );
+
+
+            // ========================================
+            // ADD TO WISHLIST
+            // ========================================
+
+            if (
+                existingIndex === -1
+            ) {
+
+                wishlist.push(
+                    product
+                );
+
+            }
+
+
+            // ========================================
+            // REMOVE FROM WISHLIST
+            // ========================================
+
+            else {
+
+                wishlist.splice(
+                    existingIndex,
+                    1
+                );
+
+            }
+
+
+            saveWishlist(
+                wishlist
+            );
+
+        }
+    );
+
+
+    // ========================================
+    // ADD TO CART CLICK
+    // ========================================
+
+    $(document).on(
+        "click",
+        ".listing-cart-button, #productCartButton",
+        function () {
+
+            const $button =
+                $(this);
+
+
+            const product =
+                getProductInfo(
+                    $button
+                );
+
+
+            if (
+                !product ||
+                !product.id
+            ) {
+
+                return;
+
+            }
+
+
+            const cart =
+                getCart();
+
+
+            const existingItem =
+                cart.find(
+                    function (item) {
+
+                        return (
+                            item.id ===
+                            product.id
+                        );
+
+                    }
+                );
+
+
+            // ========================================
+            // PRODUCT ALREADY IN CART
+            // ========================================
+
+            if (existingItem) {
+
+                existingItem.quantity += 1;
+
+            }
+
+
+            // ========================================
+            // NEW PRODUCT
+            // ========================================
+
+            else {
+
+                product.quantity = 1;
+
+
+                cart.push(
+                    product
+                );
+
+            }
+
+
+            saveCart(
+                cart
+            );
+
+
+            // ========================================
+            // BUTTON FEEDBACK
+            // ========================================
+
+            const oldHtml =
+                $button.html();
+
+
+            $button.html(
+                '<i class="fa-solid fa-check me-1" aria-hidden="true"></i>' +
+                "Added"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    $button.html(
+                        oldHtml
+                    );
+
+                },
+                800
+            );
+
+        }
+    );
+
+
+    // ========================================
+    // START
+    // ========================================
+
+    updateNavCounts();
+
+    updateWishlistButtons();
+
+
+});
+
+
+// ========================================
+// END WISHLIST AND CART
+// ========================================

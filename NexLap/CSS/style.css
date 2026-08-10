@@ -3201,3 +3201,490 @@ textarea.support-form-control {
 /* ========================================
    END SUPPORT PAGE
 ======================================== */
+
+
+/* ========================================
+   START PRODUCT DETAIL PAGE
+======================================== */
+
+
+/* ========================================
+   BREADCRUMB
+======================================== */
+
+.product-detail-breadcrumb {
+    background-color: var(--nexlap-white);
+}
+
+.product-detail-breadcrumb .breadcrumb {
+    font-size: 13px;
+}
+
+.product-detail-breadcrumb
+.breadcrumb-item a {
+    color: var(--nexlap-teal);
+}
+
+.product-detail-breadcrumb
+.breadcrumb-item a:hover,
+.product-detail-breadcrumb
+.breadcrumb-item a:focus {
+    color: var(--nexlap-teal-hover);
+}
+
+.product-detail-breadcrumb
+.breadcrumb-item.active {
+    color: #667085;
+}
+
+
+/* ========================================
+   PRODUCT MAIN
+======================================== */
+
+.product-detail-main {
+    background-color: var(--nexlap-white);
+}
+
+
+/* ========================================
+   PRODUCT IMAGE
+======================================== */
+
+.product-detail-image-box {
+    width: 100%;
+    height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    overflow: hidden;
+
+    background-color: var(--nexlap-gray);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+
+.product-detail-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ========================================
+   PRODUCT INFO
+======================================== */
+
+.product-detail-info {
+    width: 100%;
+    max-width: 560px;
+
+    padding-top: 10px;
+}
+
+
+.product-detail-brand {
+    color: var(--nexlap-teal);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.product-detail-title {
+    color: var(--nexlap-black);
+
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.product-detail-price {
+    color: var(--nexlap-black);
+
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   USE TAGS
+======================================== */
+
+.product-use-tags {
+    min-height: 30px;
+}
+
+
+.product-use-tag,
+.product-best-for-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    color: var(--nexlap-teal);
+
+    background-color: rgba(0, 124, 145, 0.08);
+
+    border: 1px solid rgba(0, 124, 145, 0.18);
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   STOCK NOTE
+======================================== */
+
+.product-stock-note {
+    background-color: var(--nexlap-gray);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+
+.product-stock-icon {
+    color: var(--nexlap-teal);
+}
+
+
+/* ========================================
+   PRODUCT ACTIONS
+======================================== */
+
+.product-detail-actions {
+    width: 100%;
+}
+
+
+.product-detail-actions .btn {
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 6px;
+}
+
+
+.product-detail-cart-button {
+    color: var(--nexlap-white);
+
+    background-color: var(--nexlap-teal);
+
+    border-color: var(--nexlap-teal);
+}
+
+
+.product-detail-cart-button:hover,
+.product-detail-cart-button:focus {
+    color: var(--nexlap-white);
+
+    background-color: var(--nexlap-teal-hover);
+
+    border-color: var(--nexlap-teal-hover);
+}
+
+
+.product-detail-wishlist-button {
+    color: var(--nexlap-black);
+
+    background-color: var(--nexlap-white);
+
+    border-color: #d0d5dd;
+}
+
+
+.product-detail-wishlist-button:hover,
+.product-detail-wishlist-button:focus {
+    color: var(--nexlap-white);
+
+    background-color: var(--nexlap-black);
+
+    border-color: var(--nexlap-black);
+}
+
+
+/* ========================================
+   QUICK INFO
+======================================== */
+
+.product-detail-quick-info {
+    color: var(--nexlap-black);
+}
+
+
+.product-detail-quick-info i {
+    color: var(--nexlap-teal);
+
+    font-size: 16px;
+}
+
+
+/* ========================================
+   SPECIFICATIONS
+======================================== */
+
+.product-specifications {
+    background-color: var(--nexlap-gray);
+
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.product-specifications h2 {
+    color: var(--nexlap-black);
+
+    font-size: 32px;
+}
+
+
+.product-specs-list {
+    padding: 8px 24px;
+
+    background-color: var(--nexlap-white);
+
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+
+.product-spec-row {
+    min-height: 58px;
+
+    align-items: center;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   BEST FOR
+======================================== */
+
+.product-best-for {
+    background-color: var(--nexlap-white);
+}
+
+
+.product-best-for h2 {
+    color: var(--nexlap-black);
+
+    font-size: 30px;
+}
+
+
+/* ========================================
+   SUPPORT CTA
+======================================== */
+
+.product-support-section {
+    background-color: var(--nexlap-white);
+}
+
+
+.product-support-box {
+    color: var(--nexlap-white);
+
+    background-color: var(--nexlap-black);
+
+    border-radius: 10px;
+}
+
+
+.product-support-box
+.section-label {
+    color: #55c6d7;
+}
+
+
+.product-support-box h2 {
+    color: var(--nexlap-white);
+
+    font-size: 30px;
+}
+
+
+.product-support-box p {
+    color: #c7cbd1;
+}
+
+
+.product-support-box
+.btn-light {
+    color: var(--nexlap-black);
+
+    font-weight: 600;
+}
+
+
+.product-support-box
+.btn-outline-light {
+    font-weight: 600;
+}
+
+
+/* ========================================
+   PRODUCT NOT FOUND
+======================================== */
+
+.product-not-found {
+    min-height: 500px;
+
+    background-color: var(--nexlap-white);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991.98px) {
+
+    .product-detail-image-box {
+        height: 440px;
+
+        padding: 32px;
+    }
+
+
+    .product-detail-info {
+        max-width: 100%;
+
+        padding-top: 0;
+    }
+
+
+    .product-detail-title {
+        font-size: 36px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 575.98px) {
+
+    .product-detail-breadcrumb .breadcrumb {
+        font-size: 11px;
+    }
+
+
+    .product-detail-image-box {
+        height: 300px;
+
+        padding: 20px;
+
+        border-radius: 8px;
+    }
+
+
+    .product-detail-title {
+        font-size: 30px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .product-detail-price {
+        font-size: 17px;
+    }
+
+
+    .product-detail-actions {
+        flex-direction: row !important;
+
+        gap: 6px !important;
+    }
+
+
+    .product-detail-actions .btn {
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        padding: 10px 5px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+
+    .product-detail-actions .btn i {
+        margin-right: 4px !important;
+    }
+
+
+    .product-specifications h2,
+    .product-best-for h2,
+    .product-support-box h2 {
+        font-size: 24px;
+    }
+
+
+    .product-specs-list {
+        padding: 4px 16px;
+    }
+
+
+    .product-spec-row {
+        gap: 20px !important;
+
+        font-size: 12px;
+    }
+
+
+    .product-use-tag,
+    .product-best-for-tag {
+        padding: 6px 10px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ========================================
+   END PRODUCT DETAIL PAGE
+======================================== */
+
+/* ========================================
+   WISHLIST ACTIVE
+======================================== */
+
+.listing-wishlist-button.is-active {
+    color: var(--nexlap-teal);
+
+    border-color: var(--nexlap-teal);
+}
+
+
+.listing-wishlist-button.is-active i {
+    color: var(--nexlap-teal);
+}

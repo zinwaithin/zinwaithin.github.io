@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- ========================================
+         BASIC META
+    ========================================= -->
+
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <meta
+            name="description"
+            content="View laptop details, pricing and specifications at NexLap.">
+
+        <title>Product Details | NexLap</title>
+
+        <!-- ========================================
+         BOOTSTRAP
+    ========================================= -->
+
+        <link
+            rel="stylesheet"
+            href="bootstrap/css/bootstrap.min.css">
+
+        <!-- ========================================
+         FONT AWESOME
+    ========================================= -->
+
+        <link
+            rel="stylesheet"
+            href="fontawesome/css/all.min.css">
+
+        <!-- ========================================
+         MAIN CSS
+    ========================================= -->
+
+        <link
+            rel="stylesheet"
+            href="CSS/style.css">
+
+    </head>
+
+    <body>
+
+        <!-- ========================================
+         START HEADER
+    ========================================= -->
+
+        <header class="bg-white border-bottom">
+
+            <nav
+                class="navbar navbar-expand-lg bg-white py-3"
+                data-bs-theme="light">
+
+                <div class="container">
+
+                    <!-- ========================================
+                     BRAND
+                ========================================= -->
+
+                    <a
+                        class="navbar-brand fw-bold me-0"
+                        href="index.html"
+                        aria-label="NexLap home">
+
+                        <span class="text-dark">
+                            Nex
+                        </span>
+
+                        <span class="text-nexlap">
+                            Lap
+                        </span>
+
+                    </a>
+
+                    <!-- ========================================
+                     MOBILE TOGGLER
+                ========================================= -->
+
+                    <button
+                        class="navbar-toggler collapsed border-0 shadow-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <!-- ========================================
+                     NAVIGATION
+                ========================================= -->
+
+                    <div
+                        class="collapse navbar-collapse pt-3 pt-lg-0"
+                        id="mainNavbar">
+
+                        <!-- Main Links -->
+
+                        <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="laptops.html">
+                                    Laptops
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="shop-by-use.html">
+                                    Shop by Use
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="brands.html">
+                                    Brands
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="how-to-order.html">
+                                    How to Order
+                                </a>
+
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a
+                                    class="nav-link py-2 px-lg-3"
+                                    href="support.html">
+                                    Support
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                        <!-- ========================================
+                         NAV ACTIONS
+                    ========================================= -->
+
+                        <div
+                            class="navbar-actions
+                               d-flex
+                               flex-column flex-lg-row
+                               align-items-start
+                               align-items-lg-center
+                               gap-3">
+
+                            <!-- Language -->
+
+                            <div class="language-switch">
+
+                                <a
+                                    class="text-dark text-decoration-none fw-semibold"
+                                    href="#">
+                                    EN
+                                </a>
+
+                                <span class="text-secondary mx-1">
+                                    |
+                                </span>
+
+                                <a
+                                    class="text-secondary text-decoration-none"
+                                    href="#">
+                                    MM
+                                </a>
+
+                            </div>
+
+                            <!-- Wishlist + Cart -->
+
+                            <div
+                                class="nav-icon-group
+                                   d-flex
+                                   align-items-center
+                                   gap-2">
+
+                                <!-- Wishlist -->
+
+                                <a
+                                    class="nav-action-icon text-decoration-none"
+                                    href="wishlist.html"
+                                    aria-label="Wishlist"
+                                    title="Wishlist">
+
+                                    <i
+                                        class="fa-solid fa-heart"
+                                        aria-hidden="true">
+                                    </i>
+
+                                    <span
+                                        class="icon-count"
+                                        id="wishlistCount">
+                                        0
+                                    </span>
+
+                                </a>
+
+                                <!-- Cart -->
+
+                                <a
+                                    class="nav-action-icon text-decoration-none"
+                                    href="cart.html"
+                                    aria-label="Shopping cart"
+                                    title="Shopping cart">
+
+                                    <i
+                                        class="fa-solid fa-cart-shopping"
+                                        aria-hidden="true">
+                                    </i>
+
+                                    <span
+                                        class="icon-count"
+                                        id="cartCount">
+                                        0
+                                    </span>
+
+                                </a>
+
+                                <!-- Shop Button -->
+
+                                <a
+                                    class="btn btn-nexlap nav-shop-button"
+                                    href="laptops.html">
+                                    Shop Laptops
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+
+            </header>
+
+            <!-- ========================================
+         END HEADER
+    ========================================= -->
+
+            <!-- ========================================
+         START PRODUCT DETAIL PAGE
+    ========================================= -->
+
+            <main>
+
+                <!-- ========================================
+             BREADCRUMB
+        ========================================= -->
+
+                <section class="product-detail-breadcrumb border-bottom">
+
+                    <div class="container py-3">
+
+                        <nav aria-label="Breadcrumb">
+
+                            <ol class="breadcrumb mb-0">
+
+                                <li class="breadcrumb-item">
+
+                                    <a
+                                        class="text-decoration-none"
+                                        href="index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+
+                                <li class="breadcrumb-item">
+
+                                    <a
+                                        class="text-decoration-none"
+                                        href="laptops.html">
+                                        Laptops
+                                    </a>
+
+                                </li>
+
+                                <li
+                                    class="breadcrumb-item"
+                                    id="productBreadcrumbBrand">
+
+                                    Product
+
+                                </li>
+
+                                <li
+                                    class="breadcrumb-item active"
+                                    id="productBreadcrumbName"
+                                    aria-current="page">
+
+                                    Details
+
+                                </li>
+
+                            </ol>
+
+                        </nav>
+
+                    </div>
+
+                </section>
+
+                <!-- ========================================
+             PRODUCT NOT FOUND
+        ========================================= -->
+
+                <section
+                    class="product-not-found d-none"
+                    id="productNotFound">
+
+                    <div class="container">
+
+                        <div class="text-center py-5 my-lg-5">
+
+                            <i
+                                class="fa-solid fa-laptop
+                               fs-1
+                               text-secondary
+                               mb-4"
+                                aria-hidden="true">
+                            </i>
+
+                            <h1 class="fw-bold mb-3">
+
+                                Product not found.
+
+                            </h1>
+
+                            <p class="text-secondary mb-4">
+
+                                The laptop you are looking for
+                                could not be found.
+
+                            </p>
+
+                            <a
+                                class="btn btn-nexlap"
+                                href="laptops.html">
+
+                                Browse Laptops
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ========================================
+             PRODUCT DETAIL CONTENT
+        ========================================= -->
+
+                <div id="productDetailContent">
+
+                    <!-- ========================================
+                 PRODUCT MAIN INFORMATION
+            ========================================= -->
+
+                    <section class="product-detail-main py-5 py-lg-6">
+
+                        <div class="container">
+
+                            <div
+                                class="row
+                               g-5
+                               align-items-start">
+
+                                <!-- ========================================
+                             PRODUCT IMAGE
+                        ========================================= -->
+
+                                <div class="col-12 col-lg-6">
+
+                                    <div class="product-detail-image-box">
+
+                                        <img
+                                            class="product-detail-image"
+                                            id="productImage"
+                                            src
+                                            alt="Laptop">
+
+                                    </div>
+
+                                </div>
+
+                                <!-- ========================================
+                             PRODUCT INFORMATION
+                        ========================================= -->
+
+                                <div class="col-12 col-lg-6">
+
+                                    <div class="product-detail-info">
+
+                                        <!-- Brand -->
+
+                                        <p
+                                            class="product-detail-brand
+                                           text-uppercase
+                                           fw-bold
+                                           mb-2"
+                                            id="productBrand">
+
+                                            Brand
+
+                                        </p>
+
+                                        <!-- Product Name -->
+
+                                        <h1
+                                            class="product-detail-title
+                                           fw-bold
+                                           mb-3"
+                                            id="productName">
+
+                                            Laptop Name
+
+                                        </h1>
+
+                                        <!-- Price -->
+
+                                        <p
+                                            class="product-detail-price
+                                           fw-bold
+                                           mb-4"
+                                            id="productPrice">
+
+                                            Price
+
+                                        </p>
+
+                                        <!-- ========================================
+                                     USE TAGS
+                                ========================================= -->
+
+                                        <div
+                                            class="product-use-tags
+                                           d-flex
+                                           flex-wrap
+                                           gap-2
+                                           mb-4"
+                                            id="productUseTags">
+
+                                            <!-- Generated by JavaScript -->
+
+                                        </div>
+
+                                        <!-- ========================================
+                                     STOCK NOTE
+                                ========================================= -->
+
+                                        <div
+                                            class="product-stock-note
+                                           p-3
+                                           mb-4">
+
+                                            <div
+                                                class="d-flex
+                                               align-items-start
+                                               gap-3">
+
+                                                <i
+                                                    class="fa-solid fa-circle-check
+                                                   product-stock-icon
+                                                   mt-1"
+                                                    aria-hidden="true">
+                                                </i>
+
+                                                <div>
+
+                                                    <p
+                                                        class="fw-semibold
+                                                       mb-1">
+
+                                                        Stock & final price
+                                                        confirmed first
+
+                                                    </p>
+
+                                                    <p
+                                                        class="text-secondary
+                                                       small
+                                                       mb-0">
+
+                                                        NexLap will confirm
+                                                        availability and the
+                                                        final
+                                                        price before payment.
+
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- ========================================
+                                     PRODUCT ACTIONS
+                                ========================================= -->
+
+                                        <div
+                                            class="product-detail-actions
+                                           d-flex
+                                           flex-column flex-sm-row
+                                           gap-2
+                                           mb-4">
+
+                                            <!-- Add to Cart -->
+
+                                            <button
+                                                class="btn
+                                               btn-nexlap
+                                               product-detail-cart-button
+                                               flex-grow-1"
+                                                id="productCartButton"
+                                                type="button">
+
+                                                <i
+                                                    class="fa-solid fa-cart-plus me-2"
+                                                    aria-hidden="true">
+                                                </i>
+
+                                                Add to Cart
+
+                                            </button>
+
+                                            <!-- Wishlist -->
+
+                                            <button
+                                                class="btn
+                                               btn-outline-dark
+                                               product-detail-wishlist-button
+                                               flex-grow-1"
+                                                id="productWishlistButton"
+                                                type="button">
+
+                                                <i
+                                                    class="fa-regular fa-heart me-2"
+                                                    aria-hidden="true">
+                                                </i>
+
+                                                Add to Wishlist
+
+                                            </button>
+
+                                        </div>
+
+                                        <!-- ========================================
+                                     QUICK INFO
+                                ========================================= -->
+
+                                        <div
+                                            class="product-detail-quick-info
+                                           border-top
+                                           pt-4">
+
+                                            <div class="row g-3">
+
+                                                <!-- Delivery -->
+
+                                                <div class="col-12 col-sm-6">
+
+                                                    <div
+                                                        class="d-flex
+                                                       align-items-start
+                                                       gap-3">
+
+                                                        <i
+                                                            class="fa-solid fa-truck
+                                                           mt-1"
+                                                            aria-hidden="true">
+                                                        </i>
+
+                                                        <div>
+
+                                                            <p
+                                                                class="fw-semibold
+                                                               mb-1">
+                                                                Yangon delivery
+                                                            </p>
+
+                                                            <p
+                                                                class="small
+                                                               text-secondary
+                                                               mb-0">
+                                                                Delivery
+                                                                available
+                                                                after
+                                                                confirmation.
+                                                            </p>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <!-- Pickup -->
+
+                                                <div class="col-12 col-sm-6">
+
+                                                    <div
+                                                        class="d-flex
+                                                       align-items-start
+                                                       gap-3">
+
+                                                        <i
+                                                            class="fa-solid fa-store
+                                                           mt-1"
+                                                            aria-hidden="true">
+                                                        </i>
+
+                                                        <div>
+
+                                                            <p
+                                                                class="fw-semibold
+                                                               mb-1">
+                                                                Store pickup
+                                                            </p>
+
+                                                            <p
+                                                                class="small
+                                                               text-secondary
+                                                               mb-0">
+                                                                Pickup option is
+                                                                also available.
+                                                            </p>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- ========================================
+                 SPECIFICATIONS
+            ========================================= -->
+
+                    <section class="product-specifications py-5">
+
+                        <div class="container">
+
+                            <div class="row g-4">
+
+                                <!-- Heading -->
+
+                                <div class="col-12 col-lg-4">
+
+                                    <p
+                                        class="section-label
+                                       text-uppercase
+                                       fw-bold
+                                       mb-2">
+
+                                        Specifications
+
+                                    </p>
+
+                                    <h2
+                                        class="fw-bold
+                                       mb-3">
+
+                                        Key specifications.
+
+                                    </h2>
+
+                                    <p
+                                        class="text-secondary
+                                       mb-0">
+
+                                        Product specifications will
+                                        be shown here for the selected
+                                        laptop.
+
+                                    </p>
+
+                                </div>
+
+                                <!-- Specification List -->
+
+                                <div class="col-12 col-lg-8">
+
+                                    <div class="product-specs-list">
+
+                                        <!-- Processor -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3
+                                           border-bottom">
+
+                                            <span class="text-secondary">
+                                                Processor
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productProcessor">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Memory -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3
+                                           border-bottom">
+
+                                            <span class="text-secondary">
+                                                Memory
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productMemory">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Storage -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3
+                                           border-bottom">
+
+                                            <span class="text-secondary">
+                                                Storage
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productStorage">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Display -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3
+                                           border-bottom">
+
+                                            <span class="text-secondary">
+                                                Display
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productDisplay">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Graphics -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3
+                                           border-bottom">
+
+                                            <span class="text-secondary">
+                                                Graphics
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productGraphics">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                        <!-- Operating System -->
+
+                                        <div
+                                            class="product-spec-row
+                                           d-flex
+                                           justify-content-between
+                                           gap-4
+                                           py-3">
+
+                                            <span class="text-secondary">
+                                                Operating System
+                                            </span>
+
+                                            <span
+                                                class="fw-semibold text-end"
+                                                id="productOperatingSystem">
+                                                —
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- ========================================
+                 BEST FOR
+            ========================================= -->
+
+                    <section class="product-best-for py-5">
+
+                        <div class="container">
+
+                            <div
+                                class="row
+                               align-items-center
+                               g-4">
+
+                                <div class="col-12 col-lg-4">
+
+                                    <p
+                                        class="section-label
+                                       text-uppercase
+                                       fw-bold
+                                       mb-2">
+
+                                        Best for
+
+                                    </p>
+
+                                    <h2
+                                        class="fw-bold
+                                       mb-0">
+
+                                        Made for the way you work.
+
+                                    </h2>
+
+                                </div>
+
+                                <div class="col-12 col-lg-8">
+
+                                    <div
+                                        class="d-flex
+                                       flex-wrap
+                                       gap-2"
+                                        id="productBestFor">
+
+                                        <!-- Generated by JavaScript -->
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- ========================================
+                 SUPPORT CTA
+            ========================================= -->
+
+                    <section class="product-support-section py-5">
+
+                        <div class="container">
+
+                            <div
+                                class="product-support-box
+                               d-flex
+                               flex-column flex-lg-row
+                               justify-content-between
+                               align-items-lg-center
+                               gap-4
+                               p-4 p-lg-5">
+
+                                <div>
+
+                                    <p
+                                        class="section-label
+                                       text-uppercase
+                                       fw-bold
+                                       mb-2">
+
+                                        Need help?
+
+                                    </p>
+
+                                    <h2
+                                        class="fw-bold
+                                       mb-2">
+
+                                        Not sure if this laptop
+                                        is right for you?
+
+                                    </h2>
+
+                                    <p
+                                        class="mb-0">
+
+                                        Tell us how you'll use it
+                                        and your budget.
+
+                                    </p>
+
+                                </div>
+
+                                <div
+                                    class="d-flex
+                                   flex-column flex-sm-row
+                                   gap-2">
+
+                                    <a
+                                        class="btn btn-light"
+                                        href="support.html">
+
+                                        Contact Support
+
+                                    </a>
+
+                                    <a
+                                        class="btn btn-outline-light"
+                                        href="tel:+959447172488">
+
+                                        <i
+                                            class="fa-solid fa-phone me-2"
+                                            aria-hidden="true">
+                                        </i>
+
+                                        +95 9 447 172 488
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </main>
+
+            <!-- ========================================
+         END PRODUCT DETAIL PAGE
+    ========================================= -->
+
+            <!-- ========================================
+         START FOOTER
+    ========================================= -->
+
+            <footer class="site-footer">
+
+                <div class="container py-5">
+
+                    <div class="row g-4 g-lg-5">
+
+                        <!-- ========================================
+                     FOOTER BRAND
+                ========================================= -->
+
+                        <div class="col-12 col-lg-4">
+
+                            <a
+                                class="footer-brand
+                               text-decoration-none
+                               fw-bold
+                               d-inline-block
+                               mb-3"
+                                href="index.html">
+
+                                <span>Nex</span>
+                                <span class="text-nexlap">Lap</span>
+
+                            </a>
+
+                            <p
+                                class="footer-description
+                               mb-3">
+
+                                Built for Yangon.
+                                Ready for what's next.
+
+                            </p>
+
+                            <p
+                                class="footer-small-text
+                               mb-0">
+
+                                Laptops for study, office,
+                                programming and gaming.
+
+                            </p>
+
+                        </div>
+
+                        <!-- ========================================
+                     SHOP LINKS
+                ========================================= -->
+
+                        <div class="col-6 col-md-4 col-lg-2">
+
+                            <h2
+                                class="footer-title
+                               fw-bold
+                               mb-3">
+
+                                Shop
+
+                            </h2>
+
+                            <ul
+                                class="list-unstyled
+                               d-grid
+                               gap-2
+                               mb-0">
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="laptops.html">
+
+                                        Laptops
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="shop-by-use.html">
+
+                                        Shop by Use
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="brands.html">
+
+                                        Brands
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="wishlist.html">
+
+                                        Wishlist
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="cart.html">
+
+                                        Cart
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- ========================================
+                     HELP LINKS
+                ========================================= -->
+
+                        <div class="col-6 col-md-4 col-lg-2">
+
+                            <h2
+                                class="footer-title
+                               fw-bold
+                               mb-3">
+
+                                Help
+
+                            </h2>
+
+                            <ul
+                                class="list-unstyled
+                               d-grid
+                               gap-2
+                               mb-0">
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="how-to-order.html">
+
+                                        How to Order
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="support.html">
+
+                                        Support
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- ========================================
+                     CONTACT
+                ========================================= -->
+
+                        <div class="col-12 col-md-4 col-lg-4">
+
+                            <h2
+                                class="footer-title
+                               fw-bold
+                               mb-3">
+
+                                Contact
+
+                            </h2>
+
+                            <ul
+                                class="list-unstyled
+                               d-grid
+                               gap-3
+                               mb-0">
+
+                                <!-- Phone -->
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="tel:+959447172488">
+
+                                        <i
+                                            class="fa-solid fa-phone
+                                           me-2"
+                                            aria-hidden="true">
+                                        </i>
+
+                                        +95 9 447 172 488
+
+                                    </a>
+
+                                </li>
+
+                                <!-- Email -->
+
+                                <li>
+
+                                    <a
+                                        class="footer-link
+                                       text-decoration-none"
+                                        href="mailto:hello@nexlap.mm">
+
+                                        <i
+                                            class="fa-solid fa-envelope
+                                           me-2"
+                                            aria-hidden="true">
+                                        </i>
+
+                                        hello@nexlap.mm
+
+                                    </a>
+
+                                </li>
+
+                                <!-- Website -->
+
+                                <li>
+
+                                    <span class="footer-small-text">
+
+                                        <i
+                                            class="fa-solid fa-globe
+                                           me-2"
+                                            aria-hidden="true">
+                                        </i>
+
+                                        nexlap.mm
+
+                                    </span>
+
+                                </li>
+
+                                <!-- Location -->
+
+                                <li>
+
+                                    <span class="footer-small-text">
+
+                                        <i
+                                            class="fa-solid fa-location-dot
+                                           me-2"
+                                            aria-hidden="true">
+                                        </i>
+
+                                        Yangon, Myanmar
+
+                                    </span>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ========================================
+                 FOOTER BOTTOM
+            ========================================= -->
+
+                    <div
+                        class="footer-bottom
+                       d-flex
+                       flex-column flex-md-row
+                       justify-content-between
+                       align-items-md-center
+                       gap-2
+                       pt-4 mt-5
+                       border-top">
+
+                        <p class="footer-small-text mb-0">
+
+                            © 2026 NexLap.
+                            All rights reserved.
+
+                        </p>
+
+                        <p class="footer-small-text mb-0">
+
+                            Built for Yangon.
+                            Ready for what's next.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+            <!-- ========================================
+         END FOOTER
+    ========================================= -->
+
+            <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+            <!-- jQuery -->
+
+            <script src="jquery-4.0.0.min.js"></script>
+
+            <!-- Bootstrap -->
+
+            <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Product Detail Logic -->
+
+            <script src="js/product-detail.js"></script>
+
+            <!-- Global JavaScript -->
+
+            <script src="js/main.js"></script>
+
+        </body>
+
+    </html>
