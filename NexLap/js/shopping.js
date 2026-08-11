@@ -720,57 +720,100 @@ $(document).ready(function () {
                                 </p>
 
 
-                                <div
-                                    class="d-grid
-                                           gap-2
-                                           mt-auto">
+                                <!-- ========================================
+                                     WISHLIST ACTIONS
+                                ========================================= -->
 
-                                    <a
-                                        class="btn
-                                               btn-outline-dark"
-                                        href="product-detail.html?id=${item.id}">
-
-                                        More Details
-
-                                    </a>
+                                <div class="mt-auto">
 
 
-                                    <button
-                                        class="btn
-                                               btn-nexlap
-                                               wishlist-add-cart-button"
-                                        type="button"
-                                        data-id="${item.id}">
+                                    <!-- ========================================
+                                         MORE DETAILS + ADD TO CART
+                                    ========================================= -->
 
-                                        <i
-                                            class="fa-solid
-                                                   fa-cart-plus
-                                                   me-2">
-                                        </i>
-
-                                        Add to Cart
-
-                                    </button>
+                                    <div
+                                        class="d-flex
+                                               flex-row
+                                               flex-nowrap
+                                               align-items-stretch
+                                               gap-2
+                                               w-100">
 
 
-                                    <button
-                                        class="btn
-                                               btn-link
-                                               text-danger
-                                               text-decoration-none
-                                               wishlist-remove-button"
-                                        type="button"
-                                        data-id="${item.id}">
+                                        <!-- More Details -->
 
-                                        <i
-                                            class="fa-solid
-                                                   fa-trash
-                                                   me-2">
-                                        </i>
+                                        <a
+                                            class="btn
+                                                   btn-outline-dark
+                                                   flex-fill
+                                                   d-inline-flex
+                                                   align-items-center
+                                                   justify-content-center
+                                                   text-nowrap"
+                                            href="product-detail.html?id=${item.id}">
 
-                                        Remove
+                                            More Details
 
-                                    </button>
+                                        </a>
+
+
+                                        <!-- Add to Cart -->
+
+                                        <button
+                                            class="btn
+                                                   btn-nexlap
+                                                   flex-fill
+                                                   d-inline-flex
+                                                   align-items-center
+                                                   justify-content-center
+                                                   text-nowrap
+                                                   wishlist-add-cart-button"
+                                            type="button"
+                                            data-id="${item.id}">
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-cart-plus
+                                                       me-1">
+                                            </i>
+
+                                            Add to Cart
+
+                                        </button>
+
+
+                                    </div>
+
+
+                                    <!-- ========================================
+                                         REMOVE
+                                    ========================================= -->
+
+                                    <div
+                                        class="text-center
+                                               mt-2">
+
+                                        <button
+                                            class="btn
+                                                   btn-link
+                                                   text-danger
+                                                   text-decoration-none
+                                                   wishlist-remove-button"
+                                            type="button"
+                                            data-id="${item.id}">
+
+                                            <i
+                                                class="fa-solid
+                                                       fa-trash
+                                                       me-2">
+                                            </i>
+
+                                            Remove
+
+                                        </button>
+
+                                    </div>
+
 
                                 </div>
 
