@@ -315,6 +315,8 @@ body {
 /* ========================================
    END HEADER
 ======================================== */
+
+
 /* ========================================
    START HERO SECTION
 ======================================== */
@@ -327,7 +329,9 @@ body {
 }
 
 
-/* Hero Content */
+/* ========================================
+   HERO CONTENT
+======================================== */
 
 .hero-content {
     max-width: 560px;
@@ -367,7 +371,9 @@ body {
 }
 
 
-/* Hero Buttons */
+/* ========================================
+   HERO BUTTONS
+======================================== */
 
 .hero-section .btn {
     width: auto;
@@ -378,11 +384,12 @@ body {
 }
 
 
-/* Hero Secondary Button */
+/* Secondary Button */
 
 .hero-section .btn-outline-light {
     color: var(--nexlap-white);
     background-color: transparent;
+
     border-color: rgba(255, 255, 255, 0.65);
 
     font-size: 15px;
@@ -391,35 +398,110 @@ body {
     border-radius: 6px;
 }
 
+
 .hero-section .btn-outline-light:hover,
 .hero-section .btn-outline-light:focus {
     color: var(--nexlap-black);
     background-color: var(--nexlap-white);
+
     border-color: var(--nexlap-white);
 }
 
 
-/* Hero Image Wrapper */
+/* ========================================
+   HERO IMAGE WRAPPER
+======================================== */
 
 .hero-image-wrap {
     width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    overflow: visible;
 }
 
 
-/* Hero Image */
+/* ========================================
+   HERO IMAGE
+======================================== */
 
 .hero-image {
-    width: 100%;
-    max-width: 720px;
-    max-height: 440px;
+    width: 115%;
+    max-width: 820px;
+    height: auto;
+
+    display: block;
 
     object-fit: contain;
+
+    transform: translateX(25px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991.98px) {
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+
+    .hero-image-wrap {
+        justify-content: center;
+    }
+
+
+    .hero-image {
+        width: 100%;
+        max-width: 680px;
+
+        transform: none;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 575.98px) {
+
+    .hero-title {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    .hero-image {
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+    .hero-section .btn {
+        font-size: 12px;
+    }
+
 }
 
 
 /* ========================================
    END HERO SECTION
 ======================================== */
+
 
 /* ========================================
    START SHOP BY USE SECTION
