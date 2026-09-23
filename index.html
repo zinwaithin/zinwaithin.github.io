@@ -1,11 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Zin Wai Thin | Junior Web Developer</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h1>hello I live in Pyay. I'm Zin Wai Thin</h1>
+
+    <!-- ================= START NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <!-- Name -->
+        <a class="navbar-brand" href="#">
+            Zin Wai Thin
+        </a>
+
+        <!-- Mobile Button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <!-- Right Side -->
+            <div class="nav-actions">
+                <a href="#projects" class="talk-btn">
+                    View Projects
+                </a>
+            </div>
+          
+
+        </div>
+
+    </div>
+</nav>
+    <!-- ================= END NAVBAR ================= -->
+
+    <!-- ================= START HERO ================= -->
+<section class="hero" id="home">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Profile -->
+            <div class="col-12 col-md-5 col-lg-5 text-center">
+
+                <img
+                    src="images/profile.png"
+                    alt="Zin Wai Thin"
+                    class="profile-img img-fluid"
+                >
+
+            </div>
+
+            <!-- Content -->
+            <div class="col-12 col-md-7 col-lg-7">
+
+                <div class="hero-content text-center text-md-start ps-lg-4">
+
+                    <p class="hello-text">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="hero-name">
+                        Zin Wai Thin
+                    </h1>
+
+                    <h2 class="hero-role">
+                        Junior Web Developer
+                    </h2>
+
+                    <p class="hero-description">
+                        I enjoy building clean, responsive and user-friendly
+                        web experiences. I love turning simple ideas into
+                        meaningful websites.
+                    </p>
+
+
+                    <div
+                        class="d-flex flex-wrap gap-3
+                               justify-content-center
+                               justify-content-md-start">
+
+                        <a href="#" class="hero-btn primary-btn">
+                            <i class="fa-solid fa-download"></i>
+                            Download CV
+                        </a>
+
+                        <a
+                            href="mailto:yourmail@gmail.com"
+                            class="hero-btn outline-btn">
+
+                            <i class="fa-regular fa-envelope"></i>
+                            Contact Me
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        class="social-links
+                               justify-content-center
+                               justify-content-md-start">
+
+                        <a href="#" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="#" title="Telegram">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+
+                        <a href="tel:+959000000000" title="Call">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!-- ================= END HERO ================= -->
+      
+<!-- ================= START ABOUT ================= -->
+<section class="about-section" id="about">
+    <div class="container">
+
+        <div class="row align-items-start g-5">
+
+            <!-- About Me -->
+            <div class="col-12 col-lg-7">
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+                <p class="about-text">
+                    I'm Zin Wai Thin, a junior web developer who enjoys combining
+                    design and technology to turn ideas into functional web experiences.
+                    As I learned more about how frontend, backend and databases work
+                    together, I became increasingly interested in full-stack web development.
+                </p>
+
+                <p class="about-text mt-3">
+                    I enjoy creating clean interfaces, working with databases and
+                    building useful features. I'm currently improving my PHP and Laravel
+                    skills while continuing to learn JavaScript, responsive web development
+                    and database technologies. I enjoy solving problems, learning new things
+                    and improving my skills through every project I build.
+                </p>
+
+            </div>
+
+
+            <!-- Basic Information -->
+            <div class="col-12 col-lg-4 ms-auto">
+
+                <div class="basic-info">
+
+                    <h3 class="basic-info-title">
+                        Basic Information
+                    </h3>
+
+                    <div class="info-item">
+                        <span class="info-label">AGE:</span>
+                        <span class="info-value">20 Years</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">LOCATION:</span>
+                        <span class="info-value">Pyay, Myanmar</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">EDUCATION:</span>
+                        <span class="info-value">First Year Student</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">ETHNICITY:</span>
+                        <span class="info-value">Bamar</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= END ABOUT ================= -->
+
+<!-- ================= START SKILLS ================= -->
+
+<section class="skills-section" id="skills">
+    <div class="container">
+
+        <!-- Section Title -->
+        <div class="skills-header text-center">
+            <h2 class="section-title">My Skills</h2>
+        </div>
+
+
+        <!-- Skills -->
+        <div class="row g-3 justify-content-center">
+
+            <!-- PHP -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/php.svg"
+                        alt="PHP Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>PHP</span>
+
+                </div>
+            </div>
+
+
+            <!-- Laravel -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/laravel.svg"
+                        alt="Laravel Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>Laravel</span>
+
+                </div>
+            </div>
+
+
+            <!-- Bootstrap -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/bootstrap.svg"
+                        alt="Bootstrap Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>Bootstrap</span>
+
+                </div>
+            </div>
+
+
+            <!-- MySQL -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/mysql.svg"
+                        alt="MySQL Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>MySQL</span>
+
+                </div>
+            </div>
+
+
+            <!-- Git -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/git.svg"
+                        alt="Git Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>Git</span>
+
+                </div>
+            </div>
+
+
+            <!-- HTML -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/html.svg"
+                        alt="HTML Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>HTML</span>
+
+                </div>
+            </div>
+
+
+            <!-- CSS -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/css.svg"
+                        alt="CSS Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>CSS</span>
+
+                </div>
+            </div>
+
+
+            <!-- JavaScript -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/javascript.svg"
+                        alt="JavaScript Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>JavaScript</span>
+
+                </div>
+            </div>
+
+
+            <!-- jQuery -->
+            <div class="col-6 col-md-4 col-lg-4">
+                <div class="skill-item">
+
+                    <img
+                        src="images/skills/jquery.svg"
+                        alt="jQuery Logo"
+                        class="skill-logo"
+                    >
+
+                    <span>jQuery</span>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= END SKILLS ================= -->
+
+<!-- ================= START PROJECTS ================= -->
+<section class="projects-section" id="projects">
+    <div class="container">
+
+        <!-- Section Title -->
+        <div class="text-center">
+            <h2 class="section-title">My Projects</h2>
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="text-end mt-5">
+
+                <a href="projects.html" class="view-projects-btn">
+                    View All Projects
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <!-- Project 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="project-card h-100">
+
+                    <img
+                        src="images/projects/project1.jpg"
+                        alt="Project 1"
+                        class="project-img"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>Project Name</h3>
+
+                        <p>
+                            A short description about this project and
+                            what it was built for.
+                        </p>
+
+
+                        <!-- Technologies -->
+                        <div class="project-tech d-flex flex-wrap gap-2">
+
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+
+                        </div>
+
+
+                        <!-- Links -->
+                        <div class="project-links d-flex gap-4 mt-4">
+
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                View Code
+                            </a>
+
+                            <a href="#" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="project-card h-100">
+
+                    <img
+                        src="images/projects/project2.jpg"
+                        alt="Project 2"
+                        class="project-img"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>Project Name</h3>
+
+                        <p>
+                            A short description about this project and
+                            what it was built for.
+                        </p>
+
+
+                        <div class="project-tech d-flex flex-wrap gap-2">
+
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Bootstrap</span>
+
+                        </div>
+
+
+                        <div class="project-links d-flex gap-4 mt-4">
+
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                View Code
+                            </a>
+
+                            <a href="#" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="project-card h-100">
+
+                    <img
+                        src="images/projects/project3.jpg"
+                        alt="Project 3"
+                        class="project-img"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>Project Name</h3>
+
+                        <p>
+                            A short description about this project and
+                            what it was built for.
+                        </p>
+
+
+                        <div class="project-tech d-flex flex-wrap gap-2">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+
+                        </div>
+
+
+                        <div class="project-links d-flex gap-4 mt-4">
+
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                View Code
+                            </a>
+
+                            <a href="#" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                Live Demo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= END PROJECTS ================= -->
+
+<!-- ================= START CONTACT ================= -->
+<section class="contact-section" id="contact">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Contact Me</h2>
+
+            <p class="contact-subtitle">
+                Feel free to reach out through any of the platforms below.
+            </p>
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Email -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="mailto:yourmail@gmail.com" class="contact-link">
+
+                    <div class="contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span>Email</span>
+                        <p>yourmail@gmail.com</p>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Telegram -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#" class="contact-link">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+
+                    <div>
+                        <span>Telegram</span>
+                        <p>@yourusername</p>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Viber -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="#" class="contact-link">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-viber"></i>
+                    </div>
+
+                    <div>
+                        <span>Viber</span>
+                        <p>+95 9 000 000 000</p>
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Phone -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <a href="tel:+959000000000" class="contact-link">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <span>Phone</span>
+                        <p>+95 9 000 000 000</p>
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= END CONTACT ================= -->
+
+<!-- ================= START FOOTER ================= -->
+<footer class="footer">
+    <div class="container text-center">
+
+        <p>
+            © 2026 Zin Wai Thin. All Rights Reserved.
+        </p>
+
+    </div>
+</footer>
+<!-- ================= END FOOTER ================= -->
+
+
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
